@@ -1,0 +1,68 @@
+@media (prefers-reduced-motion: no-preference) {
+    .Loading-Icon {
+      animation: Loading-Icon-spin infinite 3s linear;
+    }
+  }
+
+  @keyframes Loading-Icon-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /** Timer Design **/
+.countdown-timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather";
+    font-size: 30px;
+}
+.countdown {
+    background-color: skyblue;
+    border: 10px solid white;
+    border-radius: 12%;
+    padding: 50px;
+    width: 10%;
+    
+}
+
+.countdown-timer span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.countdown-timer-phones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather";
+    font-size: 12px;
+}
+.countdown-phones {
+    background-color: skyblue;
+    border: 10px solid white;
+    border-radius: 20%;
+    padding: 16px;
+    width: 100%;
+    
+}
+.countdown-timer-phones span {
+    margin: 0;
+}
+
+.timer-names{
+    font-weight: bold;
+    font-family: "Merriweather";
+    font-style: italic;
+}
+
+.two-numbers {
+    width: 2ch;
+}
