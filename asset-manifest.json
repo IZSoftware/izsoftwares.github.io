@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0b54f72a.css",
-    "main.js": "/static/js/main.521462ec.js",
+    "main.js": "/static/js/main.68b696e7.js",
     "static/js/787.9cd6b73e.chunk.js": "/static/js/787.9cd6b73e.chunk.js",
     "static/media/constructionC.jpg": "/static/media/constructionC.51ee7ca4fb28e82bbefc.jpg",
     "static/media/IZ-Logo.png": "/static/media/IZ-Logo.1bef8a49c7b832fc2a4b.png",
     "index.html": "/index.html",
     "main.0b54f72a.css.map": "/static/css/main.0b54f72a.css.map",
-    "main.521462ec.js.map": "/static/js/main.521462ec.js.map",
+    "main.68b696e7.js.map": "/static/js/main.68b696e7.js.map",
     "787.9cd6b73e.chunk.js.map": "/static/js/787.9cd6b73e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b54f72a.css",
-    "static/js/main.521462ec.js"
+    "static/js/main.68b696e7.js"
   ]
 }
