@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import Logo from '../../resources/IZ-Logo.png';
 import { Box } from '@mui/system';
-import ConstructionFooter from './ConstructionFooter';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
@@ -18,7 +17,7 @@ const defaultRemainingTime = {
     hours: '00',
     days: '00'
 }
-var countDownDate = new Date("Sept 23, 2022 12:00:00").getTime();
+var countDownDate = new Date("February 03, 2024 12:00:00").getTime();
 
 function padWithZeros(number) {
     const numberString = number.toString();
@@ -72,10 +71,10 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             <Box sx={{ mt: 5}}>
                 <Grid container direction="row" justify="center" alignItems="center">
                     <Grid item md lg xl sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
-                        <Typography variant="h2" component="h4" sx={{fontWeight: '400'}}>WE ARE COMING SOON </Typography>
+                        <Typography variant="h2" component="h4" sx={{fontWeight: '400'}}> UNDER RECONSTRUCTION </Typography>
                     </Grid>  
                     <Grid item xs sm sx={{display: {xs: 'block', sm: 'block', md: 'none'}}}>
-                        <Typography variant="h5" component="h6" sx={{fontWeight: '500'}}> WE ARE COMING SOON </Typography>
+                        <Typography variant="h5" component="h6" sx={{fontWeight: '500'}}> UNDER RECONSTRUCTION </Typography>
                     </Grid>  
                 </Grid>      
             </Box>
@@ -135,13 +134,12 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             </Box>
             <Box sx={{ mt: 5}}>
                 <Grid item md lg xl sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
-                    <Typography variant="h4" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing !!!</Typography>
+                    <Typography variant="h4" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing EIZG.org !!!</Typography>
                 </Grid>
                 <Grid item xs sm sx={{display: {xs: 'block', sm: 'block', md: 'none'}}}>
-                    <Typography variant="h6" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing !!!</Typography>
+                    <Typography variant="h6" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing EIZG.org !!!</Typography>
                 </Grid>
             </Box>
-            <ConstructionFooter />
         </div>
     );
 }

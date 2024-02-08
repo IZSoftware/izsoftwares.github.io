@@ -1,14 +1,14 @@
 import './App.css';
-import IzConstruction from './pages/construction/IzConstruction';
-import CountdownTimer from './pages/construction/CountdownTimer';
 import { Routes, Route} from "react-router-dom";
+import Home from './pages/construction/Home';
+import Live from './pages/construction/Live';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<IzConstruction />} />
-        <Route path="/live" element={<CountdownTimer />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/live" element={<Live />} />
       </Routes>
       
     </div>

@@ -5,7 +5,9 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Divider from '@mui/material/Divider';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 
 function Copyright(){
@@ -59,20 +61,34 @@ export default function ConstructionFooter(){
                                 </Typography> 
                                 <Box sx={{ gap: 2 }}>       
                                     <Grid container direction="row" justifyContent="center" justify="center" alignItems="center">
-                                        <Grid item xs={2} sm={2} md={1} lg={1} xl={1}>
-                                            <Link href="https://github.com/IZSoftware" underline="none" color="inherit">
-                                                <Typography align="right" gutterBottom>
-                                                    <GitHubIcon titleAccess="Github Account"/>     
-                                                </Typography> 
-                                            </Link>                       
-                                        </Grid>
-                                        <Grid item xs={2} sm={2} md={1} lg={1} xl={1}>
+                                        <Grid item xs={2} sm={2} md={2} lg={1} xl={1}>
                                             <Link  href="https://www.linkedin.com/company/izsoftwares" underline="none" color="inherit">
-                                                <Typography align="right" gutterBottom>
+                                                <Typography>
                                                     <LinkedInIcon titleAccess="Linkedin Account"/>                           
                                                 </Typography>  
                                             </Link>
-                                        </Grid>                                      
+                                        </Grid>
+                                        <Grid item xs={2} sm={2} md={2} lg={1} xl={1}>
+                                            <Link  href="https://www.youtube.com/@izsoftwares" underline="none" color="inherit">
+                                                <Typography>
+                                                    <YouTubeIcon titleAccess="Youtube Account"/>                           
+                                                </Typography>  
+                                            </Link>
+                                        </Grid>  
+                                        <Grid item xs={2} sm={2} md={2} lg={1} xl={1}>
+                                            <Link href="https://twitter.com/izsoftwares" underline="none" color="inherit">
+                                                <Typography>
+                                                    <TwitterIcon titleAccess="Twitter Account"/>     
+                                                </Typography> 
+                                            </Link>                       
+                                        </Grid>  
+                                        <Grid item xs={2} sm={2} md={2} lg={1} xl={1}>
+                                            <Link href="https://www.facebook.com/people/Evolv-IZSoftwares-Group/100092346416046/" underline="none" color="inherit">
+                                                <Typography>
+                                                    <FacebookIcon titleAccess="Facebook Account"/>     
+                                                </Typography> 
+                                            </Link>                       
+                                        </Grid>                   
                                     </Grid>   
                                 </Box>             
                             </Grid>
