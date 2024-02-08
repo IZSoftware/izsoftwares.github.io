@@ -43,10 +43,10 @@ export default function IzConstruction(){
             <Box sx={{ mt: 5}}>
                 <Grid container direction="row" justify="center" alignItems="center" >
                     <Grid item md lg xl sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
-                        <Typography variant="h2" component="h4"> WE ARE UNDER RECONSTRUCTION (EIZG.org) </Typography>
+                        <Typography variant="h2" component="h4"> WE ARE UNDER RECONSTRUCTION</Typography>
                     </Grid>  
                     <Grid item xs sm sx={{display: {xs: 'block', sm: 'block', md: 'none'}}}>
-                        <Typography variant="h4" component="h6"> WE ARE UNDER RECONSTRUCTION (EIZG.org) </Typography>
+                        <Typography variant="h4" component="h6"> WE ARE UNDER RECONSTRUCTION</Typography>
                     </Grid>  
                 </Grid>      
             </Box>

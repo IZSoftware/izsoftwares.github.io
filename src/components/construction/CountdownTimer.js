@@ -17,7 +17,7 @@ const defaultRemainingTime = {
     hours: '00',
     days: '00'
 }
-var countDownDate = new Date("February 03, 2024 12:00:00").getTime();
+var countDownDate = new Date("February 08, 2024 20:00:00").getTime();
 
 function padWithZeros(number) {
     const numberString = number.toString();
@@ -134,10 +134,10 @@ const CountdownTimer = ({countdownTimestampMs}) => {
             </Box>
             <Box sx={{ mt: 5}}>
                 <Grid item md lg xl sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
-                    <Typography variant="h4" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing EIZG.org !!!</Typography>
+                    <Typography variant="h4" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing !!!</Typography>
                 </Grid>
                 <Grid item xs sm sx={{display: {xs: 'block', sm: 'block', md: 'none'}}}>
-                    <Typography variant="h6" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing EIZG.org !!!</Typography>
+                    <Typography variant="h6" component="h6" sx={{fontStyle: 'italic', fontFamily: "Merriweather"}}>Stay Turned For Something Amazing !!!</Typography>
                 </Grid>
             </Box>
         </div>
