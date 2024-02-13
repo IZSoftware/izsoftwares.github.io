@@ -1,10 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.889be12d.css",
-    "main.js": "/static/js/main.5f67ae31.js",
+    "main.js": "/static/js/main.82d17977.js",
     "static/js/787.ee1f7ecf.chunk.js": "/static/js/787.ee1f7ecf.chunk.js",
     "static/media/Construction.jpg": "/static/media/Construction.33df4daced354ba682a2.jpg",
+    "static/media/home_streamline.jpg": "/static/media/home_streamline.08d3308adfa111d246b8.jpg",
+    "static/media/home_power.jpg": "/static/media/home_power.02de39148889805f3f3e.jpg",
+    "static/media/EatAndMore2.jpg": "/static/media/EatAndMore2.8de70376636220bdbf10.jpg",
+    "static/media/home_drive.jpg": "/static/media/home_drive.04b7eaf67714cc1325b5.jpg",
     "static/media/Public_Services.svg": "/static/media/Public_Services.66b1542dd1e5c472db2912ca28738ce3.svg",
+    "static/media/NBL.png": "/static/media/NBL.e0dd1f5e3b8baa75a39b.png",
     "static/media/outsourcing-services.png": "/static/media/outsourcing-services.3ab2a1992ffb8345a111.png",
     "static/media/mvp-vs-prototype.png": "/static/media/mvp-vs-prototype.e031b86ccbab986a2023.png",
     "static/media/professional.svg": "/static/media/professional.b90e06bcd37cc7541e749d989f9a0572.svg",
@@ -13,21 +18,24 @@
     "static/media/Retail.svg": "/static/media/Retail.1ce34c00fb7d3b9eb1ec7054cef68934.svg",
     "static/media/Financial.svg": "/static/media/Financial.e8110da1f1307dc3a5032e58977bd275.svg",
     "static/media/prons-agile.png": "/static/media/prons-agile.c0c7caded8e9f9d546cb.png",
+    "static/media/Minerva.png": "/static/media/Minerva.5c9a322f92b16a7c5861.png",
     "static/media/contact-us.svg": "/static/media/contact-us.12e057f91b74dab52c13.svg",
     "static/media/Smart_Office.svg": "/static/media/Smart_Office.98c3c64080046006e8783b859b8f83d3.svg",
+    "static/media/HealthcareIQ.png": "/static/media/HealthcareIQ.39ab2256a0c0e1b05db1.png",
     "static/media/security.svg": "/static/media/security.dbeca56dcb3f8cf76e08374baad55cd5.svg",
     "static/media/excellence.svg": "/static/media/excellence.418b9e6d01a2ad7fd228da74a2bebc32.svg",
     "static/media/fast-delivery.svg": "/static/media/fast-delivery.a74fb9e8bdd907919eb7628e93e8ef2e.svg",
     "static/media/quality.svg": "/static/media/quality.88f72bd553dd7a8dc36684df40a5e708.svg",
+    "static/media/Lalo.svg": "/static/media/Lalo.723b6ddb409efeb36f186a6bbeaa1dcb.svg",
     "static/media/prototype.svg": "/static/media/prototype.7ade819c930ed1401ed69603182c0170.svg",
     "static/media/Healthcare.svg": "/static/media/Healthcare.ba7cca0fc0892116c260c3f6da9306aa.svg",
     "static/media/IZ.svg": "/static/media/IZ.d984f38e128e8348c6de32ebd295065f.svg",
     "static/media/IZ2.svg": "/static/media/IZ2.79cb5f8ea7871b7acd130b2298f210cc.svg",
     "static/media/deployment.svg": "/static/media/deployment.8bf5ae891140c92a1ed3a9f223286b10.svg",
     "static/media/maintenance.svg": "/static/media/maintenance.bc505a2fd941776ec785836130dd826c.svg",
+    "index.html": "/index.html",
     "static/media/ui_ux.svg": "/static/media/ui_ux.3f194ca3c994276f5a70791c4cd5c6d1.svg",
     "static/media/qa.svg": "/static/media/qa.84b5d272929dc7de63ecbcaf75d4bcfb.svg",
-    "index.html": "/index.html",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -35,11 +43,11 @@
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.889be12d.css.map": "/static/css/main.889be12d.css.map",
-    "main.5f67ae31.js.map": "/static/js/main.5f67ae31.js.map",
+    "main.82d17977.js.map": "/static/js/main.82d17977.js.map",
     "787.ee1f7ecf.chunk.js.map": "/static/js/787.ee1f7ecf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.889be12d.css",
-    "static/js/main.5f67ae31.js"
+    "static/js/main.82d17977.js"
   ]
 }
