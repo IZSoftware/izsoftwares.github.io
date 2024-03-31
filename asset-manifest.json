@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.50d202bd.css",
-    "main.js": "/static/js/main.29bdf78d.js",
+    "main.css": "/static/css/main.69b037f2.css",
+    "main.js": "/static/js/main.9c6f74c3.js",
     "static/js/787.ee1f7ecf.chunk.js": "/static/js/787.ee1f7ecf.chunk.js",
     "static/media/Construction.jpg": "/static/media/Construction.33df4daced354ba682a2.jpg",
     "static/media/home_streamline.jpg": "/static/media/home_streamline.08d3308adfa111d246b8.jpg",
@@ -11,6 +11,8 @@
     "static/media/Public_Services.svg": "/static/media/Public_Services.66b1542dd1e5c472db2912ca28738ce3.svg",
     "static/media/NBL.png": "/static/media/NBL.e0dd1f5e3b8baa75a39b.png",
     "static/media/outsourcing-services.png": "/static/media/outsourcing-services.3ab2a1992ffb8345a111.png",
+    "static/media/ClientOnboardImg.svg": "/static/media/ClientOnboardImg.f1ee820fd409cbc2597ce00588c797f7.svg",
+    "static/media/sla.svg": "/static/media/sla.8626c4aa4b032be55c93195423ae6b8c.svg",
     "static/media/mvp-vs-prototype.png": "/static/media/mvp-vs-prototype.e031b86ccbab986a2023.png",
     "static/media/professional.svg": "/static/media/professional.b90e06bcd37cc7541e749d989f9a0572.svg",
     "static/media/become-iz-partner.svg": "/static/media/become-iz-partner.24811ba1b508cc01ff39390a1c9b54f8.svg",
@@ -18,8 +20,12 @@
     "static/media/Retail.svg": "/static/media/Retail.1ce34c00fb7d3b9eb1ec7054cef68934.svg",
     "static/media/Financial.svg": "/static/media/Financial.e8110da1f1307dc3a5032e58977bd275.svg",
     "static/media/prons-agile.png": "/static/media/prons-agile.c0c7caded8e9f9d546cb.png",
+    "static/media/meeting.svg": "/static/media/meeting.318e238867895e550f4f56f1c80a0dee.svg",
+    "static/media/proposal.svg": "/static/media/proposal.2c3632f01fce169bb2911bb136198987.svg",
+    "static/media/request.svg": "/static/media/request.293f0d7ef2742aa8f4e5929288617294.svg",
     "static/media/Minerva.png": "/static/media/Minerva.5c9a322f92b16a7c5861.png",
     "static/media/contact-us.svg": "/static/media/contact-us.12e057f91b74dab52c13.svg",
+    "static/media/sign.svg": "/static/media/sign.5cf06c426bd33a4fb71e2974a6230719.svg",
     "static/media/Smart_Office.svg": "/static/media/Smart_Office.98c3c64080046006e8783b859b8f83d3.svg",
     "static/media/HealthcareIQ.png": "/static/media/HealthcareIQ.39ab2256a0c0e1b05db1.png",
     "static/media/security.svg": "/static/media/security.dbeca56dcb3f8cf76e08374baad55cd5.svg",
@@ -42,12 +48,12 @@
     "static/media/requirement.svg": "/static/media/requirement.e4873564334b43f82ea5febbb8e8ae97.svg",
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.50d202bd.css.map": "/static/css/main.50d202bd.css.map",
-    "main.29bdf78d.js.map": "/static/js/main.29bdf78d.js.map",
+    "main.69b037f2.css.map": "/static/css/main.69b037f2.css.map",
+    "main.9c6f74c3.js.map": "/static/js/main.9c6f74c3.js.map",
     "787.ee1f7ecf.chunk.js.map": "/static/js/787.ee1f7ecf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.50d202bd.css",
-    "static/js/main.29bdf78d.js"
+    "static/css/main.69b037f2.css",
+    "static/js/main.9c6f74c3.js"
   ]
 }
