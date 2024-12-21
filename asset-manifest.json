@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.01174b6b.css",
-    "main.js": "/static/js/main.5dd41714.js",
+    "main.js": "/static/js/main.b3a9957a.js",
     "static/js/787.ee1f7ecf.chunk.js": "/static/js/787.ee1f7ecf.chunk.js",
     "static/media/Construction.jpg": "/static/media/Construction.33df4daced354ba682a2.jpg",
     "static/media/home_streamline.jpg": "/static/media/home_streamline.08d3308adfa111d246b8.jpg",
@@ -11,9 +11,11 @@
     "static/media/Public_Services.svg": "/static/media/Public_Services.66b1542dd1e5c472db2912ca28738ce3.svg",
     "static/media/NBL.png": "/static/media/NBL.e0dd1f5e3b8baa75a39b.png",
     "static/media/outsourcing-services.png": "/static/media/outsourcing-services.3ab2a1992ffb8345a111.png",
+    "static/media/Webpay.png": "/static/media/Webpay.4b6c12a3efb7d13c224a.png",
     "static/media/ClientOnboardImg.svg": "/static/media/ClientOnboardImg.f1ee820fd409cbc2597ce00588c797f7.svg",
     "static/media/sla.svg": "/static/media/sla.8626c4aa4b032be55c93195423ae6b8c.svg",
     "static/media/mvp-vs-prototype.png": "/static/media/mvp-vs-prototype.e031b86ccbab986a2023.png",
+    "static/media/JamboPay.png": "/static/media/JamboPay.06b13a8f3f35b4e09f68.png",
     "static/media/professional.svg": "/static/media/professional.b90e06bcd37cc7541e749d989f9a0572.svg",
     "static/media/become-iz-partner.svg": "/static/media/become-iz-partner.24811ba1b508cc01ff39390a1c9b54f8.svg",
     "static/media/mail-sent.png": "/static/media/mail-sent.afdb38ee29182afdb6b2.png",
@@ -22,6 +24,7 @@
     "static/media/prons-agile.png": "/static/media/prons-agile.c0c7caded8e9f9d546cb.png",
     "static/media/meeting.svg": "/static/media/meeting.318e238867895e550f4f56f1c80a0dee.svg",
     "static/media/proposal.svg": "/static/media/proposal.2c3632f01fce169bb2911bb136198987.svg",
+    "static/media/DPOPay.png": "/static/media/DPOPay.2416d85ab6cdaa84f6bc.png",
     "static/media/request.svg": "/static/media/request.293f0d7ef2742aa8f4e5929288617294.svg",
     "static/media/Minerva.png": "/static/media/Minerva.5c9a322f92b16a7c5861.png",
     "static/media/contact-us.svg": "/static/media/contact-us.12e057f91b74dab52c13.svg",
@@ -50,11 +53,11 @@
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.01174b6b.css.map": "/static/css/main.01174b6b.css.map",
-    "main.5dd41714.js.map": "/static/js/main.5dd41714.js.map",
+    "main.b3a9957a.js.map": "/static/js/main.b3a9957a.js.map",
     "787.ee1f7ecf.chunk.js.map": "/static/js/787.ee1f7ecf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01174b6b.css",
-    "static/js/main.5dd41714.js"
+    "static/js/main.b3a9957a.js"
   ]
 }
