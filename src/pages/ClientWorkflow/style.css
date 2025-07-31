@@ -1,0 +1,19 @@
+.header-container{
+    background-color: #005eb8;
+    width: 100%;
+}
+
+.header-left-title,
+.header-left-text {
+    color: #fff;
+    font-weight: 400;
+    font-size: '18px';
+    line-height: 1.78;
+    margin: 0 0 20px;
+    text-align: justify;
+}
+
+.imgClient {
+    width: 100%;
+    max-height: 60% !important;
+}

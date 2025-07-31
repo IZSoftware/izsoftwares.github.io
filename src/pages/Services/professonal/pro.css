@@ -1,0 +1,59 @@
+.Main_extra{
+    background-image: url('https://www.scnsoft.com/boss/images/fd814936-8881-465a-807e-27b33311f52bfinancial-analysis-for-a-us-based-international-real-estate-developer_large.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+.Image_rapper{
+    /* position: relative; */
+    /* min-width: 100%; */
+}
+.befor-rapp{
+    background-color: rgba(0,0,0,.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* min-width: 100%; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.imma{
+    background-image: url('https://www.scnsoft.com/boss/images/fd814936-8881-465a-807e-27b33311f52bfinancial-analysis-for-a-us-based-international-real-estate-developer_large.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+   
+}
+.secoo{
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
+.imma_title{
+    color: #fff;
+    font-weight: 400;
+    margin: 20px 20px 0 50px;
+    max-width: 890px;
+    font-size: 40px;
+    line-height: 70px;
+    /* display: flex; */
+}
+.flexSectiom{
+    display: flex;
+    padding-top: 10%;
+    gap: 85px;
+    justify-content: space-evenly !important;
+    width: 100% !important;
+}
+.mainSection_extra{
+    padding: 3% 12% 0 14%;
+}
+.text{
+    color: #3b3c3d;
+    font-size: 18px;
+    line-height: 1.78;
+    margin: 0 0 10px;
+}

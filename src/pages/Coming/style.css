@@ -1,0 +1,13 @@
+.full-screen-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+  .full-screen-image .constructImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+  
