@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import {Button, Menu, MenuItem, Typography} from '@mui/material';
+import { Button, Menu, MenuItem, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import BtnCollapse from "./Component/BtnCollapse";
 import Link from '@mui/material/Link';
 import styled from "@emotion/styled";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LaunchIcon from '@mui/icons-material/Launch';
-import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import "./style.css"
 
-function NavBarCollapse (){
-
-
+function NavBarCollapse() {
     /* For Services DropDown */
     const [anchorElAA, setAnchorElAA] = useState(null);
 
@@ -24,7 +21,6 @@ function NavBarCollapse (){
     };
 
     const openAA = Boolean(anchorElAA);
-
 
     /* For Industries DropDown */
     const [anchorElBB, setAnchorElBB] = useState(null);
@@ -43,7 +39,6 @@ function NavBarCollapse (){
     const [anchorElConnectMenu, setAnchorElConnectMenu] = useState(null);
     const [isConnectMenuOpen, setConnectMenuOpen] = useState(false);
 
-
     const handleMouseOverConnectMenu = (event) => {
         setAnchorElConnectMenu(event.currentTarget);
         setConnectMenuOpen(true);
@@ -54,13 +49,30 @@ function NavBarCollapse (){
         setConnectMenuOpen(false);
     };
 
-
-
     const openConnectMenu = Boolean(anchorElConnectMenu) && isConnectMenuOpen;
 
+    /* For Products DropDown */
+    const [anchorElProductsMenu, setAnchorElProductsMenu] = useState(null);
+    const [isProductsMenuOpen, setProductsMenuOpen] = useState(false);
 
+    const handleMouseOverProductsMenu = (event) => {
+        setAnchorElProductsMenu(event.currentTarget);
+        setProductsMenuOpen(true);
+    };
+
+    const handleMouseOutProductsMenu = () => {
+        setAnchorElProductsMenu(null);
+        setProductsMenuOpen(false);
+    };
+
+    const openProductsMenu = Boolean(anchorElProductsMenu) && isProductsMenuOpen;
 
     const [anchorEle, setAnchorEle] = useState(null);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl2, setAnchorEl2] = React.useState(null);
+    const [anchorEl1, setAnchorEl1] = React.useState(null);
+    const [anchorEl1ee, setAnchorEl1ee] = React.useState(null);
+    const [anchorEl1ee1, setAnchorEl1ee1] = React.useState(null);
 
     const handleMouseOver = (event) => {
         setAnchorEl1ee(event.currentTarget);
@@ -70,7 +82,7 @@ function NavBarCollapse (){
         setAnchorEl1ee1(event.currentTarget);
     };
 
-    const handleMouseOut = (event) => {
+    const handleMouseOut = () => {
         setAnchorEl1ee(null);
     };
 
@@ -78,22 +90,15 @@ function NavBarCollapse (){
         setAnchorEl1ee1(null);
     };
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const [anchorEl2, setAnchorEl2] = React.useState(null);
-    const [anchorEl1, setAnchorEl1] = React.useState(null);
-    const [anchorEl1ee, setAnchorEl1ee] = React.useState(null);
-    const [anchorEl1ee1, setAnchorEl1ee1] = React.useState(null);
-
     const open = Boolean(anchorEl);
     const open1 = Boolean(anchorEl1);
     const open2 = Boolean(anchorEl2);
 
-    
     const ButtonStyledLink = styled(Button)({
         '&:hover': {
             backgroundColor: 'rgba(0,0,0,0)'
-          },
-          '&:after': {
+        },
+        '&:after': {
             bottom: 0,
             content: "''",
             display: 'block',
@@ -102,16 +107,15 @@ function NavBarCollapse (){
             backgroundColor: '#1976d2',
             transition: 'width 0.5s ease 0s, left 0.5s ease 0s',
             width: 0,
-          },
-          '&:hover:after': {
-                width:' 100%', 
-                left: 0,
-          }
-    })
+        },
+        '&:hover:after': {
+            width: '100%',
+            left: 0,
+        }
+    });
 
     return (
         <div>
-            
             <BtnCollapse>
                 <Link href='/' underline="none" color="textPrimary">
                     <MenuItem>            
@@ -136,10 +140,9 @@ function NavBarCollapse (){
             </BtnCollapse>
 
             <div sx={{width: "100%"}} id="appbar-collapse">
-                <Box sx={{display: {xs: 'none', sm: 'none', md: 'block'} }} >
-            
-                    <Link  href='/' underline="none" color="textPrimary">
-                        <ButtonStyledLink  color="inherit">         
+                <Box sx={{display: {xs: 'none', sm: 'none', md: 'block'} }}>
+                    <Link href='/' underline="none" color="textPrimary">
+                        <ButtonStyledLink color="inherit">         
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
                                 Home
                             </Typography>
@@ -154,16 +157,48 @@ function NavBarCollapse (){
                         </ButtonStyledLink>
                     </Link>
 
-                   {/* <Link href="/portfolio" underline="none" color="textPrimary">
-                        <ButtonStyledLink color="inherit">          
+                    <Link href='/' underline="none" color="textPrimary" aria-controls="products-menu" aria-haspopup="true" onMouseEnter={handleMouseOverProductsMenu} onMouseLeave={handleMouseOutProductsMenu}>
+                        <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
-                                Portfolio
+                                Products
                             </Typography>
                         </ButtonStyledLink>
                     </Link>
-                    */}
+                    <Menu
+                        id="products-menu"
+                        anchorEl={anchorElProductsMenu}
+                        open={openProductsMenu}
+                        onClose={handleMouseOutProductsMenu}
+                        MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
+                        sx={{borderRadius: 0}}
+                    >
+                        <Box style={{fontSize: 18, textAlign: 'center'}}> Our Products </Box>
 
-                    <Link href='#' underline="none" color="textPrimary" aaria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverConnectMenu} onMouseLeave={handleMouseOutConnectMenu}>
+                        <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
+                            <div className="nav-items-flex">
+                                <div className="nav-title-title-connect">
+                                    ZetScore <LaunchIcon />
+                                </div> 
+                                <div style={{ whiteSpace: 'normal' }}>
+                                    Explore ZetScore
+                                </div>
+                            </div>
+                        </MenuItem>
+
+                        <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
+                            <div className="nav-items-flex">
+                              
+                                <div className="nav-title-title-connect">
+                                    ZetCollect <LaunchIcon />
+                                </div> 
+                                <div style={{ whiteSpace: 'normal' }}>
+                                    Discover ZetCollect
+                                </div>
+                            </div>
+                        </MenuItem>
+                    </Menu>
+
+                    <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverConnectMenu} onMouseLeave={handleMouseOutConnectMenu}>
                         <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
                                 Connect
@@ -174,48 +209,46 @@ function NavBarCollapse (){
                         id="connect-menu"
                         anchorEl={anchorElConnectMenu}
                         open={openConnectMenu}
-                        onClose={handleMouseOutConnectMenu} // Close menu when clicking outside
+                        onClose={handleMouseOutConnectMenu}
                         MenuListProps={{ onMouseLeave: handleMouseOutConnectMenu }}
-                        sx={{borderRadius: 0}}>
+                        sx={{borderRadius: 0}}
+                    >
+                        <Box style={{fontSize: 18, textAlign: 'center'}}> Stay Up To Date </Box>
 
-                            <Box style={{fontSize: 18, textAlign: 'center'}}> Stay Up To Date </Box>
-
-                            <MenuItem component={"a"} href={"/blog"}>  
-                                <div className="nav-items-flex">
-                                    <div className="nav-title-title-connect">
-                                        Blog
-                                    </div> 
-                                    <div  style={{ whiteSpace: 'normal' }}>
-                                        Get the latest IZSoftwares Product News and Technical articles.
-                                    </div>
+                        <MenuItem component={"a"} href={"/blog"}>  
+                            <div className="nav-items-flex">
+                                <div className="nav-title-title-connect">
+                                    Blog
+                                </div> 
+                                <div style={{ whiteSpace: 'normal' }}>
+                                    Get the latest IZSoftwares Product News and Technical articles.
                                 </div>
-                            </MenuItem>
+                            </div>
+                        </MenuItem>
 
-                            <MenuItem component={"a"} href={"/events"}>  
-                                <div className="nav-items-flex">
-                                    <div className="nav-title-title-connect">
-                                        Events
-                                    </div> 
-                                    <div style={{ whiteSpace: 'normal' }}>
-                                        Join In-person or Online events accros the IZSoftwares Ecosystem
-                                    </div>
+                        <MenuItem component={"a"} href={"/events"}>  
+                            <div className="nav-items-flex">
+                                <div className="nav-title-title-connect">
+                                    Events
+                                </div> 
+                                <div style={{ whiteSpace: 'normal' }}>
+                                    Join In-person or Online events across the IZSoftwares Ecosystem
                                 </div>
-                            </MenuItem>
+                            </div>
+                        </MenuItem>
 
-                            <MenuItem component={"a"} href={"https://www.youtube.com/@izsoftwares"} target="_blank">  
-                                <div className="nav-items-flex">
-                                    <Box className="nav-title-title-connect">
-                                        Videos <LaunchIcon />
-                                    </Box> 
-                                    <div style={{ whiteSpace: 'normal' }}>
-                                        Discover our latest products, instructional content, and a diverse range of resources through our videos, featuring on-demand and live streaming content.                                    
-                                    </div >
+                        <MenuItem component={"a"} href={"https://www.youtube.com/@izsoftwares"} target="_blank">  
+                            <div className="nav-items-flex">
+                                <Box className="nav-title-title-connect">
+                                    Videos <LaunchIcon />
+                                </Box> 
+                                <div style={{ whiteSpace: 'normal' }}>
+                                    Discover our latest products, instructional content, and a diverse range of resources through our videos, featuring on-demand and live streaming content.                                    
                                 </div>
-                            </MenuItem>
-                           
+                            </div>
+                        </MenuItem>
                     </Menu>
 
-    
                     <Link href="/contact-us" underline="none" color="textPrimary">
                         <Button variant="contained" color="primary">
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
