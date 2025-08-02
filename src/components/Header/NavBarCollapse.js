@@ -157,7 +157,7 @@ function NavBarCollapse() {
                         </ButtonStyledLink>
                     </Link>
 
-                    <Link href='/' underline="none" color="textPrimary" aria-controls="products-menu" aria-haspopup="true" onMouseEnter={handleMouseOverProductsMenu} onMouseLeave={handleMouseOutProductsMenu}>
+                    <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverProductsMenu} onMouseLeave={handleMouseOutProductsMenu}>
                         <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
                                 Products
@@ -165,34 +165,33 @@ function NavBarCollapse() {
                         </ButtonStyledLink>
                     </Link>
                     <Menu
-                        id="products-menu"
+                        id="connect-menu"
                         anchorEl={anchorElProductsMenu}
                         open={openProductsMenu}
                         onClose={handleMouseOutProductsMenu}
                         MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
-                        sx={{borderRadius: 0}}
-                    >
-                        <Box style={{fontSize: 18, textAlign: 'center'}}> Our Products </Box>
+                        sx={{borderRadius: 0}}>
+                  
+                       <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
 
                         <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
-                                    ZetScore <LaunchIcon />
+                                    ZetScores 
                                 </div> 
                                 <div style={{ whiteSpace: 'normal' }}>
-                                    Explore ZetScore
+                                    Discover how ZetScore drives employee success and simplifies performance management.
                                 </div>
                             </div>
                         </MenuItem>
 
                         <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
                             <div className="nav-items-flex">
-                              
                                 <div className="nav-title-title-connect">
-                                    ZetCollect <LaunchIcon />
+                                    ZetCollect
                                 </div> 
                                 <div style={{ whiteSpace: 'normal' }}>
-                                    Discover ZetCollect
+                                    Discover how ZetCollect transform African Microfinance Institutions Cash Collections.
                                 </div>
                             </div>
                         </MenuItem>
@@ -211,8 +210,7 @@ function NavBarCollapse() {
                         open={openConnectMenu}
                         onClose={handleMouseOutConnectMenu}
                         MenuListProps={{ onMouseLeave: handleMouseOutConnectMenu }}
-                        sx={{borderRadius: 0}}
-                    >
+                        sx={{borderRadius: 0}}>
                         <Box style={{fontSize: 18, textAlign: 'center'}}> Stay Up To Date </Box>
 
                         <MenuItem component={"a"} href={"/blog"}>  
