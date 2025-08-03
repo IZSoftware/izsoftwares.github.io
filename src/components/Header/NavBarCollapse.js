@@ -177,7 +177,7 @@ function NavBarCollapse() {
                         <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
-                                    ZetScores 
+                                    ZetScore 
                                 </div> 
                                 <div style={{ whiteSpace: 'normal' }}>
                                     Discover how ZetScore drives employee success and simplifies performance management.
