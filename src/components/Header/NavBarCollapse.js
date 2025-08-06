@@ -132,6 +132,40 @@ function NavBarCollapse() {
                         Blog
                     </MenuItem>
                 </Link>
+                <Link href='#' underline="none" color="textPrimary" aria-controls="products-menu-mobile" aria-haspopup="true" onClick={handleMouseOverProductsMenu}>
+                    <MenuItem>
+                        Products
+                    </MenuItem>
+                </Link>
+                <Menu
+                    id="products-menu-mobile"
+                    anchorEl={anchorElProductsMenu}
+                    open={openProductsMenu}
+                    onClose={handleMouseOutProductsMenu}
+                    MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
+                    sx={{borderRadius: 0}}>
+                    <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
+                    <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
+                        <div className="nav-items-flex">
+                            <div className="nav-title-title-connect">
+                                ZetScore 
+                            </div> 
+                            <div style={{ whiteSpace: 'normal' }}>
+                                Discover how ZetScore drives employee success and simplifies performance management.
+                            </div>
+                        </div>
+                    </MenuItem>
+                    <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
+                        <div className="nav-items-flex">
+                            <div className="nav-title-title-connect">
+                                ZetCollect
+                            </div> 
+                            <div style={{ whiteSpace: 'normal' }}>
+                                Discover how ZetCollect transform African Microfinance Institutions Cash Collections.
+                            </div>
+                        </div>
+                    </MenuItem>
+                </Menu>
                 <Link href="/contact-us" underline="none" color="textPrimary">
                     <MenuItem>
                         Let's Talk
@@ -148,7 +182,6 @@ function NavBarCollapse() {
                             </Typography>
                         </ButtonStyledLink>
                     </Link>
-                   
                     <Link href="/about" underline="none" color="textPrimary">
                         <ButtonStyledLink color="inherit">          
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
@@ -156,7 +189,6 @@ function NavBarCollapse() {
                             </Typography>
                         </ButtonStyledLink>
                     </Link>
-
                     <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverProductsMenu} onMouseLeave={handleMouseOutProductsMenu}>
                         <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
@@ -171,9 +203,7 @@ function NavBarCollapse() {
                         onClose={handleMouseOutProductsMenu}
                         MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
                         sx={{borderRadius: 0}}>
-                  
-                       <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
-
+                        <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
                         <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
@@ -184,7 +214,6 @@ function NavBarCollapse() {
                                 </div>
                             </div>
                         </MenuItem>
-
                         <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
@@ -196,7 +225,6 @@ function NavBarCollapse() {
                             </div>
                         </MenuItem>
                     </Menu>
-
                     <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverConnectMenu} onMouseLeave={handleMouseOutConnectMenu}>
                         <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 
@@ -212,7 +240,6 @@ function NavBarCollapse() {
                         MenuListProps={{ onMouseLeave: handleMouseOutConnectMenu }}
                         sx={{borderRadius: 0}}>
                         <Box style={{fontSize: 18, textAlign: 'center'}}> Stay Up To Date </Box>
-
                         <MenuItem component={"a"} href={"/blog"}>  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
@@ -223,7 +250,6 @@ function NavBarCollapse() {
                                 </div>
                             </div>
                         </MenuItem>
-
                         <MenuItem component={"a"} href={"/events"}>  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
@@ -234,7 +260,6 @@ function NavBarCollapse() {
                                 </div>
                             </div>
                         </MenuItem>
-
                         <MenuItem component={"a"} href={"https://www.youtube.com/@izsoftwares"} target="_blank">  
                             <div className="nav-items-flex">
                                 <Box className="nav-title-title-connect">
@@ -246,7 +271,6 @@ function NavBarCollapse() {
                             </div>
                         </MenuItem>
                     </Menu>
-
                     <Link href="/contact-us" underline="none" color="textPrimary">
                         <Button variant="contained" color="primary">
                             <Typography sx={{ fontWeight: 420}} variant="body1"> 

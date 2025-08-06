@@ -26,6 +26,7 @@ import ClientOnboard from './pages/ClientWorkflow/ClientOnboard';
 import AdministrativeFeesPage from './components/Main/MainPolicy/AdministrativeFees';
 import Gateways from './pages/Partners/Gateways';
 import './resources/style/scss/main.scss';
+import Portfolio from './pages/Portfolio/Portfolio'
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             <Route path='/portfolio' element={<Construction/>}/>
             <Route path='/careers' element={<Careers/>}/>
             <Route path='/about/careers-more' element={<More/>}/>
+            <Route path="/case-studies" element={<Portfolio />} />
 
             <Route path='/blog' element={<Blog/>}/>
             <Route path="/blog/:blogUrl" element={<BlogPost />} />
