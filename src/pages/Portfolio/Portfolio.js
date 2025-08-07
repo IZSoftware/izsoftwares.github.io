@@ -10,7 +10,7 @@ const Portfolio = () => {
     <Box
       component="header"
       sx={{
-        marginBottom: '150px', 
+        marginBottom: '200px', 
       }}
     >
     </Box>

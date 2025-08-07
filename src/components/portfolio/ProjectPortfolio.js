@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Container, 
   FormControl, 
   Autocomplete, 
   TextField, 
@@ -57,138 +56,182 @@ const ProjectPortfolio = () => {
     return industryMatch && regionMatch;
   });
 
+  // Function to truncate clientDescription to two lines
+  const truncateClientDescription = (text) => {
+    const lines = text.split('\n').filter(line => line.trim() !== '');
+    const words = lines.join(' ').split(' ');
+    let result = '';
+    let lineCount = 0;
+    let currentLine = '';
+
+    for (let word of words) {
+      if (lineCount >= 2) {
+        return result + '...';
+      }
+      if ((currentLine + word).length > 50) {
+        result += currentLine.trim() + ' ';
+        currentLine = word + ' ';
+        lineCount++;
+      } else {
+        currentLine += word + ' ';
+      }
+    }
+
+    if (currentLine.trim()) {
+      result += currentLine.trim();
+    }
+    return result.trim();
+  };
+
   return (
-    <Container>
-      <Box sx={{ textAlign: 'center', maxWidth: '1033px', margin: '0 auto' }}>
-        <Typography
-          variant="h4"
-          gutterBottom
-          sx={{
-            mb: 7,
-            color: 'black',
-            textAlign: "justify",
-            position: 'relative',
-            display: 'inline-block',
-            '&::after': {
-              content: '""',
-              display: 'block',
-              backgroundColor: '#005eb8',
-              height: '5px',
-              width: '100px',
-              position: 'absolute',
-              left: 0,
-              bottom: '-8px',
-            },
-          }}
-        >
-          Selected Success Stories From Our Project Portfolio
-        </Typography>
-      </Box>
+    <Box sx={{ width: '100%' }}>
+      <Grid container spacing={2} direction="row" justifyContent="center">
+        <Grid item xs={12} sm={12} md={9.5}>
+          <Box sx={{ textAlign: 'center', mb: 7, pt: 4 }}>
+            <Typography
+              variant="h4"
+              gutterBottom
+              sx={{
+                color: 'black',
+                textAlign: "justify",
+                position: 'relative',
+                display: 'inline-block',
+                '&::after': {
+                  content: '""',
+                  display: 'block',
+                  backgroundColor: '#005eb8',
+                  height: '5px',
+                  width: '100px',
+                  position: 'absolute',
+                  left: 0,
+                  bottom: '-8px',
+                },
+              }}
+            >
+              Selected Success Stories From Our Project Portfolio
+            </Typography>
+          </Box>
 
-      <Box>
-        <Grid container spacing={3} alignItems="center" justifyContent="center" sx={{ mb: 8 }}>
-          <Grid item xs={12} sm={6} md={4}>
-            <FormControl fullWidth>
-              <Autocomplete
-                multiple
-                value={selectedIndustries}
-                onChange={handleIndustryChange}
-                options={industries}
-                disableCloseOnSelect
-                getOptionLabel={(option) => option.name}
-                renderTags={(selected) => selected.map((opt) => opt.name).join(', ')}
-                renderInput={(params) => <TextField {...params} label="Industry" />}
-                renderOption={(props, option, { selected }) => (
-                  <li {...props} style={{ display: 'flex', alignItems: 'center' }}>
-                    <Checkbox checked={selected} />
-                    <img
-                      src={option.image}
-                      alt={option.name}
-                      style={{ width: 30, height: 30, marginRight: 10, borderRadius: '50%' }}
-                    />
-                    <ListItemText primary={option.name} />
-                  </li>
-                )}
-              />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <FormControl fullWidth>
-              <Autocomplete
-                multiple
-                value={selectedRegions}
-                onChange={handleRegionChange}
-                options={regions}
-                disableCloseOnSelect
-                getOptionLabel={(option) => option.name}
-                renderTags={(selected) => selected.map((opt) => opt.name).join(', ')}
-                renderInput={(params) => <TextField {...params} label="Region" />}
-                renderOption={(props, option, { selected }) => (
-                  <li {...props} style={{ display: 'flex', alignItems: 'center' }}>
-                    <Checkbox checked={selected} />
-                    <img
-                      src={option.image}
-                      alt={option.name}
-                      style={{ width: 20, height: 20, marginRight: 10, borderRadius: '50%' }}
-                    />
-                    <ListItemText primary={option.name} />
-                  </li>
-                )}
-              />
-            </FormControl>
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={4} justifyContent="center">
-          {filteredProjects.map((project) => (
-            <Grid item xs={12} sm={6} md={6} key={project.id}>
-              <Card sx={{ height: '100%' }}>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={project.image}
-                  alt={project.title}
+          <Grid container spacing={3} alignItems="center" justifyContent="center" sx={{ mb: 8 }}>
+            <Grid item xs={12} sm={6} md={4}>
+              <FormControl fullWidth>
+                <Autocomplete
+                  multiple
+                  value={selectedIndustries}
+                  onChange={handleIndustryChange}
+                  options={industries}
+                  disableCloseOnSelect
+                  getOptionLabel={(option) => option.name}
+                  renderTags={(selected) => selected.map((opt) => opt.name).join(', ')}
+                  renderInput={(params) => <TextField {...params} label="Industry" />}
+                  renderOption={(props, option, { selected }) => (
+                    <li {...props} style={{ display: 'flex', alignItems: 'center' }}>
+                      <Checkbox checked={selected} />
+                      <img
+                        src={option.image}
+                        alt={option.name}
+                        style={{ width: 30, height: 30, marginRight: 10, borderRadius: '50%' }}
+                      />
+                      <ListItemText primary={option.name} />
+                    </li>
+                  )}
                 />
-                <CardContent>
-                  <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', textAlign: "justify" }}>
-                    {project.title}
-                  </Typography>
-                  
-                  <Box sx={{ mb: 2 }}>
-                    <Grid container spacing={1}>
-                      <Grid item>
-                        <Chip 
-                          label={`Industry: ${project.industry}`}
-                          color="primary"
-                          variant="outlined"
-                        />
-                      </Grid>
-                      <Grid item>
-                        <Chip 
-                          label={`Region: ${project.region}`}
-                          color="primary"
-                          variant="outlined"
-                        />
-                      </Grid>
-                    </Grid>
-                  </Box>
-
-                  <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-                    <Button 
-                      variant="outlined" 
-                      color="primary" 
-                      onClick={() => handleOpenDialog(project)}
-                    >
-                      Read More
-                    </Button>
-                  </Box>
-                </CardContent>
-              </Card>
+              </FormControl>
             </Grid>
-          ))}
+
+            <Grid item xs={12} sm={6} md={4}>
+              <FormControl fullWidth>
+                <Autocomplete
+                  multiple
+                  value={selectedRegions}
+                  onChange={handleRegionChange}
+                  options={regions}
+                  disableCloseOnSelect
+                  getOptionLabel={(option) => option.name}
+                  renderTags={(selected) => selected.map((opt) => opt.name).join(', ')}
+                  renderInput={(params) => <TextField {...params} label="Region" />}
+                  renderOption={(props, option, { selected }) => (
+                    <li {...props} style={{ display: 'flex', alignItems: 'center' }}>
+                      <Checkbox checked={selected} />
+                      <img
+                        src={option.image}
+                        alt={option.name}
+                        style={{ width: 20, height: 20, marginRight: 10, borderRadius: '50%' }}
+                      />
+                      <ListItemText primary={option.name} />
+                    </li>
+                  )}
+                />
+              </FormControl>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={4} justifyContent="flex-start">
+            {filteredProjects.map((project) => (
+              <Grid item xs={12} sm={6} md={6} key={project.id}>
+                <Card sx={{ height: '100%' }}>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={project.image}
+                    alt={project.title}
+                  />
+                  <CardContent>
+                    <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', textAlign: "justify" }}>
+                      {project.title}
+                    </Typography>
+                    
+                    <Box sx={{ mb: 2 }}>
+                      <Grid container spacing={1}>
+                        <Grid item>
+                          <Chip 
+                            label={`Industry: ${project.industry}`}
+                            color="primary"
+                            variant="outlined"
+                          />
+                        </Grid>
+                        <Grid item>
+                          <Chip 
+                            label={`Region: ${project.region}`}
+                            color="primary"
+                            variant="outlined"
+                          />
+                        </Grid>
+                      </Grid>
+                    </Box>
+
+                    <Box sx={{ mb: 2 }}>
+                      <Typography 
+                        variant="body2" 
+                        sx={{ 
+                          color: 'text.secondary',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis'
+                        }}
+                      >
+                        {truncateClientDescription(project.clientDescription)}
+                      </Typography>
+                    </Box>
+
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                      <Button 
+                        variant="outlined" 
+                        color="primary" 
+                        onClick={() => handleOpenDialog(project)}
+                      >
+                        Read More
+                      </Button>
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
-      </Box>
+      </Grid>
 
       <Dialog
         open={openDialog}
@@ -237,7 +280,6 @@ const ProjectPortfolio = () => {
                 </Grid>
               </Box>
 
-              {/* About Our Client Section */}
               <Box sx={{ mb: 4 }}>
                 <Typography 
                   variant="h6" 
@@ -269,7 +311,6 @@ const ProjectPortfolio = () => {
                   {selectedProject.clientDescription}
                 </Typography>
               </Box>
-
 
               <Box sx={{ mb: 4 }}>
                 <Typography 
@@ -349,7 +390,7 @@ const ProjectPortfolio = () => {
           </>
         )}
       </Dialog>
-    </Container>
+    </Box>
   );
 };
 
