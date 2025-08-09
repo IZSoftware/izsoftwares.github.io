@@ -277,6 +277,13 @@ const ProjectPortfolio = () => {
                       variant="outlined"
                     />
                   </Grid>
+                  <Grid item>
+                    <Chip 
+                      label={`Language: ${selectedProject.language}`}
+                      color="primary"
+                      variant="outlined"
+                    />
+                  </Grid>
                 </Grid>
               </Box>
 

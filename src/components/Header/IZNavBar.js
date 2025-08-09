@@ -10,8 +10,10 @@ import { Link } from 'react-router-dom';
 import { Button, Menu, MenuItem, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function IZNavBar() {
+// Define a constant for the top navbar's height to ensure consistency
+const TOP_NAVBAR_HEIGHT = 40; 
 
+export default function IZNavBar() {
     const [anchorElSupport, setAnchorElSupport] = useState(null);
 
     const handleMouseEnterSupport = (event) => {
@@ -26,12 +28,12 @@ export default function IZNavBar() {
 
     return (
         <div>
-            {/* Top bar for Support */}
-            <AppBar position="fixed" sx={{ backgroundColor: 'primary', zIndex: (theme) => theme.zIndex.drawer + 2 }}>
-                <Toolbar disableGutters>
+            {/* Top bar for Support, now with a height of 25px */}
+            <AppBar position="fixed" sx={{ backgroundColor: '#009eb6', zIndex: (theme) => theme.zIndex.drawer + 2 }}>
+                <Toolbar disableGutters variant="dense" sx={{ minHeight: TOP_NAVBAR_HEIGHT, py: 0 }}>
                     <Grid container justifyContent="center">
                         <Grid item xs={12} sm={12} md={10}>
-                            <Grid container justifyContent="flex-end" sx={{ pr: 2 }}>
+                            <Grid container justifyContent="flex-end" sx={{ pr: 0.5 }}>
                                 <div
                                     onMouseEnter={handleMouseEnterSupport}
                                     onMouseLeave={handleMouseLeaveSupport}
@@ -39,10 +41,10 @@ export default function IZNavBar() {
                                     <Button
                                         aria-controls="support-menu"
                                         aria-haspopup="true"
-                                        sx={{ color: 'white' }}
-                                        endIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                                        sx={{ color: 'white', py: 0 }}
+                                        endIcon={<ExpandMoreIcon sx={{ color: 'white', fontSize: 16 }} />}
                                     >
-                                        <Typography sx={{ fontWeight: 420 }} variant="body2">
+                                        <Typography sx={{ fontWeight: 420 }} variant="caption" fontSize={10}>
                                             SUPPORT
                                         </Typography>
                                     </Button>
@@ -75,9 +77,10 @@ export default function IZNavBar() {
                 </Toolbar>
             </AppBar>
 
-          {/* Existing main navbar, now with fixed position */}
+            {/* Main navbar, with its 'top' position adjusted to remove the gap */}
             <Box sx={{ width: '100%' }}>
-                <AppBar position="fixed" sx={{ borderBottom: "1px solid #00d8ff", top: 64, zIndex: (theme) => theme.zIndex.drawer + 1 }} color="default">
+                {/* The 'top' value is now set to the height of the top navbar */}
+                <AppBar position="fixed" sx={{ borderBottom: "1px solid #00d8ff", top: TOP_NAVBAR_HEIGHT, zIndex: (theme) => theme.zIndex.drawer + 1 }} color="default">
                     <Toolbar>
                         <Grid container spacing={2} direction="row" justifyContent="center">
                             <Grid item xs={12} sm={12} md={10}>
