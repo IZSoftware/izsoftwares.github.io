@@ -22,6 +22,7 @@ import {
   industries,
   regions,
   projectData,
+  country,
 } from "../../components/Data/OurPartnersData";
 
 const ProjectPortfolio = () => {
@@ -85,6 +86,12 @@ const ProjectPortfolio = () => {
       result += currentLine.trim();
     }
     return result.trim();
+  };
+
+  // Function to get country name
+  const getCountryName = (countryId) => {
+    const countryObj = country.find((c) => c.name === countryId);
+    return countryObj ? countryObj.name : "Unknown";
   };
 
   return (
@@ -235,6 +242,13 @@ const ProjectPortfolio = () => {
                             variant="outlined"
                           />
                         </Grid>
+                        <Grid item>
+                          <Chip
+                            label={`Country: ${getCountryName(project.country)}`}
+                            color="primary"
+                            variant="outlined"
+                          />
+                        </Grid>
                       </Grid>
                     </Box>
 
@@ -319,13 +333,20 @@ const ProjectPortfolio = () => {
                       variant="outlined"
                     />
                   </Grid>
+                  <Grid item>
+                    <Chip
+                      label={`Country: ${getCountryName(selectedProject.country)}`}
+                      color="primary"
+                      variant="outlined"
+                    />
+                  </Grid>
                 </Grid>
               </Box>
 
               <Box sx={{ mb: 4 }}>
                 <Grid container spacing={1}>
                   {selectedProject.techStack.map((stack) => (
-                    <Grid item>
+                    <Grid item key={stack}>
                       <Chip
                         label={`${stack}`}
                         color="success"
