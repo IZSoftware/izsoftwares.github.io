@@ -38,6 +38,7 @@ export const country = [
   {name: 'Africa'},
   {name: 'UK'},
   {name: 'Cameroon'},
+  {name: 'Slovakia'},
 ];
 
 export const projectData = [
@@ -119,7 +120,7 @@ export const projectData = [
     region: 'Europe',
     techStack: ['Java', 'JavaFx', 'Algorithm', 'Data Shuffling', 'Oracle DB', 'MySQL DB', 'PostgreSQL DB'],
     image: Minerva,
-    country: 'Germany',
+    country: 'Slovakia',
     clientDescription: "Minerva is a solution with a specialized algorithm that securely connects to and updates tables across three different databases (Oracle, MySQL, PostgreSQL). This solution efficiently anonymizes production databases to ensure compliance with the GDPR (General Data Protection Regulation), which mandates the removal of client data after a certain period. It performs these updates quickly and securely, without causing any slowdowns in the main application, while maintaining data privacy and regulatory compliance.",
     challenge: "The client needed to modernize their legacy software systems while maintaining compliance with strict regulatory requirements. They required a solution that could handle complex clinical trial data, streamline research processes, and integrate with existing laboratory systems. The solution needed to be scalable to support their growing research operations.",
     description: "Over a 10-year partnership, we helped evolve their software ecosystem by:\n\n- Developing custom laboratory management systems\n- Creating automated compliance reporting tools\n- Building secure data sharing platforms\n- Implementing AI-driven research analytics\n\nKey achievements:\n- 40% reduction in research cycle time\n- 60% improvement in data accuracy\n- Full compliance with FDA and EMA regulations",
