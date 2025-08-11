@@ -118,7 +118,7 @@ function NavBarCollapse() {
         <div>
             <BtnCollapse>
                 <Link href='/' underline="none" color="textPrimary">
-                    <MenuItem>            
+                    <MenuItem> 
                         Home
                     </MenuItem>
                 </Link>
@@ -127,39 +127,83 @@ function NavBarCollapse() {
                         About
                     </MenuItem>
                 </Link>
-                <Link href='/blog' underline="none" color="textPrimary">
+                <Link href='/case-studies' underline="none" color="textPrimary">
                     <MenuItem>
-                        Blog
+                        Portfolio
                     </MenuItem>
                 </Link>
+                <Link href='#' underline="none" color="textPrimary" aria-controls="products-menu-mobile" aria-haspopup="true" onClick={handleMouseOverProductsMenu}>
+                    <MenuItem>
+                        Products
+                    </MenuItem>
+                </Link>
+                <Menu
+                    id="products-menu-mobile"
+                    anchorEl={anchorElProductsMenu}
+                    open={openProductsMenu}
+                    onClose={handleMouseOutProductsMenu}
+                    MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
+                    sx={{borderRadius: 0}}>
+                    <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
+                    <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
+                        <div className="nav-items-flex">
+                            <div className="nav-title-title-connect">
+                                ZetScore 
+                            </div> 
+                            <div style={{ whiteSpace: 'normal' }}>
+                                Discover how ZetScore drives employee success and simplifies performance management.
+                            </div>
+                        </div>
+                    </MenuItem>
+                    <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
+                        <div className="nav-items-flex">
+                            <div className="nav-title-title-connect">
+                                ZetCollect
+                            </div> 
+                            <div style={{ whiteSpace: 'normal' }}>
+                                Discover how ZetCollect transform African Microfinance Institutions Cash Collections.
+                            </div>
+                        </div>
+                    </MenuItem>
+                </Menu>
                 <Link href="/contact-us" underline="none" color="textPrimary">
                     <MenuItem>
                         Let's Talk
                     </MenuItem>
-                </Link>                 
+                </Link>
+                <Link href='/blog' underline="none" color="textPrimary">
+                    <MenuItem>
+                        Blog
+                    </MenuItem>
+                </Link> 
             </BtnCollapse>
 
             <div sx={{width: "100%"}} id="appbar-collapse">
                 <Box sx={{display: {xs: 'none', sm: 'none', md: 'block'} }}>
                     <Link href='/' underline="none" color="textPrimary">
-                        <ButtonStyledLink color="inherit">         
-                            <Typography sx={{ fontWeight: 420}} variant="body1"> 
+                        <ButtonStyledLink color="inherit"> 
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
                                 Home
                             </Typography>
                         </ButtonStyledLink>
                     </Link>
-                   
                     <Link href="/about" underline="none" color="textPrimary">
-                        <ButtonStyledLink color="inherit">          
-                            <Typography sx={{ fontWeight: 420}} variant="body1"> 
+                        <ButtonStyledLink color="inherit"> 
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
                                 About
                             </Typography>
                         </ButtonStyledLink>
                     </Link>
-
+                    <Link href="/case-studies" underline="none" color="textPrimary">
+                        <ButtonStyledLink color="inherit">
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
+                                Portfolio
+                            </Typography>
+                        </ButtonStyledLink>
+                    </Link>
                     <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverProductsMenu} onMouseLeave={handleMouseOutProductsMenu}>
-                        <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
-                            <Typography sx={{ fontWeight: 420}} variant="body1"> 
+                        <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
                                 Products
                             </Typography>
                         </ButtonStyledLink>
@@ -171,35 +215,31 @@ function NavBarCollapse() {
                         onClose={handleMouseOutProductsMenu}
                         MenuListProps={{ onMouseLeave: handleMouseOutProductsMenu }}
                         sx={{borderRadius: 0}}>
-                  
-                       <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
-
-                        <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank">  
+                        <Box style={{fontSize: 18, textAlign: 'center'}}> Discover </Box>
+                        <MenuItem component={"a"} href={"https://zetscore.com"} target="_blank"> 
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
-                                    ZetScore 
-                                </div> 
+                                    ZetScore
+                                </div>
                                 <div style={{ whiteSpace: 'normal' }}>
                                     Discover how ZetScore drives employee success and simplifies performance management.
                                 </div>
                             </div>
                         </MenuItem>
-
-                        <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank">  
+                        <MenuItem component={"a"} href={"https://zetcollect.com"} target="_blank"> 
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
                                     ZetCollect
-                                </div> 
+                                </div>
                                 <div style={{ whiteSpace: 'normal' }}>
                                     Discover how ZetCollect transform African Microfinance Institutions Cash Collections.
                                 </div>
                             </div>
                         </MenuItem>
                     </Menu>
-
                     <Link href='#' underline="none" color="textPrimary" aria-controls="connect-menu" aria-haspopup="true" onMouseEnter={handleMouseOverConnectMenu} onMouseLeave={handleMouseOutConnectMenu}>
-                        <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>           
-                            <Typography sx={{ fontWeight: 420}} variant="body1"> 
+                        <ButtonStyledLink color="inherit" endIcon={<ExpandMoreIcon />}>
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
                                 Connect
                             </Typography>
                         </ButtonStyledLink>
@@ -212,49 +252,45 @@ function NavBarCollapse() {
                         MenuListProps={{ onMouseLeave: handleMouseOutConnectMenu }}
                         sx={{borderRadius: 0}}>
                         <Box style={{fontSize: 18, textAlign: 'center'}}> Stay Up To Date </Box>
-
-                        <MenuItem component={"a"} href={"/blog"}>  
+                        <MenuItem component={"a"} href={"/blog"}>  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
                                     Blog
-                                </div> 
+                                </div>
                                 <div style={{ whiteSpace: 'normal' }}>
                                     Get the latest IZSoftwares Product News and Technical articles.
                                 </div>
                             </div>
                         </MenuItem>
-
-                        <MenuItem component={"a"} href={"/events"}>  
+                        <MenuItem component={"a"} href={"/events"}>  
                             <div className="nav-items-flex">
                                 <div className="nav-title-title-connect">
                                     Events
-                                </div> 
+                                </div>
                                 <div style={{ whiteSpace: 'normal' }}>
                                     Join In-person or Online events across the IZSoftwares Ecosystem
                                 </div>
                             </div>
                         </MenuItem>
-
-                        <MenuItem component={"a"} href={"https://www.youtube.com/@izsoftwares"} target="_blank">  
+                        <MenuItem component={"a"} href={"https://www.youtube.com/@izsoftwares"} target="_blank">  
                             <div className="nav-items-flex">
                                 <Box className="nav-title-title-connect">
                                     Videos <LaunchIcon />
-                                </Box> 
+                                </Box>
                                 <div style={{ whiteSpace: 'normal' }}>
-                                    Discover our latest products, instructional content, and a diverse range of resources through our videos, featuring on-demand and live streaming content.                                    
+                                    Discover our latest products, instructional content, and a diverse range of resources through our videos, featuring on-demand and live streaming content.
                                 </div>
                             </div>
                         </MenuItem>
                     </Menu>
-
                     <Link href="/contact-us" underline="none" color="textPrimary">
                         <Button variant="contained" color="primary">
-                            <Typography sx={{ fontWeight: 420}} variant="body1"> 
+                            <Typography sx={{ fontWeight: 420}} variant="body1">
                                 Let's Talk !
                             </Typography>
                         </Button>
-                    </Link>      
-                </Box> 
+                    </Link>
+                </Box>
             </div>
         </div>
     );

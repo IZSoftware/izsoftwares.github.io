@@ -441,8 +441,6 @@ export function Technologies(){
         
           </div>
 
-          {/* database section ends here */}
-          <Stacks/>
           <br />
         
         </div>

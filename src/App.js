@@ -26,6 +26,9 @@ import ClientOnboard from './pages/ClientWorkflow/ClientOnboard';
 import AdministrativeFeesPage from './components/Main/MainPolicy/AdministrativeFees';
 import Gateways from './pages/Partners/Gateways';
 import './resources/style/scss/main.scss';
+import Portfolio from './pages/Portfolio/Portfolio'
+import FAQPage from './components/Faq/FAQPage';
+import Technologies from './components/Technology/Technologies';
 
 
 function App() {
@@ -44,6 +47,9 @@ function App() {
             <Route path='/portfolio' element={<Construction/>}/>
             <Route path='/careers' element={<Careers/>}/>
             <Route path='/about/careers-more' element={<More/>}/>
+            <Route path="/case-studies" element={<Portfolio />} />
+            <Route path="/faqs" element={<FAQPage />} />
+            <Route path="/client-support" element={<Construction />} />
 
             <Route path='/blog' element={<Blog/>}/>
             <Route path="/blog/:blogUrl" element={<BlogPost />} />
@@ -55,7 +61,7 @@ function App() {
             <Route path="/about/client-onboard" element={<ClientOnboard/>} />
             <Route path="/about/development-process" element={<Construction/>} />
             <Route path="/about/payment-gateway-providers" element={<Gateways/>} />
-            <Route path="/about/technology-used" element={<Construction/>} />
+            <Route path="/about/technology-used" element={<Technologies/>} />
             <Route path="/services/egovernment-solutions" element={<Construction/>} />
             <Route path="/services/web-design" element={<Construction/>} />
             <Route path="/services/legacy-modernisation" element={<Construction/>} />

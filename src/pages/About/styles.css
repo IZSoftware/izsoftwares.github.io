@@ -92,7 +92,7 @@
     font-weight: 550;
     line-height: 1.71;
     margin: 0 0 4px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-top: 12px;
     padding-left: 30px;
 }
