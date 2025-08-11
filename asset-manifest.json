@@ -1,22 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.257da6eb.css",
-    "main.js": "/static/js/main.ab7e1fa0.js",
+    "main.js": "/static/js/main.e4e4a7c0.js",
     "static/js/787.ee1f7ecf.chunk.js": "/static/js/787.ee1f7ecf.chunk.js",
     "static/media/medical-banner-with-doctor-wearing-goggles.jpg": "/static/media/medical-banner-with-doctor-wearing-goggles.d2a0f3873e016678de32.jpg",
+    "static/media/people-office-work-day.jpg": "/static/media/people-office-work-day.97494c77053bbff313f8.jpg",
     "static/media/Construction.jpg": "/static/media/Construction.33df4daced354ba682a2.jpg",
+    "static/media/man-delivering-groceries-customers.jpg": "/static/media/man-delivering-groceries-customers.ea58e229aaecad095267.jpg",
     "static/media/home_streamline.jpg": "/static/media/home_streamline.08d3308adfa111d246b8.jpg",
     "static/media/Stock_Optimisation_Header.png": "/static/media/Stock_Optimisation_Header.0368694d8ab11308d8eb.png",
     "static/media/home_power.jpg": "/static/media/home_power.02de39148889805f3f3e.jpg",
     "static/media/home_drive.jpg": "/static/media/home_drive.04b7eaf67714cc1325b5.jpg",
-    "static/media/doctor-african-american-ethnicity-talking-elder-man.jpg": "/static/media/doctor-african-american-ethnicity-talking-elder-man.1ebc0c0edee4beae81c5.jpg",
+    "static/media/zerd-cinema-interface-main.webp": "/static/media/zerd-cinema-interface-main.619ab8bc0b66db9cb6ee.webp",
     "static/media/Public_Services.svg": "/static/media/Public_Services.66b1542dd1e5c472db2912ca28738ce3.svg",
     "static/media/NBL.png": "/static/media/NBL.e0dd1f5e3b8baa75a39b.png",
     "static/media/outsourcing-services.png": "/static/media/outsourcing-services.3ab2a1992ffb8345a111.png",
     "static/media/Webpay.png": "/static/media/Webpay.4b6c12a3efb7d13c224a.png",
     "static/media/ClientOnboardImg.svg": "/static/media/ClientOnboardImg.f1ee820fd409cbc2597ce00588c797f7.svg",
+    "static/media/Hero-Image-Analytics-Trends-2020.jpg": "/static/media/Hero-Image-Analytics-Trends-2020.489bc113f46bef47d838.jpg",
     "static/media/sla.svg": "/static/media/sla.8626c4aa4b032be55c93195423ae6b8c.svg",
     "static/media/mvp-vs-prototype.png": "/static/media/mvp-vs-prototype.e031b86ccbab986a2023.png",
+    "static/media/LaloImage.jpg": "/static/media/LaloImage.8cc809e38ef30242fa88.jpg",
     "static/media/JamboPay.png": "/static/media/JamboPay.06b13a8f3f35b4e09f68.png",
     "static/media/professional.svg": "/static/media/professional.b90e06bcd37cc7541e749d989f9a0572.svg",
     "static/media/angular-logo.png": "/static/media/angular-logo.709c340d5432495d2340.png",
@@ -30,6 +34,7 @@
     "static/media/meeting.svg": "/static/media/meeting.318e238867895e550f4f56f1c80a0dee.svg",
     "static/media/north-america.png": "/static/media/north-america.e62fd66ced2ee3fa94cb.png",
     "static/media/proposal.svg": "/static/media/proposal.2c3632f01fce169bb2911bb136198987.svg",
+    "static/media/Data-Anonymization-Tool.webp": "/static/media/Data-Anonymization-Tool.2a17ba54d0b2dc0f2116.webp",
     "static/media/android-logo.png": "/static/media/android-logo.ac733ca40bb1961d342f.png",
     "static/media/DPOPay.png": "/static/media/DPOPay.2416d85ab6cdaa84f6bc.png",
     "static/media/amazon-documentdb.png": "/static/media/amazon-documentdb.5ea1b7eabba1dd2281f5.png",
@@ -71,11 +76,11 @@
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.257da6eb.css.map": "/static/css/main.257da6eb.css.map",
-    "main.ab7e1fa0.js.map": "/static/js/main.ab7e1fa0.js.map",
+    "main.e4e4a7c0.js.map": "/static/js/main.e4e4a7c0.js.map",
     "787.ee1f7ecf.chunk.js.map": "/static/js/787.ee1f7ecf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.257da6eb.css",
-    "static/js/main.ab7e1fa0.js"
+    "static/js/main.e4e4a7c0.js"
   ]
 }
