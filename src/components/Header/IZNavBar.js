@@ -28,7 +28,7 @@ export default function IZNavBar() {
 
     return (
         <div>
-            {/* Top bar for Support, now with a height of 25px */}
+            {/* Top bar for Support, now with a height of 25px 
             <AppBar position="fixed" sx={{ backgroundColor: '#009eb6', zIndex: (theme) => theme.zIndex.drawer + 2 }}>
                 <Toolbar disableGutters variant="dense" sx={{ minHeight: TOP_NAVBAR_HEIGHT, py: 0 }}>
                     <Grid container justifyContent="center">
@@ -76,11 +76,12 @@ export default function IZNavBar() {
                     </Grid>
                 </Toolbar>
             </AppBar>
+            */}
 
             {/* Main navbar, with its 'top' position adjusted to remove the gap */}
             <Box sx={{ width: '100%' }}>
                 {/* The 'top' value is now set to the height of the top navbar */}
-                <AppBar position="fixed" sx={{ borderBottom: "1px solid #00d8ff", top: TOP_NAVBAR_HEIGHT, zIndex: (theme) => theme.zIndex.drawer + 1 }} color="default">
+                <AppBar position="fixed" sx={{ borderBottom: "1px solid #00d8ff", zIndex: (theme) => theme.zIndex.drawer + 1 }} color="default">
                     <Toolbar>
                         <Grid container spacing={2} direction="row" justifyContent="center">
                             <Grid item xs={12} sm={12} md={10}>
