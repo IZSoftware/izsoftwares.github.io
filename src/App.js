@@ -30,7 +30,6 @@ import Portfolio from './pages/Portfolio/Portfolio'
 import FAQPage from './components/Faq/FAQPage';
 import Technologies from './components/Technology/Technologies';
 
-
 function App() {
   return (
  
@@ -88,3 +87,4 @@ function App() {
 }
 
 export default App;
+ 
