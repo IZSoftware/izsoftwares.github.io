@@ -29,6 +29,7 @@ import './resources/style/scss/main.scss';
 import Portfolio from './pages/Portfolio/Portfolio'
 import FAQPage from './components/Faq/FAQPage';
 import Technologies from './components/Technology/Technologies';
+import SoftwareDevelopment from './components/SoftwareDevelopment/SoftwareDevelopment';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/services/software-consulting' element={<Construction/>}/>
-            <Route path='/services/software-development' element={<Construction/>}/>
+            <Route path='/services/software-development' element={<SoftwareDevelopment/>}/>
             <Route path='/healthcare/services' element={<Construction/>}/>
             <Route path='/professiona-services' element={<Construction/>}/>
             <Route path='/professiona-services-extra' element={<Construction/>}/>

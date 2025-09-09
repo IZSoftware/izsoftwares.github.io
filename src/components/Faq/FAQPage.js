@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Typography, Accordion, AccordionSummary, AccordionDetails, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// Corrected import: import the data as an object
 import faqData from '../Data/Faq';
 
 const FAQPage = () => {
