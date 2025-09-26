@@ -12,12 +12,6 @@ const data = [
     description:  "We compose dedicated teams with all necessary competencies to take over particular tasks (e.g., coding, QA, integration). With a high-performing team focused solely on your project, you can efficiently address skill gaps and speed up development.",
    
   },
-  {
-    imageUrl: softwareImage,
-    title: "Staff augmentation",
-    description:  "We ramp up your team with our best talents (from 0.5 to 150+ FTEs): back-end, front-end, and mobile developers, architects, testing engineers, DevOps engineers, data scientists, and more. You get quick and budget-friendly access to the needed skills.",
-   
-  }
 ];
 
 export default data;

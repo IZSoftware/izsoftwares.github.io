@@ -32,12 +32,12 @@ const SoftwareDevelopment = () => {
             <Grid item xs={12} sm={10} md={5}>
               <Box>
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   component="h1"
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 >
-                  Software Development Services
+                 Prioritizing Customer Focus Even Before the Project Starts
                 </Typography>
                 <Typography
                   variant="body1"
@@ -115,10 +115,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 >
-                  Our Clients
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 4 }}>
-                  We are trusted by global market leaders:
+                  We Are Trusted By Global Market Leaders
                 </Typography>
                 <Partnerships />
               </Box>
@@ -145,7 +142,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 >
-                  Industry Expertise
+                 Explore our Services:
                 </Typography>
                 <Grid container spacing={4} sx={{ mt: 2 }}>
                   {izIndustriesData.map((item, index) => (
@@ -219,32 +216,32 @@ const SoftwareDevelopment = () => {
         </Container>
       </Box>
 
-      {/* Testimonials Section */}
-      <Box
-        sx={{
-          py: 4,
-          backgroundColor: "#ffffff",
-          color: "#212121",
-        }}
-      >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
-          <Grid container spacing={4} justifyContent="center">
-            <Grid item xs={12} md={9.5}>
-              <Box textAlign="left">
-                 <Typography
-                  variant="h4"
-                  component="h2"
-                  gutterBottom
-                  sx={{ fontWeight: "bold" }}
-                >
-                  Testimonials
-                </Typography>
-                <Testimonial />
-              </Box>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
+{/* Testimonials Section */}
+<Box
+  sx={{
+    py: 4,
+    backgroundColor: "#ffffff",
+    color: "#212121",
+  }}
+>
+  <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+    <Grid container spacing={4} justifyContent="center">
+      <Grid item xs={12} md={9.5}>
+        <Box textAlign="left">
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom
+            sx={{ fontWeight: "bold" }}
+          >
+            What Our Clients Value
+          </Typography>
+          <Testimonial />
+        </Box>
+      </Grid>
+    </Grid>
+  </Container>
+</Box>
 
       {/* Fifth Section: Image Cards */}
       <Box
@@ -264,7 +261,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold"}}
                 >
-                  Our Development Approach
+                Different Collaboration Scenarios 
                 </Typography>
                 <ImageCard />
               </Box>
@@ -298,7 +295,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 > 
-                  Frequently Asked Questions
+                  FAQ about Our Software Development Services:
                 </Typography>
 
                 <FAQ faqData={faqData} />

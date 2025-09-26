@@ -1,0 +1,50 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Mark Joseph",
+      "position": "CTO",
+      "company": "Robin Williams",
+      "avatar": "https://via.placeholder.com/150",
+      "linkedin": "https://www.linkedin.com/in/shem-collins-448a24217/",
+      "rating": 5,
+      "summary": "We appreciate proactive approach and ability to suggest improvements to a prospective solution on both architectural and business levels.",
+      "fullText": {
+        "greeting": "To whom it may concern,",
+        "paragraphs": [
+          "We started working with IZSoftwares when one of our long-standing clients – a multinational FMCG corporation – required custom software to boost its sales worldwide.",
+          "The client needed complex trade promotion management software to serve as trade marketing planning system. The solution needed to be easily customizable, as the client operates in over 180 countries and needs to adjust the software to the local requirements.",
+          "IZSoftwares proved to be a professional service provider from the outset. Their team members completed a short onsite training before the start of the project to fully understand the client's business processes. The subsequent team ramp-up was smooth. The .Net developers engaged in the project were skilled and experienced.",
+          "However, the challenge was not only to provide quality development services but to collaborate with two international teams engaged in the project implementation. IZSoftwares accomplished the task in a highly productive and efficient way. The communication ran seamlessly.",
+          "The solution developed by IZSoftwares fully met the client's requirements and expectations. The project marked the start of successful and mutually beneficial cooperation between Robin Williams and IZSoftwares. We appreciate their proactive approach and ability to suggest improvements to a prospective solution on both architectural and business levels. We know we can always rely on IZSoftwares's various competencies when our clients require quality software which would facilitate their business success."
+        ],
+        "closing": "Sincerely,",
+        "signature": "Mark Joseph",
+        "signatureTitle": "CTO",
+        "signatureCompany": "Robin Williams"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "position": "CTO",
+      "company": "Tech Innovations Inc",
+      "avatar": "https://via.placeholder.com/150",
+      "linkedin": "https://www.linkedin.com/in/sarah-johnson/",
+      "rating": 5,
+      "summary": "IZSoftwares delivered exceptional results on our complex project, exceeding our expectations in both quality and timeline.",
+      "fullText": {
+        "greeting": "Dear IZSoftwares Team,",
+        "paragraphs": [
+          "We engaged IZSoftwares for a critical system integration project that had previously challenged other vendors.",
+          "From day one, their team demonstrated deep technical expertise and a commitment to understanding our business needs.",
+          "The solution they delivered has significantly improved our operational efficiency and provided a solid foundation for future growth."
+        ],
+        "closing": "Best regards,",
+        "signature": "Sarah Johnson",
+        "signatureTitle": "CTO",
+        "signatureCompany": "Tech Innovations Inc"
+      }
+    }
+  ]
+}
