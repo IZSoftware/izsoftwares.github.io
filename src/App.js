@@ -30,6 +30,7 @@ import Portfolio from './pages/Portfolio/Portfolio'
 import FAQPage from './components/Faq/FAQPage';
 import Technologies from './components/Technology/Technologies';
 import SoftwareDevelopment from './components/SoftwareDevelopment/SoftwareDevelopment';
+import { Egovernment } from './pages/eGovernment/Egovernment';
 
 function App() {
   return (
@@ -62,7 +63,7 @@ function App() {
             <Route path="/about/development-process" element={<Construction/>} />
             <Route path="/about/payment-gateway-providers" element={<Gateways/>} />
             <Route path="/about/technology-used" element={<Technologies/>} />
-            <Route path="/services/egovernment-solutions" element={<Construction/>} />
+            <Route path="/services/egovernment-solutions" element={<Egovernment/>} />
             <Route path="/services/web-design" element={<Construction/>} />
             <Route path="/services/legacy-modernisation" element={<Construction/>} />
             <Route path="/services/connect-sphere" element={<Construction/>} />
