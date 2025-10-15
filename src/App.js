@@ -30,7 +30,7 @@ import Portfolio from './pages/Portfolio/Portfolio'
 import FAQPage from './components/Faq/FAQPage';
 import Technologies from './components/Technology/Technologies';
 import SoftwareDevelopment from './components/SoftwareDevelopment/SoftwareDevelopment';
-import { Egovernment } from './pages/eGovernment/Egovernment';
+import  Egovernment from './pages/eGovernment/Egovernment';
 
 function App() {
   return (

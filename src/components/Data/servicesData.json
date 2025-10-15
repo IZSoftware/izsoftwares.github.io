@@ -1,0 +1,78 @@
+{
+  "g2cServices": [
+    {
+      "title": "Birth Services",
+      "icon": "ChildCareIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Marriage Services",
+      "icon": "FavoriteIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Death Services",
+      "icon": "CancelIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Divorce Services",
+      "icon": "FamilyRestroomIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Adoption Services",
+      "icon": "AssignmentIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Resident ID Card",
+      "icon": "BadgeIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Criminal Record",
+      "icon": "GavelIcon",
+      "type": "dropdown",
+      "description": ""
+    }
+  ],
+  "g2bServices": [
+    {
+      "title": "Business Licenses",
+      "icon": "BusinessIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Environmental Permits",
+      "icon": "NatureIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Construction Permits",
+      "icon": "ConstructionIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Business Registration",
+      "icon": "AppRegistrationIcon",
+      "type": "dropdown",
+      "description": ""
+    },
+    {
+      "title": "Trade License",
+      "icon": "StorefrontIcon",
+      "type": "dropdown",
+      "description": ""
+    }
+  ]
+}

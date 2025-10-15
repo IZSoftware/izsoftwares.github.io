@@ -1,0 +1,45 @@
+{
+  "serviceOptions": {
+    "Birth Services": ["Birth Record", "Birth Certificate"],
+    "Marriage Services": ["Certificate of Being Single", "Marriage Declaration", "Marriage Certificate"],
+    "Death Services": ["Death Record", "Death Certificate"],
+    "Divorce Services": ["Divorce Record", "Divorce Certificate"],
+    "Adoption Services": ["Adoption Record", "Adoption Certificate"],
+    "Resident ID Card": [
+      "Resident ID Card First Application",
+      "Replacement of Resident ID Card",
+      "Renewal of Resident ID Card"
+    ],
+    "Criminal Record": [
+      "Criminal Record Certificate",
+      "Updated Criminal Record Certificate (Personal Information Update etc)"
+    ],
+    "Business Licenses": [
+      "Educational Activity License",
+      "Hospital License",
+      "Gambling License",
+      "Startup License"
+    ],
+    "Environmental Permits": [
+      "Environmental Impact Assessment (EIA) Approval",
+      "Waste Management & Disposal Permit",
+      "Pollution Emission Permit"
+    ],
+    "Construction Permits": [
+      "Building Construction Permit",
+      "Demolition Permit",
+      "Occupancy Certificate (Post-Construction Approval)",
+      "Renovation/Modification Authorization"
+    ],
+    "Business Registration": [
+      "Local Business Registration",
+      "Foreign Business Registration"
+    ],
+    "Trade License": [
+      "Import/Export License",
+      "Wholesale/Retail Trade License",
+      "Professional Service License",
+      "Industrial Production License"
+    ]
+  }
+}
