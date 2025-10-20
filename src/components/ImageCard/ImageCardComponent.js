@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, CardMedia, Box } from '@mui/material';
 
 const ImageCardComponent = ({ title, description, imageUrl }) => {
   return (
-    <Box sx={{ maxWidth: 350, position: 'relative' }}>
+    <Box sx={{ width: '100%', position: 'relative' }}>
       {/* Blue line at the top */}
       <Box
         sx={{
@@ -17,19 +17,22 @@ const ImageCardComponent = ({ title, description, imageUrl }) => {
       />
 
       {/* Card */}
-      <Card sx={{ textAlign: 'center', padding: 2 }}>
-        {/* Image section */}
+      <Card sx={{ textAlign: 'center', padding: 3, height: '100%' }}>
+        {/* Image section - made much bigger */}
         <CardMedia
           component="img"
-          height="130"
+          height="200"
           image={imageUrl}
           alt={title}
-          sx={{ objectFit: 'contain', marginBottom: 2 }}
+          sx={{ 
+            objectFit: 'contain', 
+            marginBottom: 2,
+            padding: 1
+          }}
         />
 
         {/* Card Content  */}
-        <CardContent>
-         
+        <CardContent sx={{ flexGrow: 1 }}>
           <Box
             sx={{
               display: 'flex',
@@ -40,7 +43,7 @@ const ImageCardComponent = ({ title, description, imageUrl }) => {
           >
             {/* Title */}
             <Typography
-              variant="h6"
+              variant="h5" 
               component="div"
               sx={{
                 fontWeight: 'bold',
@@ -56,7 +59,7 @@ const ImageCardComponent = ({ title, description, imageUrl }) => {
 
             {/* Description */}
             <Typography
-              variant="body2"
+              variant="body1"
               color="text.secondary"
               sx={{
                 textAlign: 'justify',

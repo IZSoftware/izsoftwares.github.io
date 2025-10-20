@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Avatar, Box, Typography, Rating, Card, CardContent, Link,
+  Avatar, Box, Typography, Rating, Link,
   Modal, IconButton, AppBar, Toolbar,
 } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -13,94 +13,94 @@ function TestimonialCard({ testimonial }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // Add a check to ensure testimonial data exists
   if (!testimonial) {
     return <div>Loading testimonial...</div>;
   }
 
   return (
     <>
-      <Card sx={{ maxWidth: 1400, margin: 'auto', boxShadow: 3, mb: 4 }}>
-        <CardContent sx={{ p: 3 }}>
-          <Box 
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'flex-start',
-              mb: 2,
+      <Box sx={{ 
+        mb: 4,
+        p: 3,
+        backgroundColor: '#BBDEFB',
+        borderRadius: 2
+      }}>
+        <Box 
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            mb: 2,
+          }}
+        >
+          {/* Profile Info: Picture, Name, and Job Title */}
+          <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Avatar 
+              alt={testimonial.name} 
+              src={testimonial.avatar}
+              sx={{ width: 64, height: 64, mr: 2 }} 
+            />
+            <Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
+                <Typography variant="h6" sx={{ mr: 1, fontWeight: 'bold', fontSize: '1.2rem', color: 'black' }}>
+                  {testimonial.name}
+                </Typography>
+                <Link
+                  href={testimonial.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  color="inherit"
+                >
+                  <LinkedInIcon sx={{ color: '#0077b5', fontSize: 20 }} />
+                </Link>
+              </Box>
+              <Typography variant="body2" sx={{ fontSize: '1rem', color: 'black' }}>
+                {testimonial.position}, {testimonial.company}
+              </Typography>
+            </Box>
+          </Box>
+  
+          {/* 5-Star Rating */}
+          <Rating 
+            name="read-only" 
+            value={testimonial.rating} 
+            readOnly 
+            sx={{ color: '#ffc107', mt: 0.5 }} 
+            size="small"
+          />
+        </Box>
+  
+        {/* Description */}
+        <Typography variant="body1" sx={{ 
+          fontStyle: 'italic', 
+          lineHeight: 1.6,
+          color: 'black',
+          fontSize: '1.1rem',
+          mb: 2
+        }}>
+          {testimonial.summary}
+        </Typography>
+        
+        {/* Check original link */}
+        <Box sx={{ textAlign: 'right' }}>
+          <Link
+            component="button"
+            variant="body2"
+            onClick={handleOpen}
+            sx={{ 
+              color: 'black',
+              textDecoration: 'none',
+              fontWeight: 'medium',
+              fontSize: '1rem',
+              '&:hover': {
+                textDecoration: 'underline'
+              }
             }}
           >
-            {/* Profile Info: Picture, Name, and Job Title */}
-            <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-              <Avatar 
-                alt={testimonial.name} 
-                src={testimonial.avatar}
-                sx={{ width: 64, height: 64, mr: 2 }} 
-              />
-              <Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
-                  <Typography variant="h6" sx={{ mr: 1, fontWeight: 'bold', fontSize: '1.1rem' }}>
-                    {testimonial.name}
-                  </Typography>
-                  <Link
-                    href={testimonial.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    color="inherit"
-                  >
-                    <LinkedInIcon sx={{ color: '#0077b5', fontSize: 20 }} />
-                  </Link>
-                </Box>
-                <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.9rem' }}>
-                  {testimonial.position}, {testimonial.company}
-                </Typography>
-              </Box>
-            </Box>
-    
-            {/* 5-Star Rating */}
-            <Rating 
-              name="read-only" 
-              value={testimonial.rating} 
-              readOnly 
-              sx={{ color: '#ffc107', mt: 0.5 }} 
-              size="small"
-            />
-          </Box>
-    
-          {/* Description */}
-          <Typography variant="body1" sx={{ 
-            fontStyle: 'italic', 
-            lineHeight: 1.6,
-            color: 'text.primary',
-            fontSize: '0.95rem',
-            pt: 1,
-            borderTop: '1px solid',
-            borderColor: 'divider',
-            mb: 2
-          }}>
-            {testimonial.summary}
-          </Typography>
-          
-          {/* Check original link */}
-          <Box sx={{ textAlign: 'right' }}>
-            <Link
-              component="button"
-              variant="body2"
-              onClick={handleOpen}
-              sx={{ 
-                color: 'primary.main',
-                textDecoration: 'none',
-                fontWeight: 'medium',
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
-              Check the original
-            </Link>
-          </Box>
-        </CardContent>
-      </Card>
+            Check the original
+          </Link>
+        </Box>
+      </Box>
 
       {/* Modal with full testimonial */}
       <Modal
@@ -128,7 +128,7 @@ function TestimonialCard({ testimonial }) {
         }}>
           <AppBar position="static" color="transparent" elevation={0}>
             <Toolbar variant="dense">
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'black' }}>
                 Testimonial Letter
               </Typography>
               <IconButton
@@ -147,34 +147,34 @@ function TestimonialCard({ testimonial }) {
             overflow: 'auto',
             lineHeight: 1.7
           }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: 'black' }}>
               {testimonial.name}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary" gutterBottom>
+            <Typography variant="subtitle1" sx={{ color: 'black'}}>
               {testimonial.position}, {testimonial.company}
             </Typography>
             
-            <Typography variant="body1" paragraph sx={{ mt: 3 }}>
+            <Typography variant="body1" paragraph sx={{ mt: 3, color: 'black', fontSize: '1.05rem' }}>
               {testimonial.fullText.greeting}
             </Typography>
             
             {testimonial.fullText.paragraphs.map((paragraph, index) => (
-              <Typography key={index} variant="body1" paragraph>
+              <Typography key={index} variant="body1" paragraph sx={{ color: 'black', fontSize: '1.05rem' }}>
                 {paragraph}
               </Typography>
             ))}
             
-            <Typography variant="body1" paragraph sx={{ mt: 4 }}>
+            <Typography variant="body1" paragraph sx={{ mt: 4, color: 'black', fontSize: '1.05rem' }}>
               {testimonial.fullText.closing}
             </Typography>
             
-            <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'black', fontSize: '1.05rem' }}>
               {testimonial.fullText.signature}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" sx={{ color: 'black' }}>
               {testimonial.fullText.signatureTitle}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" sx={{ color: 'black' }}>
               {testimonial.fullText.signatureCompany}
             </Typography>
           </Box>
@@ -189,7 +189,6 @@ function Testimonial() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading data (in case of async loading in the future)
     try {
       if (testimonialsData && testimonialsData.testimonials) {
         setTestimonials(testimonialsData.testimonials);
@@ -206,9 +205,9 @@ function Testimonial() {
   }
 
   return (
-    <Box>
+    <Box sx={{ width: '100%' }}>
       {testimonials.map((testimonial) => (
-        <Box key={testimonial.id} sx={{ mb: 4 }}>
+        <Box key={testimonial.id}>
           <TestimonialCard testimonial={testimonial} />
         </Box>
       ))}

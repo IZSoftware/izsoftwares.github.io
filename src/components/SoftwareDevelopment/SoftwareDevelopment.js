@@ -8,8 +8,10 @@ import listData from "../Data/listdata";
 import OurOfferingsSoftwareDev from "../../components/ourOfferings/OurOfferingsSoftwareDev";
 import Testimonial from "../Testimonial/Testimonial";
 import ImageCard from "../../pages/ImageCard/ImageCard";
-import FAQ from "../../components/Faq/FAQ"; 
+import FAQ from "../../components/Faq/FAQ";
 import faqData from "../../components/Data/faqdata";
+import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
+import Share from "../../components/share/Share";
 
 const SoftwareDevelopment = () => {
   return (
@@ -37,7 +39,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 >
-                 Prioritizing Customer Focus Even Before the Project Starts
+                  Prioritizing Customer Focus Even Before the Project Starts
                 </Typography>
                 <Typography
                   variant="body1"
@@ -142,7 +144,7 @@ const SoftwareDevelopment = () => {
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
                 >
-                 Explore our Services:
+                  Explore our Services:
                 </Typography>
                 <Grid container spacing={4} sx={{ mt: 2 }}>
                   {izIndustriesData.map((item, index) => (
@@ -197,11 +199,11 @@ const SoftwareDevelopment = () => {
         </Container>
       </Box>
 
-      {/* Our Offerings Section */}
+      {/* Our Offerings Section with Grey Background */}
       <Box
         sx={{
           py: 4,
-          backgroundColor: "#ffffff",
+          backgroundColor: "#fafafa",
           color: "#212121",
         }}
       >
@@ -216,32 +218,32 @@ const SoftwareDevelopment = () => {
         </Container>
       </Box>
 
-{/* Testimonials Section */}
-<Box
-  sx={{
-    py: 4,
-    backgroundColor: "#ffffff",
-    color: "#212121",
-  }}
->
-  <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
-    <Grid container spacing={4} justifyContent="center">
-      <Grid item xs={12} md={9.5}>
-        <Box textAlign="left">
-          <Typography
-            variant="h4"
-            component="h2"
-            gutterBottom
-            sx={{ fontWeight: "bold" }}
-          >
-            What Our Clients Value
-          </Typography>
-          <Testimonial />
-        </Box>
-      </Grid>
-    </Grid>
-  </Container>
-</Box>
+      {/* Testimonials Section */}
+      <Box
+        sx={{
+          py: 4,
+          backgroundColor: "#ffffff",
+          color: "#212121",
+        }}
+      >
+        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+          <Grid container spacing={4} justifyContent="center">
+            <Grid item xs={12} md={9.5}>
+              <Box textAlign="left">
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                >
+                  What Our Clients Value
+                </Typography>
+                <Testimonial />
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
 
       {/* Fifth Section: Image Cards */}
       <Box
@@ -259,9 +261,9 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold"}}
+                  sx={{ fontWeight: "bold" }}
                 >
-                Different Collaboration Scenarios 
+                  Different Collaboration Scenarios
                 </Typography>
                 <ImageCard />
               </Box>
@@ -271,14 +273,7 @@ const SoftwareDevelopment = () => {
       </Box>
 
       {/* Sixth Section: FAQ */}
-     <Box
-        sx={{
-          py: 4,
-          backgroundColor: "#ffffff",
-          color: "#212121",
-        }}
-      >
-              <Box
+      <Box
         sx={{
           py: 4,
           backgroundColor: "#ffffff",
@@ -294,17 +289,43 @@ const SoftwareDevelopment = () => {
                   component="h2"
                   gutterBottom
                   sx={{ fontWeight: "bold" }}
-                > 
+                >
                   FAQ about Our Software Development Services:
                 </Typography>
-
                 <FAQ faqData={faqData} />
               </Box>
             </Grid>
           </Grid>
         </Container>
       </Box>
-      </Box>
+
+      {/* Contact and Share Section */}
+      <Container
+        maxWidth={false}
+        sx={{
+          px: { xs: 5, sm: 3, md: 0 },
+          py: 8,
+          backgroundColor: "#f8f9fa",
+        }}
+      >
+        <Grid container spacing={4} justifyContent="flex-start">
+          <Grid item xs={12} md={12}>
+            <ContactForm />
+            <Box sx={{ width: "100%" }}>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item xs={12} sm={12} md={9.5}>
+                  <Share />
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 };

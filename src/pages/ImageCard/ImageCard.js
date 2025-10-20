@@ -6,9 +6,9 @@ import { Box, Grid } from "@mui/material";
 const ImageCard = () => {
   return (
     <Box sx={{ mt: 2 }}>
-      <Grid container spacing={4}>
+      <Grid container spacing={6}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={6} lg={4.5} key={index}> 
             <ImageCardComponent
               imageUrl={item.imageUrl}
               title={item.title}
