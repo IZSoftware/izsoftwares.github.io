@@ -9,9 +9,9 @@ import Share from '../../components/share/Share';
 
 // Import your industry vertical images
 import industry1 from '../../assets/images/Mobile design 1.png';
-import industry2 from '../../assets/images/ZetCollect.png';
+import industry2 from '../../assets/images/ZetCollect mockuper.png';
 import industry3 from '../../assets/images/Mobile design 2.png';
-import industry4 from '../../assets/images/Zetscore web.png';
+import industry4 from '../../assets/images/ZetScore mockuper.png';
 import industry5 from '../../assets/images/Mobile design 3.png';
 
 // Import your UX service images
