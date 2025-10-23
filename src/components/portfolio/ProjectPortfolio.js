@@ -25,6 +25,7 @@ import {
   country,
 } from "../../components/Data/OurPartnersData";
 
+
 const ProjectPortfolio = () => {
   const [selectedIndustries, setSelectedIndustries] = useState([]);
   const [selectedRegions, setSelectedRegions] = useState([]);
@@ -463,6 +464,7 @@ const ProjectPortfolio = () => {
                 Close
               </Button>
             </DialogActions>
+ 
           </>
         )}
       </Dialog>

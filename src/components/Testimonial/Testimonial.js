@@ -22,7 +22,7 @@ function TestimonialCard({ testimonial }) {
       <Box sx={{ 
         mb: 4,
         p: 3,
-        backgroundColor: '#BBDEFB',
+        backgroundColor: '#005EB8',
         borderRadius: 2
       }}>
         <Box 
@@ -42,7 +42,7 @@ function TestimonialCard({ testimonial }) {
             />
             <Box>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 0.5 }}>
-                <Typography variant="h6" sx={{ mr: 1, fontWeight: 'bold', fontSize: '1.2rem', color: 'black' }}>
+                <Typography variant="h6" sx={{ mr: 1, fontWeight: 'bold', fontSize: '1.2rem', color: 'white' }}>
                   {testimonial.name}
                 </Typography>
                 <Link
@@ -51,10 +51,10 @@ function TestimonialCard({ testimonial }) {
                   rel="noopener noreferrer" 
                   color="inherit"
                 >
-                  <LinkedInIcon sx={{ color: '#0077b5', fontSize: 20 }} />
+                  <LinkedInIcon sx={{ color: 'white', fontSize: 30 }} />
                 </Link>
               </Box>
-              <Typography variant="body2" sx={{ fontSize: '1rem', color: 'black' }}>
+              <Typography variant="body2" sx={{ fontSize: '1rem', color: 'white' }}>
                 {testimonial.position}, {testimonial.company}
               </Typography>
             </Box>
@@ -72,10 +72,10 @@ function TestimonialCard({ testimonial }) {
   
         {/* Description */}
         <Typography variant="body1" sx={{ 
-          fontStyle: 'italic', 
+          // fontStyle: 'italic', 
           lineHeight: 1.6,
-          color: 'black',
-          fontSize: '1.1rem',
+          color: 'white',
+          fontSize: '1.3rem',
           mb: 2
         }}>
           {testimonial.summary}
@@ -88,8 +88,8 @@ function TestimonialCard({ testimonial }) {
             variant="body2"
             onClick={handleOpen}
             sx={{ 
-              color: 'black',
-              textDecoration: 'none',
+              color: 'white',
+              textDecoration: 'underline',
               fontWeight: 'medium',
               fontSize: '1rem',
               '&:hover': {
