@@ -28,7 +28,7 @@
     "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "El Salvador",
     "Grenada", "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico",
     "Nicaragua", "Panama", "Saint Kitts and Nevis", "Saint Lucia",
-    "Saint Vincent and the Grenadines", "Trinidad and Tobago", "United States"
+    "Saint Vincent and the Grenadines", "Trinidad and Tobago", "United States of America"
   ],
 
   "South America": [
@@ -37,8 +37,7 @@
   ],
 
   "Oceania": [
-    "Australia", "Fiji", "Kiribati", "Marshall Islands", "Micronesia",
-    "Nauru", "New Zealand", "Palau", "Papua New Guinea", "Samoa",
-    "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu"
+    "Australia", "Fiji", "Kiribati", "New Zealand", "Papua New Guinea", 
+    "Samoa", "Solomon Islands", "Tonga", "Tuvalu"
   ]
 }
