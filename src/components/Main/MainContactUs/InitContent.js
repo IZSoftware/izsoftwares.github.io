@@ -6,10 +6,7 @@ import {
   Container,
   Grid,
   TextField,
-  Select,
-  MenuItem,
   FormControl,
-  InputLabel,
   FormControlLabel,
   Switch,
   Typography,
@@ -37,6 +34,9 @@ const API_CONFIG = {
 
 // Email validation regex pattern
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// Phone validation regex pattern (supports international format)
+const PHONE_REGEX = /^[\d\s\-+().]{7,20}$/;
 
 // iOS-style Switch Component - Simplified
 const IOSSwitch = styled(Switch)(({ theme }) => ({
@@ -142,25 +142,18 @@ const getAllCountries = () => {
   return allCountries.sort();
 };
 
-// Group countries by continent for dropdown
-const getCountriesByContinent = () => {
-  return Object.entries(countriesData).map(([continent, countries]) => ({
-    continent,
-    countries: countries.sort()
-  }));
-};
-
 const ContactUsPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [modal, setModal] = useState(null);
   const [formData, setFormData] = useState({
-    full_name: '',
-    business_email: '',
-    work_phone: '',
-    company_name: '',
+    name: '',
+    email: '',
+    message: '',
+    phone: '',
     country: '',
-    sign_nda: false,
-    message: ''
+    company: '',
+    interest: '',
+    ndaRequested: false
   });
   const [errors, setErrors] = useState({});
 
@@ -172,7 +165,6 @@ const ContactUsPage = () => {
 
   // Get countries data
   const allCountries = getAllCountries();
-  const countriesByContinent = getCountriesByContinent();
 
   const showModal = (message, type = 'success') => {
     setModal({ message, type });
@@ -185,14 +177,51 @@ const ContactUsPage = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Email validation
-    if (formData.business_email && !EMAIL_REGEX.test(formData.business_email)) {
-      newErrors.business_email = 'Please enter a valid business email address';
+    // Name validation (required, 2-100 chars)
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters';
+    } else if (formData.name.trim().length > 100) {
+      newErrors.name = 'Name must be less than 100 characters';
     }
 
-    // Phone number validation (only numbers)
-    if (formData.work_phone && !/^\d+$/.test(formData.work_phone)) {
-      newErrors.work_phone = 'Phone number should contain only numbers';
+    // Email validation (required, valid format, max 100 chars)
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!EMAIL_REGEX.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    } else if (formData.email.length > 100) {
+      newErrors.email = 'Email must be less than 100 characters';
+    }
+
+    // Message validation (required, 10-5000 chars)
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+    } else if (formData.message.trim().length > 5000) {
+      newErrors.message = 'Message must be less than 5000 characters';
+    }
+
+    // Phone validation (optional, but if provided: 7-20 chars, international format)
+    if (formData.phone && !PHONE_REGEX.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number (7-20 characters, international format supported)';
+    }
+
+    // Country validation (optional, but if provided: max 100 chars)
+    if (formData.country && formData.country.length > 100) {
+      newErrors.country = 'Country must be less than 100 characters';
+    }
+
+    // Company validation (optional, but if provided: max 200 chars)
+    if (formData.company && formData.company.length > 200) {
+      newErrors.company = 'Company name must be less than 200 characters';
+    }
+
+    // Interest validation (optional, but if provided: max 100 chars)
+    if (formData.interest && formData.interest.length > 100) {
+      newErrors.interest = 'Interest must be less than 100 characters';
     }
 
     setErrors(newErrors);
@@ -203,19 +232,10 @@ const ContactUsPage = () => {
     const { id, value, type, checked } = e.target;
     const fieldId = id || e.target.name;
     
-    // For phone number input, only allow numbers
-    if (fieldId === 'work_phone') {
-      const numbersOnly = value.replace(/\D/g, '');
-      setFormData(prev => ({
-        ...prev,
-        [fieldId]: numbersOnly
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [fieldId]: type === 'checkbox' ? checked : value
-      }));
-    }
+    setFormData(prev => ({
+      ...prev,
+      [fieldId]: type === 'checkbox' ? checked : value
+    }));
 
     // Clear error when user starts typing
     if (errors[fieldId]) {
@@ -238,18 +258,26 @@ const ContactUsPage = () => {
     const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.TIMEOUT);
 
     try {
+      // Prepare the request body according to API requirements
+      const requestBody = {
+        name: data.name.trim(),
+        email: data.email.trim(),
+        message: data.message.trim(),
+        source: 'IZSoftwares',
+        ...(data.phone && { phone: data.phone }),
+        ...(data.country && { country: data.country }),
+        ...(data.company && { company: data.company }),
+        ...(data.interest && { interest: data.interest }),
+        ...(data.ndaRequested && { ndaRequested: data.ndaRequested })
+      };
+
       const response = await fetch(API_CONFIG.URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         mode: 'cors',
-        body: JSON.stringify({
-          name: data.full_name,
-          email: data.business_email,
-          message: `Work Phone: ${data.work_phone}\nCompany: ${data.company_name}\nCountry: ${data.country}\nSign NDA: ${data.sign_nda ? 'Yes' : 'No'}\nMessage: ${data.message}`,
-          source: 'Evolv'
-        }),
+        body: JSON.stringify(requestBody),
         signal: controller.signal
       });
 
@@ -299,13 +327,14 @@ const ContactUsPage = () => {
       
       // Reset form immediately
       setFormData({
-        full_name: '',
-        business_email: '',
-        work_phone: '',
-        company_name: '',
+        name: '',
+        email: '',
+        message: '',
+        phone: '',
         country: '',
-        sign_nda: false,
-        message: ''
+        company: '',
+        interest: '',
+        ndaRequested: false
       });
 
       // Clear errors
@@ -413,66 +442,73 @@ const ContactUsPage = () => {
 
                   <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
                     <Grid container spacing={3}>
-                      {/* Full Name and Business Email - Two Columns */}
+                      {/* Name and Email - Two Columns */}
                       <Grid item xs={12} sm={6}>
                         <TextField
                           fullWidth
-                          id="full_name"
+                          id="name"
                           label="Full Name"
-                          value={formData.full_name}
+                          value={formData.name}
                           onChange={handleInputChange}
                           required
                           variant="outlined"
                           size="small"
+                          error={!!errors.name}
+                          helperText={errors.name}
+                          inputProps={{ maxLength: 100 }}
                         />
                       </Grid>
 
                       <Grid item xs={12} sm={6}>
                         <TextField
                           fullWidth
-                          id="business_email"
-                          label="Business Email"
+                          id="email"
+                          label="Email"
                           type="email"
-                          value={formData.business_email}
+                          value={formData.email}
                           onChange={handleInputChange}
                           required
                           variant="outlined"
-                          error={!!errors.business_email}
-                          helperText={errors.business_email}
+                          error={!!errors.email}
+                          helperText={errors.email}
                           size="small"
+                          inputProps={{ maxLength: 100 }}
                         />
                       </Grid>
 
-                      {/* Work Phone Number and Company Name - Two Columns */}
+                      {/* Phone and Company - Two Columns */}
                       <Grid item xs={12} sm={6}>
                         <TextField
                           fullWidth
-                          id="work_phone"
-                          label="Work Phone Number"
-                          value={formData.work_phone}
+                          id="phone"
+                          label="Phone Number (Optional)"
+                          value={formData.phone}
                           onChange={handleInputChange}
-                          required
                           variant="outlined"
-                          error={!!errors.work_phone}
-                          helperText={errors.work_phone}
+                          error={!!errors.phone}
+                          helperText={errors.phone}
                           size="small"
+                          placeholder="+1 (555) 123-4567"
+                          inputProps={{ maxLength: 20 }}
                         />
                       </Grid>
 
                       <Grid item xs={12} sm={6}>
                         <TextField
                           fullWidth
-                          id="company_name"
-                          label="Company Name"
-                          value={formData.company_name}
+                          id="company"
+                          label="Company (Optional)"
+                          value={formData.company}
                           onChange={handleInputChange}
-                          required
                           variant="outlined"
+                          error={!!errors.company}
+                          helperText={errors.company}
                           size="small"
+                          inputProps={{ maxLength: 200 }}
                         />
                       </Grid>
 
-                      {/* Country with Autocomplete */}
+                      {/* Country and Interest - Two Columns */}
                       <Grid item xs={12} sm={6}>
                         <FormControl fullWidth size="small">
                           <Autocomplete
@@ -483,8 +519,9 @@ const ContactUsPage = () => {
                             renderInput={(params) => (
                               <TextField
                                 {...params}
-                                label="Country"
-                                required
+                                label="Country (Optional)"
+                                error={!!errors.country}
+                                helperText={errors.country}
                                 size="small"
                                 InputProps={{
                                   ...params.InputProps,
@@ -508,62 +545,29 @@ const ContactUsPage = () => {
                         </FormControl>
                       </Grid>
 
-                      {/* Alternative: Grouped Dropdown (commented out) */}
-                      {/* <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth size="small">
-                          <InputLabel id="country-label">Country</InputLabel>
-                          <Select
-                            labelId="country-label"
-                            id="country"
-                            value={formData.country}
-                            label="Country"
-                            onChange={handleInputChange}
-                            required
-                            MenuProps={{
-                              PaperProps: {
-                                style: {
-                                  maxHeight: 300
-                                }
-                              }
-                            }}
-                          >
-                            {countriesByContinent.map(({ continent, countries }) => [
-                              <MenuItem 
-                                key={continent} 
-                                value="" 
-                                disabled 
-                                sx={{ 
-                                  backgroundColor: 'grey.100',
-                                  fontWeight: 'bold',
-                                  fontSize: '0.875rem',
-                                  color: 'text.primary'
-                                }}
-                              >
-                                {continent}
-                              </MenuItem>,
-                              ...countries.map(country => (
-                                <MenuItem 
-                                  key={country} 
-                                  value={country}
-                                  sx={{ 
-                                    pl: 3,
-                                    fontSize: '0.875rem'
-                                  }}
-                                >
-                                  {country}
-                                </MenuItem>
-                              ))
-                            ])}
-                          </Select>
-                        </FormControl>
-                      </Grid> */}
-
                       <Grid item xs={12} sm={6}>
+                        <TextField
+                          fullWidth
+                          id="interest"
+                          label="Interest (Optional)"
+                          value={formData.interest}
+                          onChange={handleInputChange}
+                          variant="outlined"
+                          error={!!errors.interest}
+                          helperText={errors.interest}
+                          size="small"
+                          inputProps={{ maxLength: 100 }}
+                          placeholder="Product/service interest"
+                        />
+                      </Grid>
+
+                      {/* NDA Switch */}
+                      <Grid item xs={12}>
                         <FormControlLabel
                           control={
                             <IOSSwitch
-                              id="sign_nda"
-                              checked={formData.sign_nda}
+                              id="ndaRequested"
+                              checked={formData.ndaRequested}
                               onChange={handleInputChange}
                             />
                           }
@@ -592,6 +596,9 @@ const ContactUsPage = () => {
                           multiline
                           rows={4}
                           size="small"
+                          error={!!errors.message}
+                          helperText={errors.message}
+                          inputProps={{ maxLength: 5000 }}
                         />
                       </Grid>
 
