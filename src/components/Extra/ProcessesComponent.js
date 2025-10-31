@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import RequirementImg from '../../resources/images/processes/requirement.svg';
@@ -56,16 +55,13 @@ export default function ProcessesComponent(){
                     <Grid item xs={12} sm={12} md={6} lg={4}>
                         <Box
                             sx={{
-                                minWidth: '250px !important',
-                                maxWidth: '250px !important',
-                                minHeight: '350px !important',        
+                                minWidth: '100% !important',
+                                minHeight: '100% !important',     
                                 padding: '45px 25px !important',
                                 borderRadius: '15px !important',
                                 boxShadow: '0px 10px 15px 0px rgba(0,0,0,0.1) !important',
                                 webkitBoxShadow: '0px 10px 15px 0px rgba(0,0,0,0.1) !important',
                                 mozBoxShadow: '0px 10px 15px 0px rgba(0,0,0,0.1) !important',
-                                minWidth: '100% !important',
-                                minHeight: '100% !important'
                             }}>
                        
                             <div class="title-box text-center">

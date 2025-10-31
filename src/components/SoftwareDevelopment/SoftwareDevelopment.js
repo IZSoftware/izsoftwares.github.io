@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import { Partnerships } from "../../components/carousel";
+import { Partnerships } from "../carousel";
 import IndustriesComponent from "../../components/Extra/IndustriesComponent";
 import ListComponent from "../../components/ListComponent/ListComponent";
-import { izIndustriesData } from "../../components/Data/serviceMap";
-import listData from "../Data/listdata";
+import { izIndustriesData } from "../Data/ServiceMap";
+import listData from "../Data/Listdata";
 import OurOfferingsSoftwareDev from "../../components/ourOfferings/OurOfferingsSoftwareDev";
 import Testimonial from "../Testimonial/Testimonial";
 import ImageCard from "../../pages/ImageCard/ImageCard";
 import FAQ from "../../components/Faq/FAQ";
-import faqData from "../../components/Data/faqdata";
+import combinedFaqData from "../../components/Data/combinedFaqData";
 import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
 import Share from "../../components/share/Share";
 
@@ -292,7 +292,10 @@ const SoftwareDevelopment = () => {
                 >
                   FAQ about Our Software Development Services:
                 </Typography>
-                <FAQ faqData={faqData} />
+                <FAQ faqData={combinedFaqData.softwareDevelopment.map(faq => ({
+                  title: faq.question,
+                  description: faq.answer
+                }))} />
               </Box>
             </Grid>
           </Grid>

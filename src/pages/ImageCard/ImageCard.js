@@ -1,6 +1,6 @@
 import React from "react";
 import ImageCardComponent from "../../components/ImageCard/ImageCardComponent";
-import data from "../../components/Data/imagedata";
+import data from "../../components/Data/Imagedata";
 import { Box, Grid } from "@mui/material";
 
 const ImageCard = () => {

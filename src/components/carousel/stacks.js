@@ -1,6 +1,6 @@
 import React from 'react'
-import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
-import { Aws, cloud } from '../Data/serviceMap';
+import PopupState, { bindTrigger } from 'material-ui-popup-state';
+import { Aws } from '../Data/ServiceMap';
 
 function Stacks() {
   return (

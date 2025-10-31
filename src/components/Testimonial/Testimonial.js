@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CloseIcon from '@mui/icons-material/Close';
-import testimonialsData from '../../components/Data/testimonialData.json';
+import testimonialsData from '../../components/Data/TestimonialData.json';
 
 function TestimonialCard({ testimonial }) {
   const [open, setOpen] = useState(false);

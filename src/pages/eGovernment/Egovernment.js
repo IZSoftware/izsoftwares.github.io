@@ -17,7 +17,7 @@ import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import IndustriesComponent from '../../components/eGovernment/IndustriesComponent';
 import DropdownModal from '../../components/eGovernment/DropdownModal';
 import InfoModal from '../../components/eGovernment/InfoModal';
-import servicesData from '../../components/Data/servicesData.json';
+import servicesData from '../../components/Data/ServicesData.json';
 import { iconMap } from '../../components/eGovernment/iconMap';
 import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
 import Share from "../../components/share/Share";

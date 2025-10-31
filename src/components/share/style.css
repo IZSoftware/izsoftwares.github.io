@@ -1,6 +1,7 @@
 .share-component {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-bottom: 25px;
     margin-top: 25px;
     top: unset;
@@ -9,8 +10,11 @@
 .share-component-title {
     font-size: 20px;
     font-weight: bold;
-    line-height: 40px;
+    line-height: 1;
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 40px;
 }
 
 .share-component-link {

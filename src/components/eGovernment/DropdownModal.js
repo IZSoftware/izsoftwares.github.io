@@ -10,8 +10,8 @@ import {
   Chip,
 } from '@mui/material';
 import { Close, AccessTime, LocalOffer, Business } from '@mui/icons-material';
-import serviceOptionsData from '../../components/Data/serviceOptions.json';
-import serviceDetailsData from '../../components/Data/serviceDetails.json';
+import serviceOptionsData from '../../components/Data/ServiceOptions.json';
+import serviceDetailsData from '../../components/Data/eGovernmentData.json';
 
 const DropdownModal = ({ open, onClose, service }) => {
   const [selectedOption, setSelectedOption] = useState('');

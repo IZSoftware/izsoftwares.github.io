@@ -1,6 +1,5 @@
-import React from 'react'
 import { CareerHeader } from '../../components/carousel/CarouselHead';
-import { Grid, Box, Paper, Typography } from '@mui/material';
+import { Grid, Paper } from '@mui/material';
 import HomeDriveImg from '../../resources/images/home-carousel/home_drive.jpg';
 
 

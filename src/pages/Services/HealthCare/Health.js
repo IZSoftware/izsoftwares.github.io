@@ -1,10 +1,7 @@
-import React from 'react'
 import './health.css'
-import { Box, Grid, Hidden, Stack } from '@mui/material'
+import { Box, Hidden, Stack } from '@mui/material'
 import StatsItem from '../../../components/StatsItem'
-import ServicesProjects from '../../../components/carousel/Healthcare'
 import { FlexContainer, SoftwareTypesCard } from '../../../components/Extra'
-import Stacks from '../../../components/carousel/stacks'
 
 function Health() {
   return (

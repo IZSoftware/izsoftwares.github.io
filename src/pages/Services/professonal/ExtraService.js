@@ -1,9 +1,5 @@
-import React from 'react'
-import { CardCarousel } from '../../../components/carousel/CarouselHead'
 import './pro.css'
 import { Stats } from '../../../components/StatsItem/Stats'
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
 import { Hidden } from '@mui/material';
 
 

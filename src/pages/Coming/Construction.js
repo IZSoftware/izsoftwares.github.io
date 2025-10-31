@@ -1,6 +1,4 @@
-import React from 'react';
-import { Box, Grid, Button, Typography } from '@mui/material'
-import HomeIcon from '@material-ui/icons/Home';
+import { Box, Grid, Typography } from '@mui/material'
 import ConstructionImg from '../../resources/images/Construction.jpg';
 import './style.css';
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Typography, Button, Container, Grid, Card, CardContent, IconButton } from '@mui/material';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import UIUX from '../../assets/images/UX_UI_design.png';
 import uiuxData from '../../components/Data/uiuxdesignData.json';
