@@ -1,15 +1,8 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import IZNavBar from './components/Header/IZNavBar'
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home';
-import Service from './pages/Services';
-import DigitalTransform from './pages/Services/DigitalTransform';
-import Health from './pages/Services/HealthCare/Health';
-import Professional from './pages/Services/professonal/Professional';
-import ExtraService from './pages/Services/professonal/ExtraService';
-import CaseStudyPage from './pages/CaseStudy';
 import Blog from './pages/Blog/Blog';
 import BlogPost from './pages/Blog/BlogPost';
 import Careers from './pages/Careers/Careers';

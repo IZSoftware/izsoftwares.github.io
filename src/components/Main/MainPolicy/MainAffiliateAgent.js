@@ -27,7 +27,7 @@ export default function MainAffiliateAgent(){
                             </Grid>
                             <Grid item xs={12} sm={12} md={10}>
                                 <br />
-                                <img src={AffiliateAgentImage} alt="IZ Affiliate Image" ></img>
+                                <img src={AffiliateAgentImage} alt="IZ Affiliate" ></img>
                             </Grid>
                         </Grid>
                         <br /><br />

@@ -9,32 +9,6 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import "./style.css"
 
 function NavBarCollapse() {
-    /* For Services DropDown */
-    const [anchorElAA, setAnchorElAA] = useState(null);
-
-    const handleMouseOverAA = (event) => {
-        setAnchorElAA(event.currentTarget);
-    };
-
-    const handleMouseOutAA = () => {
-        setAnchorElAA(null);
-    };
-
-    const openAA = Boolean(anchorElAA);
-
-    /* For Industries DropDown */
-    const [anchorElBB, setAnchorElBB] = useState(null);
-
-    const handleMouseOverBB = (event) => {
-        setAnchorElBB(event.currentTarget);
-    };
-
-    const handleMouseOutBB = () => {
-        setAnchorElBB(null);
-    };
-
-    const openBB = Boolean(anchorElBB);
-
     /* For Connect DropDown */
     const [anchorElConnectMenu, setAnchorElConnectMenu] = useState(null);
     const [isConnectMenuOpen, setConnectMenuOpen] = useState(false);
@@ -66,33 +40,6 @@ function NavBarCollapse() {
     };
 
     const openProductsMenu = Boolean(anchorElProductsMenu) && isProductsMenuOpen;
-
-    const [anchorEle, setAnchorEle] = useState(null);
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const [anchorEl2, setAnchorEl2] = React.useState(null);
-    const [anchorEl1, setAnchorEl1] = React.useState(null);
-    const [anchorEl1ee, setAnchorEl1ee] = React.useState(null);
-    const [anchorEl1ee1, setAnchorEl1ee1] = React.useState(null);
-
-    const handleMouseOver = (event) => {
-        setAnchorEl1ee(event.currentTarget);
-    };
-
-    const handleMouseOver1 = (event) => {
-        setAnchorEl1ee1(event.currentTarget);
-    };
-
-    const handleMouseOut = () => {
-        setAnchorEl1ee(null);
-    };
-
-    const handleMouseOut1 = () => {
-        setAnchorEl1ee1(null);
-    };
-
-    const open = Boolean(anchorEl);
-    const open1 = Boolean(anchorEl1);
-    const open2 = Boolean(anchorEl2);
 
     const ButtonStyledLink = styled(Button)({
         '&:hover': {
