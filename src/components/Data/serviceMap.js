@@ -8,11 +8,11 @@ import PhpLogo from '../../resources/images/ServiceMap/php-logo.svg';
 import JavaLogo from '../../resources/images/ServiceMap/java-logo.svg';
 import PythonLogo from '../../resources/images/ServiceMap/python_1.svg';
 import NodeLogo from '../../resources/images/ServiceMap/node-js-logo-small.svg';
-import HTMLLogo from "../../assets/images/html.png";
-import CSSLogo from "../../assets/images/css.png";
+import HTMLLogo from "../../resources/images/ServiceMap/html.svg";
+import CSSLogo from "../../resources/images/ServiceMap/css.svg";
 import JavaScriptLogo from "../../assets/images/javascript-logo.png"
 import ReactLogo from "../../assets/images/react-js-logo.png"
-import AngularLogo from "../../assets/images/angular-logo.png"
+import AngularLogo from "../../resources/images/ServiceMap/angular-logo.svg"
 import VueLogo from "../../assets/images/vuejs-logo.png"
 import NextLogo from "../../assets/images/nextjs.png"
 import AndroidLogo from "../../assets/images/android-logo.png"
@@ -20,28 +20,28 @@ import IOSLogo from "../../assets/images/ios-logo.png"
 import ProgressiveWebAppLogo from "../../assets/images/pwa-logo.png"
 import PostgreSQLLogo from "../../assets/images/postgresql-vertical-logo.png"
 import MySQLLogo from "../../assets/images/mysql.png"
-import OracleLogo from "../../assets/images/oracle.png"
-import MongoDBLogo from "../../assets/images/mongodb-logo.png"
+import OracleLogo from "../../resources/images/ServiceMap/oracle.svg";
+import MongoDBLogo from "../../resources/images/ServiceMap/mongodb-logo.svg"
 import AWSLogo from "../../assets/images/aws.png"
-import GoogleCloudLogo from "../../assets/images/mongodb-logo.png"
+import GoogleCloudLogo from "../../resources/images/ServiceMap/google-cloud-logo.svg"
 import DigitalOceanLogo from "../../assets/images/digital-ocean.png"
-import AmazonS3Logo from "../../assets/images/amazon-s3.png"
-import AmazonDynamoLogo from "../../assets/images/amazon-dynamodb-logo.png"
-import AmazonDocumentDBLogo from "../../assets/images/amazon-documentdb.png"
-import AmazonRDSLogo from "../../assets/images/amazon-rds-logo.png"
-import AWSElasticacheLogo from "../../assets/images/aws-elasticache.png"
-import Gitlab from "../../assets/images/gitlab.png"
+import AmazonS3Logo from "../../resources/images/ServiceMap/amazon-s3.svg"
+import AmazonDynamoLogo from  "../../resources/images/ServiceMap/amazon-dynamodb-logo.svg"
+import AmazonDocumentDBLogo from  "../../resources/images/ServiceMap/amazon-dynamodb-logo.svg"
+import AmazonRDSLogo from  "../../resources/images/ServiceMap/amazon-rds-logo.svg"
+import AWSElasticacheLogo from  "../../resources/images/ServiceMap/aws-elasticache.svg"
+import Gitlab from "../../resources/images/ServiceMap/jenkins (1).svg"
 import KubernetesLogo from "../../assets/images/kubernetes-logo.png"
 import AwsDeveloperToolsLogo from "../../assets/images/aws-developer-tools.png"
-import GoogleDeveloperToolsLogo  from "../../assets/images/google-developer-tools.png"
-import JenkinsLogo  from "../../assets/images/gitlab.png"
+import GoogleDeveloperToolsLogo from "../../resources/images/ServiceMap/google-developer-tools.svg"
+import DockerLogo  from "../../resources/images/ServiceMap/jenkins.svg"
 import PrometheusLogo  from "../../assets/images/prometheus-logo.png"
 import GrafanaLogo  from "../../assets/images/grafana-logo.png"
 import ElasticSearchLogo  from "../../assets/images/elasticsearch.png"
-import SeleniumLogo  from "../../assets/images/selenium.png"
-import PostmanLogo  from "../../assets/images/postman.png"
-import ApacheJmeterLogo  from "../../assets/images/apache-jmeter.png"
-import FlutterLogo  from "../../assets/images/flutter-logo.png"
+import SeleniumLogo  from "../../resources/images/ServiceMap/selenium.svg"
+import PostmanLogo  from "../../resources/images/ServiceMap/postman.svg"
+import ApacheJmeterLogo  from "../../resources/images/ServiceMap/apache-jmeter.svg"
+import FlutterLogo  from "../../resources/images/ServiceMap/flutter-logo.svg"
 
 
 const aboutServiceMap =[
@@ -299,7 +299,7 @@ const cloud =[
 
 const devops =[
     {
-        image:JenkinsLogo,
+        image:DockerLogo,
       
     },
     {

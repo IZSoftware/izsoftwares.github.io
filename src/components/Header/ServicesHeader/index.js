@@ -3,6 +3,7 @@ import { Box, Hidden, Stack } from '@mui/material'
 // import StatsItem from '../../components/StatsItem'
 import StatsItem from '../../StatsItem'
 import { FlexContainer, Optimal, SoftwareForAdvancedBusiness, SoftwareTypesCard, Technologies } from '../../Extra'
+import SoftwareDevelopmentIllustration from '../../../assets/images/cover-pic-sw-development.svg'
 
 
 
@@ -32,7 +33,7 @@ function ServiceHeader() {
         <div className="icp-image-wrapper ">
         <img  
         className='img'
-        src="https://www.scnsoft.com/software-development-services/software-development/cro/cover-pic-sw-development.svg"
+        src={SoftwareDevelopmentIllustration}
         alt="Software development cover illustration" />
         </div>
         </div>

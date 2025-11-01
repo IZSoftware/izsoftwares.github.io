@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container, Grid, Card, CardContent, IconButton
 import { Star, ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import UIUX from '../../assets/images/UX_UI_design.png';
-import uiuxData from '../../components/Data/uiuxdesignData.json';
+import uiuxData from '../../components/Data/UiuxdesignData.json';
 import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
 import Share from '../../components/share/Share';
 

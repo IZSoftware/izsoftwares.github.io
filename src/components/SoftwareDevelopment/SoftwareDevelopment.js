@@ -9,7 +9,7 @@ import OurOfferingsSoftwareDev from "../../components/ourOfferings/OurOfferingsS
 import Testimonial from "../Testimonial/Testimonial";
 import ImageCard from "../../pages/ImageCard/ImageCard";
 import FAQ from "../../components/Faq/FAQ";
-import combinedFaqData from "../../components/Data/combinedFaqData";
+import combinedFaqData from "../../components/Data/CombinedFaqData";
 import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
 import Share from "../../components/share/Share";
 
