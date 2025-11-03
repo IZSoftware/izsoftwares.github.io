@@ -1,15 +1,8 @@
-import React from 'react'
 import { Optimal, SoftwareTypesCard, Transform } from '../../components/Extra'
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 import TimeLine from '../../components/Timeline/TimeLine';
 import Share from '../../components/share/Share';
 import { Box } from '@mui/material';
-import { geoData } from '../../components/Data/serviceMap';
+import { geoData } from '../../components/Data/ServiceMap';
 import Typography from '@mui/material/Typography';
 
 export default function DigitalTransform() {

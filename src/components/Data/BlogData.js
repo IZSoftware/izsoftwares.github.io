@@ -1,6 +1,6 @@
+/* eslint-disable no-multi-str */
 import OutsourcingImg from '../../resources/images/blog/outsourcing-services.png';
 import PronsAgileImg from '../../resources/images/blog/prons-agile.png';
-import MvpVSPrototypeImg from '../../resources/images/blog/mvp-vs-prototype.png';
 import StockOptimisation from  '../../resources/images/blog/Stock_Optimisation_Header.png';
 import Persona from "../../resources/images/IZ.svg";
 
@@ -51,16 +51,16 @@ export const blogDataDetail = [
         "timeframe": 5,
         "image": OutsourcingImg,
         "content": "Why to choose Software Outsourcing Services and how to find a good outsourcing partner.",
-        "overviewContent": "Software outsourcing services involve entrusting specific software projects to a seasoned IT/Software company. \
-                            Rather than managing an internal team, businesses are progressively opting to assign their IT operations and duties—such as software development and upkeep, legacy modernization, ui/ux design, quality assurance, and more—to an external software outsourcing vendor. \
-                            In essence, instead of handling all software-related tasks internally, companies are leveraging the expertise and resources of external service providers to efficiently manage and execute various aspects of their software projects. \
-                            This approach allows businesses to focus on their core competencies while benefiting from the specialized skills and efficiency of external software outsourcing vendors.",
+        "overviewContent": `Software outsourcing services involve entrusting specific software projects to a seasoned IT/Software company. 
+                            Rather than managing an internal team, businesses are progressively opting to assign their IT operations and duties—such as software development and upkeep, legacy modernization, ui/ux design, quality assurance, and more—to an external software outsourcing vendor. 
+                            In essence, instead of handling all software-related tasks internally, companies are leveraging the expertise and resources of external service providers to efficiently manage and execute various aspects of their software projects. 
+                            This approach allows businesses to focus on their core competencies while benefiting from the specialized skills and efficiency of external software outsourcing vendors.`,
         "keyFeatures": [],
         "keyBenefits": [
             {
             "subtitle": "Cost Savings",
-            "description": "Smaller cost as compared to hiring an in-house Software Team is the biggest motivation for outsourcing Software services. \
-                            By outsourcing, you can save on salaries, social benefits, onboarding and training, office space, and other costs associated with having in-house IT experts."
+            "description": "Smaller cost as compared to hiring an in-house Software Team is the biggest motivation for outsourcing Software services. " +
+                          "By outsourcing, you can save on salaries, social benefits, onboarding and training, office space, and other costs associated with having in-house IT experts."
             },
             {
             "subtitle": "Full Focus on Business Development",

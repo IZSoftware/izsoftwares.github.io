@@ -68,7 +68,7 @@ export default function BlogPost() {
                 <Grid container direction="row" justifyContent="flex-start">
                   <Grid item xs={12} sm={10}>
                     <img
-                      alt='Blog Image'
+                      alt={selectedBlog.title || ''}
                       src={selectedBlog.image}
                       style={{ width: '100%', height: 'auto', maxWidth: '100%' }}
                     />

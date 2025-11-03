@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import { Extra, Industries, Policy, SolutionOffered, Technologies } from '../../components/Extra'
-import { aboutServiceMap, solutionData, geoData, pricePolicy, izIndustriesData } from '../../components/Data/serviceMap'
+import { aboutServiceMap, solutionData, geoData, pricePolicy, izIndustriesData } from '../../components/Data/ServiceMap'
 
 import './styles.css'
 import { Partnerships } from '../../components/carousel'

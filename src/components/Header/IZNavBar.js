@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
@@ -7,24 +6,10 @@ import Avatar from '@mui/material/Avatar';
 import Logo from '../../resources/images/IZ.svg';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
-import { Button, Menu, MenuItem, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 // Define a constant for the top navbar's height to ensure consistency
-const TOP_NAVBAR_HEIGHT = 40; 
 
 export default function IZNavBar() {
-    const [anchorElSupport, setAnchorElSupport] = useState(null);
-
-    const handleMouseEnterSupport = (event) => {
-        setAnchorElSupport(event.currentTarget);
-    };
-
-    const handleMouseLeaveSupport = () => {
-        setAnchorElSupport(null);
-    };
-
-    const openSupport = Boolean(anchorElSupport);
 
     return (
         <div>

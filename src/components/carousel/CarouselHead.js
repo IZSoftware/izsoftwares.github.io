@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import HomePowerImg from '../../resources/images/home-carousel/home_power.jpg';
 import HomeStreamlineImg from '../../resources/images/home-carousel/home_streamline.jpg';
 import HomeDriveImg from '../../resources/images/home-carousel/home_drive.jpg';
+import SideBeachTurkey from '../../resources/images/CareerCarousel/side-beach-turkey.jpg';
+import EnterprisePortalDevelopment from '../../resources/images/CareerCarousel/enterprise-portal-development-for-a-financial-advisory-firm.jpg';
+import CustomerPortalDevelopment from '../../resources/images/CareerCarousel/customer-portal-development-for-a-tax-consultation-agency.jpg';
+import DevelopmentSharepointRecordsManagementSystem from '../../resources/images/CareerCarousel/development-of-a-sharepoint-records-management-system-for-a-us-legal-firm.jpg';
 
 
 const homeCarousel = [
@@ -24,33 +28,27 @@ const homeCarousel = [
   },
 ];
 
-const careerCarousel = [
-  {
-    name: 'Image Career',
-    imageUrl: HomeDriveImg
-  }
-];
 
 const data = [
   {
     name: 'Development of a Records Management System for a Legal Firm',
     description: 'BI solution delivered by ScienceSoft allowed the Customer to integrate the data from disparate sources and better understand their business with a comprehensive financial analysis.',
-    imageUrl: 'https://www.worldbeachguide.com/photos/side-beach-turkey.jpg',
+    imageUrl: SideBeachTurkey,
   },
   {
     name: 'An enterprise portal that offers advanced team collaboration and project management functionality and supports regulatory compliance.',
     description: 'An enterprise portal that offers advanced team collaboration and project management functionality and supports regulatory compliance.',
-    imageUrl: 'https://www.scnsoft.com/images-for-slider-with-content/custom-software-dev/enterprise-portal-development-for-a-financial-advisory-firm.jpg',
+    imageUrl: EnterprisePortalDevelopment
   },
   {
     name:'Development of a Records Management System for a Legal Firm',
     description: 'A SharePoint-based records management system with document profiling and calendaring capabilities. The system ensures records immutability and facilitates management of large volumes of legal documents.',
-    imageUrl:'https://www.scnsoft.com/images-for-slider-with-content/custom-software-dev/customer-portal-development-for-a-tax-consultation-agency.jpg',
+    imageUrl:CustomerPortalDevelopment
   },
   {
     name:'Development of a Records Management System for a Legal Firm',
     description: 'A SharePoint-based records management system with document profiling and calendaring capabilities. The system ensures records immutability and A SharePoint-based records management system with document profiling and calendaring capabilities. The system ensures records immutability and facilitates management of large volumes of legal documents.',
-    imageUrl: 'https://www.scnsoft.com/images-for-slider-with-content/sh-and-o365/development-of-a-sharepoint-records-management-system-for-a-us-legal-firm.jpg',
+    imageUrl: DevelopmentSharepointRecordsManagementSystem
   },
 ];
 export const BackgroundCarousel = () => {
@@ -92,10 +90,11 @@ const Item = ({ item }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [phrases.length]);
 
   useEffect(() => {
     setText(phrases[textIndex]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textIndex]);
 
   return (
@@ -191,7 +190,7 @@ const Itema = ({ item }) => {
 
 
 export const CardCarousel = () => {
-  const [text, setText] = useState('');
+  const [, setText] = useState('');
 
   const animateText = useCallback((direction) => {
     // Replace 'description' with the text you want to animate
@@ -218,7 +217,7 @@ export const CardCarousel = () => {
         },
       }}
     stopAutoPlayOnHover={false}>
-      {data.map((item, index) => (
+      {data.map((item) => (
         <Paper
        className='pepperSection'
       >

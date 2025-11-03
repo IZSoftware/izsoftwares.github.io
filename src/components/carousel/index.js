@@ -1,7 +1,4 @@
 import React from 'react';
-import { autoPlay } from 'react-swipeable-views-utils';
-import SwipeableViews from 'react-swipeable-views';
-import Slider from "react-slick";
 import Box from '@mui/material/Box';
 import { Grid, useMediaQuery, useTheme } from '@mui/material';
 import HealthcareIQ_Img from '../../resources/images/Partnership/HealthcareIQ.png';
@@ -11,6 +8,11 @@ import LaloImg from '../../resources/images/Partnership/Lalo.svg';
 import EatAndMoreImg from '../../resources/images/Partnership/EatAndMore1.jpg';
 import MinervaImg from '../../resources/images/Partnership/Minerva.png';
 
+// Import Swiper instead of react-swipeable-views
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const partnershipImg = [
   {
@@ -57,48 +59,53 @@ const partnershipImg = [
   }
 ];
 
-
 export function Partnerships() {
   const theme = useTheme();
   const isXS = useMediaQuery(theme.breakpoints.down('xs'));
   const isSM = useMediaQuery(theme.breakpoints.down('sm'));
   const isMD = useMediaQuery(theme.breakpoints.down('md'));
 
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: isXS ? 1 : (isSM ? 2 : (isMD ? 3 : 5)),
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "linear"
+  const getSlidesToShow = () => {
+    if (isXS) return 1;
+    if (isSM) return 2;
+    if (isMD) return 3;
+    return 5;
   };
-
 
   return (
     <div className='slider'>
-      <Slider {...settings}>
-        {partnershipImg.map((img, index) => {
-          return (
-            <div key={index}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <img src={img.image} title={img.name} alt={img.description} width={img.width} height={img.height} />
-                </Grid>
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={30}
+        slidesPerView={getSlidesToShow()}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        speed={1500}
+      >
+        {partnershipImg.map((img, index) => (
+          <SwiperSlide key={index}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <img 
+                  src={img.image} 
+                  title={img.name} 
+                  alt={img.description} 
+                  width={img.width} 
+                  height={img.height} 
+                  style={{ 
+                    display: 'block', 
+                    margin: '0 auto',
+                    objectFit: 'contain'
+                  }} 
+                />
               </Grid>
-            </div>
-          )
-        })}
-      </Slider>
+            </Grid>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
+  );
 }
-
-
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const successStories = [
   {
@@ -180,30 +187,38 @@ const successStories = [
   }
 ];
 
-
 export function SwipeableText() {
-    const theme = useTheme();
-    const [activeStep, setActiveStep] = React.useState(0);
-
-    const handleStepChange = (step) => {
-      setActiveStep(step);
-    };
+  const [, setActiveStep] = React.useState(0);
 
   return (
     <Box>
       <Grid container direction="row" justifyContent="center" alignItems="center">
-        <AutoPlaySwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={activeStep}
-          onChangeIndex={handleStepChange}
-          interval={7000}
-          enableMouseEvents>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          autoplay={{ delay: 7000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          onSlideChange={(swiper) => setActiveStep(swiper.activeIndex)}
+          loop={true}
+        >
           {successStories.map((step, index) => (
-            <div key={index}>
-              <Box sx={{ height: 'auto', display: 'block', maxWidth: '100%', overflow: 'hidden', backgroundColor: '#fafafa;', border: '10px solid #e0e0e0', borderRadius: 5, paddingLeft: 5, paddingRight: 5, paddingTop: 5, paddingBottom: 5}}>
+            <SwiperSlide key={index}>
+              <Box sx={{ 
+                height: 'auto', 
+                display: 'block', 
+                maxWidth: '100%', 
+                overflow: 'hidden', 
+                backgroundColor: '#fafafa', 
+                border: '10px solid #e0e0e0', 
+                borderRadius: 5, 
+                paddingLeft: 5, 
+                paddingRight: 5, 
+                paddingTop: 5, 
+                paddingBottom: 5
+              }}>
                 <Grid container direction="row" justifyContent="flex-start" alignItems="center">
                   <div>
-                   
                     {step.label.content.map((item, itemIndex) => (
                       <React.Fragment key={itemIndex}>
                         {item.type === 'phrase' && <p>{item.text}</p>}
@@ -227,19 +242,16 @@ export function SwipeableText() {
                       <b>{step.country}</b>
                     </div>
                   </Grid>
-                  
                 </Grid>
                 <br />
                 <div>
                   <img src={step.profile} width={120} height={60} alt="Logo" />
                 </div>
               </Box>
-            </div>
+            </SwiperSlide>
           ))}
-        </AutoPlaySwipeableViews>
+        </Swiper>
       </Grid>
     </Box>
-
-
   );
 }

@@ -1,11 +1,7 @@
-import React from 'react'
 import '../HealthCare/health.css'
-import { Box, Grid, Hidden, Stack } from '@mui/material'
+import { Box, Hidden, Stack } from '@mui/material'
 import StatsItem from '../../../components/StatsItem'
-import ServicesProjects from '../../../components/carousel/Healthcare'
-import { FlexContainer, ITService, ServiceCompany, SoftwareTypesCard } from '../../../components/Extra'
-import Stacks from '../../../components/carousel/stacks'
-import TextCarousel from '../../../components/carousel/TextCarousel'
+import { ITService, ServiceCompany } from '../../../components/Extra'
 import { CardCarousel } from '../../../components/carousel/CarouselHead'
 import Share from '../../../components/share/Share'
 

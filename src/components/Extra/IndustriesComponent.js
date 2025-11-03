@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-
 
 export default function IndustriesComponent({image, text}){
 

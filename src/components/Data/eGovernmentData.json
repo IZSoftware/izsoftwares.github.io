@@ -1,0 +1,268 @@
+{
+  "serviceDetails": {
+    "Birth Record": {
+      "title": "Birth Record",
+      "description": "This eService allows citizens to apply for a birth record certificate. The application is processed by local Government authorities at the sector level where the applicant is registered.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Birth Certificate": {
+      "title": "Birth Certificate",
+      "description": "This eService allows citizens to apply for an official birth certificate. The application is processed by local Government authorities at the sector level where the birth was registered.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Certificate of Being Single": {
+      "title": "Certificate of Being Single",
+      "description": "This eService allows citizens to apply for a certificate of being single. This document confirms that the applicant is not currently married.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Marriage Declaration": {
+      "title": "Marriage Declaration",
+      "description": "This eService allows couples to submit a marriage declaration before the official ceremony. The application is processed by local Government authorities.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Marriage Certificate": {
+      "title": "Marriage Certificate",
+      "description": "This eService allows citizens to apply for an official marriage certificate. The application is processed by local Government authorities at the sector level where the marriage was registered.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Death Record": {
+      "title": "Death Record",
+      "description": "This eService allows authorized persons to obtain a death record document. The application is processed by local Government authorities at the sector level.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Death Certificate": {
+      "title": "Death Certificate",
+      "description": "This eService allows family members or authorized persons to apply for an official death certificate. The application is processed by local Government authorities.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Divorce Record": {
+      "title": "Divorce Record",
+      "description": "This eService allows citizens to obtain a divorce record document. The application is processed by local Government authorities at the sector level.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Divorce Certificate": {
+      "title": "Divorce Certificate",
+      "description": "This eService allows citizens to apply for an official certificate of divorce. The application is processed by local Government authorities.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Adoption Record": {
+      "title": "Adoption Record",
+      "description": "This eService allows authorized persons to access adoption records. The application is processed by relevant Government authorities with strict confidentiality.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Adoption Certificate": {
+      "title": "Adoption Certificate",
+      "description": "This eService allows adoptive parents to apply for an official adoption certificate. The application is processed by relevant Government authorities.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Resident ID Card First Application": {
+      "title": "Resident ID Card First Application",
+      "description": "This eService allows citizens aged 16 and above to apply for their first resident identification card.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Replacement of Resident ID Card": {
+      "title": "Replacement of Resident ID Card",
+      "description": "This eService allows citizens to apply for a replacement of their lost, stolen, or damaged resident ID card.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Renewal of Resident ID Card": {
+      "title": "Renewal of Resident ID Card",
+      "description": "This eService allows citizens to renew their expired resident identification card.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Criminal Record Certificate": {
+      "title": "Criminal Record Certificate",
+      "description": "This eService allows citizens to apply for a criminal record certificate, which shows whether the applicant has any criminal convictions.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Updated Criminal Record Certificate (Personal Information Update etc)": {
+      "title": "Updated Criminal Record Certificate (Personal Information Update etc)",
+      "description": "This eService allows applicants to request corrections or updates to errors in their criminal record certificate details.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Educational Activity License": {
+      "title": "Educational Activity License",
+      "description": "This eService allows institutions to apply for a license to operate educational activities and programs.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Hospital License": {
+      "title": "Hospital License",
+      "description": "This eService allows healthcare institutions to apply for a license to operate a hospital.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Gambling License": {
+      "title": "Gambling License",
+      "description": "This eService allows businesses to apply for a license to operate gambling services.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Startup License": {
+      "title": "Startup License",
+      "description": "This eService allows entrepreneurs to apply for a specialized license for startup businesses.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Environmental Impact Assessment (EIA) Approval": {
+      "title": "Environmental Impact Assessment (EIA) Approval",
+      "description": "This eService allows businesses to apply for environmental impact assessment approval for projects.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Waste Management & Disposal Permit": {
+      "title": "Waste Management & Disposal Permit",
+      "description": "This eService allows businesses to apply for a permit to manage and dispose of waste materials.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Pollution Emission Permit": {
+      "title": "Pollution Emission Permit",
+      "description": "This eService allows industrial facilities to apply for a permit to emit controlled substances.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Building Construction Permit": {
+      "title": "Building Construction Permit",
+      "description": "This eService allows property owners to apply for a permit to construct new buildings.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Demolition Permit": {
+      "title": "Demolition Permit",
+      "description": "This eService allows property owners to apply for a permit to demolish structures.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Occupancy Certificate (Post-Construction Approval)": {
+      "title": "Occupancy Certificate (Post-Construction Approval)",
+      "description": "This eService allows property owners to apply for an occupancy certificate after construction.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Renovation/Modification Authorization": {
+      "title": "Renovation/Modification Authorization",
+      "description": "This eService allows property owners to apply for authorization to renovate or modify buildings.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Local Business Registration": {
+      "title": "Local Business Registration",
+      "description": "This eService allows local entrepreneurs to register their business.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Foreign Business Registration": {
+      "title": "Foreign Business Registration",
+      "description": "This eService allows foreign investors to register their business.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Import/Export License": {
+      "title": "Import/Export License",
+      "description": "This eService allows businesses to apply for a license to import or export goods.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Wholesale/Retail Trade License": {
+      "title": "Wholesale/Retail Trade License",
+      "description": "This eService allows businesses to apply for a wholesale or retail trade license.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Professional Service License": {
+      "title": "Professional Service License",
+      "description": "This eService allows professionals to apply for a license to provide professional services.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    },
+    "Industrial Production License": {
+      "title": "Industrial Production License",
+      "description": "This eService allows businesses to apply for a license for industrial production activities.",
+      "processingTime": "X hrs/days",
+      "price": "X/African currency",
+      "provider": "Minister Incharge",
+      "learnMoreUrl": "#"
+    }
+  }
+}

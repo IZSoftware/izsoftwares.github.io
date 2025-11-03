@@ -8,16 +8,9 @@ import CardContent from '@mui/material/CardContent';
 import './styles.css'
 import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
 import React, { useState } from 'react';
-import { Aws, Backend, Framework, Frontend, database, mobile, cloud, monitoring, cicd, devops, testAuto } from '../Data/serviceMap';
+import { Aws, Backend, Framework, Frontend, database, mobile, cloud, monitoring, cicd, devops, testAuto } from '../Data/ServiceMap';
 import {Box} from '@mui/material';
 import PopupState, { bindTrigger } from 'material-ui-popup-state';
-import Stacks from '../carousel/stacks';
-import CardActions from '@mui/material/CardActions';
-import CardMedia from '@mui/material/CardMedia';
-import { Link } from 'react-router-dom';
-
-
-
 
 export function Extra({bgCollor}) {
   return (
@@ -32,7 +25,7 @@ export function FlexContainer(){
     <div className='flex-comtainer'> 
     <div className='contain'>
             <div className='image'>
-              <img alt='nothing' src='	https://www.scnsoft.com/software-development-services/software-development/cro/custom-software.svg'
+              <img alt='nothing' src='https://www.scnsoft.com/software-development-services/software-development/cro/custom-software.svg'
               className='flex-container-img'
               />
             </div>
@@ -197,7 +190,7 @@ export function Technologies(){
                         <div >
                           <div className='imagg'
                             variant="contained" {...bindTrigger(popupState)}>
-                            <img src={item.image} width={55} height={48} />
+                            <img src={item.image} width={55} height={48} alt="Backend Img" />
                           </div>
                         </div>
                       )}
@@ -216,7 +209,8 @@ export function Technologies(){
                         <div>
                           <div className='imagg'
                             variant="contained" {...bindTrigger(popupState)}>
-                            <img src={item.image} width={55} height={48} />
+                            {/* // eslint-disable-next-line jsx-a11y/alt-text */}
+                            <img src={item.image} width={50} height={50} alt="Framework Img" />
                           </div>
                           
                         </div>
@@ -236,7 +230,7 @@ export function Technologies(){
                         <div>
                           <div className='imagg'
                             variant="contained" {...bindTrigger(popupState)}>
-                            <img src={item.image} width={55} height={48} />
+                            <img src={item.image} width={55} height={48} alt='mobile' />
                           </div>
                         </div>
                       )}
@@ -259,7 +253,7 @@ export function Technologies(){
                         <div>
                           <div className='imagg'
                             variant="contained" {...bindTrigger(popupState)}>
-                            <img src={item.image} width={55} height={48} />
+                            <img src={item.image} width={67} height={50} alt="Database Img" />
                           </div>
                         
                         </div>
@@ -288,7 +282,7 @@ export function Technologies(){
                     <div>
                       <div className='imagg'
                         variant="contained" {...bindTrigger(popupState)}>
-                        <img src={item.image} width={55} height={48} />
+                        <img src={item.image} width={70} height={48} alt="Cloud Img" />
                       </div>
                     
                     </div>
@@ -317,7 +311,7 @@ export function Technologies(){
                       <div>
                         <div className='imagg'
                           variant="contained" {...bindTrigger(popupState)}>
-                          <img src={item.image} width={55} height={48} alt='nthng'/>
+                          <img src={item.image} width={55} height={48} alt='AWS'/>
                         </div>
                       
                       </div>
@@ -345,7 +339,7 @@ export function Technologies(){
                     <div>
                       <div className='imagg'
                         variant="contained" {...bindTrigger(popupState)}>
-                        <img src={item.image} width={55} height={48} />
+                        <img src={item.image} width={55} height={48} alt='devOps'/>
                       </div>
                     
                     </div>
@@ -372,7 +366,7 @@ export function Technologies(){
                     <div>
                       <div className='imagg'
                         variant="contained" {...bindTrigger(popupState)}>
-                        <img src={item.image} width={55} height={48} />
+                        <img src={item.image} width={70} height={44} alt='CI/CD TOOLS' />
                       </div>
                     
                     </div>
@@ -400,7 +394,7 @@ export function Technologies(){
                     <div>
                       <div className='imagg'
                         variant="contained" {...bindTrigger(popupState)}>
-                        <img src={item.image} width={55} height={48} />
+                        <img src={item.image} width={55} height={48} alt='MONITORING' />
                       </div>
                     
                     </div>
@@ -427,7 +421,7 @@ export function Technologies(){
                     <div>
                       <div className='imagg'
                         variant="contained" {...bindTrigger(popupState)}>
-                        <img src={item.image} width={55} height={48} />
+                        <img src={item.image} width={75} height={48} alt='Testing Automation Tools' />
                       </div>
                     
                     </div>
@@ -540,7 +534,7 @@ export function SolutionOffered({item}){
 
 
 export function Policy({item}){
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   return(
     <Card

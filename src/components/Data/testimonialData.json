@@ -1,0 +1,51 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Erio Malagoli",
+      "position": "CEO",
+      "company": "Eat and More UK",
+      "avatar": "https://via.placeholder.com/150",
+      "linkedin": "https://uk.linkedin.com/in/erio-malagoli-84bb8531",
+      "rating": 5,
+      "summary": "Our collaboration with Evolv IZSoftwares Group over the past nine months has been outstanding. Throughout this period, they provided Frontend Development, Backend Development, and Mobile Development services with remarkable expertise and professionalism.",
+      "fullText": {
+        "greeting": "To whom it may concern,",
+        "paragraphs": [
+          "Our collaboration with IZSoftwares Group over the past nine months has been outstanding. Throughout this period, they provided Frontend Development, Backend Development, and Mobile Development services with remarkable expertise and professionalism.",
+          "Even the most challenging tasks were handled efficiently, and all deliverables were consistently completed on time without compromising quality.",
+          "The team demonstrated excellent communication, technical skill, and a commitment to understanding and fulfilling our requirements.",
+          "I wholeheartedly endorse Evolv IZSoftwares Group and their talented team and would highly recommend them to anyone seeking reliable and high-quality software development services."
+        ],
+        "closing": "Sincerely,",
+        "signature": "Erio Malagoli",
+        "signatureTitle": "CEO",
+        "signatureCompany": "EatandMore UK"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Katiuska Flores",
+      "position": "Director Data Curation Analytics",
+      "company": "HealthCare IQ",
+      "avatar": "https://via.placeholder.com/150",
+      "linkedin": "https://www.linkedin.com/in/katiuskafloressanchez",
+      "rating": 5,
+      "summary": "IZSoftwares are always available, and peers with you on reaching good quality of products. You feel you are working with a team member that cares with you about the success of the project. We are lucky to have work with them.",
+      "fullText": {
+        "greeting": "To whom it may concern,",
+        "paragraphs": [
+          "Our collaboration with IZSoftwares on an algorithm-intensive project, particularly Multi-Benchmark, Multi-Level systems, in a microservices architecture",
+          "The IZSoftwares team is consistently available, highly responsive, and deeply invested in ensuring the success of the project.",
+          "Working with them feels like collaborating with dedicated team members who genuinely care about the quality and outcome of the product.",
+          "Their expertise, proactive approach, and attention to detail have been invaluable in navigating complex systems and delivering robust, scalable solutions.",
+          "We consider ourselves fortunate to have partnered with IZSoftwares and highly recommend their team for any challenging technical projects."
+        ],
+        "closing": "Best Regards,",
+        "signature": "Katiuska Flores",
+        "signatureTitle": "Director Data Curation Analytics",
+        "signatureCompany": "HealthCare IQ"
+      }
+    }
+  ]
+}

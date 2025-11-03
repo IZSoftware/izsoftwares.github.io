@@ -1,15 +1,8 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import IZNavBar from './components/Header/IZNavBar'
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home';
-import Service from './pages/Services';
-import DigitalTransform from './pages/Services/DigitalTransform';
-import Health from './pages/Services/HealthCare/Health';
-import Professional from './pages/Services/professonal/Professional';
-import ExtraService from './pages/Services/professonal/ExtraService';
-import CaseStudyPage from './pages/CaseStudy';
 import Blog from './pages/Blog/Blog';
 import BlogPost from './pages/Blog/BlogPost';
 import Careers from './pages/Careers/Careers';
@@ -29,7 +22,9 @@ import './resources/style/scss/main.scss';
 import Portfolio from './pages/Portfolio/Portfolio'
 import FAQPage from './components/Faq/FAQPage';
 import Technologies from './components/Technology/Technologies';
-
+import SoftwareDevelopment from './components/SoftwareDevelopment/SoftwareDevelopment';
+import  Egovernment from './pages/eGovernment/Egovernment';
+import  UIDesignServices from './pages/UiUxDesign/UIDesignServices';
 
 function App() {
   return (
@@ -40,7 +35,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/services/software-consulting' element={<Construction/>}/>
-            <Route path='/services/software-development' element={<Construction/>}/>
+            <Route path='/services/software-development' element={<SoftwareDevelopment/>}/>
             <Route path='/healthcare/services' element={<Construction/>}/>
             <Route path='/professiona-services' element={<Construction/>}/>
             <Route path='/professiona-services-extra' element={<Construction/>}/>
@@ -62,8 +57,8 @@ function App() {
             <Route path="/about/development-process" element={<Construction/>} />
             <Route path="/about/payment-gateway-providers" element={<Gateways/>} />
             <Route path="/about/technology-used" element={<Technologies/>} />
-            <Route path="/services/egovernment-solutions" element={<Construction/>} />
-            <Route path="/services/web-design" element={<Construction/>} />
+            <Route path="/services/egovernment-solutions" element={<Egovernment/>} />
+            <Route path="/services/web-design" element={<UIDesignServices />} />
             <Route path="/services/legacy-modernisation" element={<Construction/>} />
             <Route path="/services/connect-sphere" element={<Construction/>} />
             <Route path="/services/digitization-and-digitalization" element={<Construction/>} />

@@ -1,0 +1,128 @@
+{
+  "brandDifferentiation": {
+    "title": "Brand differentiation",
+    "description": "We look closer at the competitive market that your product will enter, spot opportunities to stand out and define a unique selling proposition of your brand.",
+    "features": [
+      {
+        "title": "Brand differentiation",
+        "description": "Our team provides professional user experience (UX) design services. We analyze your target audience and think through personas and user scenarios. Based on the findings and materials we now have on hand, we create UX wireframes where we fully illustrate how to make your SaaS product user-friendly."
+      },
+      {
+        "title": "UX design",
+        "description": "Our team provides professional user experience (UX) design services. We analyze your target audience and think through personas and user scenarios. Based on the findings and materials we now have on hand, we create UX wireframes where we fully illustrate how to make your SaaS product user-friendly."
+      },
+      {
+        "title": "Designs tailored to your clients",
+        "description": "We know that users perceive design and functionality as a single unit: if they don't like it, they leave. Thanks to our expertise in creating user-centered designs, we ensure your product resonates with your target audience."
+      },
+      {
+        "title": "Business-focused design processes",
+        "description": "By creating the UI for your SaaS product, we share the responsibility for software's commercial success. While our designers follow the latest design trends to reflect your unique brand identity, they also account for such business aspects as competitiveness and support of marketing and customer service objectives, including successful up/cross-selling, effective strategic offers, and increased dwell time."
+      },
+      {
+        "title": "Early UI samples",
+        "description": "To ensure a shared and consistent vision of your SaaS UI design at the very start, we provide desktop and/or mobile UI samples prior to signing the project contract."
+      }
+    ]
+  },
+  "industryVerticals": [
+    {
+      "id": 1,
+      "title": "Mobile Ticketing",
+      "image": "industry1.png"
+    },
+    {
+      "id": 2,
+      "title": "ZetCollect Industry",
+      "image": "industry2.png"
+    },
+    {
+      "id": 3,
+      "title": "Mobile Ticketing",
+      "image": "industry3.png"
+    },
+    {
+      "id": 4,
+      "title": "ZetScore Industry",
+      "image": "industry4.png"
+    },
+    {
+      "id": 5,
+      "title": "Mobile Ticketing",
+      "image": "industry5.png"
+    }
+  ],
+  "uxServices": {
+    "title": "What UX Includes",
+    "services": [
+      {
+        "number": "1",
+        "title": "User Research and Analysis",
+        "description": "Competitors' analysis, web analytics, user interviews, and initial user testing will enable you to understand the goals, needs and mental models of your users."
+      },
+      {
+        "number": "2",
+        "title": "Persona and Scenario Creation",
+        "description": "Analyzed data is used to create personas – fictional profiles of your real users – which later become the basis for scenarios – user-software interaction patterns."
+      },
+      {
+        "number": "3",
+        "title": "User Journey Mapping",
+        "description": "Different scenarios are combined to create a comprehensive user journey map that covers all possible points of users' interaction with your software."
+      },
+      {
+        "number": "4",
+        "title": "Wireframing and Prototyping",
+        "description": "The user journey map is transformed into multiple wireframes. When they are assembled, you get a prototype that gives you a clear vision of a future web or mobile app without forcing you to invest in front-end code development."
+      },
+      {
+        "number": "5",
+        "title": "Testing",
+        "description": "Rigorous usability testing of the finished prototype to ensure the UX design quality and eliminate chances of critical UX errors prior to front end development."
+      }
+    ]
+  },
+  "uxDesignServices": [
+    {
+      "title": "Web and/or mobile app UX design",
+      "description": "Stellar UX of your app across all devices to increase the number of visitors and their session time.",
+      "buttonText": "Request →",
+      "image": "ux_service1.png"
+    },
+    {
+      "title": "SaaS UX design",
+      "description": "SaaS user experience that ensures fast onboarding and high subscription renewal rate.",
+      "buttonText": "Request →",
+      "image": "ux_service2.png"
+    },
+    {
+      "title": "B2C website / portal UX design",
+      "description": "Customer-centric design that makes for higher dwell time and a lower user error rate as well as enhances user engagement.",
+      "buttonText": "I'm interested →",
+      "image": "ux_service3.png"
+    },
+    {
+      "title": "B2B website / portal UX design",
+      "description": "Industry-specific design to increase the frequency of email subscriptions, pre-registrations for future services, and quote/demo requests.",
+      "buttonText": "I'm interested →",
+      "image": "ux_service4.png"
+    }
+  ],
+  "serviceOptions": [
+    {
+      "title": "One-off design from scratch",
+      "description": "SaaS UI design customized for your future target audience to ensure fast onboarding and customer acquisition.",
+      "buttonText": "Request →"
+    },
+    {
+      "title": "Redesign",
+      "description": "Brand-new SaaS UI with a focus on improving all current weak points uncovered during a comprehensive UI audit.",
+      "buttonText": "Request →"
+    },
+    {
+      "title": "Continuous design",
+      "description": "Iterative UI design and support of your constantly evolving product in close collaboration with your team.",
+      "buttonText": "Request →"
+    }
+  ]
+}

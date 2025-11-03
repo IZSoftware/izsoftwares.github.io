@@ -1,65 +1,97 @@
-import React, { useState } from 'react';
-import { Container, Typography, Accordion, AccordionSummary, AccordionDetails, Box } from '@mui/material';
+import React from 'react';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// Corrected import: import the data as an object
-import faqData from '../Data/Faq';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const FAQPage = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+const FAQ = ({ faqData }) => {
+  const [expanded, setExpanded] = React.useState(false);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
   };
 
-  const faqs = faqData.faqs;
+  // Add a conditional check to ensure faqData is a valid array
+  if (!Array.isArray(faqData)) {
+    console.error("Error: faqData is not an array. Check the data source.");
+    return null;
+  }
 
   return (
-    <Box component="section" sx={{ minHeight: '100vh', py: { xs: 10, lg: 19 }, bgcolor: 'white' }}>
-      {/* Header Section */}
-      <Container maxWidth="lg" sx={{ mb: 10, textAlign: 'center' }}>
-        <Typography variant="h2" sx={{ mb: 5, fontWeight: 'bold', color: '#1F2A44' }}>
-          Frequently Asked Questions
-        </Typography>
-        <Typography variant="h6" sx={{ maxWidth: '48rem', mx: 'auto', color: '#4B5563' }}>
-          Find answers to common questions about our services and offerings.
-        </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4, gap: 2 }}>
-          
-        </Box>
-      </Container>
-
-      {/* FAQ Items Section */}
-      <Container maxWidth="md" sx={{ px: { xs: 2, sm: 3, lg: 4 } }}>
-        <Box sx={{ bgcolor: 'white', boxShadow: 3, borderRadius: 2, overflow: 'hidden' }}>
-          {/* Use the corrected 'faqs' variable here */}
-          {Array.isArray(faqs) && faqs.length > 0 ? (
-            faqs.map((faq, index) => (
-              <Accordion
-                key={index}
-                expanded={openIndex === index}
-                onChange={() => toggleFAQ(index)}
-                sx={{ borderBottom: index === faqs.length - 1 ? 'none' : '1px solid #E5E7EB' }}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{ color: '#6B7280' }} />}
-                  sx={{ px: 3, py: 2 }}
-                >
-                  <Typography variant="h6" sx={{ fontWeight: 'medium', color: '#1F2A44' }}>
-                    {faq.question}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails sx={{ px: 3, pb: 3 }}>
-                  <Typography sx={{ color: '#4B5563' }}>{faq.answer}</Typography>
-                </AccordionDetails>
-              </Accordion>
-            ))
-          ) : (
-            <Typography sx={{ p: 3, color: '#4B5563' }}>No FAQs available at this time.</Typography>
-          )}
-        </Box>
-      </Container>
-    </Box>
+    <div>
+      <Box />
+      {faqData.map((faq, index) => (
+        <Accordion
+          key={index}
+          expanded={expanded === `panel${index}`}
+          onChange={handleChange(`panel${index}`)}
+          sx={{
+            marginBottom: '10px',
+            boxShadow: 'none',
+            border: '1px solid #dce3ed',
+            '&.Mui-expanded': {
+              backgroundColor: '#f5faff',
+            },
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon
+              sx={{
+                color: '#000000',
+                transform: 'rotate(0deg)',
+                '&.Mui-expanded': { transform: 'rotate(180deg)' },
+              }}
+            />}
+            aria-controls={`faq-content-${index}`}
+            id={`faq-header-${index}`}
+            sx={{
+              padding: '10px 16px',
+              '&.Mui-expanded': {
+                backgroundColor: '#e7f1ff',
+                color: '#0073e6',
+              },
+              '& .MuiAccordionSummary-content': {
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                margin: 0,
+              },
+            }}
+          >
+            {expanded === `panel${index}` ? (
+              <KeyboardArrowDownIcon
+                sx={{
+                  color: '#000000',
+                  transition: 'transform 0.3s ease-in-out',
+                }}
+              />
+            ) : (
+              <KeyboardArrowRightIcon
+                sx={{
+                  color: '#000000',
+                  transition: 'transform 0.3s ease-in-out',
+                }}
+              />
+            )}
+            <Typography variant="h6" sx={{ fontSize: '16px', fontWeight: 'bold' }}>
+              {faq.question || faq.title}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails
+            sx={{
+              padding: '10px 16px',
+              backgroundColor: '#f5faff',
+              color: '#333',
+              fontSize: '14px',
+              paddingLeft: '44px',
+            }}
+          >
+            <Typography variant="body1">{faq.answer || faq.description}</Typography> 
+          </AccordionDetails>
+        </Accordion>
+      ))}
+    </div>
   );
 };
 
-export default FAQPage;
+export default FAQ;

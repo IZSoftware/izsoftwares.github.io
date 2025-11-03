@@ -7,7 +7,7 @@ import ClientMeetingImg from '../../resources/images/Cooperation-Client/meeting.
 import ClientNDAImg from '../../resources/images/Cooperation-Client/sign.svg';
 import ClientProposalImg from '../../resources/images/Cooperation-Client/proposal.svg';
 import ClientSLAImg from '../../resources/images/Cooperation-Client/sla.svg';
-import ContactUsOther from '../../components/Main/MainContactUs/ContactUsOther';
+import ContactUsClientOnboarding from '../../components/Main/MainContactUs/ContactUsClientOnboarding';
 import Share from '../../components/share/Share';
 import Testimonial from './Testimonial';
 
@@ -252,8 +252,7 @@ export default function ClientOnboard() {
 
                             {/* CONTACT SECTION */}
                             <br /> <br /><br /><br />
-                            <h2 style={{fontWeight: 'bolder', color: '#000'}}>Reach Out To Our Expert</h2>
-                            <ContactUsOther />
+                            <ContactUsClientOnboarding />
 
                             <Share/>
                         </Grid>
