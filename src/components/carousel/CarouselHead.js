@@ -281,7 +281,7 @@ export const CareerHeader = ({ item }) => {
   return (
     <Paper
       style={{
-        backgroundImage:`url(${item})`,
+        backgroundImage: `url(${item})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
@@ -289,20 +289,46 @@ export const CareerHeader = ({ item }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
-     }}
+      }}
     >
-      <div className='more-page'>
-        <div style={{textAlign: 'center', fontSize: '24px', fontWeight: 'bold'}}>JOIN US, BE YOU.</div>
-        <br/>
-        <div style={{fontSize: '18px'}}>
-          This is where individual creativity comes together, united by the values that inspire great work. Here, you'll do more than just join something — you'll contribute something meaningful.
+      <Paper
+        elevation={3}
+        style={{
+          padding: '40px 60px',
+          backgroundColor: 'rgba(255, 255, 255, 1)',
+          borderTopLeftRadius: '0',
+          borderTopRightRadius: '12px',
+          borderBottomLeftRadius: '12px',
+          borderBottomRightRadius: '0',
+          textAlign: 'center',
+          maxWidth: '800px',
+        }}
+      >
+        <div style={{ 
+          fontSize: '24px', 
+          fontWeight: 'bold',
+          marginBottom: '20px',
+          marginTop: '-15px'
+        }}>
+          JOIN US, BE YOU
         </div>
-        <br/>
-        <div>
-            <span style={{fontSize: '18px', fontWeight: '550'}}>IZSoftwares. Make It Yours</span>
+        
+        <div style={{
+          fontSize: '16px',
+          marginBottom: '30px',
+          lineHeight: '1.6'
+        }}>
+          This is where individual creativity comes together, united by the values that inspire great work. Here, you'll do more than just join something - you'll contribute something useful.
         </div>
-        <br/>
-      </div>
+        
+        <div style={{
+          fontSize: '18px',
+          fontWeight: 'bold',
+          marginTop: '20px'
+        }}>
+          IZSoftwares. Make It Yours
+        </div>
+      </Paper>
     </Paper>
   );
 };
