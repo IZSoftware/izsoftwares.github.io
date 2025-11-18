@@ -13,32 +13,52 @@ export default function Careers() {
   return (
     <Box sx={{width: '100%'}}>
         
-        <Paper style={{paddingBottom: '100px', marginBottom: '100px', background: 'linear-gradient(90deg, rgba(42,97,163,1) 0%, rgba(28,92,161,1) 35%, rgba(37,124,232,1) 100%)' }}>
-            <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item xs={10} >
-                    <div style={{textAlign:'center', paddingTop: '200px' }}>
-                        <div style={{ color:'#fff', fontWeight:'bolder', fontSize: '48px'}}>CAREERS</div>
-                        <br />
-                        <div style={{ color:'#fff', fontSize: '28px', marginBottom: '50px'}}>WORKING WITH IZSOFTWARES</div>
-                        
-                        
-                        <Grid container direction="row" justifyContent="center" alignItems="center" style={{ textAlign: 'justify', color: '#fff' }}>
-                            <div style={{maxWidth: '700px'}}>    
-                                Evolv IZSoftwares Group acknowledges that its staff constitute its most valuable resource and are instrumental in the attainment of IZSoftwares Objectives.
-                            </div>
-                        </Grid>
-                        <br />
-                        <Grid container direction="row" justifyContent="center" alignItems="center" style={{ textAlign: 'justify', color: '#fff' }}>
-                            <div style={{maxWidth: '700px'}}>
-                                The realization of IZSoftwares Strategic Goals relies on having an appropriate number of staff members possessing the requisite knowledge, skills, and competencies, deployed effectively in their respective roles.
-                            </div>
-                        </Grid>
-                        <br />
-                        <Link to='/about/careers-more' className='read-more' sx={{textAlign:'center'}}>Read More</Link>
+<Paper style={{paddingBottom: '100px', marginBottom: '100px', background: 'linear-gradient(90deg, rgba(42,97,163,1) 0%, rgba(28,92,161,1) 35%, rgba(37,124,232,1) 100%)' }}>
+    <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid item xs={10} >
+            <div style={{textAlign:'center', paddingTop: '200px' }}>
+                <div style={{ color:'#fff', fontWeight:'bolder', fontSize: '48px'}}>CAREERS</div>
+                <br />
+                <div style={{ color:'#fff', fontSize: '28px', marginBottom: '50px'}}>WORKING WITH IZSOFTWARES</div>
+                <Grid container direction="row" justifyContent="center" alignItems="center" style={{ textAlign: 'justify', color: '#fff' }}>
+                    <div style={{maxWidth: '700px'}}>    
+                        Evolv IZSoftwares Group acknowledges that its staff constitute its most valuable resource and are instrumental in the attainment of IZSoftwares Objectives.
                     </div>
                 </Grid>
-            </Grid>
-        </Paper>
+                <br />
+                <Grid container direction="row" justifyContent="center" alignItems="center" style={{ textAlign: 'justify', color: '#fff' }}>
+                    <div style={{maxWidth: '700px'}}>
+                        The realization of IZSoftwares Strategic Goals relies on having an appropriate number of staff members possessing the requisite knowledge, skills, and competencies, deployed effectively in their respective roles.
+                    </div>
+                </Grid>
+                <br />
+                 {/* White Horizontal Line */}
+                <div style={{ 
+                    width: '150px', 
+                    height: '2px', 
+                    backgroundColor: '#fff', 
+                    margin: '0 auto 0px auto' 
+                }}></div>
+                
+                {/* Read More Link with white color */}
+                <Link 
+                    to='/about/careers-more' 
+                    style={{
+                        color: '#fff',
+                        textDecoration: 'none',
+                        fontSize: '18px',
+                        fontWeight: '500',
+                        textAlign: 'center',
+                        display: 'inline-block',
+                        marginTop: '20px'
+                    }}
+                >
+                    Read More
+                </Link>
+            </div>
+        </Grid>
+    </Grid>
+</Paper>
         
         <div className='main-career'>
             <div style={{textAlign: 'center', fontSize: '40px', fontWeight: 'bold'}}> CAREERS </div>

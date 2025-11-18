@@ -11,7 +11,7 @@ import VueLogo from "../../assets/images/vuejs-logo.png"
 import NextLogo from "../../assets/images/nextjs.png"
 import AndroidLogo from "../../assets/images/android-logo.png"
 import IOSLogo from "../../assets/images/ios-logo.png"
-import ProgressiveWebAppLogo from "../../assets/images/flutter-logo.png"
+import ProgressiveWebAppLogo from "../../assets/images/pwa-logo.png"
 import PostgreSQLLogo from "../../assets/images/postgresql-vertical-logo.png"
 import MySQLLogo from "../../assets/images/mysql.png"
 import OracleLogo from "../../assets/images/oracle.png"
@@ -26,6 +26,7 @@ import AmazonRDSLogo from "../../assets/images/amazon-rds-logo.png"
 import AWSElasticacheLogo from "../../assets/images/aws-elasticache.png"
 import DockerLogo from "../../assets/images/jenkins.png"
 import KubernetesLogo from "../../assets/images/kubernetes-logo.png"
+import AwsESCLogo from "../../assets/images/AwsEcs.png"
 import AwsDeveloperToolsLogo from "../../assets/images/aws-developer-tools.png"
 import GoogleDeveloperToolsLogo  from "../../assets/images/google-developer-tools.png"
 import JenkinsLogo  from "../../assets/images/gitlab.png"
@@ -84,7 +85,8 @@ export const TechnologiesData = {
   ],
   DevOpsContainerization: [
     {id: 1, name: "Docker", image: DockerLogo },
-    {id: 2, name: "Kubernetes", image: KubernetesLogo }
+    {id: 2, name: "Kubernetes", image: KubernetesLogo },
+    {id: 3, name: "AWS ECS", image: AwsESCLogo }
   ],
   DevOpsCICDTools: [
     {id: 1, name: "Aws Developer Tools", image: AwsDeveloperToolsLogo },
