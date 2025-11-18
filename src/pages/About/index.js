@@ -17,11 +17,9 @@ import ExcellenceImg from '../../resources/images/iz-quality/excellence.svg';
 import { CloudDownload } from '@mui/icons-material';
 
 
-
-
 export default function About() {
 
-  const fileUrl = "https://drive.google.com/uc?export=download&id=1sCaalN5B-UfiAWpMEbTMyprdDCUVCXXO";
+  const fileUrl = "https://drive.google.com/file/d/1sCaalN5B-UfiAWpMEbTMyprdDCUVCXXO/view";
 
   return (
     <Box sx={{p: 5, width: '100%',  marginTop: '100px'}}>
@@ -49,9 +47,19 @@ export default function About() {
                   <span style={{color: '#004485', fontWeight: '700'}}>Evolv IZSoftwares Group Ltd </span> is regulated by the Government of Kenya. 
                 </p>
                 <p>
-                  <span> <Button variant="outlined" color="primary" startIcon={<CloudDownload />} href={fileUrl} download> IZSoftwares Profile 2023 </Button> </span>
+                  <span> 
+                    <Button 
+                      variant="outlined" 
+                      color="primary" 
+                      startIcon={<CloudDownload />} 
+                      href={fileUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    > 
+                      IZSoftwares Profile 2023 
+                    </Button> 
+                  </span>
                 </p>
-                
               </Box>
             </Box>
             <h1 className='hp-title'>Evolv IZSoftwares Group in Numbers</h1>

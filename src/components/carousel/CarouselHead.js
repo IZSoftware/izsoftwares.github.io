@@ -294,29 +294,31 @@ export const CareerHeader = ({ item }) => {
       <Paper
         elevation={3}
         style={{
-          padding: '40px 60px',
+          padding: '20px 40px',
           backgroundColor: 'rgba(255, 255, 255, 1)',
           borderTopLeftRadius: '0',
           borderTopRightRadius: '12px',
           borderBottomLeftRadius: '12px',
           borderBottomRightRadius: '0',
-          textAlign: 'center',
-          maxWidth: '800px',
+          maxWidth: '600px',
         }}
       >
         <div style={{ 
           fontSize: '24px', 
           fontWeight: 'bold',
           marginBottom: '20px',
-          marginTop: '-15px'
+          marginTop: '-15px',
+          textAlign: 'center'
         }}>
           JOIN US, BE YOU
         </div>
         
         <div style={{
-          fontSize: '16px',
+          fontSize: '18px',
           marginBottom: '30px',
-          lineHeight: '1.6'
+          lineHeight: '1.6',
+          textAlign: 'justify',
+          textAlignLast: 'left'
         }}>
           This is where individual creativity comes together, united by the values that inspire great work. Here, you'll do more than just join something - you'll contribute something useful.
         </div>
@@ -324,7 +326,8 @@ export const CareerHeader = ({ item }) => {
         <div style={{
           fontSize: '18px',
           fontWeight: 'bold',
-          marginTop: '20px'
+          marginTop: '20px',
+          textAlign: 'center'
         }}>
           IZSoftwares. Make It Yours
         </div>
