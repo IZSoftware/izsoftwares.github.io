@@ -1,2 +1,2 @@
-// import './css'
-// import './javascript'
+import './css/styles'
+import './javascript/jslib'
