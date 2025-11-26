@@ -1,10 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
-  FormControl,
-  Autocomplete,
-  TextField,
-  Checkbox,
-  ListItemText,
   Grid,
   Card,
   CardMedia,
@@ -17,7 +12,12 @@ import {
   DialogContent,
   DialogActions,
   Chip,
+  Checkbox,
+  TextField,
+  InputAdornment,
 } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import ClearIcon from "@mui/icons-material/Clear";
 import {
   industries,
   regions,
@@ -25,19 +25,289 @@ import {
   country,
 } from "../../components/Data/OurPartnersData";
 
+const TabBasedFilter = ({ selectedValues, onChange }) => {
+  const [activeTab, setActiveTab] = useState("industries");
+  const [isOpen, setIsOpen] = useState(true); // Set to true by default
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleToggle = (option) => {
+    const isSelected = selectedValues.some((item) => item.name === option.name);
+    let newValue;
+    
+    if (isSelected) {
+      newValue = selectedValues.filter((item) => item.name !== option.name);
+    } else {
+      newValue = [...selectedValues, option];
+    }
+    
+    onChange(null, newValue);
+  };
+
+  const isSelected = (option) => {
+    return selectedValues.some((item) => item.name === option.name);
+  };
+
+  const getTabContent = () => {
+    switch (activeTab) {
+      case "industries":
+        return industries;
+      case "regions":
+        return regions;
+      default:
+        return [];
+    }
+  };
+
+  const getTabLabel = (tab) => {
+    const labels = {
+      industries: "Industries",
+      regions: "Regions"
+    };
+    return labels[tab];
+  };
+
+  const hasSelectedFilters = selectedValues.length > 0;
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    // Always open dropdown when switching tabs
+    setIsOpen(true);
+  };
+
+  const handleArrowClick = (e) => {
+    e.stopPropagation(); // Prevent tab click when clicking arrow
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <Box ref={dropdownRef} sx={{ position: "relative", width: "100%" }}>
+      {/* Tabs Only */}
+      <Box sx={{ 
+            display: "flex", 
+            border: "1px solid #d1d5db",
+            borderRadius: "8px",
+            backgroundColor: "#f3f4f6",
+            overflow: "hidden",
+          }}>
+            {["industries", "regions"].map((tab) => (
+              <Box
+                key={tab}
+                onClick={() => handleTabClick(tab)}
+                sx={{
+                  flex: 1,
+                  padding: "16px 24px",
+                  cursor: "pointer",
+                  textAlign: "center",
+                  borderBottom: activeTab === tab ? "3px solid #005eb8" : "3px solid transparent",
+                  backgroundColor: activeTab === tab ? "white" : "transparent",
+                  color: activeTab === tab ? "#005eb8" : "#6b7280",
+                  fontWeight: activeTab === tab ? "600" : "500",
+                  fontSize: "16px",
+                  transition: "all 0.2s",
+                  "&:hover": {
+                    backgroundColor: activeTab === tab ? "white" : "#f9fafb",
+                    color: "#005eb8",
+                  },
+                  position: "relative",
+                  minWidth: "180px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 1,
+                }}
+              >
+                {getTabLabel(tab)}
+                <span 
+                  onClick={handleArrowClick}
+                  style={{ 
+                    transform: isOpen && activeTab === tab ? "rotate(180deg)" : "rotate(0deg)", 
+                    transition: "transform 0.3s",
+                    fontSize: "12px",
+                    color: activeTab === tab ? "#005eb8" : "#6b7280",
+                    cursor: "pointer"
+                  }}
+                >
+                  ▼
+                </span>
+                {selectedValues.some(item => 
+                  getTabContent().some(opt => opt.name === item.name)
+                ) && activeTab !== tab && (
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "8px",
+                      right: "12px",
+                      width: "12px",
+                      height: "12px",
+                      borderRadius: "50%",
+                      backgroundColor: "#005eb8",
+                      border: "2px solid white",
+                    }}
+                  />
+                )}
+              </Box>
+            ))}
+          </Box>
+
+      {/* Dropdown Content - Shows by default on page load */}
+      {isOpen && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: "calc(100% + 8px)",
+            left: 0,
+            right: 0,
+            backgroundColor: "white",
+            border: "1px solid #d1d5db",
+            borderRadius: "8px",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+            zIndex: 9999,
+            overflow: "hidden",
+          }}
+        >
+          {/* Tab Content */}
+          <Box sx={{ maxHeight: "400px", overflowY: "auto" }}>
+            <Grid container spacing={0}>
+              {getTabContent().map((option, index) => (
+                <Grid item xs={6} key={option.name}>
+                  <Box
+                    onClick={() => handleToggle(option)}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      padding: "14px 16px",
+                      cursor: "pointer",
+                      borderBottom: "1px solid #f3f4f6",
+                      "&:hover": {
+                        backgroundColor: "#f8fafc",
+                      },
+                      backgroundColor: isSelected(option) ? "#f0f7ff" : "transparent",
+                      transition: "background-color 0.2s",
+                    }}
+                  >
+                    <Checkbox
+                      checked={isSelected(option)}
+                      sx={{ 
+                        padding: "0 12px 0 0",
+                        color: "#d1d5db",
+                        '&.Mui-checked': {
+                          color: "#005eb8",
+                        },
+                      }}
+                    />
+                    {option.image && (
+                      <img
+                        src={option.image}
+                        alt={option.name}
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          marginRight: "12px",
+                          borderRadius: "6px",
+                          objectFit: "cover",
+                        }}
+                      />
+                    )}
+                    <Typography 
+                      sx={{ 
+                        fontSize: "14px",
+                        color: isSelected(option) ? "#005eb8" : "#374151",
+                        fontWeight: isSelected(option) ? "600" : "400",
+                        flex: 1,
+                      }}
+                    >
+                      {option.name}
+                    </Typography>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+
+          {/* Selected Filters Badges */}
+          {hasSelectedFilters && (
+            <Box sx={{ 
+              padding: "16px",
+              borderTop: "1px solid #e5e7eb",
+              backgroundColor: "#f9fafb",
+            }}>
+              <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 1 }}>
+                <Typography sx={{ fontSize: "14px", color: "#374151", mr: 1 }}>
+                  Selected:
+                </Typography>
+                {selectedValues.map((value) => (
+                  <Chip
+                    key={value.name}
+                    label={value.name}
+                    onDelete={() => handleToggle(value)}
+                    size="small"
+                    sx={{
+                      backgroundColor: "#005eb8",
+                      color: "white",
+                      fontSize: "12px",
+                      '& .MuiChip-deleteIcon': {
+                        color: "white",
+                        fontSize: "16px",
+                        '&:hover': {
+                          color: "#f3f4f6",
+                        },
+                      },
+                    }}
+                  />
+                ))}
+                <Button
+                  size="small"
+                  onClick={() => onChange(null, [])}
+                  sx={{
+                    fontSize: "12px",
+                    color: "#dc2626",
+                    textTransform: "none",
+                    ml: 1,
+                    minWidth: "auto",
+                    '&:hover': {
+                      backgroundColor: "transparent",
+                      color: "#b91c1c",
+                    },
+                  }}
+                >
+                  Clear all
+                </Button>
+              </Box>
+            </Box>
+          )}
+        </Box>
+      )}
+    </Box>
+  );
+};
 
 const ProjectPortfolio = () => {
-  const [selectedIndustries, setSelectedIndustries] = useState([]);
-  const [selectedRegions, setSelectedRegions] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleIndustryChange = (event, newValue) => {
-    setSelectedIndustries(newValue);
+  const handleFilterChange = (event, newValue) => {
+    setSelectedFilters(newValue);
   };
 
-  const handleRegionChange = (event, newValue) => {
-    setSelectedRegions(newValue);
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
   };
 
   const handleOpenDialog = (project) => {
@@ -51,15 +321,21 @@ const ProjectPortfolio = () => {
   };
 
   const filteredProjects = projectData.filter((project) => {
-    const industryMatch =
-      selectedIndustries.length === 0 ||
-      selectedIndustries.some((industry) => project.industry === industry.name);
+    // Filter by selected industries/regions
+    const filterMatch = selectedFilters.length === 0 || 
+      selectedFilters.some((filter) => 
+        project.industry === filter.name || project.region === filter.name
+      );
 
-    const regionMatch =
-      selectedRegions.length === 0 ||
-      selectedRegions.some((region) => project.region === region.name);
+    // Filter by search query
+    const searchMatch = searchQuery === "" || 
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.clientDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.region.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return industryMatch && regionMatch;
+    return filterMatch && searchMatch;
   });
 
   // Function to truncate clientDescription to two lines
@@ -124,165 +400,164 @@ const ProjectPortfolio = () => {
             </Typography>
           </Box>
 
-          <Grid
-            container
-            spacing={3}
-            alignItems="center"
-            justifyContent="center"
-            sx={{ mb: 8 }}
-          >
-            <Grid item xs={12} sm={6} md={4}>
-              <FormControl fullWidth>
-                <Autocomplete
-                  multiple
-                  value={selectedIndustries}
-                  onChange={handleIndustryChange}
-                  options={industries}
-                  disableCloseOnSelect
-                  getOptionLabel={(option) => option.name}
-                  renderTags={(selected) =>
-                    selected.map((opt) => opt.name).join(", ")
-                  }
-                  renderInput={(params) => (
-                    <TextField {...params} label="Industry" />
-                  )}
-                  renderOption={(props, option, { selected }) => (
-                    <li
-                      {...props}
-                      style={{ display: "flex", alignItems: "center" }}
-                    >
-                      <Checkbox checked={selected} />
-                      <img
-                        src={option.image}
-                        alt={option.name}
-                        style={{
-                          width: 30,
-                          height: 30,
-                          marginRight: 10,
-                          borderRadius: "50%",
-                        }}
-                      />
-                      <ListItemText primary={option.name} />
-                    </li>
-                  )}
-                />
-              </FormControl>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={4}>
-              <FormControl fullWidth>
-                <Autocomplete
-                  multiple
-                  value={selectedRegions}
-                  onChange={handleRegionChange}
-                  options={regions}
-                  disableCloseOnSelect
-                  getOptionLabel={(option) => option.name}
-                  renderTags={(selected) =>
-                    selected.map((opt) => opt.name).join(", ")
-                  }
-                  renderInput={(params) => (
-                    <TextField {...params} label="Region" />
-                  )}
-                  renderOption={(props, option, { selected }) => (
-                    <li
-                      {...props}
-                      style={{ display: "flex", alignItems: "center" }}
-                    >
-                      <Checkbox checked={selected} />
-                      <img
-                        src={option.image}
-                        alt={option.name}
-                        style={{
-                          width: 20,
-                          height: 20,
-                          marginRight: 10,
-                          borderRadius: "50%",
-                        }}
-                      />
-                      <ListItemText primary={option.name} />
-                    </li>
-                  )}
-                />
-              </FormControl>
-            </Grid>
-          </Grid>
-
-          <Grid container spacing={4} justifyContent="flex-start">
-            {filteredProjects.map((project) => (
-              <Grid item xs={12} sm={6} md={6} key={project.id}>
-                <Card sx={{ height: "100%" }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={project.image}
-                    alt={project.title}
-                  />
-                  <CardContent>
-                    <Typography
-                      variant="h6"
-                      gutterBottom
-                      sx={{ fontWeight: "bold", textAlign: "justify" }}
-                    >
-                      {project.title}
-                    </Typography>
-
-                    <Box sx={{ mb: 2 }}>
-                      <Grid container spacing={1}>
-                        <Grid item>
-                          <Chip
-                            label={`Industry: ${project.industry}`}
-                            color="primary"
-                            variant="outlined"
-                          />
-                        </Grid>
-                        <Grid item>
-                          <Chip
-                            label={`Region: ${project.region}`}
-                            color="primary"
-                            variant="outlined"
-                          />
-                        </Grid>
-                        <Grid item>
-                          <Chip
-                            label={`Country: ${getCountryName(project.country)}`}
-                            color="primary"
-                            variant="outlined"
-                          />
-                        </Grid>
-                      </Grid>
-                    </Box>
-
-                    <Box sx={{ mb: 2 }}>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "text.secondary",
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                        }}
-                      >
-                        {truncateClientDescription(project.clientDescription)}
-                      </Typography>
-                    </Box>
-
-                    <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+          {/* Search Bar */}
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
+            <Box sx={{ width: "100%", maxWidth: "800px" }}>
+              <TextField
+                fullWidth
+                placeholder="Search projects by title, description, industry, or region..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: '8px',
+                    fontSize: '16px',
+                    padding: '8px 16px',
+                    '&:hover fieldset': {
+                      borderColor: '#005eb8',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#005eb8',
+                    },
+                  },
+                }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon sx={{ color: '#6b7280' }} />
+                    </InputAdornment>
+                  ),
+                  endAdornment: searchQuery && (
+                    <InputAdornment position="end">
                       <Button
-                        variant="outlined"
-                        color="primary"
-                        onClick={() => handleOpenDialog(project)}
+                        onClick={clearSearch}
+                        sx={{ 
+                          minWidth: 'auto', 
+                          padding: '4px',
+                          color: '#6b7280',
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                            color: '#005eb8',
+                          }
+                        }}
                       >
-                        Read More
+                        <ClearIcon fontSize="small" />
                       </Button>
-                    </Box>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Box>
+          </Box>
+
+          {/* Tab-Based Filter */}
+          <Box sx={{ 
+            display: "flex", 
+            justifyContent: "center", 
+            mb: 25 // Fixed margin since dropdown is open by default
+          }}>
+            <Box sx={{ width: "100%", maxWidth: "800px" }}>
+              <TabBasedFilter
+                selectedValues={selectedFilters}
+                onChange={handleFilterChange}
+              />
+            </Box>
+          </Box>
+
+          {/* Projects Grid */}
+          <Box sx={{ mt: 4 }}>
+            <Grid container spacing={4} justifyContent="flex-start">
+              {filteredProjects.map((project) => (
+                <Grid item xs={12} sm={6} md={6} key={project.id}>
+                  <Card sx={{ 
+                    height: "100%",
+                    transition: "transform 0.2s, box-shadow 0.2s",
+                    "&:hover": {
+                      transform: "translateY(-4px)",
+                      boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                    }
+                  }}>
+                    <CardMedia
+                      component="img"
+                      height="200"
+                      image={project.image}
+                      alt={project.title}
+                      sx={{ objectFit: "cover" }}
+                    />
+                    <CardContent>
+                      <Typography
+                        variant="h6"
+                        gutterBottom
+                        sx={{ fontWeight: "bold", textAlign: "justify" }}
+                      >
+                        {project.title}
+                      </Typography>
+
+                      <Box sx={{ mb: 2 }}>
+                        <Grid container spacing={1}>
+                          <Grid item>
+                            <Chip
+                              label={`Industry: ${project.industry}`}
+                              color="primary"
+                              variant="outlined"
+                              size="small"
+                            />
+                          </Grid>
+                          <Grid item>
+                            <Chip
+                              label={`Region: ${project.region}`}
+                              color="primary"
+                              variant="outlined"
+                              size="small"
+                            />
+                          </Grid>
+                          <Grid item>
+                            <Chip
+                              label={`Country: ${getCountryName(project.country)}`}
+                              color="primary"
+                              variant="outlined"
+                              size="small"
+                            />
+                          </Grid>
+                        </Grid>
+                      </Box>
+
+                      <Box sx={{ mb: 2 }}>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "text.secondary",
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            lineHeight: "1.5",
+                          }}
+                        >
+                          {truncateClientDescription(project.clientDescription)}
+                        </Typography>
+                      </Box>
+
+                      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                        <Button
+                          variant="outlined"
+                          color="primary"
+                          onClick={() => handleOpenDialog(project)}
+                          sx={{ 
+                            textTransform: 'none',
+                            fontWeight: '500',
+                          }}
+                        >
+                          Read More
+                        </Button>
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Grid>
       </Grid>
 
@@ -464,7 +739,6 @@ const ProjectPortfolio = () => {
                 Close
               </Button>
             </DialogActions>
- 
           </>
         )}
       </Dialog>
