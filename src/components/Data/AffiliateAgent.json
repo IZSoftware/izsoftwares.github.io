@@ -1,0 +1,44 @@
+{
+  "solutionsData": [
+    {
+      "id": 1,
+      "title": "Portals",
+      "description": "Developing comprehensive portal solutions that provide seamless user experiences, centralized access to information, and efficient business process management for your clients.",
+      "icon": "../../../assets/images/dashboard.png"
+    },
+    {
+      "id": 2,
+      "title": "Mobile Apps",
+      "description": "Creating innovative mobile applications for iOS and Android platforms that engage users, enhance customer experience, and drive business growth through mobile technology.",
+      "icon": "../../../assets/images/mobile-app.png"
+    },
+    {
+      "id": 3,
+      "title": "CRM",
+      "description": "Helping companies enhance customer management, win new clients and improve productivity through customized CRM solutions tailored to specific business needs.",
+      "icon": "../../../assets/images/crm.png"
+    }
+  ],
+  "howWeWorkData": [
+    {
+      "id": 1,
+      "title": "IT Consulting",
+      "description": "We can start with solution and platform consulting to help our clients get a clear vision of the IT solution they want to implement. Also we can provide IT strategic consulting advising companies how to improve their IT strategies."
+    },
+    {
+      "id": 2,
+      "title": "Implementation",
+      "description": "Apart from developing and testing an IT solution, we are always ready to assist our clients in integration, data migration and other related processes to ensure that a new IT solution integrates into corporate workflows and contributes to business value."
+    },
+    {
+      "id": 3,
+      "title": "Support",
+      "description": "We provide all-round support of the IT solutions our clients are using (whether delivered by ScienceSoft or other teams): add new functionality, ensure better interoperability, performance and usability, fix bugs."
+    }
+  ],
+  "whyChooseUsData": [
+    "Since 2022 in IT consulting and software development for healthcare, banking, retail, manufacturing, telecom and other industries (more than 4,200 completed projects).",
+    "Big talent pool with a wide range of skills (currently 750+ specialists in project management, business analysis, development, testing and more) – we are fully equipped to rely on our internal resources.",
+    "Fair and transparent commissions."
+  ]
+}

@@ -15,7 +15,7 @@ const Portfolio = () => {
         }}
       ></Box>
 
-      <box component="portfolio">
+      <Box component="portfolio">
         <ProjectPortfolio />
         {/* CONTACT SECTION */}
         <br /> <br />
@@ -32,7 +32,7 @@ const Portfolio = () => {
             <Share />
           </Grid>
         </Grid>
-      </box>
+      </Box>
 
       <Box
         component="footer"
