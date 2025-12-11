@@ -25,6 +25,7 @@ import Technologies from './components/Technology/Technologies';
 import SoftwareDevelopment from './components/SoftwareDevelopment/SoftwareDevelopment';
 import  Egovernment from './pages/eGovernment/Egovernment';
 import  UIDesignServices from './pages/UiUxDesign/UIDesignServices';
+import  Modernization from './pages/Modernization/Modernization';
 
 function App() {
   return (
@@ -59,7 +60,7 @@ function App() {
             <Route path="/about/technology-used" element={<Technologies/>} />
             <Route path="/services/egovernment-solutions" element={<Egovernment/>} />
             <Route path="/services/web-design" element={<UIDesignServices />} />
-            <Route path="/services/legacy-modernisation" element={<Construction/>} />
+            <Route path="/services/legacy-modernisation" element={<Modernization/>} />
             <Route path="/services/connect-sphere" element={<Construction/>} />
             <Route path="/services/digitization-and-digitalization" element={<Construction/>} />
             <Route path="/industries/healthcare" element={<Construction/>} />
