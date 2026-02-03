@@ -1,0 +1,173 @@
+{
+  "hero": {
+    "title": "Application Modernization Services",
+    "description": "IZSOFTWARES' clients discover that modernizing 20-year-old, undocumented legacy applications is achievable without disrupting business operations, while attaining significant enhancements in app functionality, usability, performance, security, and scalability.",
+    "buttonText": "Modernize Your Applications",
+    "image": "/modernization-hero.svg"
+  },
+
+  "whyPartner": {
+    "title": "Why Partner Up with IZSoftwares for Legacy Software Modernization",
+    "points": [
+      "36 years in software engineering, 13 years in cloud migration.",
+      "750+ IT professionals, including business analysts, project managers, architects, software engineers, testers, DevOps engineers, and data scientists. Only 3% of candidates pass our 6-step hiring process and make it to an offer at IZSoftwares. Over 50% of IZSoftwares talents are senior and lead specialists with 9-20 years of experience.",
+      "Expert proficiency in modernization of legacy applications and different migration approaches (rehosting, replatforming, re-architecting, refactoring, and more).",
+      "Experience in 30+ industries, including healthcare, BFSI, manufacturing, retail, logistics, oil & gas, and telecoms.",
+      "Partnerships with Microsoft, AWS, Oracle, and other global tech leaders.",
+      "Well-established Agile and DevOps cultures, transparent KPIs, mature risk management practices.",
+      "Hands-on knowledge of HIPAA, HITECH, PCI DSS/SSF, GDPR, and other field- and region-specific regulations to ensure full software compliance."
+    ]
+  },
+    
+"competencies": {
+  "title": "Our Application Modernization Competencies",
+  "cards": [
+    {
+      "image": "consulting.svg",
+      "title": "Application modernization consulting",
+      "description": "We thoroughly investigate your legacy application code and infrastructure, mine requirements, and provide detailed guidance on the improvements that can help you derive max value from previous investments."
+    },
+    {
+      "image": "migration_to_cloud.svg",
+      "title": "Legacy app migration to cloud",
+      "description": "Depending on the application and business needs, IZSoftwares offers one of the three ways to the cloud — application re-hosting, application re-platforming or a cloud-native implementation."
+    },
+    {
+      "image": "re-engineering.svg",
+      "title": "Application reengineering",
+      "description": "With a wide pool of legacy application modernization skills, we can help you restore and slightly modify code and design of your long-running enterprise applications.\n\nApplication reengineering can grant:\n• Web and mobile enablement.\n• Improved look&feel.\n• Simplified and less costly maintenance and updates."
+    },
+    {
+      "image": "architecture-design.svg",
+      "title": "Application re-architecting",
+      "description": "We change an application’s architecture to make it more scalable, flexible, integration-friendly, and secure. The apps with modern modular architectures are easier to maintain and evolve, and they can benefit from distributed computing, cloud elasticity and resilience. Nowadays, our clients tend to get maximum value from service-oriented architecture (SOA), microservices, and serverless implementations."
+    },
+    {
+      "image": "containerization.svg",
+      "title": "Application containerization",
+      "description": "Across all modernization options, we can pack your apps or their parts into packages isolated from each other at the OS level.\n\nContainerization means:\n• Fewer resources required to run.\n• Easier scalability.\n• Simplified movement across different environments.\n• CI/CD practices enablement."
+    },
+    {
+      "image": "cross-platform.svg",
+      "title": "Mobile and cross-platform compatibility",
+      "description": "Our designers and software engineers help businesses ensure their software offers seamless experiences across platforms and devices. We thoroughly review your solution to identify any potential compatibility issues (like functionality and display problems, security conflicts) and provide recommendations for remediation."
+    }
+  ]
+},
+  "benefits": {
+    "title": "Application Modernization Benefits",
+    "cards": [
+      { "title": "Better user experience", "description": "due to upgraded UX/UI design, improved app performance, and new highly requested features." },
+      { "title": "State-of-the-art security", "description": "due to introducing secure software design and coding best practices, expert security testing, and built-in regulatory compliance." },
+      { "title": "Lower maintenance costs", "description": "due to the reduced IT support team workload and wide cloud optimization opportunities." },
+      { "title": "Streamlined business processes and improved employee productivity", "description": "due to workflow automation and implementation of advanced techs." },
+      { "title": "Increased app availability & scalability", "description": "due to optimized software design and infinite cloud resources (for cloud migration)." },
+      { "title": "Ease of further app evolution", "description": "due to the clear software documentation, flexible architecture (e.g., SOA/microservices-based), and reusable code." }
+    ]
+  },
+
+  "cloudMigration": {
+    "title": "For Cloud Application Migrations",
+    "leftColumn": [
+      "Reduced costs of IT infrastructure due to the pay-as-you-go pricing model.",
+      "Quick scalability of cloud resources with no upfront cost (pay-as-you-go pricing).",
+      "99.90 – 99.99% migrated app uptime and zero risk failure.",
+      "Faster application updates (~33% increased speed of software engineering and deployment)."
+    ],
+    "rightColumn": [
+      "For rehosting: 15–20% savings over on-premises application hosting.",
+      "For replatforming: up to 450% ROI, 35%–80% savings over on-premises application hosting.",
+      "For refactoring: up to 470% ROI, 50% faster deployments."
+    ]
+  },
+    "caseStudy": {
+    "title": "Example of Our Impact: Modernizing a Core Business System",
+    "description": "Here's one example of how IZSoftwares helped a global enterprise modernize its core business system. By replacing outdated software with a scalable, automated platform, we enabled higher efficiency, reduced risks, and set the stage for digital transformation.",
+    "challenges": [
+      "Outdated 20-year-old underwriting software",
+      "Disconnected systems causing slow and error-prone data sharing",
+      "Heavy reliance on internal IT resources with limited expertise",
+      "High maintenance costs for obsolete technology",
+      "Elevated risk of fraud and non-compliance",
+      "Opaque risk assessment and pricing processes",
+      "Limited insight into underwriting data and trends",
+      "Low underwriter productivity due to inefficient task assignment",
+      "Manual, fragmented workflows",
+      "No centralized view or traceability of operations",
+      "Static, non-collaborative policy management"
+    ],
+    "solutions": [
+      "Modern, automated underwriting platform built on .NET, Angular, and Azure",
+      "Seamless integration with CRM, financial software, compliance tools, and BI systems",
+      "Fully outsourced solution with a dedicated cross-functional team from IZSoftwares",
+      "Reduced maintenance costs thanks to a modern, scalable architecture",
+      "Automated fraud detection and compliance enforcement (KYC/AML, OFAC)",
+      "Drill-down dashboards with real-time tracking of risk scores, premiums, and policy status",
+      "Instant data flow into enterprise data warehouse for advanced analytics",
+      "Smart task management dashboards to optimize underwriter performance",
+      "Robust automation of underwriting, quoting, and policy management",
+      "End-to-end traceability and centralized dashboards for full visibility",
+      "Collaborative, customizable policy creation with real-time updates"
+    ]
+  },
+
+  "modernizationStrategy": {
+    "title": "Our 4-Step Application Modernization Strategy",
+    "description": "Each legacy app will have a unique modernization strategy. However, we follow a structured process to save time on organizational matters.",
+    "image": "/izsoftwares modernization banner.png"
+  },
+    "methodology": {
+    "title": "The Methodology Behind Successful Application Modernization Deliveries",
+    "description": "Our strategic approach to team assembly, project scoping, and cost estimation ensures your modernization project is handled with exact planning and meticulous execution from start to finish. With our commitment to quality management, detailed documentation, and efficient knowledge sharing, we guarantee a smooth and efficient upgrade for your applications.\n\nTake a closer look at our project management and development frameworks, best practices, and work samples from our recent projects.",
+    "cards": [
+      { "icon": "People", "title": "How we allocate resources", "description": "Unveil the art of designing the winning team structure and handpicking ideally suited talents. Explore how our resource assignment process is customized to the cooperation model of your choice — full outsourcing or team augmentation." },
+      { "icon": "Settings", "title": "How we scope modernization projects", "description": "Dive into our dynamic 6-step scoping process designed for application development and modernization projects. Get an exclusive peek at a section of our Vision & Scope document, feature list, user journey map, and UX wireframes." },
+      { "icon": "Calculate", "title": "How we estimate modernization projects", "description": "Discover the essential factors and guiding principles we employ to accurately forecast costs. Check a list of cost optimization strategies." },
+      { "icon": "GroupWork", "title": "How we organize collaboration", "description": "Discover the core principles guiding our approach to client engagement: transparency, flexibility, and predictability." },
+      { "icon": "Warning", "title": "How we manage risks", "description": "Discover how we identify and manage risks throughout the project lifecycle, from initial assessment to final delivery." },
+      { "icon": "TrendingUp", "title": "How we measure project success", "description": "Discover real-world examples of metrics and tools we use to track progress, budget, and quality." },
+      { "icon": "Timeline", "title": "How we approach project reporting", "description": "Learn what insights you can expect in project status reports and how often you’ll receive them." },
+      { "icon": "Description", "title": "Project documentation", "description": "Discover a range of examples from modernization projects: architecture diagrams, code quality reports, test plans, and user manuals." },
+      { "icon": "Shield", "title": "Quality management", "description": "Explore how we ensure compliance with industry standards and best practices." },
+      { "icon": "Security", "title": "Security management", "description": "Discover the meticulous security practices we apply to protect your data and IT environments." }
+    ]
+  },
+
+  "timelines": {
+    "title": "Application Modernization: Timelines and Costs",
+    "items": [
+      { "duration": "2+ months", "description": "to perform UI updates, simple code conversions and cloud migrations" },
+      { "duration": "6+ months", "description": "to replatform/refactor an application of medium size and complexity" },
+      { "duration": "2+ years", "description": "for reengineering and refactoring of large enterprise-wide systems" }
+    ],
+    "costDescription": "The total cost of application modernization can range from $10,000–$15,000 for a UI upgrade or rehosting of a small app to $50,000–$250,000 for a substantial modernization of a medium/large app. If extensive reengineering, deep recoding, or implementation of advanced techs (e.g., big data, AI/ML) is required, the cost may reach $500,000+ for a large application.",
+    "costFactors": [
+      "The complexity of applications and their dependencies.",
+      "The volume of data to transfer.",
+      "The life span of the application and its cloud migration readiness; the scope of infrastructure, code and configuration changes required.",
+      "The extent of modernization automation and the cost of the relevant software licenses (e.g., code conversion tools).",
+      "The required testing efforts."
+    ]
+  },
+
+  "difference": {
+    "title": "Difference between App Modernization and Digital Transformation",
+    "rows": [
+      { "label": "Goal", "digital": "To improve the speed, resilience, performance and cost of business processes by adopting new digital capabilities. For more information, please visit our dedicated digital transformation services page.", "modernization": "To revamp an existing app in a way to improve its vital characteristics (extensibility, security, performance, usability) and optimize maintenance cost." },
+      { "label": "Scope", "digital": "• Modernization of legacy apps.\n• New software development.\n• Cloud enablement.\n• Data-driven environment modeling.\n• Transformation of corporate culture.", "modernization": "• App migration to a new technology stack.\n• Code refactoring.\n• App re-architecting.\n• App re-platforming.\n• App migration to the cloud." },
+      { "label": "Duration", "digital": "Commonly 2+ years.", "modernization": "• 2-6 months for medium app modernization.\n• 1-2 years for large enterprise-wide app modernization." },
+      { "label": "Cost", "digital": "• $400,000–$2,000,000 for companies with up to 5,000 employees.\n• $600,000–$5,000,000 for companies with 5,000+ employees.", "modernization": "• $50,000–$250,000 for medium/large app modernization.\n• Up to $500,000 for extensive reengineering or deep re-coding of a large app." }
+    ]
+  },
+
+  "faq": {
+    "title": "Answering Frequent Questions about Application Modernization",
+    "questions": [
+      { "question": "What is the biggest factor in deciding to start the modernization process for an application?", "answer": "The main trigger is usually high maintenance costs combined with poor performance, security risks, or inability to scale. When the cost of keeping an old system exceeds the cost of modernizing it —, that's when companies act." },
+      { "question": "Is it possible to modernize a legacy app with no detailed documentation (functional specifications)?", "answer": "Yes, absolutely. We specialize in reverse engineering and documentation recovery. We analyze code, database schemas, and user behavior to reconstruct requirements." },
+      { "question": "How can I be sure that the modernized app will bring the expected results instead of only wasting the company's time and resources?", "answer": "We use a risk-based approach with clear milestones, KPIs, and regular demos. You see working software from week 4, and we guarantee business value delivery or money back." },
+      { "question": "Can we modernize legacy applications without operational downtime?", "answer": "Yes. We use blue-green deployment, feature toggles, and parallel run strategies to ensure zero downtime during migration." },
+      { "question": "Is it possible to avoid long freeze-up of the apps during modernization?", "answer": "Absolutely. We modernize in small, safe increments with continuous integration and automated testing." }
+    ]
+  }
+}

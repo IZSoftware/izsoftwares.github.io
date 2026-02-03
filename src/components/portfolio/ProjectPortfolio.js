@@ -97,7 +97,7 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
             display: "flex", 
             border: "1px solid #d1d5db",
             borderRadius: "8px",
-            backgroundColor: "#f3f4f6",
+            backgroundColor: "#e5f2fe",
             overflow: "hidden",
           }}>
             {["industries", "regions"].map((tab) => (
@@ -169,7 +169,7 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
             left: 0,
             right: 0,
             backgroundColor: "white",
-            border: "1px solid #d1d5db",
+            border: "1px solid #e5f2fe",
             borderRadius: "8px",
             boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
             zIndex: 9999,

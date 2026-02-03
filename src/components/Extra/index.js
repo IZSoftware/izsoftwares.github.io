@@ -25,7 +25,7 @@ export function FlexContainer(){
     <div className='flex-comtainer'> 
     <div className='contain'>
             <div className='image'>
-              <img alt='nothing' src='https://www.scnsoft.com/software-development-services/software-development/cro/custom-software.svg'
+              <img alt='nothing' src='/custom-software.svg'
               className='flex-container-img'
               />
             </div>
@@ -451,7 +451,7 @@ export function Optimal(){
   return(
     <div className='optimal'>
        
-    <div> <img src='https://www.scnsoft.com/icons-tritone/scrum.svg' style={{height:'80px',width:'80px'}} alt='nothing' /></div>
+    <div> <img src='/scrum.svg' style={{height:'80px',width:'80px'}} alt='nothing' /></div>
     <div> 
       <div style={{fontWeight:'bold',fontSize:'30px',padding:'15px 0px 15px'}}> Scrum development </div>
       <div className='h'>  Software development is done in Sprints, 2–3-week iterations with identified granular goals and backlogs. We ensure process transparency via sprint planning meetings, daily stand-ups, sprint review (and demo), retrospective, backlog refinement (grooming). </div>
