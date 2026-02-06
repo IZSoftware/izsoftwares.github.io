@@ -32,7 +32,7 @@ const homeCarousel = [
 const data = [
   {
     name: 'Development of a Records Management System for a Legal Firm',
-    description: 'BI solution delivered by ScienceSoft allowed the Customer to integrate the data from disparate sources and better understand their business with a comprehensive financial analysis.',
+    description: 'BI solution delivered by IZSoftwares allowed the Customer to integrate the data from disparate sources and better understand their business with a comprehensive financial analysis.',
     imageUrl: SideBeachTurkey,
   },
   {

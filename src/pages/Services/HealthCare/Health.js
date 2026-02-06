@@ -15,8 +15,8 @@ function Health() {
                 </div>
                 <div className='mainHealth'>
                 <div className='left'>
-                    <span>Healthcare IT services cover care delivery digitalization, IT modernization, cloud migration, IT support, etc. In healthcare IT since 2005, ScienceSoft offers full-cycle IT services for medical organizations to leverage tech-enabled healthcare without expanding an in-house IT team.</span>
-                    <h1 className='hp-title'>Why Choose Healthcare IT Services by ScienceSoft</h1>
+                    <span>Healthcare IT services cover care delivery digitalization, IT modernization, cloud migration, IT support, etc. In healthcare IT since 2005, IZSoftwares offers full-cycle IT services for medical organizations to leverage tech-enabled healthcare without expanding an in-house IT team.</span>
+                    <h1 className='hp-title'>Why Choose Healthcare IT Services by IZSoftwares</h1>
                     <Box mt={10} mb={15}>
           <Stack direction="row" mb={4} spacing={{ xs: 1, sm: 2, md: 12 }} variant='div'>
             <StatsItem number="34 years" title="years software development" />
@@ -34,12 +34,12 @@ function Health() {
                 <li>Quality management system for medical device software and software as a medical device proven by ISO 13485 certification.</li>
                 <li>Mature quality and security management systems backed by ISO 9001 and ISO 27001.</li>
                 <li>Authorized AWS Solution Provider.</li>
-                <li>ScienceSoft’s RPM solution won the Best Healthcare Technology Solution Award 2022 from Health Tech Digital.</li>
+                <li>IZSoftwares’s RPM solution won the Best Healthcare Technology Solution Award 2022 from Health Tech Digital.</li>
             </ul>
         </div>
         <div>
             
-            <h1 className='hp-title'>Healthcare IT Services ScienceSoft Offers</h1>
+            <h1 className='hp-title'>Healthcare IT Services IZSoftwares Offers</h1>
             <span>We provide the following services separately or in combination.</span>
             <div style={{display:'flex',flexWrap:'wrap',gap:'4px',marginBottom:'10px',justifyContent:'start'}}>
                 <FlexContainer/>

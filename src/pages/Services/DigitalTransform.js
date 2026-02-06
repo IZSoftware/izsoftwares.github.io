@@ -13,9 +13,9 @@ export default function DigitalTransform() {
         <h1 className="icp-title">
         End-to-End Digital Transformation Services
         </h1>   
-        <p className="icp-text">Digital transformation is the process of planning and executing an individual business strategy for digital adoption. Medium and large enterprises partner with ScienceSoft to find improvement opportunities in their business processes and launch digital transformation.</p>
+        <p className="icp-text">Digital transformation is the process of planning and executing an individual business strategy for digital adoption. Medium and large enterprises partner with IZSoftwares to find improvement opportunities in their business processes and launch digital transformation.</p>
         <div className="icp-header-phrase">
-        {/* <p className='text'>Combining over 30 years of experience in IT and a great drive for innovation, ScienceSoft designs and builds software to rely on: secure, high-performing, scalable, and user-friendly.</p> */}
+        {/* <p className='text'>Combining over 30 years of experience in IT and a great drive for innovation, IZSoftwares designs and builds software to rely on: secure, high-performing, scalable, and user-friendly.</p> */}
         </div>
         <div className="icp-header-link-wrapper">
         <button  className="icp" >
@@ -74,7 +74,7 @@ export default function DigitalTransform() {
          
         </div>
         <div style={{paddingLeft:'14%',paddingRight:'14%'}}>
-          <h1 className='hp-title'>How ScienceSoft Will Create Your Digital Transformation Profit </h1>
+          <h1 className='hp-title'>How IZSoftwares Will Create Your Digital Transformation Profit </h1>
 
           <div>Digital transformations are vast in scale and cost. So, before rushing into this experience, you need to understand if the investment will pay off. Below, we describe the most common opportunities created by digital adoption, but surely you will have even more benefits arising from your individual digital transformation strategy.</div>
         <div 
