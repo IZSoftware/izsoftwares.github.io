@@ -6,6 +6,7 @@ import {
   Typography,
   Button,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function HowMuchWillYourCloudAppProjectCost() {
   const factors = [
@@ -47,27 +48,36 @@ export default function HowMuchWillYourCloudAppProjectCost() {
       <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
         <Grid container spacing={6} justifyContent="center">
           <Grid item xs={12} md={9.5}>
-            {/* Main Title */}
+            {/* Main Title – bigger */}
             <Typography
-              variant="h3"
+              variant="h2"
               sx={{
                 fontWeight: 800,
-                color: "#002d5c",
-                mb: 4,
+                color: "#004d99",
+                mb: 5,
                 textAlign: { xs: 'center', md: 'left' },
+                fontSize: { xs: '2.2rem', md: '3rem' },
               }}
             >
               How Much Will Your Cloud App Project Cost?
             </Typography>
 
-            {/* Factors list + standalone image */}
+            {/* Factors list + image */}
             <Grid container spacing={6} alignItems="center">
               <Grid item xs={12} md={7}>
-                <Typography variant="body1" sx={{ color: "#5a6c7d", lineHeight: 1.7, mb: 3 }}>
-                  For accurate cost estimation, ScienceSoft takes into account:
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "#000000",
+                    fontWeight: 600,
+                    mb: 4,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  For accurate cost estimation, we take into account:
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 0, listStyle: 'none', mb: 4 }}>
+                <Box component="ul" sx={{ pl: 0, listStyle: 'none', mb: 5 }}>
                   {factors.map((factor, index) => (
                     <Box
                       component="li"
@@ -75,41 +85,49 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                       sx={{
                         display: 'flex',
                         alignItems: 'flex-start',
-                        mb: 2,
-                        color: "#5a6c7d",
+                        mb: 3,
                       }}
                     >
                       <Box
                         sx={{
-                          width: 6,
-                          height: 6,
+                          width: 8,
+                          height: 8,
                           borderRadius: '50%',
                           backgroundColor: "#004d99",
-                          mt: '10px',
-                          mr: 2,
+                          mt: '12px',
+                          mr: 2.5,
                           flexShrink: 0,
                         }}
                       />
-                      <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: "#000000",
+                          lineHeight: 1.8,
+                          fontSize: '1.1rem',
+                        }}
+                      >
                         {factor}
                       </Typography>
                     </Box>
                   ))}
                 </Box>
 
-                <Box sx={{ mt: 4, textAlign: { xs: 'center', md: 'left' } }}>
+                <Box sx={{ mt: 5, textAlign: { xs: 'center', md: 'left' } }}>
                   <Button
+                    component={Link}
+                    to="/contact-us"
                     variant="contained"
                     size="large"
                     sx={{
                       backgroundColor: "#004d99",
                       color: "white",
-                      px: 5,
-                      py: 1.8,
+                      px: 6,
+                      py: 2,
                       fontWeight: "bold",
                       textTransform: "none",
                       borderRadius: 2,
-                      fontSize: "1.1rem",
+                      fontSize: "1.15rem",
                       "&:hover": {
                         backgroundColor: "#003366",
                       },
@@ -120,10 +138,10 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                 </Box>
               </Grid>
 
-              {/* Image – completely standalone, no wrapper styling */}
+              {/* Image */}
               <Grid item xs={12} md={5}>
                 <img
-                  src="/images/cloud-cost-estimation-illustration.svg" // ← replace with your actual image path
+                  src="/cost_calculation.svg"
                   alt="Cloud app cost estimation illustration"
                   style={{
                     width: "100%",
@@ -134,22 +152,31 @@ export default function HowMuchWillYourCloudAppProjectCost() {
               </Grid>
             </Grid>
 
-            {/* Second part: How ScienceSoft Helps Optimize Costs – plain list */}
-            <Box sx={{ mt: 10 }}>
+            {/* Optimization Points */}
+            <Box sx={{ mt: 12 }}>
               <Typography
-                variant="h4"
+                variant="h3"
                 sx={{
                   fontWeight: 800,
-                  color: "#002d5c",
-                  mb: 4,
+                  color: "#004d99",
+                  mb: 5,
                   textAlign: { xs: 'center', md: 'left' },
+                  fontSize: { xs: '1.8rem', md: '2.5rem' },
                 }}
               >
-                How ScienceSoft Helps Optimize Cloud App Costs
+                How We Help Optimize Cloud App Costs
               </Typography>
 
-              <Typography variant="body1" sx={{ color: "#5a6c7d", lineHeight: 1.7, mb: 5 }}>
-                ScienceSoft's consultants provide an efficient cloud resource utilization plan due to:
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#000000",
+                  lineHeight: 1.6,
+                  mb: 6,
+                  fontWeight: 500,
+                }}
+              >
+                Our consultants provide an efficient cloud resource utilization plan through:
               </Typography>
 
               <Box component="ol" sx={{ pl: 0, listStyle: 'none', counterReset: 'item' }}>
@@ -160,28 +187,28 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                     sx={{
                       display: 'flex',
                       alignItems: 'flex-start',
-                      mb: 4,
+                      mb: 5,
                       counterIncrement: 'item',
                     }}
                   >
                     <Box
                       sx={{
-                        minWidth: 48,
-                        height: 48,
+                        minWidth: 52,
+                        height: 52,
                         backgroundColor: "#e6f2ff",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        mr: 3,
+                        mr: 3.5,
                         mt: 0.5,
                         flexShrink: 0,
                         border: "2px solid #004d99",
                       }}
                     >
                       <Typography
-                        variant="h6"
+                        variant="h5"
                         sx={{
-                          fontWeight: 700,
+                          fontWeight: 800,
                           color: "#004d99",
                         }}
                       >
@@ -189,16 +216,30 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                       </Typography>
                     </Box>
 
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "#5a6c7d",
-                        lineHeight: 1.7,
-                        flex: 1,
-                      }}
-                    >
-                      {point.text}
-                    </Typography>
+                    <Box sx={{ flex: 1 }}>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          color: "#000000",
+                          fontWeight: 700,
+                          mb: 1.5,
+                          lineHeight: 1.4,
+                        }}
+                      >
+                        {point.text.split('.')[0] + '.'}
+                      </Typography>
+
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: "#000000",
+                          lineHeight: 1.8,
+                          fontSize: '1.05rem',
+                        }}
+                      >
+                        {point.text}
+                      </Typography>
+                    </Box>
                   </Box>
                 ))}
               </Box>

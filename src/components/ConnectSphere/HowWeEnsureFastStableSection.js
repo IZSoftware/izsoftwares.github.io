@@ -48,18 +48,17 @@ export default function HowWeEnsureFastStableSection() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 } }}>
+    <Box sx={{ py: { xs: 6, md: 10 }, backgroundColor: "#f8f9fa" }}>
       <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
         <Grid container spacing={6} justifyContent="center">
           <Grid item xs={12} md={9.5}>
-            {/* Title & description – left-aligned, full width */}
             <Box sx={{ mb: 6 }}>
               <Typography
                 variant="h3"
                 sx={{
                   fontWeight: 800,
-                  color: "#002d5c",
-                  textAlign: 'left',           // ← changed to left
+                  color: "#004283",
+                  textAlign: 'left',
                 }}
               >
                 How We Ensure Fast and Stable Cloud App Development
@@ -69,9 +68,9 @@ export default function HowWeEnsureFastStableSection() {
                 variant="body1"
                 sx={{
                   mt: 3,
-                  color: "#5a6c7d",
+                  color: "#000000",
                   lineHeight: 1.7,
-                  textAlign: 'justify',        // ← justified for clean paragraph
+                  textAlign: 'justify',
                 }}
               >
                 IZSoftwares brings mature development and project management practices and deep multi-domain expertise to steadily drive cloud app projects to their goals, address uncertainties agilely, and ensure the superior quality of cloud solutions our clients receive.
@@ -81,42 +80,40 @@ export default function HowWeEnsureFastStableSection() {
                 variant="body1"
                 sx={{
                   mt: 2,
-                  color: "#5a6c7d",
+                  color: "#000000",
                   lineHeight: 1.7,
-                  textAlign: 'justify',        // ← justified
+                  textAlign: 'justify',
                 }}
               >
                 Check the proven benefits of our approach and follow the links to discover our success-driven practices in detail.
               </Typography>
             </Box>
 
-            {/* Grid of points – unchanged */}
             <Grid container spacing={4}>
               {points.map((point, index) => (
-                <Grid item xs={12} md={6} key={index}>
+                <Grid item xs={12} sm={6} md={4} key={index}>
                   <Card
                     sx={{
                       height: "100%",
                       borderRadius: 3,
-                      boxShadow: "0 8px 32px rgba(0,0,0,0.05)",
-                      border: "1px solid #e1e8f0",
-                      transition: "all 0.3s ease",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+                      border: "1px solid #e0e0e0",
+                      transition: "all 0.25s ease",
                       "&:hover": {
-                        transform: "translateY(-5px)",
-                        boxShadow: "0 15px 40px rgba(0,77,153,0.1)",
-                        borderColor: "#004d99",
+                        transform: "translateY(-4px)",
+                        boxShadow: "0 12px 32px rgba(0,66,131,0.12)",
+                        borderColor: "#004283",
                       },
                     }}
                   >
                     <CardContent sx={{ p: 4, height: "100%" }}>
-                      {/* Checkmark + Title */}
                       <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                         <Box
                           sx={{
                             width: 32,
                             height: 32,
                             borderRadius: "50%",
-                            backgroundColor: "#e6f2ff",
+                            backgroundColor: "#f0f4f8",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -124,7 +121,7 @@ export default function HowWeEnsureFastStableSection() {
                             flexShrink: 0,
                           }}
                         >
-                          <Typography sx={{ color: "#004d99", fontWeight: 700, fontSize: "1.2rem" }}>
+                          <Typography sx={{ color: "#004283", fontWeight: 700, fontSize: "1.3rem" }}>
                             ✓
                           </Typography>
                         </Box>
@@ -133,18 +130,17 @@ export default function HowWeEnsureFastStableSection() {
                           variant="h5"
                           sx={{
                             fontWeight: 700,
-                            color: "#002d5c",
+                            color: "#004283",
                           }}
                         >
                           {point.title}
                         </Typography>
                       </Box>
 
-                      {/* Description */}
                       <Typography
                         variant="body1"
                         sx={{
-                          color: "#5a6c7d",
+                          color: "#000000",
                           lineHeight: 1.7,
                           textAlign: 'justify',
                         }}

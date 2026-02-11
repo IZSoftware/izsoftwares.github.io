@@ -7,22 +7,18 @@ import {
   Card,
   CardContent,
 } from '@mui/material';
-import LockIcon from '@mui/icons-material/LockOutlined';
-import ScheduleIcon from '@mui/icons-material/Schedule';
-import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 export default function PricingOptionsSection() {
   const pricingOptions = [
     {
       title: "Fixed price",
-      icon: LockIcon,
+      iconSrc: "/price-tag.png",
       bestFor: "Feasibility study, PoC, small cloud projects with clear and stable requirements.",
       description: "You pay the price established by a contract.",
     },
     {
       title: "Time & Material, Time & Material with a cap",
-      icon: ScheduleIcon,
+      iconSrc: "/hourglass.png",
       bestFor:
         "advisory activities (business analysis, architecture design, project planning, etc.), agile cloud app development and implementation, cloud app evolution (introducing substantial changes or adding new functionality).",
       description:
@@ -30,14 +26,14 @@ export default function PricingOptionsSection() {
     },
     {
       title: "Per-ticket pricing",
-      icon: ConfirmationNumberIcon,
+      iconSrc: "/tickets.png",
       bestFor: "L1, L2 cloud application support.",
       description:
         "At the start of cooperation, we define the ticket cost, and you get charged based on the volume of incidents we resolve monthly.",
     },
     {
       title: "Fixed monthly fee",
-      icon: CalendarTodayIcon,
+      iconSrc: "/fees.png",
       bestFor: "L3 cloud application support (in-code defect fixes, functional changes).",
       description:
         "At the start of cooperation, we define the hourly rate for cloud app support activities. After the service is delivered, you pay for a bunch of hours during which we’ve been providing support.",
@@ -45,7 +41,7 @@ export default function PricingOptionsSection() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 } }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: "#f8f9fa" }}>
       <Container maxWidth={false} sx={{ px: { xs: 4, sm: 6, md: 0 } }}>
         <Grid container justifyContent="center">
           <Grid item xs={12} md={9.5}>
@@ -53,10 +49,10 @@ export default function PricingOptionsSection() {
             <Typography
               variant="h3"
               sx={{
-                fontWeight: 700,
-                color: "#000000",
-                textAlign: "center",
-                mb: 5,
+                fontWeight: 800,
+                color: "#004283",
+                textAlign: "left",
+                mb: 6,
                 letterSpacing: "-0.5px",
               }}
             >
@@ -72,29 +68,39 @@ export default function PricingOptionsSection() {
                     sx={{
                       height: "100%",
                       border: "1px solid #e0e0e0",
-                      borderRadius: 2,
+                      borderRadius: 3,
+                      backgroundColor: "#ffffff",
                       transition: "all 0.25s ease",
                       "&:hover": {
-                        borderColor: "#bdbdbd",
-                        boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                        borderColor: "#004283",
+                        boxShadow: "0 8px 24px rgba(0,66,131,0.12)",
+                        transform: "translateY(-4px)",
                       },
                     }}
                   >
-                    <CardContent sx={{ p: 5, textAlign: "justify" }}>
-                      {/* Icon at top */}
-                      <Box sx={{ mb: 3, display: "flex", justifyContent: "center" }}>
+                    <CardContent sx={{ p: 5, textAlign: "left" }}>
+                      {/* Icon – now image, no background */}
+                      <Box sx={{ mb: 4, display: "flex", justifyContent: "center" }}>
                         <Box
                           sx={{
                             width: 64,
                             height: 64,
                             borderRadius: "50%",
-                            backgroundColor: "#f5f5f5",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
+                            overflow: "hidden",
                           }}
                         >
-                          <option.icon sx={{ fontSize: 32, color: "#424242" }} />
+                          <img
+                            src={option.iconSrc}
+                            alt={`${option.title} icon`}
+                            style={{
+                              width: "72%",
+                              height: "72%",
+                              objectFit: "contain",
+                            }}
+                          />
                         </Box>
                       </Box>
 
@@ -102,8 +108,8 @@ export default function PricingOptionsSection() {
                       <Typography
                         variant="h5"
                         sx={{
-                          fontWeight: 600,
-                          color: "#000000",
+                          fontWeight: 700,
+                          color: "#004283",
                           mb: 2,
                           textAlign: "center",
                         }}
@@ -115,12 +121,13 @@ export default function PricingOptionsSection() {
                       <Typography
                         variant="subtitle1"
                         sx={{
-                          fontWeight: 500,
-                          color: "#424242",
+                          fontWeight: 600,
+                          color: "#000000",
                           mb: 3,
+                          lineHeight: 1.5,
                         }}
                       >
-                        Best for: {option.bestFor}
+                        <strong>Best for:</strong> {option.bestFor}
                       </Typography>
 
                       {/* Description */}
@@ -128,6 +135,7 @@ export default function PricingOptionsSection() {
                         variant="body1"
                         sx={{
                           color: "#000000",
+                          lineHeight: 1.7,
                           fontSize: "1.05rem",
                         }}
                       >

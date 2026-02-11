@@ -19,11 +19,11 @@ function Professional() {
                 <div className='left'>
                     <div>IT solutions for professional services allow businesses to digitalize service delivery and automate internal operations for increased productivity and a more competitive advantage in their industry.</div>
 
-                    <div style={{paddingTop:'10px'}}>Providing IT solutions for professional services <h1 style={{fontSize:'20px' ,color:'#000',fontWeight:'bold'}}>since 2008</h1> ScienceSoft enables professional services companies to acquire new customers with <h1
+                    <div style={{paddingTop:'10px'}}>Providing IT solutions for professional services <h1 style={{fontSize:'20px' ,color:'#000',fontWeight:'bold'}}>since 2008</h1> IZSoftwares enables professional services companies to acquire new customers with <h1
                     style={{fontSize:'20px' ,color:'#000',fontWeight:'bold'}}>
                         
                     digital service delivery channels and optimize internal business processes,</h1>like project management, employee collaboration, and more.</div>
-                    <h1 className='hp-title'>What Makes ScienceSoft a Reliable Partner </h1>
+                    <h1 className='hp-title'>What Makes IZSoftwares a Reliable Partner </h1>
 
                     <ul>
                         <li>15 years in IT for professional services.</li>
