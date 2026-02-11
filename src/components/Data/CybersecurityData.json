@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "title": "Cybersecurity Services: Protect Your Applications and Networks",
+    "description": "IZSoftwares provides the full range of information security services to businesses in 30+ industries, including healthcare, BFSI, retail, manufacturing, and telecoms. We help minimize cyber risks and avoid devastating consequences of cyberattacks and compliance breaches."
+  },
+
+  "services": {
+    "title": "Explore the Full Range of Our Cybersecurity Services",
+    "description": "IZSoftwares delivers comprehensive cybersecurity solutions tailored to protect your digital assets, ensure regulatory compliance, and maintain business continuity in an increasingly threat-heavy landscape.",
+    "categories": [
+      {
+        "name": "Security Consulting",
+        "subServices": [
+          "Cybersecurity Consulting",
+          "Application Security Consulting",
+          "Cloud Security Consulting"
+        ],
+        "description": "We help organizations adopt a proactive cybersecurity strategy that includes robust threat detection, incident response mechanisms, and continuous evolution of their cyber defenses."
+      },
+      {
+        "name": "IT Security Operations",
+        "subServices": [
+          "Managed Security Services",
+          "Identity and Access Management",
+          "Vulnerability Management"
+        ],
+        "description": "We provide end-to-end managed security operations to keep your infrastructure protected 24/7, with rapid incident detection, response, and remediation capabilities."
+      },
+      {
+        "name": "Compliance Services",
+        "subServices": [
+          "Compliance Assessment Services (ISO 9001, SOC2, ISO 27001)"
+        ],
+        "description": "We help organizations achieve and maintain compliance with global and industry-specific regulations through thorough assessments and tailored remediation strategies."
+      }
+    ]
+  },
+
+  "attributes": {
+    "title": "Must-Have Attributes of Our Cybersecurity Services",
+    "items": [
+      {
+        "title": "Proactive Threat Detection",
+        "description": "Advanced monitoring and intelligence-driven detection mechanisms that identify threats before they impact your business."
+      },
+      {
+        "title": "Rapid Incident Response",
+        "description": "Well-defined incident response playbooks and 24/7 availability to contain and remediate security incidents quickly."
+      },
+      {
+        "title": "Regulatory Compliance Focus",
+        "description": "Deep expertise in global standards and frameworks to ensure your organization meets all required compliance obligations."
+      },
+      {
+        "title": "Cloud-Native Security",
+        "description": "Specialized protection strategies designed for cloud environments, including multi-cloud and hybrid deployments."
+      },
+      {
+        "title": "Application Security Lifecycle",
+        "description": "Security integrated from design through deployment and maintenance with secure SDLC practices."
+      },
+      {
+        "title": "Identity & Access Governance",
+        "description": "Robust identity management, least-privilege access, and continuous access review processes."
+      }
+    ]
+  }
+}
