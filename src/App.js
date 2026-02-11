@@ -27,6 +27,7 @@ import  Egovernment from './pages/eGovernment/Egovernment';
 import  UIDesignServices from './pages/UiUxDesign/UIDesignServices';
 import  Modernization from './pages/Modernization/Modernization';
 import  ConnectSphere from './pages/ConnectSphere/ConnectSphere';
+// import  CyberSecurity from './pages/CyberSecurity/CyberSecurity';
 
 function App() {
   return (
@@ -63,7 +64,7 @@ function App() {
             <Route path="/services/web-design" element={<UIDesignServices />} />
             <Route path="/services/legacy-modernisation" element={<Modernization/>} />
             <Route path="/services/connect-sphere" element={<ConnectSphere/>} />
-            <Route path="/services/digitization-and-digitalization" element={<Construction/>} />
+            {/* <Route path="/services/cybersecurity" element={<CyberSecurity/>} /> */}
             <Route path="/industries/healthcare" element={<Construction/>} />
             <Route path="/industries/public-services" element={<Construction/>} />
             <Route path="/industries/professional-services" element={<Construction/>} />

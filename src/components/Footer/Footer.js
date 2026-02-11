@@ -222,9 +222,9 @@ export default function Footer(){
                                             </Grid>
                                             
                                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                                                <Link href="/services/digitization-and-digitalization" underline="none" color="inherit">
+                                                <Link href="/services/cybersecurity" underline="none" color="inherit">
                                                     <Typography align="center" gutterBottom>
-                                                        Digital Transformation
+                                                       CyberSecurity
                                                     </Typography> 
                                                 </Link>                                                             
                                             </Grid>

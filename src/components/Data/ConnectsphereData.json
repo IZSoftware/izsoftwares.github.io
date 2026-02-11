@@ -3,13 +3,8 @@
     "title": "ConnectSphere",
     "subtitle": "Unified Cloud Management Platform",
     "description": "ConnectSphere is an advanced platform built on AWS and GCP that provides unified access, management, and orchestration of cloud services. Streamline your cloud operations with a single pane of glass.",
-    "image": "/cover-cloud-app-development-services.svg",
+    "image": "/ConnectSphereHeroImage.png",
     "buttons": [
-      {
-        "text": "Start Free Trial",
-        "variant": "contained",
-        "color": "#fff"
-      },
       {
         "text": "Schedule Demo",
         "variant": "outlined",
@@ -18,7 +13,6 @@
     ],
     "features": [
       { "icon": "Cloud", "text": "Multi-Cloud" },
-      { "icon": "Storage", "text": "Unified Management" },
       { "icon": "Security", "text": "Enterprise Security" },
       { "icon": "Api", "text": "API First" }
     ]
@@ -67,153 +61,127 @@
     "features": [
       {
         "title": "Cloud Infrastructure Provisioning",
-        "icon": "Bolt",
+        "iconSrc": "/infrastructure.png",
         "description": "Automate and streamline the deployment of cloud resources across multiple platforms with infrastructure-as-code and templated solutions.",
         "bullets": "• Terraform & CloudFormation • One-click deployments • Multi-region setup"
       },
       {
         "title": "Scalability & Reliability",
-        "icon": "Scale",
+        "iconSrc": "/scalability.png",
         "description": "Automatically scale resources based on demand with built-in failover and high-availability configurations ensuring 99.9% uptime.",
         "bullets": "• Auto-scaling • Load balancing • Disaster recovery • Multi-AZ deployment"
       },
       {
         "title": "Security & Compliance",
-        "icon": "Security",
+        "iconSrc": "/compliance.png",
         "description": "Enterprise-grade security with built-in compliance for HIPAA, GDPR, SOC 2, and PCI DSS. End-to-end encryption and granular access controls.",
         "bullets": "• Zero-trust security • Compliance automation • Audit logging • Data encryption"
       },
       {
         "title": "Cost Optimization",
-        "icon": "MonetizationOn",
+        "iconSrc": "/cost.png",
         "description": "Intelligent cost monitoring and optimization with automated resource scheduling, right-sizing recommendations, and budget alerts.",
         "bullets": "• Cost analytics • Reserved instances • Spot instance management • Budget tracking"
-      },
-      {
-        "title": "Unified Cloud Management",
-        "icon": "Dashboard",
-        "description": "Single dashboard to manage all your cloud resources across AWS, GCP, and other providers. Centralized monitoring, logging, and management.",
-        "bullets": "• Multi-cloud dashboard • Centralized monitoring • Automated workflows • API integration"
       }
     ]
   },
-  
-  "whyConnectSphere": {
-    "title": "Why ConnectSphere?",
-    "subtitle": "Discover how our unified cloud management platform delivers tangible business value and technical excellence for your organization.",
-    "businessBenefits": [
-      {
-        "title": "Cost Reduction",
-        "icon": "Savings",
-        "description": "Reduce cloud spending by up to 40% with intelligent resource optimization, automated scaling, and consolidated billing across all platforms."
-      },
-      {
-        "title": "Operational Efficiency",
-        "icon": "TrendingUp",
-        "description": "Streamline operations with centralized management, reducing administrative overhead by 60% and enabling faster time-to-market for new initiatives."
-      },
-      {
-        "title": "Risk Mitigation",
-        "icon": "Security",
-        "description": "Minimize business risk with consistent security policies, compliance automation, and disaster recovery orchestration across all environments."
-      }
-    ],
-    "technicalAdvantages": [
-      {
-        "title": "Seamless Integration",
-        "icon": "Integration",
-        "description": "Native integration with AWS, GCP, Azure, and hybrid environments. Unified APIs and consistent tooling eliminate platform silos."
-      },
-      {
-        "title": "Performance Optimization",
-        "icon": "Speed",
-        "description": "Intelligent workload placement, auto-scaling, and performance monitoring ensure optimal resource utilization and application performance."
-      },
-      {
-        "title": "Advanced Security",
-        "icon": "Security",
-        "description": "Centralized identity management, encryption-at-rest, real-time threat detection, and automated compliance reporting across all cloud platforms."
-      }
-    ],
-    "unifiedPlatform": {
-      "title": "Why a Unified Platform?",
-      "description": "Traditional multi-cloud management creates complexity, security gaps, and cost inefficiencies. ConnectSphere provides a single, integrated solution that transforms these challenges into advantages.",
-      "points": [
-        {
-          "title": "Eliminate Silos",
-          "description": "Break down platform barriers and enable cross-cloud workflows with consistent policies and unified management interfaces."
-        },
-        {
-          "title": "Simplify Operations",
-          "description": "Reduce operational complexity with centralized monitoring, logging, and incident management across all your cloud environments."
-        },
-        {
-          "title": "Future-Proof Architecture",
-          "description": "Adapt to new cloud services and providers without major redesigns. Our platform evolves with the cloud landscape."
-        }
-      ],
-      "testimonial": "Companies using ConnectSphere report an average of 65% faster deployment cycles, 45% lower operational costs, and 80% reduction in security incidents across their multi-cloud environments."
+ "whyConnectSphere": {
+  "title": "Why ConnectSphere?",
+  "subtitle": "Discover how our unified cloud management platform delivers tangible business value and technical excellence for your organization.",
+  "businessBenefits": [
+    {
+      "title": "Cost Reduction",
+      "iconSrc": "/reduction.png",
+      "description": "Reduce cloud spending by up to 40% with intelligent resource optimization, automated scaling, and consolidated billing across all platforms."
+    },
+    {
+      "title": "Operational Efficiency",
+      "iconSrc": "/efficacy.png",
+      "description": "Streamline operations with centralized management, reducing administrative overhead by 60% and enabling faster time-to-market for new initiatives."
+    },
+    {
+      "title": "Risk Mitigation",
+      "iconSrc": "/risk-management.png",
+      "description": "Minimize business risk with consistent security policies, compliance automation, and disaster recovery orchestration across all environments."
     }
-  },
+  ],
+  "technicalAdvantages": [
+    {
+      "title": "Seamless Integration",
+      "iconSrc": "/hybrid-cloud.png",
+      "description": "Native integration with AWS, GCP, Azure, and hybrid environments. Unified APIs and consistent tooling eliminate platform silos."
+    },
+    {
+      "title": "Performance Optimization",
+      "iconSrc": "/success.png",
+      "description": "Intelligent workload placement, auto-scaling, and performance monitoring ensure optimal resource utilization and application performance."
+    },
+    {
+      "title": "Advanced Security",
+      "iconSrc": "/lock.png",
+      "description": "Centralized identity management, encryption-at-rest, real-time threat detection, and automated compliance reporting across all cloud platforms."
+    }
+  ]
+},
   
-  "useCases": {
-    "title": "Use Cases",
-    "subtitle": "Explore how ConnectSphere solves real-world challenges across various industries and application scenarios.",
-    "cases": [
-      {
-        "title": "Enterprise Application Hosting",
-        "icon": "Business",
-        "description": "Reliably host mission-critical enterprise applications with high availability, security, and compliance requirements across hybrid and multi-cloud environments.",
-        "features": [
-          "High Availability & Disaster Recovery",
-          "Enterprise-grade Security & Compliance",
-          "Performance Monitoring & Optimization",
-          "Automated Backup & Recovery"
-        ],
-        "idealFor": "ERP systems, CRM platforms, financial applications"
-      },
-      {
-        "title": "Scalable Backend Infrastructure",
-        "icon": "Architecture",
-        "description": "Build and manage elastic, auto-scaling backend systems for web and mobile applications that handle variable workloads with optimal cost efficiency.",
-        "features": [
-          "Auto-scaling & Load Balancing",
-          "Serverless & Container Orchestration",
-          "Real-time Monitoring & Analytics",
-          "Cost-optimized Resource Allocation"
-        ],
-        "idealFor": "SaaS platforms, mobile apps, API services"
-      },
-      {
-        "title": "Cloud Migration Support",
-        "icon": "CloudUpload",
-        "description": "Streamline your transition to the cloud with comprehensive migration tools, assessment frameworks, and post-migration optimization for legacy systems.",
-        "features": [
-          "Assessment & Planning Tools",
-          "Automated Migration Workflows",
-          "Data Transfer Optimization",
-          "Post-migration Validation & Testing"
-        ],
-        "idealFor": "Legacy modernization, data center migration, hybrid cloud"
-      }
-    ],
-    "commonBenefits": [
-      {
-        "title": "Reduced Complexity",
-        "icon": "Storage",
-        "description": "Single interface for managing all your cloud resources across multiple providers and environments."
-      },
-      {
-        "title": "Enhanced Security",
-        "icon": "Security",
-        "description": "Consistent security policies and compliance management across your entire cloud footprint."
-      },
-      {
-        "title": "Improved Performance",
-        "icon": "Speed",
-        "description": "Optimized resource allocation and workload placement for better application performance and user experience."
-      }
-    ],
+"useCases": {
+  "title": "Use Cases",
+  "subtitle": "Explore how ConnectSphere solves real-world challenges across various industries and application scenarios.",
+  "cases": [
+    {
+      "title": "Enterprise Application Hosting",
+      "iconSrc": "/hosting.png",
+      "description": "Reliably host mission-critical enterprise applications with high availability, security, and compliance requirements across hybrid and multi-cloud environments.",
+      "features": [
+        "High Availability & Disaster Recovery",
+        "Enterprise-grade Security & Compliance",
+        "Performance Monitoring & Optimization",
+        "Automated Backup & Recovery"
+      ],
+      "idealFor": "ERP systems, CRM platforms, financial applications"
+    },
+    {
+      "title": "Scalable Backend Infrastructure",
+      "iconSrc": "/database (2).png",
+      "description": "Build and manage elastic, auto-scaling backend systems for web and mobile applications that handle variable workloads with optimal cost efficiency.",
+      "features": [
+        "Auto-scaling & Load Balancing",
+        "Serverless & Container Orchestration",
+        "Real-time Monitoring & Analytics",
+        "Cost-optimized Resource Allocation"
+      ],
+      "idealFor": "SaaS platforms, mobile apps, API services"
+    },
+    {
+      "title": "Cloud Migration Support",
+      "iconSrc": "/migration.png",
+      "description": "Streamline your transition to the cloud with comprehensive migration tools, assessment frameworks, and post-migration optimization for legacy systems.",
+      "features": [
+        "Assessment & Planning Tools",
+        "Automated Migration Workflows",
+        "Data Transfer Optimization",
+        "Post-migration Validation & Testing"
+      ],
+      "idealFor": "Legacy modernization, data center migration, hybrid cloud"
+    }
+  ],
+   "commonBenefits": [
+    {
+      "title": "High Reliability",
+      "iconSrc": "/reliability.png",
+      "description": "99.99% uptime with multi-region redundancy and automated failover."
+    },
+    {
+      "title": "Cost Efficiency",
+      "iconSrc": "/cost.png",
+      "description": "Smart optimization reduces bills by 30–50% on average."
+    },
+    {
+      "title": "Security First",
+      "iconSrc": "/security.png",
+      "description": "Zero-trust model and continuous compliance monitoring."
+    }
+  ],
     "exploreButton": "Explore All Use Cases"
   },
   "cloudServices": {
