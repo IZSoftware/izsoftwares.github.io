@@ -18,7 +18,7 @@ function ServiceHeader() {
         </h1>   
         <p className="icp-text">Our Passion is to Deliver Software that Helps You Succeed</p>
         <div className="icp-header-phrase">
-        <div className='text'>Combining over 30 years of experience in IT and a great drive for innovation, ScienceSoft designs and builds software to rely on: secure, high-performing, scalable, and user-friendly.</div>
+        <div className='text'>Combining over 30 years of experience in IT and a great drive for innovation, IZSoftwares designs and builds software to rely on: secure, high-performing, scalable, and user-friendly.</div>
         </div>
         <div className="icp-header-link-wrapper">
         <button  className="icp" >
@@ -41,9 +41,9 @@ function ServiceHeader() {
           <div className='left'>
             <div className='section-text'><strong>
             Software development services
-              </strong>  help plan, design, develop, integrate, test, manage and evolve software solutions. Quality-centered and adherent to mature software development practices, ScienceSoft provides application development services to startups, software companies, and enterprises across 30+ industries. We are ready to offer <strong>end-to-end development</strong> that covers everything from business analysis to software delivery and support, help modernize your legacy software, or augment your team with our IT experts at any stage of SDLC.</div>
+              </strong>  help plan, design, develop, integrate, test, manage and evolve software solutions. Quality-centered and adherent to mature software development practices, IZSoftwares provides application development services to startups, software companies, and enterprises across 30+ industries. We are ready to offer <strong>end-to-end development</strong> that covers everything from business analysis to software delivery and support, help modernize your legacy software, or augment your team with our IT experts at any stage of SDLC.</div>
           <h1 className='hp-title'>
-          Why Choose ScienceSoft for Your Software Development Project Read more on 
+          Why Choose IZSoftwares for Your Software Development Project Read more on 
           </h1>
           <Box mt={10} mb={15}>
           <Stack direction="row" mb={4} spacing={{ xs: 1, sm: 2, md: 12 }} variant='div'>
@@ -109,7 +109,7 @@ function ServiceHeader() {
       <Optimal/>
 
       </div>
-      <h1 className='hp-title'>Costs of Software Development Services at ScienceSoft</h1>
+      <h1 className='hp-title'>Costs of Software Development Services at IZSoftwares</h1>
       <div>Major cost factors:</div>
       <ul>
         <li>Application type (web, mobile, desktop); number of platforms and OS versions supported.</li>

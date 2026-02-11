@@ -119,7 +119,7 @@ export default function LegacyModernization() {
                   <Button variant="contained" size="large" sx={{ 
                     backgroundColor: "#fff", 
                     color: "#005EB8", 
-                    "&:hover": { backgroundColor: "#004d99" }, 
+                    "&:hover": { backgroundColor: "#004d99", color: "#fff", }, 
                     px: 6, 
                     py: 2, 
                     fontWeight: "bold", 

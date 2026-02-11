@@ -1,0 +1,283 @@
+{
+  "hero": {
+    "title": "ConnectSphere",
+    "subtitle": "Unified Cloud Management Platform",
+    "description": "ConnectSphere is an advanced platform built on AWS and GCP that provides unified access, management, and orchestration of cloud services. Streamline your cloud operations with a single pane of glass.",
+    "image": "/ConnectSphereHeroImage.png",
+    "buttons": [
+      {
+        "text": "Schedule Demo",
+        "variant": "outlined",
+        "color": "#fff"
+      }
+    ],
+    "features": [
+      { "icon": "Cloud", "text": "Multi-Cloud" },
+      { "icon": "Security", "text": "Enterprise Security" },
+      { "icon": "Api", "text": "API First" }
+    ]
+  },
+  
+  "cloudSolutions": {
+    "title": "Cloud Solutions We Offer",
+    "subtitle": "Seamlessly manage your infrastructure across leading cloud providers",
+    "providers": [
+      {
+        "name": "Amazon Web Services",
+        "subtitle": "Comprehensive AWS Support",
+        "color": "#ff9900",
+        "description": "Full integration with AWS ecosystem including EC2, S3, RDS, Lambda, and advanced services like SageMaker and Redshift.",
+        "capabilities": [
+          "EC2 & Auto Scaling",
+          "S3 & CloudFront",
+          "RDS & DynamoDB",
+          "Lambda Functions",
+          "VPC Networking",
+          "IAM Security"
+        ],
+        "buttonText": "Explore AWS Integration"
+      },
+      {
+        "name": "Google Cloud Platform",
+        "subtitle": "Advanced GCP Services",
+        "color": "#4285f4",
+        "description": "Complete GCP integration with Compute Engine, Cloud Storage, BigQuery, and AI/ML services like Vertex AI and Cloud Vision.",
+        "capabilities": [
+          "Compute Engine",
+          "Cloud Storage",
+          "BigQuery Analytics",
+          "Cloud Functions",
+          "Kubernetes Engine",
+          "Cloud IAM"
+        ],
+        "buttonText": "Explore GCP Integration"
+      }
+    ]
+  },
+  
+  "keyCapabilities": {
+    "title": "Key Capabilities & Features",
+    "subtitle": "Powerful features to streamline your cloud operations and maximize efficiency",
+    "features": [
+      {
+        "title": "Cloud Infrastructure Provisioning",
+        "iconSrc": "/infrastructure.png",
+        "description": "Automate and streamline the deployment of cloud resources across multiple platforms with infrastructure-as-code and templated solutions.",
+        "bullets": "• Terraform & CloudFormation • One-click deployments • Multi-region setup"
+      },
+      {
+        "title": "Scalability & Reliability",
+        "iconSrc": "/scalability.png",
+        "description": "Automatically scale resources based on demand with built-in failover and high-availability configurations ensuring 99.9% uptime.",
+        "bullets": "• Auto-scaling • Load balancing • Disaster recovery • Multi-AZ deployment"
+      },
+      {
+        "title": "Security & Compliance",
+        "iconSrc": "/compliance.png",
+        "description": "Enterprise-grade security with built-in compliance for HIPAA, GDPR, SOC 2, and PCI DSS. End-to-end encryption and granular access controls.",
+        "bullets": "• Zero-trust security • Compliance automation • Audit logging • Data encryption"
+      },
+      {
+        "title": "Cost Optimization",
+        "iconSrc": "/cost.png",
+        "description": "Intelligent cost monitoring and optimization with automated resource scheduling, right-sizing recommendations, and budget alerts.",
+        "bullets": "• Cost analytics • Reserved instances • Spot instance management • Budget tracking"
+      }
+    ]
+  },
+ "whyConnectSphere": {
+  "title": "Why ConnectSphere?",
+  "subtitle": "Discover how our unified cloud management platform delivers tangible business value and technical excellence for your organization.",
+  "businessBenefits": [
+    {
+      "title": "Cost Reduction",
+      "iconSrc": "/reduction.png",
+      "description": "Reduce cloud spending by up to 40% with intelligent resource optimization, automated scaling, and consolidated billing across all platforms."
+    },
+    {
+      "title": "Operational Efficiency",
+      "iconSrc": "/efficacy.png",
+      "description": "Streamline operations with centralized management, reducing administrative overhead by 60% and enabling faster time-to-market for new initiatives."
+    },
+    {
+      "title": "Risk Mitigation",
+      "iconSrc": "/risk-management.png",
+      "description": "Minimize business risk with consistent security policies, compliance automation, and disaster recovery orchestration across all environments."
+    }
+  ],
+  "technicalAdvantages": [
+    {
+      "title": "Seamless Integration",
+      "iconSrc": "/hybrid-cloud.png",
+      "description": "Native integration with AWS, GCP, Azure, and hybrid environments. Unified APIs and consistent tooling eliminate platform silos."
+    },
+    {
+      "title": "Performance Optimization",
+      "iconSrc": "/success.png",
+      "description": "Intelligent workload placement, auto-scaling, and performance monitoring ensure optimal resource utilization and application performance."
+    },
+    {
+      "title": "Advanced Security",
+      "iconSrc": "/lock.png",
+      "description": "Centralized identity management, encryption-at-rest, real-time threat detection, and automated compliance reporting across all cloud platforms."
+    }
+  ]
+},
+  
+"useCases": {
+  "title": "Use Cases",
+  "subtitle": "Explore how ConnectSphere solves real-world challenges across various industries and application scenarios.",
+  "cases": [
+    {
+      "title": "Enterprise Application Hosting",
+      "iconSrc": "/hosting.png",
+      "description": "Reliably host mission-critical enterprise applications with high availability, security, and compliance requirements across hybrid and multi-cloud environments.",
+      "features": [
+        "High Availability & Disaster Recovery",
+        "Enterprise-grade Security & Compliance",
+        "Performance Monitoring & Optimization",
+        "Automated Backup & Recovery"
+      ],
+      "idealFor": "ERP systems, CRM platforms, financial applications"
+    },
+    {
+      "title": "Scalable Backend Infrastructure",
+      "iconSrc": "/database (2).png",
+      "description": "Build and manage elastic, auto-scaling backend systems for web and mobile applications that handle variable workloads with optimal cost efficiency.",
+      "features": [
+        "Auto-scaling & Load Balancing",
+        "Serverless & Container Orchestration",
+        "Real-time Monitoring & Analytics",
+        "Cost-optimized Resource Allocation"
+      ],
+      "idealFor": "SaaS platforms, mobile apps, API services"
+    },
+    {
+      "title": "Cloud Migration Support",
+      "iconSrc": "/migration.png",
+      "description": "Streamline your transition to the cloud with comprehensive migration tools, assessment frameworks, and post-migration optimization for legacy systems.",
+      "features": [
+        "Assessment & Planning Tools",
+        "Automated Migration Workflows",
+        "Data Transfer Optimization",
+        "Post-migration Validation & Testing"
+      ],
+      "idealFor": "Legacy modernization, data center migration, hybrid cloud"
+    }
+  ],
+   "commonBenefits": [
+    {
+      "title": "High Reliability",
+      "iconSrc": "/reliability.png",
+      "description": "99.99% uptime with multi-region redundancy and automated failover."
+    },
+    {
+      "title": "Cost Efficiency",
+      "iconSrc": "/cost.png",
+      "description": "Smart optimization reduces bills by 30–50% on average."
+    },
+    {
+      "title": "Security First",
+      "iconSrc": "/security.png",
+      "description": "Zero-trust model and continuous compliance monitoring."
+    }
+  ],
+    "exploreButton": "Explore All Use Cases"
+  },
+  "cloudServices": {
+    "title": "The Scope of IZSoftwares Cloud Application Services",
+    "subtitle": "We can provide any single service or a mix of services from the list.",
+    "services": [
+      {
+        "title": "Cloud app consulting",
+        "image": "/interview.png",
+        "items": [
+          "Elicit business needs for new cloud apps",
+          "Describe and prioritize functional and technical requirements",
+          "Design architecture and UX/UI",
+          "Estimate TCO and ROI",
+          "Conduct feasibility studies",
+          "Provide project roadmaps",
+          "Assess quality and efficiency of existing apps",
+          "Suggest short-term and long-term improvements"
+        ]
+      },
+      {
+        "title": "Cloud app development",
+        "image": "/mobile-development.png",
+        "items": [
+          "Simple mobile apps to complex enterprise systems",
+          "Cover entire development process: ideation to deployment",
+          "Design to coding, testing, and user training",
+          "PoCs, interactive prototypes, and MVPs",
+          "Test and validate functionality before full-scale implementation",
+          "Perfect solutions tailored to your needs"
+        ]
+      },
+      {
+        "title": "App migration to the cloud",
+        "image": "/cloud-computing.png",
+        "items": [
+          "Move apps of any complexity from on-premises to cloud",
+          "Quick, safe migration with minimal business disruption",
+          "Choose optimal migration strategy (rehosting, replatforming, refactoring)",
+          "Select fitting cloud services",
+          "Define steps and timelines",
+          "Set up monitoring tools post-migration",
+          "Track performance, response time, and load",
+          "Handle continuous support"
+        ]
+      },
+      {
+        "title": "Cloud app support and maintenance",
+        "image": "/car.png",
+        "items": [
+          "Ensure 24/7 proper and efficient application function",
+          "Continuous performance monitoring and optimization",
+          "Security monitoring and enhancement",
+          "Regular upgrades and patches",
+          "Regular backups",
+          "Disaster recovery strategy updates",
+          "User support for issues and questions"
+        ]
+      },
+      {
+        "title": "Cloud app containerization",
+        "image": "/containerization.png",
+        "items": [
+          "Encapsulate applications and components with dependencies",
+          "Easy deployment and management in cloud environments",
+          "Increase app agility and flexibility",
+          "Improve performance and reliability",
+          "Reduce development and maintenance costs",
+          "Simplify deployment processes"
+        ]
+      },
+      {
+        "title": "Cloud security",
+        "image": "/cloud.png",
+        "items": [
+          "Set up secure cloud environments from scratch",
+          "Enhance security of existing cloud assets",
+          "Solid protection for cloud data, apps, and infrastructure",
+          "Identify vulnerabilities in cloud security",
+          "Provide extensive guidance and remediation assistance",
+          "Beyond just identification to comprehensive protection"
+        ]
+      },
+      {
+        "title": "Cloud usage optimization",
+        "image": "/operation.png",
+        "items": [
+          "Maximize efficiency of cloud resources and infrastructure",
+          "Continuous monitoring and cost analysis",
+          "Identify underutilized or overutilized resources",
+          "Enable autoscaling capabilities",
+          "Optimize data storage strategies",
+          "Cost-effective resource allocation",
+          "Performance optimization across cloud services"
+        ]
+      }
+    ]
+  }
+}

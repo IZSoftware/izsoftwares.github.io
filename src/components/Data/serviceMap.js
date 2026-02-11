@@ -201,7 +201,7 @@ const Framework =[
      
         workforce:'workforce',
         number:'60+',
-        text:'ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices.'
+        text:'IZSoftwares achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices.'
     },
     {
         image:AngularLogo,
@@ -209,16 +209,16 @@ const Framework =[
         year:'10 years',
         workforce:'workforce',
         number:'60+',
-        text:'ScienceSoft leverages code reusability Angular is notable for to create large-scale apps. We chose Angular for a banking app with 3M+ users.'
+        text:'IZSoftwares leverages code reusability Angular is notable for to create large-scale apps. We chose Angular for a banking app with 3M+ users.'
     },
     {
         image:VueLogo,
-        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+        text:"By using a lightweight Vue framework, IZSoftwares creates high-performant apps with real-time rendering."
     },
     {
         image:NextLogo,
 
-        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+        text:"By using a lightweight Vue framework, IZSoftwares creates high-performant apps with real-time rendering."
     }
   
 ]
@@ -238,13 +238,13 @@ const mobile =[
         pnumber:'60+',
         workforce:'workforce',
         number:'80+',
-        text:"ScienceSoft takes the best from native mobile and web apps and creates the ultimate user experience in PWA."
+        text:"IZSoftwares takes the best from native mobile and web apps and creates the ultimate user experience in PWA."
     },
     {
         image:FlutterLogo,
         practice:'Practice',
         year:'6 years',     
-        text:"With Ionic, ScienceSoft creates a single app codebase for web and mobile platforms and thus expands the audience of created apps to billions of users at the best cost."
+        text:"With Ionic, IZSoftwares creates a single app codebase for web and mobile platforms and thus expands the audience of created apps to billions of users at the best cost."
     }
 ]
 
@@ -274,7 +274,7 @@ const Aws =[
     },
     {
         image:AmazonDocumentDBLogo,
-        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+        text:"By using a lightweight Vue framework, IZSoftwares creates high-performant apps with real-time rendering."
     },
     {
         image:AmazonRDSLogo,

@@ -1,0 +1,154 @@
+import React from 'react';
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+} from '@mui/material';
+
+export default function PricingOptionsSection() {
+  const pricingOptions = [
+    {
+      title: "Fixed price",
+      iconSrc: "/price-tag.png",
+      bestFor: "Feasibility study, PoC, small cloud projects with clear and stable requirements.",
+      description: "You pay the price established by a contract.",
+    },
+    {
+      title: "Time & Material, Time & Material with a cap",
+      iconSrc: "/hourglass.png",
+      bestFor:
+        "advisory activities (business analysis, architecture design, project planning, etc.), agile cloud app development and implementation, cloud app evolution (introducing substantial changes or adding new functionality).",
+      description:
+        "You receive the end-of-the-month invoice based on the hours or efforts reported per month (under the stated upper limit in case of T&M with a cap).",
+    },
+    {
+      title: "Per-ticket pricing",
+      iconSrc: "/tickets.png",
+      bestFor: "L1, L2 cloud application support.",
+      description:
+        "At the start of cooperation, we define the ticket cost, and you get charged based on the volume of incidents we resolve monthly.",
+    },
+    {
+      title: "Fixed monthly fee",
+      iconSrc: "/fees.png",
+      bestFor: "L3 cloud application support (in-code defect fixes, functional changes).",
+      description:
+        "At the start of cooperation, we define the hourly rate for cloud app support activities. After the service is delivered, you pay for a bunch of hours during which we’ve been providing support.",
+    },
+  ];
+
+  return (
+    <Box sx={{ py: { xs: 8, md: 12 }, backgroundColor: "#f8f9fa" }}>
+      <Container maxWidth={false} sx={{ px: { xs: 4, sm: 6, md: 0 } }}>
+        <Grid container justifyContent="center">
+          <Grid item xs={12} md={9.5}>
+            {/* Section title */}
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 800,
+                color: "#004283",
+                textAlign: "left",
+                mb: 6,
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Pricing Options for Our Services
+            </Typography>
+
+            {/* Cards grid */}
+            <Grid container spacing={4}>
+              {pricingOptions.map((option, index) => (
+                <Grid item xs={12} sm={6} key={index}>
+                  <Card
+                    elevation={0}
+                    sx={{
+                      height: "100%",
+                      border: "1px solid #e0e0e0",
+                      borderRadius: 3,
+                      backgroundColor: "#ffffff",
+                      transition: "all 0.25s ease",
+                      "&:hover": {
+                        borderColor: "#004283",
+                        boxShadow: "0 8px 24px rgba(0,66,131,0.12)",
+                        transform: "translateY(-4px)",
+                      },
+                    }}
+                  >
+                    <CardContent sx={{ p: 5, textAlign: "left" }}>
+                      {/* Icon – now image, no background */}
+                      <Box sx={{ mb: 4, display: "flex", justifyContent: "center" }}>
+                        <Box
+                          sx={{
+                            width: 64,
+                            height: 64,
+                            borderRadius: "50%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            overflow: "hidden",
+                          }}
+                        >
+                          <img
+                            src={option.iconSrc}
+                            alt={`${option.title} icon`}
+                            style={{
+                              width: "72%",
+                              height: "72%",
+                              objectFit: "contain",
+                            }}
+                          />
+                        </Box>
+                      </Box>
+
+                      {/* Title */}
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          fontWeight: 700,
+                          color: "#004283",
+                          mb: 2,
+                          textAlign: "center",
+                        }}
+                      >
+                        {option.title}
+                      </Typography>
+
+                      {/* Best for */}
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          fontWeight: 600,
+                          color: "#000000",
+                          mb: 3,
+                          lineHeight: 1.5,
+                        }}
+                      >
+                        <strong>Best for:</strong> {option.bestFor}
+                      </Typography>
+
+                      {/* Description */}
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: "#000000",
+                          lineHeight: 1.7,
+                          fontSize: "1.05rem",
+                        }}
+                      >
+                        {option.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
