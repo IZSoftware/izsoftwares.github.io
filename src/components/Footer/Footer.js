@@ -14,6 +14,17 @@ import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import Hidden from '@mui/material/Hidden';
 import Chip from '@mui/material/Chip';
+import { keyframes } from '@mui/system';
+
+// Define pulse animation
+const pulse = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+`;
 
 function Copyright(){
     
@@ -171,8 +182,29 @@ export default function Footer(){
                                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                                                 <Link href="/careers" underline="none" color="inherit">
                                                     <Typography align="center" gutterBottom>
-                                                        Careers  <Chip label="Hiring" color="success" size="small"/> {/* */}
+                                                        Careers  <Chip label="Hiring" color="success" size="small"/>
                                                     </Typography> 
+                                                </Link>                                                             
+                                            </Grid>
+                                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                                <Link href="/status" underline="none" color="inherit">
+                                                    <Box sx={{ display: 'inline-flex', alignItems: 'center' }}>
+                                                        <Typography align="center" gutterBottom sx={{ mr: 0.5 }}>
+                                                            Status
+                                                        </Typography>
+                                                        <Box 
+                                                            sx={{ 
+                                                                display: 'inline-flex',
+                                                                animation: `${pulse} 2s ease-in-out infinite`,
+                                                                color: '#4caf50',
+                                                                ml: 0.5
+                                                            }}
+                                                        >
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/>
+                                                            </svg>
+                                                        </Box>
+                                                    </Box>
                                                 </Link>                                                             
                                             </Grid>
                                         </Grid>                    
@@ -285,7 +317,7 @@ export default function Footer(){
                                 </Grid>    
                                 
                                 <br />
-                                <hr class="footerSeparator"/>
+                                <hr className="footerSeparator" />
                                 <Grid container spacing={2} direction="row" justifyContent="space-between" alignItems="center">
                                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>  
                                         <Grid container spacing={2} direction="row" justifyContent="center" alignItems="center">
