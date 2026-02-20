@@ -70,7 +70,7 @@ const StatusNavbar = () => {
 
                   {/* Desktop Menu - Professional, clean navbar */}
                   <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', gap: 3 }}>
-                    <Link to="/status" style={{ textDecoration: 'none' }}>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
                       <Typography sx={{ 
                         fontWeight: 500, 
                         fontSize: '0.9rem',
@@ -79,7 +79,7 @@ const StatusNavbar = () => {
                           color: '#000000'
                         }
                       }}>
-                        STATUS
+                        HOME
                       </Typography>
                     </Link>
                   </Box>
@@ -162,7 +162,7 @@ const StatusNavbar = () => {
             <ListItem disablePadding sx={{ mb: 0.5 }}>
               <ListItemButton
                 component={Link}
-                to="/status"
+                to="/"
                 onClick={toggleMenu}
                 sx={{
                   px: 1.5,
@@ -177,7 +177,7 @@ const StatusNavbar = () => {
                 }}
               >
                 <ListItemText 
-                  primary="STATUS"
+                  primary="HOME"
                   primaryTypographyProps={{
                     fontSize: '0.9rem',
                     fontWeight: 500,

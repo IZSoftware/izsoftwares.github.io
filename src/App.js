@@ -61,11 +61,14 @@ const AppContent = () => {
         <Route path="/case-studies" element={<Portfolio />} />
         <Route path="/faqs" element={<FAQPage />} />
         <Route path="/client-support" element={<Construction />} />
+
         <Route path='/blog' element={<Blog/>}/>
         <Route path="/blog/:blogUrl" element={<BlogPost />} />
         <Route path="/contact-us" element={<InitContent />} />
         <Route path="/events" element={<Events/>} />
+
         <Route path='/zetscore' element={<ConstructionZetScore/>}/>
+
         <Route path="/about/client-onboard" element={<ClientOnboard/>} />
         <Route path="/about/development-process" element={<Construction/>} />
         <Route path="/about/payment-gateway-providers" element={<Gateways/>} />
@@ -81,6 +84,7 @@ const AppContent = () => {
         <Route path="/industries/financial-services" element={<Construction/>} />
         <Route path="/industries/smart-office" element={<Construction/>} />
         <Route path="/industries/retail" element={<Construction/>} />
+        
         <Route path="/about/affiliate-agent" element={<AffiliateAgent />} />
         <Route path="/about/terms-use" element={<TermsUse />} />
         <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />

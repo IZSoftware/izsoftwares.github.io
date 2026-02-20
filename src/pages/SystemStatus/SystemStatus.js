@@ -245,7 +245,7 @@ const Status = () => {
                     <Grid container spacing={3} alignItems="center" justifyContent="space-between">
                       <Grid item xs={12} md={6}>
                         <Typography variant="h3" sx={{ fontWeight: 700, color: '#111827', mb: 1, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
-                          System Health Overview
+                          Product Health Overview
                         </Typography>
                         <Typography sx={{ color: '#4b5563', fontSize: { xs: '1rem', sm: '1.2rem' } }}>
                           Last updated: {new Date().toLocaleString()}
@@ -273,8 +273,8 @@ const Status = () => {
                   {/* Combined Status Table */}
                   <Box sx={{ mb: 4 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3, flexWrap: 'wrap', gap: 2 }}>
-                      <Typography variant="h5" sx={{ fontWeight: 600, color: '#374151' }}>
-                        Service Status Details
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: '#374151', fontSize: { xs: '1.5rem', sm: '2rem' } }}>
+                        Product Status Details
                       </Typography>
                       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                         <Box sx={{ px: { xs: 2, sm: 3 }, py: 1, bgcolor: '#e8f5e9', borderRadius: 5 }}>
@@ -294,15 +294,14 @@ const Status = () => {
                       <Table>
                         <TableHead>
                           <TableRow sx={{ bgcolor: '#f9fafb' }}>
-                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>Product</TableCell>
-                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>Service</TableCell>
-                            <TableCell align="center" sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>Status</TableCell>
-                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>Details</TableCell>
+                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '1rem', sm: '1.2rem' } }}>Product</TableCell>
+                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '1rem', sm: '1.2rem' } }}>Service</TableCell>
+                            <TableCell align="center" sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '1rem', sm: '1.2rem' } }}>Status</TableCell>
+                            <TableCell sx={{ fontWeight: 700, color: '#4b5563', py: { xs: 2, sm: 3 }, fontSize: { xs: '1rem', sm: '1.2rem' } }}>Details</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
                           {allServices.map((item, index) => {
-                            // Check if this is the first ZetCollect service (after ZetScore)
                             const isFirstZetCollect = index === zetScoreServices.length;
                             
                             return (
@@ -316,16 +315,16 @@ const Status = () => {
                                         p: 0, 
                                         borderBottom: 'none',
                                         position: 'relative',
-                                        height: '24px',
+                                        height: '32px',
                                         '&::before': {
                                           content: '""',
                                           position: 'absolute',
                                           top: '50%',
                                           left: 0,
                                           right: 0,
-                                          height: '3px',
-                                          background: 'linear-gradient(135deg, transparent 49.5%, #94a3b8 49.5%, #94a3b8 50.5%, transparent 50.5%)',
-                                          backgroundSize: '20px 20px',
+                                          height: '5px',
+                                          background: 'linear-gradient(135deg, transparent 49.5%, #64748b 49.5%, #64748b 50.5%, transparent 50.5%)',
+                                          backgroundSize: '25px 25px',
                                           backgroundRepeat: 'repeat-x',
                                         }
                                       }}
@@ -334,14 +333,14 @@ const Status = () => {
                                 )}
                                 <TableRow sx={{ '&:hover': { bgcolor: '#f9fafb' } }}>
                                   <TableCell sx={{ 
-                                    fontWeight: 600, 
+                                    fontWeight: 700, 
                                     color: item.product === 'ZetScore' ? '#2e7d32' : PRIMARY, 
                                     py: { xs: 2, sm: 3 }, 
-                                    fontSize: { xs: '0.9rem', sm: '1.1rem' } 
+                                    fontSize: { xs: '1.2rem', sm: '1.4rem' }  // Increased product name font size
                                   }}>
                                     {item.product}
                                   </TableCell>
-                                  <TableCell sx={{ fontWeight: 500, color: '#111827', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>
+                                  <TableCell sx={{ fontWeight: 500, color: '#111827', py: { xs: 2, sm: 3 }, fontSize: { xs: '1rem', sm: '1.1rem' } }}>
                                     {item.service}
                                   </TableCell>
                                   <TableCell align="center" sx={{ py: { xs: 2, sm: 3 } }}>
@@ -349,7 +348,7 @@ const Status = () => {
                                       {getStatusIcon(item.status)}
                                     </Box>
                                   </TableCell>
-                                  <TableCell sx={{ color: '#6b7280', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.9rem', sm: '1.1rem' } }}>
+                                  <TableCell sx={{ color: '#6b7280', py: { xs: 2, sm: 3 }, fontSize: { xs: '0.95rem', sm: '1.05rem' } }}>
                                     {item.reason}
                                   </TableCell>
                                 </TableRow>
