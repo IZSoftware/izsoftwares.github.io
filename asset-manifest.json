@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7d63aa26.css",
-    "main.js": "/static/js/main.c2425ae7.js",
+    "main.js": "/static/js/main.a11a2fca.js",
     "static/js/453.a785ddce.chunk.js": "/static/js/453.a785ddce.chunk.js",
     "static/media/medical-banner-with-doctor-wearing-goggles.jpg": "/static/media/medical-banner-with-doctor-wearing-goggles.d2a0f3873e016678de32.jpg",
     "static/media/ZetCollect mockuper.png": "/static/media/ZetCollect mockuper.64dd30cdd041518dd96a.png",
@@ -22,6 +22,7 @@
     "static/media/development-of-a-sharepoint-records-management-system-for-a-us-legal-firm.jpg": "/static/media/development-of-a-sharepoint-records-management-system-for-a-us-legal-firm.5e616fd71e9bfa5f1661.jpg",
     "static/media/UX_UI_design.png": "/static/media/UX_UI_design.6c1de7f685110f8d85da.png",
     "static/media/NBL.png": "/static/media/NBL.e0dd1f5e3b8baa75a39b.png",
+    "static/media/cybersecurity banner.png": "/static/media/cybersecurity banner.105094d2ea0369bfd788.png",
     "static/media/outsourcing-services.png": "/static/media/outsourcing-services.3ab2a1992ffb8345a111.png",
     "static/media/b2c-retailers.png": "/static/media/b2c-retailers.35b1ca967a7b6182e899.png",
     "static/media/Webpay.png": "/static/media/Webpay.4b6c12a3efb7d13c224a.png",
@@ -34,7 +35,7 @@
     "static/media/professional.svg": "/static/media/professional.b90e06bcd37cc7541e749d989f9a0572.svg",
     "static/media/angular-logo.png": "/static/media/angular-logo.709c340d5432495d2340.png",
     "static/media/enterprise-portal-development-for-a-financial-advisory-firm.jpg": "/static/media/enterprise-portal-development-for-a-financial-advisory-firm.9345209b0db0e8cc52d9.jpg",
-    "static/media/become-iz-partner.svg": "/static/media/become-iz-partner.24811ba1b508cc01ff39390a1c9b54f8.svg",
+    "static/media/become-iz-partner.svg": "/static/media/become-iz-partner.3f0e1354e11eaebb8c8f7943296f39c5.svg",
     "static/media/pwa-logo.png": "/static/media/pwa-logo.24e5267f2697316941cc.png",
     "static/media/jenkins (1).svg": "/static/media/jenkins (1).680d9ffa39829760e67c2b90cb6897cd.svg",
     "static/media/mail-sent.png": "/static/media/mail-sent.afdb38ee29182afdb6b2.png",
@@ -58,6 +59,7 @@
     "static/media/talent-management.png": "/static/media/talent-management.02e295feb361c8cb87b0.png",
     "static/media/contact-us.svg": "/static/media/contact-us.12e057f91b74dab52c13.svg",
     "static/media/africa.png": "/static/media/africa.b8d57f28508d5d53d8ab.png",
+    "static/media/crm.png": "/static/media/crm.22860591a081b116b0fe.png",
     "static/media/database sourcing.png": "/static/media/database sourcing.d98dd148f72a826ba4b8.png",
     "static/media/sign.svg": "/static/media/sign.5cf06c426bd33a4fb71e2974a6230719.svg",
     "static/media/EatAndMore1.jpg": "/static/media/EatAndMore1.2c813fb26bbfd143d748.jpg",
@@ -65,6 +67,7 @@
     "static/media/speech-bubble.png": "/static/media/speech-bubble.f08e0eb18dd974497a88.png",
     "static/media/python_1.png": "/static/media/python_1.8cf7058581c85f651d63.png",
     "static/media/HealthcareIQ.png": "/static/media/HealthcareIQ.39ab2256a0c0e1b05db1.png",
+    "static/media/mobile-app.png": "/static/media/mobile-app.145d9ce0157a56f8fcd8.png",
     "static/media/amazon-dynamodb-logo.png": "/static/media/amazon-dynamodb-logo.d1df31c5cb7d1cc5f64a.png",
     "static/media/gitlab.png": "/static/media/gitlab.8a8d11e389d8f201135f.png",
     "static/media/google-developer-tools.png": "/static/media/google-developer-tools.f14275502e45ab295dd8.png",
@@ -105,21 +108,27 @@
     "static/media/ui_ux.svg": "/static/media/ui_ux.3f194ca3c994276f5a70791c4cd5c6d1.svg",
     "static/media/qa.svg": "/static/media/qa.84b5d272929dc7de63ecbcaf75d4bcfb.svg",
     "static/media/oracle.svg": "/static/media/oracle.73eaf55290bf131e0100d3dd23471d08.svg",
+    "static/media/consulting.svg": "/static/media/consulting.f25ba2375f98e880ecf19377bb592609.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/migration_to_cloud.svg": "/static/media/migration_to_cloud.f83005de00e210c3240db72b49a3f7fe.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/architecture-design.svg": "/static/media/architecture-design.99284694f63360b287bd155ace4fd732.svg",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/requirement.svg": "/static/media/requirement.e4873564334b43f82ea5febbb8e8ae97.svg",
+    "static/media/containerization.svg": "/static/media/containerization.93aa3672df71084c2bab68cd1b534a12.svg",
     "static/media/html.svg": "/static/media/html.14d18d383b1549419a56cbc75d6b1423.svg",
+    "static/media/cross-platform.svg": "/static/media/cross-platform.e89cba45c8d376869169e4fab0434785.svg",
+    "static/media/re-engineering.svg": "/static/media/re-engineering.bd23b3bc83ee957a22ebadfb6025c3e2.svg",
     "static/media/angular-logo.svg": "/static/media/angular-logo.303226e17701dca7573192bfef2d78f7.svg",
     "static/media/css.svg": "/static/media/css.0a8fc537999f2d29e9cda7b6f6e8dce1.svg",
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.7d63aa26.css.map": "/static/css/main.7d63aa26.css.map",
-    "main.c2425ae7.js.map": "/static/js/main.c2425ae7.js.map",
+    "main.a11a2fca.js.map": "/static/js/main.a11a2fca.js.map",
     "453.a785ddce.chunk.js.map": "/static/js/453.a785ddce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d63aa26.css",
-    "static/js/main.c2425ae7.js"
+    "static/js/main.a11a2fca.js"
   ]
 }
