@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7d63aa26.css",
-    "main.js": "/static/js/main.68275cda.js",
+    "main.js": "/static/js/main.c2425ae7.js",
     "static/js/453.a785ddce.chunk.js": "/static/js/453.a785ddce.chunk.js",
     "static/media/medical-banner-with-doctor-wearing-goggles.jpg": "/static/media/medical-banner-with-doctor-wearing-goggles.d2a0f3873e016678de32.jpg",
     "static/media/ZetCollect mockuper.png": "/static/media/ZetCollect mockuper.64dd30cdd041518dd96a.png",
@@ -58,7 +58,6 @@
     "static/media/talent-management.png": "/static/media/talent-management.02e295feb361c8cb87b0.png",
     "static/media/contact-us.svg": "/static/media/contact-us.12e057f91b74dab52c13.svg",
     "static/media/africa.png": "/static/media/africa.b8d57f28508d5d53d8ab.png",
-    "static/media/crm.png": "/static/media/crm.22860591a081b116b0fe.png",
     "static/media/database sourcing.png": "/static/media/database sourcing.d98dd148f72a826ba4b8.png",
     "static/media/sign.svg": "/static/media/sign.5cf06c426bd33a4fb71e2974a6230719.svg",
     "static/media/EatAndMore1.jpg": "/static/media/EatAndMore1.2c813fb26bbfd143d748.jpg",
@@ -66,7 +65,6 @@
     "static/media/speech-bubble.png": "/static/media/speech-bubble.f08e0eb18dd974497a88.png",
     "static/media/python_1.png": "/static/media/python_1.8cf7058581c85f651d63.png",
     "static/media/HealthcareIQ.png": "/static/media/HealthcareIQ.39ab2256a0c0e1b05db1.png",
-    "static/media/mobile-app.png": "/static/media/mobile-app.145d9ce0157a56f8fcd8.png",
     "static/media/amazon-dynamodb-logo.png": "/static/media/amazon-dynamodb-logo.d1df31c5cb7d1cc5f64a.png",
     "static/media/gitlab.png": "/static/media/gitlab.8a8d11e389d8f201135f.png",
     "static/media/google-developer-tools.png": "/static/media/google-developer-tools.f14275502e45ab295dd8.png",
@@ -117,11 +115,11 @@
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.7d63aa26.css.map": "/static/css/main.7d63aa26.css.map",
-    "main.68275cda.js.map": "/static/js/main.68275cda.js.map",
+    "main.c2425ae7.js.map": "/static/js/main.c2425ae7.js.map",
     "453.a785ddce.chunk.js.map": "/static/js/453.a785ddce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d63aa26.css",
-    "static/js/main.68275cda.js"
+    "static/js/main.c2425ae7.js"
   ]
 }
