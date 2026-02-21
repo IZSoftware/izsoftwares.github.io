@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Container, 
   Grid, 
@@ -17,149 +17,21 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import CancelIcon from '@mui/icons-material/Cancel';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import statusData from '../../components/Data/Izsoftware_status.json';
 
 const Status = () => {
   const PRIMARY = '#004d99';
+  const [zetScoreServices, setZetScoreServices] = useState([]);
+  const [zetCollectServices, setZetCollectServices] = useState([]);
+  const [, setMetadata] = useState({});
+  const [lastUpdated] = useState(new Date());
 
-  // ZetScore Services
-  const zetScoreServices = [
-    {
-      service: 'Peer Review',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Assessment',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Employee Wellbeing',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Net Promoter System',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Personal Development',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Workforce Analytics',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Onboarding',
-      status: 'Under Maintenance',
-      reason: 'Scheduled maintenance in progress'
-    },
-    {
-      service: 'Background Checks',
-      status: 'Under Maintenance',
-      reason: 'Scheduled maintenance in progress'
-    },
-    {
-      service: 'Work Authorization',
-      status: 'Under Maintenance',
-      reason: 'Scheduled maintenance in progress'
-    }
-  ];
-
-  // ZetCollect Services (Combined Current + Upcoming)
-  const zetCollectServices = [
-    // Current Services
-    {
-      service: 'Client Management',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Collector Management',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Branch Setup',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Mobile Collection',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Booklet System',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Transaction History',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'Reports & Analytics',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'User Access & Roles',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    {
-      service: 'SMS Notifications',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Daily Synchronization',
-      status: 'Operational',
-      reason: 'All systems operational'
-    },
-    // Upcoming Features
-    {
-      service: 'GPS Traceability',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Missed Collection Alerts',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Client Risk Profile & Rating',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Route & Schedule Optimization',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Client Self Portal',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'New Currency System (CDF)',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    },
-    {
-      service: 'Mobile Money',
-      status: 'Under Maintenance',
-      reason: 'System under maintenance'
-    }
-  ];
+  useEffect(() => {
+    // Load data from JSON
+    setZetScoreServices(statusData.zetScoreServices);
+    setZetCollectServices(statusData.zetCollectServices);
+    setMetadata(statusData.metadata);
+  }, []);
 
   const zetScoreWithProduct = zetScoreServices.map((item, index) => ({ 
     ...item, 
@@ -248,7 +120,7 @@ const Status = () => {
                           Product Health Overview
                         </Typography>
                         <Typography sx={{ color: '#4b5563', fontSize: { xs: '1rem', sm: '1.2rem' } }}>
-                          Last updated: {new Date().toLocaleString()}
+                          Last updated: {lastUpdated.toLocaleString()}
                         </Typography>
                       </Grid>
                       <Grid item xs={12} md={6}>
