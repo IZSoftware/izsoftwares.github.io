@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d63aa26.css",
-    "main.js": "/static/js/main.806b8524.js",
-    "static/js/453.a785ddce.chunk.js": "/static/js/453.a785ddce.chunk.js",
+    "main.css": "/static/css/main.60bc5a14.css",
+    "main.js": "/static/js/main.d132818f.js",
+    "static/js/453.79b1ddd5.chunk.js": "/static/js/453.79b1ddd5.chunk.js",
     "static/media/medical-banner-with-doctor-wearing-goggles.jpg": "/static/media/medical-banner-with-doctor-wearing-goggles.d2a0f3873e016678de32.jpg",
     "static/media/ZetCollect mockuper.png": "/static/media/ZetCollect mockuper.64dd30cdd041518dd96a.png",
     "static/media/people-office-work-day.jpg": "/static/media/people-office-work-day.97494c77053bbff313f8.jpg",
@@ -123,12 +123,12 @@
     "static/media/css.svg": "/static/media/css.0a8fc537999f2d29e9cda7b6f6e8dce1.svg",
     "static/media/modal_bg.svg": "/static/media/modal_bg.17380953c44d9575da8e.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.7d63aa26.css.map": "/static/css/main.7d63aa26.css.map",
-    "main.806b8524.js.map": "/static/js/main.806b8524.js.map",
-    "453.a785ddce.chunk.js.map": "/static/js/453.a785ddce.chunk.js.map"
+    "main.60bc5a14.css.map": "/static/css/main.60bc5a14.css.map",
+    "main.d132818f.js.map": "/static/js/main.d132818f.js.map",
+    "453.79b1ddd5.chunk.js.map": "/static/js/453.79b1ddd5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d63aa26.css",
-    "static/js/main.806b8524.js"
+    "static/css/main.60bc5a14.css",
+    "static/js/main.d132818f.js"
   ]
 }
