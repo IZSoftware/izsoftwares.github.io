@@ -1,0 +1,103 @@
+{
+  "services": [
+    {
+      "key": "financial-software-development",
+      "label": "Financial software development",
+      "title": "Financial software development",
+      "description": "We offer full-cycle IT consulting and software engineering to help BFSI companies transform operations and unlock growth opportunities. We prioritize data security and regulatory compliance throughout the financial software implementation journey.",
+      "bullets": [
+        "Fintech software development",
+        "Insurance software development",
+        "Lending software development",
+        "Payment software development",
+        "Investment software development",
+        "Banking software development"
+      ]
+    },
+    {
+      "key": "financial-software-consulting",
+      "label": "Financial software consulting",
+      "title": "Financial software consulting",
+      "description": "We design robust solutions tailored to your needs and deliver a detailed project plan for predictable implementation. For financial products specifically, we assist in idea productization, CX strategy creation, and market entry planning.",
+      "bullets": [
+        "Digital transformation consulting",
+        "Software consulting",
+        "Mobile app consulting",
+        "SaaS consulting",
+        "BPM consulting",
+        "Feasibility assessment"
+      ]
+    },
+    {
+      "key": "software-modernization",
+      "label": "Software modernization",
+      "title": "Software modernization",
+      "description": "We upgrade your existing software to help you get a modern solution at an optimal cost and with minimal disruption to business workflows.",
+      "bullets": [
+        "Software modernization",
+        "Cloud migration",
+        "Code review and revamp"
+      ]
+    },
+    {
+      "key": "managed-financial-it-services",
+      "label": "Managed financial IT services",
+      "title": "Managed financial IT services",
+      "description": "We monitor, troubleshoot, and upgrade all components of your financial IT infrastructure and apps to keep them stable, cost-effective, and relevant to your needs. Our teams adapt to your time zones and business hours.",
+      "bullets": [
+        "IT infrastructure support and monitoring",
+        "Managed application services",
+        "L1–L3 IT help desk",
+        "Cloud management",
+        "Managed security",
+        "IT automation"
+      ]
+    },
+    {
+      "key": "quality-assurance-testing",
+      "label": "Quality assurance and testing",
+      "title": "Quality assurance and testing",
+      "description": "We offer versatile QA services to ensure top-notch quality of financial IT systems.",
+      "bullets": [
+        "Software testing",
+        "QA consulting",
+        "Code audit",
+        "Test automation"
+      ]
+    },
+    {
+      "key": "financial-it-security",
+      "label": "Financial IT security",
+      "title": "Financial IT security",
+      "description": "We help protect your software and IT infrastructure from emerging cyber threats and guarantee 100% compliance with the required regulatory frameworks.",
+      "bullets": [
+        "Application security",
+        "PCI DSS compliance",
+        "NYDFS cybersecurity assessment",
+        "GDPR compliance"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "title": "How do you ensure data security and compliance for financial applications?",
+      "description": "We implement multiple layers of security including end-to-end encryption, secure authentication protocols, and regular security audits. Our development follows strict compliance standards including PCI DSS, GDPR, and SOC 2. We also conduct thorough vulnerability assessments and penetration testing to identify and address potential security risks before deployment."
+    },
+    {
+      "title": "What is your typical timeline for developing a financial software solution?",
+      "description": "The timeline varies based on project complexity and requirements. A basic MVP can be delivered in 3-4 months, while enterprise-level solutions typically take 6-12 months. We follow agile methodology with 2-week sprints, allowing you to see progress continuously and adjust priorities as needed. We'll provide a detailed project roadmap during the discovery phase."
+    },
+    {
+      "title": "How do you handle integration with existing financial systems and legacy infrastructure?",
+      "description": "We specialize in seamless integration using RESTful APIs, microservices architecture, and middleware solutions. Our team conducts thorough system analysis to understand your existing infrastructure, then designs integration strategies that minimize disruption to ongoing operations. We also offer legacy system modernization services to gradually upgrade outdated components while maintaining business continuity."
+    },
+    {
+      "title": "What regulatory compliance standards do you address in financial software development?",
+      "description": "We ensure compliance with major financial regulations including PCI DSS for payment processing, GDPR for data protection, SOX for financial reporting, and local regulations like NYDFS for cybersecurity. Our team stays updated with evolving compliance requirements and implements necessary controls, audit trails, and reporting features to help you maintain regulatory adherence."
+    },
+    {
+      "title": "Do you provide ongoing support and maintenance after the software is deployed?",
+      "description": "Yes, we offer comprehensive managed IT services including 24/7 monitoring, regular security updates, performance optimization, and technical support. Our maintenance packages include L1-L3 support, bug fixes, feature enhancements, and infrastructure management. We adapt to your time zone and business hours to ensure minimal disruption to your operations."
+    }
+  ]
+}
