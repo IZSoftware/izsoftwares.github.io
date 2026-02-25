@@ -1,0 +1,44 @@
+[
+  {
+    "id": "consulting-offer",
+    "title": "Solution consulting, implementation and support for professional services",
+    "image": "/crm_dedicated_services_crm_implementation_consulting.svg",
+    "sections": [
+      {
+        "heading": "We consult on:",
+        "items": [
+          "Choosing suitable solutions and their optimal functionality to meet your business needs.",
+          "Reducing implementation costs.",
+          "Ensuring user adoption."
+        ]
+      },
+      {
+        "heading": "We offer:",
+        "items": [
+          "End-to-end solution implementation.",
+          "After-launch support.",
+          "Continuous solution maintenance and evolution."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "it-outsourcing",
+    "title": "IT outsourcing for professional services",
+    "image": "/it-outsourcicg.svg",
+    "sections": [
+      {
+        "heading": null,
+        "items": [
+          "Business analysis",
+          "Software development.",
+          "QA.",
+          "Data analytics.",
+          "IT support.",
+          "Managed infrastructure services.",
+          "Help desk."
+        ]
+      }
+    ]
+  }
+]

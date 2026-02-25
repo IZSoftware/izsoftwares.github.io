@@ -1,0 +1,26 @@
+[
+  {
+    "id": "corporate-finance-solutions",
+    "title": "Corporate finance solutions",
+    "description": "We can develop software to automate all key financial processes, such as accounting, billing, invoicing, and financial modeling. We ensure that your financial solutions comply with applicable regional and industry-specific regulations.",
+    "image": "/research-and-development.png"
+  },
+  {
+    "id": "hr-management-solutions",
+    "title": "HR management solutions",
+    "description": "We can deliver a system to manage your human resources and build a comprehensive employee experience, from recruitment and onboarding to training, performance management, and continuous learning.",
+    "image": "/human-resources.png"
+  },
+  {
+    "id": "project-management-solutions",
+    "title": "Project management solutions",
+    "description": "We can design a custom solution to enable convenient team collaboration, project planning, task management and scheduling, resource allocation, project budget management, and progress monitoring.",
+    "image": "/presentation.png"
+  },
+  {
+    "id": "digital-customer-channels",
+    "title": "Digital customer channels",
+    "description": "We can implement a web portal and a mobile app to ensure that customers have secure access to your services and their personal data anytime, anywhere. We integrate secure in-app payment gateways based on your customer's preferred payment methods.",
+    "image": "/customer-portal-green.svg"
+  }
+]

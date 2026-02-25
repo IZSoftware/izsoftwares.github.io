@@ -78,7 +78,7 @@ const HeroPage = () => {
                           mx: { xs: 'auto', md: 0 }
                         }}
                       >
-                        Since 2005, ScienceSoft has been an end-to-end technology partner for companies from the finance sector, helping them smoothly digitalize their business operations and deliver top-of-the-line customer experience despite time and budget constraints and changing requirements.
+                        Since 2022, IZSoftwares has been an end-to-end technology partner for companies from the finance sector, helping them smoothly digitalize their business operations and deliver top-of-the-line customer experience despite time and budget constraints and changing requirements.
                       </Typography>
 
                       <Box sx={{ 
