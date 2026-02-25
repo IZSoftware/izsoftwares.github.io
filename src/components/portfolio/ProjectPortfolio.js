@@ -15,6 +15,8 @@ import {
   Checkbox,
   TextField,
   InputAdornment,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ClearIcon from "@mui/icons-material/Clear";
@@ -24,11 +26,14 @@ import {
   projectData,
   country,
 } from "../../components/Data/OurPartnersData";
+import ReactMarkdown from 'react-markdown';
 
 const TabBasedFilter = ({ selectedValues, onChange }) => {
   const [activeTab, setActiveTab] = useState("industries");
-  const [isOpen, setIsOpen] = useState(true); // Set to true by default
+  const [isOpen, setIsOpen] = useState(true);
   const dropdownRef = useRef(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -81,86 +86,89 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-    // Always open dropdown when switching tabs
     setIsOpen(true);
   };
 
   const handleArrowClick = (e) => {
-    e.stopPropagation(); // Prevent tab click when clicking arrow
+    e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
   return (
     <Box ref={dropdownRef} sx={{ position: "relative", width: "100%" }}>
-      {/* Tabs Only */}
+      {/* Tabs  */}
       <Box sx={{ 
-            display: "flex", 
-            border: "1px solid #d1d5db",
-            borderRadius: "8px",
-            backgroundColor: "#e5f2fe",
-            overflow: "hidden",
-          }}>
-            {["industries", "regions"].map((tab) => (
+        display: "flex", 
+        flexDirection: isMobile ? "column" : "row",
+        border: "1px solid #d1d5db",
+        borderRadius: "8px",
+        backgroundColor: "#e5f2fe",
+        overflow: "hidden",
+      }}>
+        {["industries", "regions"].map((tab) => (
+          <Box
+            key={tab}
+            onClick={() => handleTabClick(tab)}
+            sx={{
+              flex: 1,
+              padding: isMobile ? "12px 16px" : "16px 24px",
+              cursor: "pointer",
+              textAlign: "center",
+              borderBottom: activeTab === tab 
+                ? isMobile ? "none" : "3px solid #005eb8"
+                : isMobile ? "none" : "3px solid transparent",
+              borderLeft: isMobile && activeTab === tab ? "3px solid #005eb8" : "none",
+              backgroundColor: activeTab === tab ? "white" : "transparent",
+              color: activeTab === tab ? "#005eb8" : "#6b7280",
+              fontWeight: activeTab === tab ? "600" : "500",
+              fontSize: isMobile ? "14px" : "16px",
+              transition: "all 0.2s",
+              "&:hover": {
+                backgroundColor: activeTab === tab ? "white" : "#f9fafb",
+                color: "#005eb8",
+              },
+              position: "relative",
+              minWidth: isMobile ? "auto" : "180px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 1,
+            }}
+          >
+            {getTabLabel(tab)}
+            <span 
+              onClick={handleArrowClick}
+              style={{ 
+                transform: isOpen && activeTab === tab ? "rotate(180deg)" : "rotate(0deg)", 
+                transition: "transform 0.3s",
+                fontSize: isMobile ? "10px" : "12px",
+                color: activeTab === tab ? "#005eb8" : "#6b7280",
+                cursor: "pointer"
+              }}
+            >
+              ▼
+            </span>
+            {selectedValues.some(item => 
+              getTabContent().some(opt => opt.name === item.name)
+            ) && activeTab !== tab && (
               <Box
-                key={tab}
-                onClick={() => handleTabClick(tab)}
                 sx={{
-                  flex: 1,
-                  padding: "16px 24px",
-                  cursor: "pointer",
-                  textAlign: "center",
-                  borderBottom: activeTab === tab ? "3px solid #005eb8" : "3px solid transparent",
-                  backgroundColor: activeTab === tab ? "white" : "transparent",
-                  color: activeTab === tab ? "#005eb8" : "#6b7280",
-                  fontWeight: activeTab === tab ? "600" : "500",
-                  fontSize: "16px",
-                  transition: "all 0.2s",
-                  "&:hover": {
-                    backgroundColor: activeTab === tab ? "white" : "#f9fafb",
-                    color: "#005eb8",
-                  },
-                  position: "relative",
-                  minWidth: "180px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 1,
+                  position: "absolute",
+                  top: isMobile ? "4px" : "8px",
+                  right: isMobile ? "4px" : "12px",
+                  width: isMobile ? "8px" : "12px",
+                  height: isMobile ? "8px" : "12px",
+                  borderRadius: "50%",
+                  backgroundColor: "#005eb8",
+                  border: "2px solid white",
                 }}
-              >
-                {getTabLabel(tab)}
-                <span 
-                  onClick={handleArrowClick}
-                  style={{ 
-                    transform: isOpen && activeTab === tab ? "rotate(180deg)" : "rotate(0deg)", 
-                    transition: "transform 0.3s",
-                    fontSize: "12px",
-                    color: activeTab === tab ? "#005eb8" : "#6b7280",
-                    cursor: "pointer"
-                  }}
-                >
-                  ▼
-                </span>
-                {selectedValues.some(item => 
-                  getTabContent().some(opt => opt.name === item.name)
-                ) && activeTab !== tab && (
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: "8px",
-                      right: "12px",
-                      width: "12px",
-                      height: "12px",
-                      borderRadius: "50%",
-                      backgroundColor: "#005eb8",
-                      border: "2px solid white",
-                    }}
-                  />
-                )}
-              </Box>
-            ))}
+              />
+            )}
           </Box>
+        ))}
+      </Box>
 
-      {/* Dropdown Content - Shows by default on page load */}
+      {/* Dropdown Content  */}
       {isOpen && (
         <Box
           sx={{
@@ -177,16 +185,16 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
           }}
         >
           {/* Tab Content */}
-          <Box sx={{ maxHeight: "400px", overflowY: "auto" }}>
+          <Box sx={{ maxHeight: isMobile ? "300px" : "400px", overflowY: "auto" }}>
             <Grid container spacing={0}>
               {getTabContent().map((option, index) => (
-                <Grid item xs={6} key={option.name}>
+                <Grid item xs={isMobile ? 12 : 6} key={option.name}>
                   <Box
                     onClick={() => handleToggle(option)}
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      padding: "14px 16px",
+                      padding: isMobile ? "12px 14px" : "14px 16px",
                       cursor: "pointer",
                       borderBottom: "1px solid #f3f4f6",
                       "&:hover": {
@@ -199,21 +207,22 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
                     <Checkbox
                       checked={isSelected(option)}
                       sx={{ 
-                        padding: "0 12px 0 0",
+                        padding: isMobile ? "0 8px 0 0" : "0 12px 0 0",
                         color: "#d1d5db",
                         '&.Mui-checked': {
                           color: "#005eb8",
                         },
                       }}
+                      size={isMobile ? "small" : "medium"}
                     />
                     {option.image && (
                       <img
                         src={option.image}
                         alt={option.name}
                         style={{
-                          width: "24px",
-                          height: "24px",
-                          marginRight: "12px",
+                          width: isMobile ? "20px" : "24px",
+                          height: isMobile ? "20px" : "24px",
+                          marginRight: isMobile ? "8px" : "12px",
                           borderRadius: "6px",
                           objectFit: "cover",
                         }}
@@ -221,7 +230,7 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
                     )}
                     <Typography 
                       sx={{ 
-                        fontSize: "14px",
+                        fontSize: isMobile ? "13px" : "14px",
                         color: isSelected(option) ? "#005eb8" : "#374151",
                         fontWeight: isSelected(option) ? "600" : "400",
                         flex: 1,
@@ -235,15 +244,15 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
             </Grid>
           </Box>
 
-          {/* Selected Filters Badges */}
+          {/* Selected Filters Badges  */}
           {hasSelectedFilters && (
             <Box sx={{ 
-              padding: "16px",
+              padding: isMobile ? "12px" : "16px",
               borderTop: "1px solid #e5e7eb",
               backgroundColor: "#f9fafb",
             }}>
               <Box sx={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 1 }}>
-                <Typography sx={{ fontSize: "14px", color: "#374151", mr: 1 }}>
+                <Typography sx={{ fontSize: isMobile ? "13px" : "14px", color: "#374151" }}>
                   Selected:
                 </Typography>
                 {selectedValues.map((value) => (
@@ -251,14 +260,15 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
                     key={value.name}
                     label={value.name}
                     onDelete={() => handleToggle(value)}
-                    size="small"
+                    size={isMobile ? "small" : "small"}
                     sx={{
                       backgroundColor: "#005eb8",
                       color: "white",
-                      fontSize: "12px",
+                      fontSize: isMobile ? "11px" : "12px",
+                      height: isMobile ? "24px" : "28px",
                       '& .MuiChip-deleteIcon': {
                         color: "white",
-                        fontSize: "16px",
+                        fontSize: isMobile ? "14px" : "16px",
                         '&:hover': {
                           color: "#f3f4f6",
                         },
@@ -270,7 +280,7 @@ const TabBasedFilter = ({ selectedValues, onChange }) => {
                   size="small"
                   onClick={() => onChange(null, [])}
                   sx={{
-                    fontSize: "12px",
+                    fontSize: isMobile ? "11px" : "12px",
                     color: "#dc2626",
                     textTransform: "none",
                     ml: 1,
@@ -297,6 +307,9 @@ const ProjectPortfolio = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
 
   const handleFilterChange = (event, newValue) => {
     setSelectedFilters(newValue);
@@ -321,13 +334,11 @@ const ProjectPortfolio = () => {
   };
 
   const filteredProjects = projectData.filter((project) => {
-    // Filter by selected industries/regions
     const filterMatch = selectedFilters.length === 0 || 
       selectedFilters.some((filter) => 
         project.industry === filter.name || project.region === filter.name
       );
 
-    // Filter by search query
     const searchMatch = searchQuery === "" || 
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -338,7 +349,6 @@ const ProjectPortfolio = () => {
     return filterMatch && searchMatch;
   });
 
-  // Function to truncate clientDescription to two lines
   const truncateClientDescription = (text) => {
     const lines = text.split("\n").filter((line) => line.trim() !== "");
     const words = lines.join(" ").split(" ");
@@ -350,7 +360,7 @@ const ProjectPortfolio = () => {
       if (lineCount >= 2) {
         return result + "...";
       }
-      if ((currentLine + word).length > 50) {
+      if ((currentLine + word).length > (isMobile ? 30 : 50)) {
         result += currentLine.trim() + " ";
         currentLine = word + " ";
         lineCount++;
@@ -365,34 +375,34 @@ const ProjectPortfolio = () => {
     return result.trim();
   };
 
-  // Function to get country name
   const getCountryName = (countryId) => {
     const countryObj = country.find((c) => c.name === countryId);
     return countryObj ? countryObj.name : "Unknown";
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", px: isMobile ? 2 : 0 }}>
       <Grid container spacing={2} direction="row" justifyContent="center">
         <Grid item xs={12} sm={12} md={9.5}>
-          <Box sx={{ textAlign: "center", mb: 7, pt: 4 }}>
+          <Box sx={{ textAlign: "left", mb: 5, pt: isMobile ? 2 : 4 }}>
             <Typography
-              variant="h4"
+              variant={isMobile ? "h5" : "h4"}
               gutterBottom
               sx={{
                 color: "black",
-                textAlign: "justify",
+                textAlign: "left",
                 position: "relative",
                 display: "inline-block",
+                fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.125rem",
                 "&::after": {
                   content: '""',
                   display: "block",
                   backgroundColor: "#005eb8",
-                  height: "5px",
-                  width: "100px",
+                  height: isMobile ? "3px" : "5px",
+                  width: isMobile ? "60px" : "100px",
                   position: "absolute",
                   left: 0,
-                  bottom: "-8px",
+                  bottom: isMobile ? "-4px" : "-8px",
                 },
               }}
             >
@@ -400,19 +410,20 @@ const ProjectPortfolio = () => {
             </Typography>
           </Box>
 
-          {/* Search Bar */}
-          <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
-            <Box sx={{ width: "100%", maxWidth: "800px" }}>
+          {/* Search Bar  */}
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
+            <Box sx={{ width: "100%", maxWidth: isMobile ? "100%" : "800px" }}>
               <TextField
                 fullWidth
-                placeholder="Search projects by title, description, industry, or region..."
+                placeholder={isMobile ? "Search projects..." : "Search projects by title, description, industry, or region..."}
                 value={searchQuery}
                 onChange={handleSearchChange}
+                size={isMobile ? "small" : "medium"}
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     borderRadius: '8px',
-                    fontSize: '16px',
-                    padding: '8px 16px',
+                    fontSize: isMobile ? '14px' : '16px',
+                    padding: isMobile ? '4px 12px' : '8px 16px',
                     '&:hover fieldset': {
                       borderColor: '#005eb8',
                     },
@@ -424,7 +435,7 @@ const ProjectPortfolio = () => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <SearchIcon sx={{ color: '#6b7280' }} />
+                      <SearchIcon sx={{ color: '#6b7280', fontSize: isMobile ? 20 : 24 }} />
                     </InputAdornment>
                   ),
                   endAdornment: searchQuery && (
@@ -433,7 +444,7 @@ const ProjectPortfolio = () => {
                         onClick={clearSearch}
                         sx={{ 
                           minWidth: 'auto', 
-                          padding: '4px',
+                          padding: isMobile ? '2px' : '4px',
                           color: '#6b7280',
                           '&:hover': {
                             backgroundColor: 'transparent',
@@ -441,7 +452,7 @@ const ProjectPortfolio = () => {
                           }
                         }}
                       >
-                        <ClearIcon fontSize="small" />
+                        <ClearIcon fontSize={isMobile ? "small" : "medium"} />
                       </Button>
                     </InputAdornment>
                   ),
@@ -450,13 +461,13 @@ const ProjectPortfolio = () => {
             </Box>
           </Box>
 
-          {/* Tab-Based Filter */}
+          {/* Tab-Based Filter  */}
           <Box sx={{ 
             display: "flex", 
             justifyContent: "center", 
-            mb: 25 // Fixed margin since dropdown is open by default
+            mb: isMobile ? 35 : 25
           }}>
-            <Box sx={{ width: "100%", maxWidth: "800px" }}>
+            <Box sx={{ width: "100%", maxWidth: isMobile ? "100%" : "800px" }}>
               <TabBasedFilter
                 selectedValues={selectedFilters}
                 onChange={handleFilterChange}
@@ -464,59 +475,81 @@ const ProjectPortfolio = () => {
             </Box>
           </Box>
 
-          {/* Projects Grid */}
+          {/* Projects Grid  */}
           <Box sx={{ mt: 4 }}>
-            <Grid container spacing={4} justifyContent="flex-start">
+            <Grid container spacing={isMobile ? 2 : 4} justifyContent="flex-start">
               {filteredProjects.map((project) => (
                 <Grid item xs={12} sm={6} md={6} key={project.id}>
                   <Card sx={{ 
                     height: "100%",
                     transition: "transform 0.2s, box-shadow 0.2s",
                     "&:hover": {
-                      transform: "translateY(-4px)",
+                      transform: isMobile ? "none" : "translateY(-4px)",
                       boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
                     }
                   }}>
                     <CardMedia
                       component="img"
-                      height="200"
+                      height={isMobile ? "150" : "200"}
                       image={project.image}
                       alt={project.title}
                       sx={{ objectFit: "cover" }}
                     />
-                    <CardContent>
+                    <CardContent sx={{ p: isMobile ? 2 : 3 }}>
                       <Typography
-                        variant="h6"
+                        variant={isMobile ? "subtitle1" : "h6"}
                         gutterBottom
-                        sx={{ fontWeight: "bold", textAlign: "justify" }}
+                        sx={{ 
+                          fontWeight: "bold", 
+                          textAlign: "justify",
+                          fontSize: isMobile ? "1rem" : "1.25rem",
+                        }}
                       >
                         {project.title}
                       </Typography>
 
                       <Box sx={{ mb: 2 }}>
-                        <Grid container spacing={1}>
-                          <Grid item>
+                        <Grid container spacing={0.5}>
+                          <Grid item xs={12}>
                             <Chip
                               label={`Industry: ${project.industry}`}
                               color="primary"
                               variant="outlined"
-                              size="small"
+                              size={isMobile ? "small" : "small"}
+                              sx={{ 
+                                mr: 0.5, 
+                                mb: 0.5,
+                                fontSize: isMobile ? '10px' : '11px',
+                                height: isMobile ? '20px' : '24px',
+                              }}
                             />
                           </Grid>
-                          <Grid item>
+                          <Grid item xs={12}>
                             <Chip
                               label={`Region: ${project.region}`}
                               color="primary"
                               variant="outlined"
-                              size="small"
+                              size={isMobile ? "small" : "small"}
+                              sx={{ 
+                                mr: 0.5, 
+                                mb: 0.5,
+                                fontSize: isMobile ? '10px' : '11px',
+                                height: isMobile ? '20px' : '24px',
+                              }}
                             />
                           </Grid>
-                          <Grid item>
+                          <Grid item xs={12}>
                             <Chip
                               label={`Country: ${getCountryName(project.country)}`}
                               color="primary"
                               variant="outlined"
-                              size="small"
+                              size={isMobile ? "small" : "small"}
+                              sx={{ 
+                                mr: 0.5, 
+                                mb: 0.5,
+                                fontSize: isMobile ? '10px' : '11px',
+                                height: isMobile ? '20px' : '24px',
+                              }}
                             />
                           </Grid>
                         </Grid>
@@ -533,6 +566,7 @@ const ProjectPortfolio = () => {
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             lineHeight: "1.5",
+                            fontSize: isMobile ? '0.875rem' : '0.9rem',
                           }}
                         >
                           {truncateClientDescription(project.clientDescription)}
@@ -544,9 +578,11 @@ const ProjectPortfolio = () => {
                           variant="outlined"
                           color="primary"
                           onClick={() => handleOpenDialog(project)}
+                          size={isMobile ? "small" : "medium"}
                           sx={{ 
                             textTransform: 'none',
                             fontWeight: '500',
+                            fontSize: isMobile ? '0.8rem' : '0.9rem',
                           }}
                         >
                           Read More
@@ -561,32 +597,34 @@ const ProjectPortfolio = () => {
         </Grid>
       </Grid>
 
+      {/* Dialog  */}
       <Dialog
         open={openDialog}
         onClose={handleCloseDialog}
         maxWidth="md"
         fullWidth
+        fullScreen={isMobile}
         scroll="paper"
       >
         {selectedProject && (
           <>
-            <DialogTitle>
+            <DialogTitle sx={{ p: isMobile ? 2 : 3 }}>
               <Typography
-                variant="h5"
+                variant={isMobile ? "h6" : "h5"}
                 component="div"
                 sx={{ fontWeight: "bold" }}
               >
                 {selectedProject.title}
               </Typography>
             </DialogTitle>
-            <DialogContent>
+            <DialogContent dividers sx={{ p: isMobile ? 2 : 3 }}>
               <Box sx={{ mb: 3 }}>
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   style={{
                     width: "100%",
-                    height: "300px",
+                    height: isMobile ? "200px" : "300px",
                     objectFit: "cover",
                     borderRadius: "8px",
                   }}
@@ -594,38 +632,45 @@ const ProjectPortfolio = () => {
               </Box>
 
               <Box sx={{ mb: 2 }}>
-                <Grid container spacing={1}>
-                  <Grid item>
+                <Grid container spacing={0.5}>
+                  <Grid item xs={12} sm={4}>
                     <Chip
                       label={`Industry: ${selectedProject.industry}`}
                       color="primary"
                       variant="outlined"
+                      size="small"
+                      sx={{ width: '100%' }}
                     />
                   </Grid>
-                  <Grid item>
+                  <Grid item xs={12} sm={4}>
                     <Chip
                       label={`Region: ${selectedProject.region}`}
                       color="primary"
                       variant="outlined"
+                      size="small"
+                      sx={{ width: '100%' }}
                     />
                   </Grid>
-                  <Grid item>
+                  <Grid item xs={12} sm={4}>
                     <Chip
                       label={`Country: ${getCountryName(selectedProject.country)}`}
                       color="primary"
                       variant="outlined"
+                      size="small"
+                      sx={{ width: '100%' }}
                     />
                   </Grid>
                 </Grid>
               </Box>
 
               <Box sx={{ mb: 4 }}>
-                <Grid container spacing={1}>
+                <Grid container spacing={0.5}>
                   {selectedProject.techStack.map((stack) => (
                     <Grid item key={stack}>
                       <Chip
                         label={`${stack}`}
                         color="success"
+                        size="small"
                       />
                     </Grid>
                   ))}
@@ -634,19 +679,20 @@ const ProjectPortfolio = () => {
 
               <Box sx={{ mb: 4 }}>
                 <Typography
-                  variant="h6"
+                  variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 2,
+                    mb: 1,
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
+                    fontSize: isMobile ? "1rem" : "1.25rem",
                     "&::before": {
                       content: '""',
-                      width: "4px",
-                      height: "24px",
+                      width: isMobile ? "3px" : "4px",
+                      height: isMobile ? "18px" : "24px",
                       backgroundColor: "#0066cc",
-                      marginRight: "10px",
+                      marginRight: "8px",
                       borderRadius: "2px",
                     },
                   }}
@@ -654,31 +700,35 @@ const ProjectPortfolio = () => {
                   About Our Client
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{
-                    pl: 3,
+                    pl: 2,
                     borderLeft: "1px solid #e0e0e0",
+                    fontSize: isMobile ? '0.875rem' : '1rem',
                   }}
                 >
-                  {selectedProject.clientDescription}
+                  <ReactMarkdown> 
+                    {selectedProject.clientDescription}
+                  </ReactMarkdown> 
                 </Typography>
               </Box>
 
               <Box sx={{ mb: 4 }}>
                 <Typography
-                  variant="h6"
+                  variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 2,
+                    mb: 1,
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
+                    fontSize: isMobile ? "1rem" : "1.25rem",
                     "&::before": {
                       content: '""',
-                      width: "4px",
-                      height: "24px",
+                      width: isMobile ? "3px" : "4px",
+                      height: isMobile ? "18px" : "24px",
                       backgroundColor: "#0066cc",
-                      marginRight: "10px",
+                      marginRight: "8px",
                       borderRadius: "2px",
                     },
                   }}
@@ -686,31 +736,35 @@ const ProjectPortfolio = () => {
                   The Challenge
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{
-                    pl: 3,
+                    pl: 2,
                     borderLeft: "1px solid #e0e0e0",
+                    fontSize: isMobile ? '0.875rem' : '1rem',
                   }}
                 >
-                  {selectedProject.challenge}
+                  <ReactMarkdown> 
+                    {selectedProject.challenge}
+                  </ReactMarkdown>
                 </Typography>
               </Box>
 
               <Box sx={{ mb: 4 }}>
                 <Typography
-                  variant="h6"
+                  variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 2,
+                    mb: 1,
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
+                    fontSize: isMobile ? "1rem" : "1.25rem",
                     "&::before": {
                       content: '""',
-                      width: "4px",
-                      height: "24px",
+                      width: isMobile ? "3px" : "4px",
+                      height: isMobile ? "18px" : "24px",
                       backgroundColor: "#0066cc",
-                      marginRight: "10px",
+                      marginRight: "8px",
                       borderRadius: "2px",
                     },
                   }}
@@ -718,23 +772,28 @@ const ProjectPortfolio = () => {
                   The Transformation & Solution
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{
-                    pl: 3,
+                    pl: 2,
                     borderLeft: "1px solid #e0e0e0",
                     whiteSpace: "pre-line",
+                    fontSize: isMobile ? '0.875rem' : '1rem',
                   }}
                 >
-                  {selectedProject.description}
+                  <ReactMarkdown>
+                    {selectedProject.description}
+                  </ReactMarkdown>
                 </Typography>
               </Box>
             </DialogContent>
-            <DialogActions>
+            <DialogActions sx={{ p: isMobile ? 2 : 3 }}>
               <Button
                 onClick={handleCloseDialog}
                 variant="contained"
                 color="primary"
-                sx={{ mb: 2, mr: 2 }}
+                size={isMobile ? "small" : "medium"}
+                fullWidth={isMobile}
+                sx={{ mb: isMobile ? 1 : 0 }}
               >
                 Close
               </Button>

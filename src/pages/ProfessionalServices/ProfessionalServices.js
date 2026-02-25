@@ -1,23 +1,19 @@
 import React from "react";
-import HeroSection from "../../components/FinanceIndustry/HeroSection";
-import FinancialServices from "../../components/FinanceIndustry/FinancialServices";
-import FinancialInstitutions from "../../components/FinanceIndustry/FinancialInstitutions";
-import FinancialSolutions from "../../components/FinanceIndustry/FinancialSolutions";
-import TechnologiesWeUse from "../../components/FinanceIndustry/TechnologiesWeUse";
-import FAQ from "../../components/FinanceIndustry/FAQ";
+import HeroSection from "../../components/ProfessionalServices/HeroSection";
+import SoftwareSolutions from "../../components/ProfessionalServices/SoftwareSolutions";
+import ChooseITServices from "../../components/ProfessionalServices/ChooseITServices";
+import ITSolutionsGains from "../../components/ProfessionalServices/ITSolutionsGains";
 import ContactForm from "../../components/Main/MainContactUs/ContactUsHome";
 import Share from "../../components/share/Share";
 import { Box, Container, Grid } from "@mui/material";
 
-function FinanceIndustry() {
+function ProfessionalServices() {
   return (
     <>
       <HeroSection />
-      <FinancialServices />
-      <FinancialInstitutions />
-      <FinancialSolutions />
-      <TechnologiesWeUse />
-      <FAQ />
+      <SoftwareSolutions />
+      <ChooseITServices />
+      <ITSolutionsGains />
 
       {/* CONTACT AND SHARE */}
       <Container
@@ -46,4 +42,4 @@ function FinanceIndustry() {
   );
 }
 
-export default FinanceIndustry;
+export default ProfessionalServices;
