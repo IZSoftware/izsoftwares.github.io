@@ -4,16 +4,21 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export default function UseCasesSection({ useCases }) {
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, backgroundColor: "#f8f9fa" }}>
-      <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
+    <Box sx={{ py: { xs: 6, sm: 8, md: 10 }, backgroundColor: "#f8f9fa" }}>
+      <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
         <Grid container spacing={6} justifyContent="center">
-          <Grid item xs={12} md={9.5}>
-            <Box sx={{ mb: 8 }}>
+          <Grid item xs={12} md={11} lg={10}>
+            
+            {/* Header */}
+            <Box sx={{ mb: { xs: 4, md: 8 } }}>
               <Typography 
                 variant="h3" 
                 sx={{ 
                   fontWeight: "800", 
-                  color: "#004283"
+                  color: "#004283",
+                  textAlign: { xs: 'center', md: 'left' },
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
+                  mb: 2,
                 }}
               >
                 {useCases.title || "Use Cases"}
@@ -21,16 +26,19 @@ export default function UseCasesSection({ useCases }) {
               <Typography 
                 variant="h6" 
                 sx={{ 
-                  color: "#000000", 
+                  color: "#4a5568", 
                   mt: 2,
-                  maxWidth: 800
+                  textAlign: { xs: 'center', md: 'left' },
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
+                  px: { xs: 2, md: 0 }
                 }}
               >
                 {useCases.subtitle || "Explore real-world applications"}
               </Typography>
             </Box>
 
-            <Grid container spacing={6}>
+            {/* Use Cases Grid */}
+            <Grid container spacing={{ xs: 3, sm: 4, md: 6 }}>
               {(useCases.cases || []).map((useCase, index) => (
                 <Grid item xs={12} md={4} key={index}>
                   <Card sx={{ 
@@ -41,22 +49,28 @@ export default function UseCasesSection({ useCases }) {
                     transition: "all 0.25s ease",
                     backgroundColor: "#ffffff",
                     "&:hover": {
-                      transform: "translateY(-6px)",
-                      boxShadow: "0 12px 32px rgba(0,66,131,0.12)",
-                      borderColor: "#004283"
+                      transform: { xs: "none", md: "translateY(-6px)" },
+                      boxShadow: { xs: "none", md: "0 12px 32px rgba(0,66,131,0.12)" },
+                      borderColor: { xs: "#e0e0e0", md: "#004283" }
                     }
                   }}>
-                    <CardContent sx={{ p: 4, height: "100%", display: "flex", flexDirection: "column" }}>
+                    <CardContent sx={{ 
+                      p: { xs: 3, sm: 4 }, 
+                      height: "100%", 
+                      display: "flex", 
+                      flexDirection: "column" 
+                    }}>
+                      {/* Icon */}
                       <Box sx={{ 
-                        width: 70,
-                        height: 70,
+                        width: { xs: 60, sm: 70 },
+                        height: { xs: 60, sm: 70 },
                         borderRadius: 2,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        mb: 4,
-                        overflow: "hidden"
-                        // Removed backgroundColor → clean & modern
+                        mb: 3,
+                        overflow: "hidden",
+                        mx: { xs: 'auto', md: 0 }
                       }}>
                         <img
                           src={useCase.iconSrc}
@@ -69,58 +83,82 @@ export default function UseCasesSection({ useCases }) {
                         />
                       </Box>
                       
+                      {/* Title */}
                       <Typography 
                         variant="h5" 
                         sx={{ 
                           fontWeight: "700", 
                           color: "#004283",
-                          mb: 3
+                          mb: 2,
+                          fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
+                          textAlign: { xs: 'center', md: 'left' }
                         }}
                       >
                         {useCase.title}
                       </Typography>
                       
+                      {/* Description */}
                       <Typography 
                         variant="body1" 
                         sx={{ 
-                          color: "#000000", 
+                          color: "#4a5568", 
                           lineHeight: 1.7,
-                          mb: 4
+                          mb: 3,
+                          fontSize: { xs: '0.9rem', sm: '0.95rem', md: '1rem' },
+                          textAlign: 'justify'
                         }}
                       >
                         {useCase.description}
                       </Typography>
                       
-                      <Box sx={{ mb: 4, flexGrow: 1 }}>
+                      {/* Key Features */}
+                      <Box sx={{ mb: 3, flexGrow: 1 }}>
                         <Typography 
                           variant="subtitle2" 
                           sx={{ 
                             fontWeight: "600", 
                             color: "#004283",
-                            mb: 2
+                            mb: 2,
+                            fontSize: { xs: '0.9rem', md: '1rem' },
+                            textAlign: { xs: 'center', md: 'left' }
                           }}
                         >
                           Key Features:
                         </Typography>
                         
                         {(useCase.features || []).map((feature, featureIndex) => (
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 1.5 }} key={featureIndex}>
-                            <CheckCircleIcon sx={{ fontSize: 20, color: "#004283", mr: 1.5 }} />
-                            <Typography variant="body2" sx={{ color: "#000000" }}>
+                          <Box sx={{ 
+                            display: "flex", 
+                            alignItems: "flex-start", 
+                            mb: 1.5 
+                          }} key={featureIndex}>
+                            <CheckCircleIcon sx={{ 
+                              fontSize: { xs: 18, md: 20 }, 
+                              color: "#004283", 
+                              mr: 1.5,
+                              mt: 0.3,
+                              flexShrink: 0
+                            }} />
+                            <Typography variant="body2" sx={{ 
+                              color: "#4a5568",
+                              fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' }
+                            }}>
                               {feature}
                             </Typography>
                           </Box>
                         ))}
                       </Box>
                       
-                      <Box sx={{ mt: "auto" }}>
+                      {/* Footer */}
+                      <Box sx={{ mt: "auto", textAlign: { xs: 'center', md: 'left' } }}>
                         <Typography 
                           variant="caption" 
                           sx={{ 
                             display: "block",
-                            color: "#000000",
+                            color: "#4a5568",
                             mb: 2,
-                            fontStyle: "italic"
+                            fontStyle: "italic",
+                            fontSize: { xs: '0.75rem', md: '0.8rem' }
                           }}
                         >
                           Ideal for: {useCase.idealFor || "Various applications"}
@@ -138,7 +176,9 @@ export default function UseCasesSection({ useCases }) {
                               borderColor: "#004283"
                             },
                             fontWeight: "600",
-                            textTransform: "none"
+                            textTransform: "none",
+                            fontSize: { xs: '0.8rem', md: '0.875rem' },
+                            px: { xs: 2, md: 3 }
                           }}
                         >
                           Learn More
@@ -149,34 +189,36 @@ export default function UseCasesSection({ useCases }) {
                 </Grid>
               ))}
 
+              {/* Common Benefits Card */}
               <Grid item xs={12}>
                 <Card sx={{ 
-                  mt: 8,
+                  mt: { xs: 4, md: 8 },
                   borderRadius: 3,
                   backgroundColor: "#004283",
                   color: "white",
                   boxShadow: "0 6px 20px rgba(0,66,131,0.2)"
                 }}>
-                  <CardContent sx={{ p: { xs: 4, md: 6 } }}>
+                  <CardContent sx={{ p: { xs: 3, sm: 4, md: 6 } }}>
                     <Typography 
                       variant="h4" 
                       sx={{ 
                         fontWeight: "700", 
                         mb: 4,
                         textAlign: "center",
-                        color: "white"
+                        color: "white",
+                        fontSize: { xs: '1.3rem', sm: '1.6rem', md: '2rem', lg: '2.2rem' }
                       }}
                     >
                       Common Benefits Across All Use Cases
                     </Typography>
                     
-                    <Grid container spacing={4}>
+                    <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
                       {(useCases.commonBenefits || []).map((benefit, index) => (
                         <Grid item xs={12} md={4} key={index}>
-                          <Box sx={{ textAlign: "center", p: 3 }}>
+                          <Box sx={{ textAlign: "center", p: { xs: 2, md: 3 } }}>
                             <Box sx={{
-                              width: 60,
-                              height: 60,
+                              width: { xs: 50, sm: 60 },
+                              height: { xs: 50, sm: 60 },
                               mx: "auto",
                               mb: 2,
                               display: "flex",
@@ -199,7 +241,8 @@ export default function UseCasesSection({ useCases }) {
                               sx={{ 
                                 fontWeight: "600", 
                                 mb: 2,
-                                color: "white"
+                                color: "white",
+                                fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' }
                               }}
                             >
                               {benefit.title}
@@ -209,7 +252,8 @@ export default function UseCasesSection({ useCases }) {
                               sx={{ 
                                 color: "white", 
                                 lineHeight: 1.7,
-                                opacity: 0.95
+                                opacity: 0.95,
+                                fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' }
                               }}
                             >
                               {benefit.description}
@@ -219,7 +263,7 @@ export default function UseCasesSection({ useCases }) {
                       ))}
                     </Grid>
                     
-                    <Box sx={{ textAlign: "center", mt: 6 }}>
+                    <Box sx={{ textAlign: "center", mt: { xs: 4, md: 6 } }}>
                       <Button 
                         variant="contained"
                         size="large"
@@ -229,10 +273,10 @@ export default function UseCasesSection({ useCases }) {
                           "&:hover": { 
                             backgroundColor: "#f0f4f8"
                           },
-                          px: 6,
-                          py: 1.5,
+                          px: { xs: 4, sm: 5, md: 6 },
+                          py: { xs: 1.2, sm: 1.5 },
                           fontWeight: "bold",
-                          fontSize: "1.1rem",
+                          fontSize: { xs: '0.95rem', sm: '1rem', md: '1.1rem' },
                           textTransform: "none",
                           borderRadius: 2
                         }}

@@ -21,29 +21,44 @@ const SoftwareDevelopment = () => {
         sx={{
           background: "linear-gradient(to right, #004d99, #002d5c)",
           color: "white",
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid
             container
-            spacing={4}
+            spacing={{ xs: 6, md: 4 }}
             alignItems="center"
             justifyContent="center"
           >
-            <Grid item xs={12} sm={10} md={5}>
-              <Box>
+            <Grid item xs={12} md={6} lg={5}>
+              <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                 <Typography
                   variant="h3"
                   component="h1"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.8rem', 
+                      sm: '2.2rem', 
+                      md: '2.5rem',
+                      lg: '3rem' 
+                    },
+                    lineHeight: 1.2,
+                  }}
                 >
                   Prioritizing Customer Focus Even Before the Project Starts
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ mt: 2, mb: 4, lineHeight: 1.6 }}
+                  sx={{ 
+                    mt: 2, 
+                    mb: 4, 
+                    lineHeight: 1.6,
+                    fontSize: { xs: '1rem', sm: '1.1rem' },
+                    px: { xs: 2, sm: 4, md: 0 },
+                  }}
                 >
                   At IZSoftwares, we work with clients to shape software
                   solutions across the full development lifecycle — from
@@ -59,26 +74,27 @@ const SoftwareDevelopment = () => {
                     "&:hover": {
                       backgroundColor: "#005EB8",
                     },
-                    px: 4,
-                    py: 1.5,
+                    px: { xs: 3, sm: 4 },
+                    py: { xs: 1.2, sm: 1.5 },
                     fontWeight: "bold",
                     textTransform: "none",
                     borderRadius: 1,
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
                   }}
                 >
                   Shape your solution with us
                 </Button>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={10} md={4.5}>
+            <Grid item xs={12} md={6} lg={5}>
               <Box
                 sx={{
                   width: "100%",
-                  mt: { xs: 5, md: 9 },
+                  mt: { xs: 0, md: 0 },
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: { xs: "250px", md: "450px" },
+                  height: { xs: "200px", sm: "300px", md: "400px", lg: "450px" },
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   borderRadius: 2,
                   overflow: "hidden",
@@ -86,7 +102,7 @@ const SoftwareDevelopment = () => {
               >
                 <img
                   src="/softwaredevelopment.jpg"
-                  alt="Placeholder for Testimonial or Product"
+                  alt="Software Development"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -102,12 +118,12 @@ const SoftwareDevelopment = () => {
       {/* Second Section: Our Clients */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#ffffff",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -115,7 +131,16 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.5rem', 
+                      sm: '1.8rem', 
+                      md: '2rem',
+                      lg: '2.2rem' 
+                    },
+                    mb: { xs: 3, sm: 4 },
+                  }}
                 >
                   We Are Trusted By Global Market Leaders
                 </Typography>
@@ -129,12 +154,12 @@ const SoftwareDevelopment = () => {
       {/* Third Section: Industry Expertise */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#ffffff",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -142,11 +167,20 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.5rem', 
+                      sm: '1.8rem', 
+                      md: '2rem',
+                      lg: '2.2rem' 
+                    },
+                    mb: { xs: 3, sm: 4 },
+                  }}
                 >
                   Explore our Services:
                 </Typography>
-                <Grid container spacing={4} sx={{ mt: 2 }}>
+                <Grid container spacing={{ xs: 3, sm: 4 }} sx={{ mt: 2 }}>
                   {izIndustriesData.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                       <IndustriesComponent
@@ -165,12 +199,12 @@ const SoftwareDevelopment = () => {
       {/* Fourth Section: Solution Focused Services */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#ffffff",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -178,11 +212,20 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.5rem', 
+                      sm: '1.8rem', 
+                      md: '2rem',
+                      lg: '2.2rem' 
+                    },
+                    mb: { xs: 3, sm: 4 },
+                  }}
                 >
                   Solution Focused Services
                 </Typography>
-                <Grid container spacing={4}>
+                <Grid container spacing={{ xs: 3, sm: 4 }}>
                   {listData.serviceCards.map((card, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                       <ListComponent
@@ -202,12 +245,12 @@ const SoftwareDevelopment = () => {
       {/* Our Offerings Section with Grey Background */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#fafafa",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -221,12 +264,12 @@ const SoftwareDevelopment = () => {
       {/* Testimonials Section */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#ffffff",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -234,7 +277,16 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.5rem', 
+                      sm: '1.8rem', 
+                      md: '2rem',
+                      lg: '2.2rem' 
+                    },
+                    mb: { xs: 3, sm: 4 },
+                  }}
                 >
                   What Our Clients Value
                 </Typography>
@@ -245,7 +297,7 @@ const SoftwareDevelopment = () => {
         </Container>
       </Box>
 
-      {/* Fifth Section: Image Cards */}
+      {/* Fifth Section: Image Cards - KEPT ORIGINAL */}
       <Box
         sx={{
           py: 4,
@@ -275,12 +327,12 @@ const SoftwareDevelopment = () => {
       {/* Sixth Section: FAQ */}
       <Box
         sx={{
-          py: 4,
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#ffffff",
           color: "#212121",
         }}
       >
-        <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 0 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={9.5}>
               <Box textAlign="left">
@@ -288,7 +340,16 @@ const SoftwareDevelopment = () => {
                   variant="h4"
                   component="h2"
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ 
+                    fontWeight: "bold",
+                    fontSize: { 
+                      xs: '1.5rem', 
+                      sm: '1.8rem', 
+                      md: '2rem',
+                      lg: '2.2rem' 
+                    },
+                    mb: { xs: 3, sm: 4 },
+                  }}
                 >
                   FAQ about Our Software Development Services:
                 </Typography>
@@ -306,22 +367,22 @@ const SoftwareDevelopment = () => {
       <Container
         maxWidth={false}
         sx={{
-          px: { xs: 5, sm: 3, md: 0 },
-          py: 8,
+          px: { xs: 3, sm: 4, md: 5 },
+          py: { xs: 6, sm: 8, md: 10 },
           backgroundColor: "#f8f9fa",
         }}
       >
-        <Grid container spacing={4} justifyContent="flex-start">
-          <Grid item xs={12} md={12}>
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={9.5}>
             <ContactForm />
-            <Box sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%", mt: 4 }}>
               <Grid
                 container
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
               >
-                <Grid item xs={12} sm={12} md={9.5}>
+                <Grid item xs={12}>
                   <Share />
                 </Grid>
               </Grid>

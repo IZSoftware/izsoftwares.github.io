@@ -44,40 +44,42 @@ export default function HowMuchWillYourCloudAppProjectCost() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, backgroundColor: "#f8fafc" }}>
-      <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
+    <Box sx={{ py: { xs: 6, sm: 8, md: 10 }, backgroundColor: "#f8fafc" }}>
+      <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
         <Grid container spacing={6} justifyContent="center">
-          <Grid item xs={12} md={9.5}>
-            {/* Main Title – bigger */}
+          <Grid item xs={12} md={11} lg={10}>
+            {/* Main Title */}
             <Typography
               variant="h2"
               sx={{
                 fontWeight: 800,
                 color: "#004d99",
-                mb: 5,
+                mb: 4,
                 textAlign: { xs: 'center', md: 'left' },
-                fontSize: { xs: '2.2rem', md: '3rem' },
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
               }}
             >
               How Much Will Your Cloud App Project Cost?
             </Typography>
 
             {/* Factors list + image */}
-            <Grid container spacing={6} alignItems="center">
+            <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
               <Grid item xs={12} md={7}>
                 <Typography
                   variant="h5"
                   sx={{
                     color: "#000000",
                     fontWeight: 600,
-                    mb: 4,
+                    mb: 3,
                     lineHeight: 1.5,
+                    fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.4rem' },
+                    textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
                   For accurate cost estimation, we take into account:
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 0, listStyle: 'none', mb: 5 }}>
+                <Box component="ul" sx={{ pl: 0, listStyle: 'none', mb: 4 }}>
                   {factors.map((factor, index) => (
                     <Box
                       component="li"
@@ -85,7 +87,7 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                       sx={{
                         display: 'flex',
                         alignItems: 'flex-start',
-                        mb: 3,
+                        mb: 2.5,
                       }}
                     >
                       <Box
@@ -94,17 +96,17 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                           height: 8,
                           borderRadius: '50%',
                           backgroundColor: "#004d99",
-                          mt: '12px',
-                          mr: 2.5,
+                          mt: '10px',
+                          mr: 2,
                           flexShrink: 0,
                         }}
                       />
                       <Typography
                         variant="body1"
                         sx={{
-                          color: "#000000",
-                          lineHeight: 1.8,
-                          fontSize: '1.1rem',
+                          color: "#4a5568",
+                          lineHeight: 1.7,
+                          fontSize: { xs: '0.95rem', sm: '1rem', md: '1.1rem' },
                         }}
                       >
                         {factor}
@@ -113,7 +115,7 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                   ))}
                 </Box>
 
-                <Box sx={{ mt: 5, textAlign: { xs: 'center', md: 'left' } }}>
+                <Box sx={{ mt: 4, textAlign: { xs: 'center', md: 'left' } }}>
                   <Button
                     component={Link}
                     to="/contact-us"
@@ -122,12 +124,12 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                     sx={{
                       backgroundColor: "#004d99",
                       color: "white",
-                      px: 6,
-                      py: 2,
+                      px: { xs: 4, sm: 5, md: 6 },
+                      py: { xs: 1.5, sm: 1.8, md: 2 },
                       fontWeight: "bold",
                       textTransform: "none",
                       borderRadius: 2,
-                      fontSize: "1.15rem",
+                      fontSize: { xs: '1rem', sm: '1.1rem', md: '1.15rem' },
                       "&:hover": {
                         backgroundColor: "#003366",
                       },
@@ -140,28 +142,35 @@ export default function HowMuchWillYourCloudAppProjectCost() {
 
               {/* Image */}
               <Grid item xs={12} md={5}>
-                <img
-                  src="/cost_calculation.svg"
-                  alt="Cloud app cost estimation illustration"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                  }}
-                />
+                <Box sx={{ 
+                  display: 'flex', 
+                  justifyContent: 'center',
+                  mt: { xs: 2, md: 0 }
+                }}>
+                  <img
+                    src="/cost_calculation.svg"
+                    alt="Cloud app cost estimation illustration"
+                    style={{
+                      width: "100%",
+                      maxWidth: { xs: 300, sm: 400, md: '100%' },
+                      height: "auto",
+                      display: "block",
+                    }}
+                  />
+                </Box>
               </Grid>
             </Grid>
 
             {/* Optimization Points */}
-            <Box sx={{ mt: 12 }}>
+            <Box sx={{ mt: { xs: 8, md: 12 } }}>
               <Typography
                 variant="h3"
                 sx={{
                   fontWeight: 800,
                   color: "#004d99",
-                  mb: 5,
+                  mb: 4,
                   textAlign: { xs: 'center', md: 'left' },
-                  fontSize: { xs: '1.8rem', md: '2.5rem' },
+                  fontSize: { xs: '1.6rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
                 }}
               >
                 How We Help Optimize Cloud App Costs
@@ -170,10 +179,12 @@ export default function HowMuchWillYourCloudAppProjectCost() {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#000000",
+                  color: "#4a5568",
                   lineHeight: 1.6,
-                  mb: 6,
+                  mb: 5,
                   fontWeight: 500,
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
+                  textAlign: { xs: 'center', md: 'left' },
                 }}
               >
                 Our consultants provide an efficient cloud resource utilization plan through:
@@ -187,19 +198,21 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                     sx={{
                       display: 'flex',
                       alignItems: 'flex-start',
-                      mb: 5,
+                      mb: { xs: 4, md: 5 },
                       counterIncrement: 'item',
+                      flexDirection: { xs: 'column', sm: 'row' },
                     }}
                   >
                     <Box
                       sx={{
-                        minWidth: 52,
-                        height: 52,
+                        minWidth: { xs: 44, sm: 48, md: 52 },
+                        height: { xs: 44, sm: 48, md: 52 },
                         backgroundColor: "#e6f2ff",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        mr: 3.5,
+                        mr: { xs: 0, sm: 3 },
+                        mb: { xs: 2, sm: 0 },
                         mt: 0.5,
                         flexShrink: 0,
                         border: "2px solid #004d99",
@@ -210,6 +223,7 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                         sx={{
                           fontWeight: 800,
                           color: "#004d99",
+                          fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' },
                         }}
                       >
                         {point.number}
@@ -222,8 +236,9 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                         sx={{
                           color: "#000000",
                           fontWeight: 700,
-                          mb: 1.5,
+                          mb: 1,
                           lineHeight: 1.4,
+                          fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
                         }}
                       >
                         {point.text.split('.')[0] + '.'}
@@ -232,9 +247,9 @@ export default function HowMuchWillYourCloudAppProjectCost() {
                       <Typography
                         variant="body1"
                         sx={{
-                          color: "#000000",
+                          color: "#4a5568",
                           lineHeight: 1.8,
-                          fontSize: '1.05rem',
+                          fontSize: { xs: '0.9rem', sm: '0.95rem', md: '1rem' },
                         }}
                       >
                         {point.text}
