@@ -1,0 +1,275 @@
+[
+  {
+    "section": "For care providers, healthtech startups, and established software product companies",
+    "categories": [
+      {
+        "title": "Hospital management",
+        "icon": "LocalHospital",
+        "color": "#e74c3c",
+        "items": [
+          "Practice management software",
+          "EHR and HIE",
+          "Admission, discharge, and transfer (ADT) systems",
+          "Hospital information system (HIS)",
+          "Medical billing software",
+          "Healthcare data analytics",
+          "Appointment management apps",
+          "Healthcare CRM",
+          "AR/VR for medical staff training",
+          "Medical HR and hospital staffing",
+          "Hospital inventory management and asset tracking",
+          "Incident management software",
+          "Revenue cycle management (RCM)"
+        ]
+      },
+      {
+        "title": "Treatment management",
+        "icon": "Healing",
+        "color": "#3498db",
+        "items": [
+          "Diagnostic software (incl. AI solutions)",
+          "Treatment planning software (incl. AI-driven personalization)",
+          "Clinical decision support systems",
+          "Care coordination platforms (incl. portals)",
+          "Medication management software",
+          "Nursing information systems (NIS)",
+          "Pharmacy information systems (PIS)",
+          "AR/VR for surgery planning"
+        ]
+      },
+      {
+        "title": "Patient engagement & experience",
+        "icon": "People",
+        "color": "#2ecc71",
+        "items": [
+          "Patient apps",
+          "Patient portals",
+          "Medical websites",
+          "Patient engagement software",
+          "Digital therapeutics (DTx)",
+          "Telemedicine apps",
+          "Virtual hospital",
+          "Remote patient monitoring software",
+          "Chronic disease management",
+          "Medical VR & AR solutions",
+          "Healthcare AI chatbots"
+        ]
+      },
+      {
+        "title": "Laboratory and imaging management",
+        "icon": "Biotech",
+        "color": "#f1c40f",
+        "items": [
+          "In vitro diagnostic software",
+          "Lab information software (LIS)",
+          "Laboratory analytics",
+          "Medical image analysis software",
+          "Picture archiving and communication systems (PACS)",
+          "Radiology information systems (RIS)"
+        ]
+      },
+      {
+        "title": "Mental health care",
+        "icon": "Psychology",
+        "color": "#9b59b6",
+        "items": [
+          "Mental health EHR",
+          "Telepsychiatry software",
+          "Prescription digital therapeutics (PTD) for mental health",
+          "Cognitive behavioral therapy (CBT) tools",
+          "Mental health apps (for emotional regulation, guided therapy sessions, etc.)",
+          "Mental health chatbots",
+          "Mindfulness and meditation apps"
+        ]
+      },
+      {
+        "title": "Nursing homes and assisted livings",
+        "icon": "Elderly",
+        "color": "#e67e22",
+        "items": [
+          "Long-term care EHR/EMR",
+          "Resident well-being monitoring",
+          "Medication administration & tracking",
+          "Remote health monitoring (for residents receiving at-home care)",
+          "Telemedicine software for nursing homes",
+          "Apps for resident-family communication",
+          "Staff scheduling and management",
+          "Digital workplaces for caregivers & nurses",
+          "Incident management software",
+          "Data analytics and management",
+          "Billing and revenue cycle management"
+        ]
+      },
+      {
+        "title": "Home care",
+        "icon": "Home",
+        "color": "#1abc9c",
+        "items": [
+          "Integrated home health solutions",
+          "Telemedicine platforms, e.g., telenursing",
+          "Remote patient monitoring (RPM) for chronic disease management",
+          "Medication adherence tracking apps",
+          "Self-management apps for patients",
+          "Fall detection and emergency alert systems",
+          "Analytics and reporting"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "For pharmaceutical, biotech, life science companies & contract research organizations (CROs)",
+    "categories": [
+      {
+        "title": "Clinical research & trial management",
+        "icon": "Science",
+        "color": "#34495e",
+        "items": [
+          "Clinical trial management software",
+          "Clinical data management software",
+          "Software for remote clinical trial monitoring",
+          "Electronic clinical outcomes assessment (eCOA) software",
+          "Lab information management systems (LIMS)",
+          "Electronic laboratory notebook (ELN)",
+          "Electronic trial master file (eTMF) software"
+        ]
+      },
+      {
+        "title": "Research & analytics solutions",
+        "icon": "Analytics",
+        "color": "#7f8c8d",
+        "items": [
+          "Data analytics for contract research organizations",
+          "Bioinformatics software (for analyzing biological data)",
+          "AI/ML-based drug discovery platforms"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "For medical device manufacturers and SaMD companies",
+    "categories": [
+      {
+        "title": "Medical devices and SaMD",
+        "icon": "PrecisionManufacturing",
+        "color": "#d35400",
+        "items": [
+          "Cloud software for data storage and analysis, device management and integration",
+          "Medical image analysis",
+          "AI-enabled diagnostics",
+          "AI-powered personalized care planning",
+          "Biosensor cloud applications",
+          "ML-based sensor data analysis",
+          "AR/VR solutions for diagnosis and treatment"
+        ]
+      },
+      {
+        "title": "User and staff software",
+        "icon": "Computer",
+        "color": "#e67e22",
+        "items": [
+          "Patient applications for medical devices (wearables, smart devices)",
+          "Medical staff applications (e.g., for medical device configuration)",
+          "Portals for medical professionals"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "For veterinary clinics and hospitals",
+    "categories": [
+      {
+        "title": "Veterinary clinic management software",
+        "icon": "Pets",
+        "color": "#16a085",
+        "items": [
+          "Veterinary EHR",
+          "Scheduling and billing",
+          "Veterinary practice management systems",
+          "Veterinary intranet",
+          "Inventory management"
+        ]
+      },
+      {
+        "title": "Veterinary-specific solutions",
+        "icon": "Veterinary",
+        "color": "#27ae60",
+        "items": [
+          "Veterinary diagnostic software",
+          "Veterinary telemedicine",
+          "Remote monitoring for animal health (wearables for pets, livestock)",
+          "Pet wellness and management apps"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "For healthcare GOs, NGOs, and insurance providers",
+    "categories": [
+      {
+        "title": "Health insurance management",
+        "icon": "AccountBalance",
+        "color": "#8e44ad",
+        "items": [
+          "Health information exchange (HIE) software",
+          "Health plan management",
+          "Population health management tools",
+          "Policy administration software",
+          "Insurance eligibility verification",
+          "Billing software",
+          "Claim management software",
+          "Underwriting software",
+          "Customer-facing health insurance apps",
+          "Health insurance portals (for patients and providers)",
+          "Behavior-based insurance software",
+          "Risk management software",
+          "Compliance monitoring systems"
+        ]
+      },
+      {
+        "title": "Software for healthcare GOs and NGOs",
+        "icon": "Public",
+        "color": "#2980b9",
+        "items": [
+          "Population health platforms",
+          "Public health management systems",
+          "Healthcare access platforms (e.g., telemedicine for rural areas)",
+          "Epidemiology & disease surveillance software",
+          "Disaster response & relief systems (tracking, logistics)",
+          "Grant and fund management solutions"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "For fitness and wellness companies",
+    "categories": [
+      {
+        "title": "Wellness and fitness applications",
+        "icon": "FitnessCenter",
+        "color": "#27ae60",
+        "items": [
+          "Wellness apps",
+          "Meditation apps",
+          "Diet and nutrition apps",
+          "Fitness apps",
+          "Telefitness",
+          "User apps for wearable devices",
+          "Mental health apps (mood tracking, stress management)",
+          "Sleep tracking apps",
+          "Cycle monitoring apps"
+        ]
+      },
+      {
+        "title": "Gym and fitness center management",
+        "icon": "FitnessCenter",
+        "color": "#2c3e50",
+        "items": [
+          "Gym management software",
+          "Class scheduling & trainer management",
+          "Fitness CRM",
+          "Membership and billing systems"
+        ]
+      }
+    ]
+  }
+]

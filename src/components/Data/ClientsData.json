@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "Hospitals and health systems",
+    "image": "/hospital.png"
+  },
+  {
+    "id": 2,
+    "title": "Healthcare software companies",
+    "image": "/healthcare-software.png"
+  },
+  {
+    "id": 3,
+    "title": "Healthtech startups",
+    "image": "/healthtech-startup.png"
+  },
+  {
+    "id": 4,
+    "title": "Mental health providers",
+    "image": "/mental-health.png"
+  },
+  {
+    "id": 5,
+    "title": "Nursing homes and assisted living facilities",
+    "image": "/nursing-home.png"
+  },
+  {
+    "id": 6,
+    "title": "Home care providers",
+    "image": "/home-care.png"
+  },
+  {
+    "id": 7,
+    "title": "Veterinary clinics and hospitals",
+    "image": "/veterinary.png"
+  },
+  {
+    "id": 8,
+    "title": "Medical laboratories",
+    "image": "/medical-lab.png"
+  },
+  {
+    "id": 9,
+    "title": "Medical device manufacturers",
+    "image": "/medical-device.png"
+  },
+  {
+    "id": 10,
+    "title": "Pharmaceutical companies",
+    "image": "/pharmaceutical.png"
+  },
+  {
+    "id": 11,
+    "title": "Medical biotech companies",
+    "image": "/biotech.png"
+  },
+  {
+    "id": 12,
+    "title": "Contract research organizations",
+    "image": "/contract-research.png"
+  },
+  {
+    "id": 13,
+    "title": "Health insurance companies",
+    "image": "/health-insurance.png"
+  },
+  {
+    "id": 14,
+    "title": "Healthcare NGOs and GOs",
+    "image": "/healthcare-ngo.png"
+  },
+  {
+    "id": 15,
+    "title": "Fitness and wellness companies",
+    "image": "/fitness-wellness.png"
+  }
+]

@@ -34,6 +34,7 @@ import CyberSecurity from './pages/CyberSecurity/CyberSecurity';
 import FinanceIndustry from './pages/FinanceIndustry/FinanceIndustry';
 import ProfessionalServices from './pages/ProfessionalServices/ProfessionalServices';
 import RetailIndustries from './pages/RetailIndustries/RetailIndustries';
+import HealthCare from './pages/HealthCare/HealthCare';
 
 // Main App Content with conditional navbar
 const AppContent = () => {
@@ -81,7 +82,7 @@ const AppContent = () => {
         <Route path="/services/legacy-modernisation" element={<Modernization/>} />
         <Route path="/services/connect-sphere" element={<ConnectSphere/>} />
         <Route path="/services/cybersecurity" element={<CyberSecurity/>} />
-        <Route path="/industries/healthcare" element={<Construction/>} />
+        <Route path="/industries/healthcare" element={<HealthCare />} />
         <Route path="/industries/public-services" element={<Construction/>} />
         <Route path="/industries/professional-services" element={<ProfessionalServices/>} />
         <Route path="/industries/financial-services" element={<FinanceIndustry/>} />

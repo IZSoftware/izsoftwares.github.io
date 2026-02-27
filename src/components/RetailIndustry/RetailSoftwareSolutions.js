@@ -44,7 +44,7 @@ export default function RetailSoftwareSolutions() {
                 fontWeight: 400,
               }}
             >
-              Knowing the competitive nature of retail, ScienceSoft is committed to helping retailers boost their digital maturity and market resilience. Our wide service portfolio covers all IT needs of retail companies, from automating business operations and data analytics to launching new digital sales channels and ensuring the security of payments and customer data.
+              Knowing the competitive nature of retail, IZSoftwaresis committed to helping retailers boost their digital maturity and market resilience. Our wide service portfolio covers all IT needs of retail companies, from automating business operations and data analytics to launching new digital sales channels and ensuring the security of payments and customer data.
             </Typography>
 
             {/* Title */}

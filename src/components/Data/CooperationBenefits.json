@@ -1,0 +1,20 @@
+{
+  "title": "Envisage Benefits of Cooperation with IZSoftwares",
+  "benefits": [
+    {
+      "id": 1,
+      "title": "End-to-end compliance",
+      "description": "We know all the ins and outs of compliance with HIPAA, GDPR, and the regulations of the GCC health authorities. Our in-house cybersecurity experts and regulatory consultants ensure full PHI protection and compliance at all project stages."
+    },
+    {
+      "id": 2,
+      "title": "Smooth collaboration",
+      "description": "You will be fully informed of the project status because cooperation with us is based on a pre-agreed process and a set of KPIs. We keep in touch with the client's stakeholders and self-manage our work."
+    },
+    {
+      "id": 3,
+      "title": "Meticulous approach to quality and security",
+      "description": "We prioritize quality and security to help our healthcare clients get tangible business value, optimize costs, and withstand any security threats."
+    }
+  ]
+}

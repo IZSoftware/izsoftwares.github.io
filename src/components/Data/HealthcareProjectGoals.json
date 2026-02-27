@@ -1,0 +1,42 @@
+{
+  "title": "What We Do To Achieve Your Healthcare IT Project Goals",
+  "description": "IZSoftwares's mission is to drive your project success despite time and budget constraints, adapting agilely to changing requirements. We use a set of project management practices developed and refined by our in-house PMO.",
+  "goals": [
+    {
+      "id": 1,
+      "title": "Team assembly and scaling",
+      "iconSrc": "/team-assembly.png",
+      "description": "IZSoftwares selects the best-fitting skills for your project. We have project managers proficient in medical IT specifics, healthcare IT and regulatory consultants, and compliance officers on board. To optimize project expenses and address any changing needs, we can swiftly scale the team up and down."
+    },
+    {
+      "id": 2,
+      "title": "Realistic time and cost estimates",
+      "iconSrc": "/cost-estimates.png",
+      "description": "We tailor time and cost estimates to the project scope defined by each client's unique needs. We always stay honest about the necessary investments and offer a clear rationale for the cost estimates."
+    },
+    {
+      "id": 3,
+      "title": "Scope creep control",
+      "iconSrc": "/scope-control.png",
+      "description": "IZSoftwares rigorously manages change requests and involves stakeholders to prevent unnecessary deviations from project goals. We evaluate the feasibility, business impact, cost, and time of implementing each proposed change request and ensure its status visibility."
+    },
+    {
+      "id": 4,
+      "title": "Teamwork and centralized knowledge management",
+      "iconSrc": "/teamwork.png",
+      "description": "To foster effective collaboration and fast progress, we choose a schedule convenient for all project stakeholders. By meticulously documenting all critical decisions and processes, we prevent any loss of vital project knowledge and make it accessible to the stakeholders."
+    },
+    {
+      "id": 5,
+      "title": "Risk identification and mitigation",
+      "iconSrc": "/risk-mitigation.png",
+      "description": "To ensure high project predictability and enduring cooperation success, we assess and monitor operational, technology, business, and external risks throughout the SDLC. We also devise proactive mitigation strategies to swiftly navigate disruptions, align mitigation plans with client priorities, and stay fully transparent about project health."
+    },
+    {
+      "id": 6,
+      "title": "Project success assessment and routine reporting",
+      "iconSrc": "/success-assessment.png",
+      "description": "To measure software development success throughout the SDLC, continuously improve service quality, and ensure that the deliverables meet our clients' expectations, we create and consistently monitor tailored sets of objectives and key results. We regularly revise success metrics, report on agreed KPIs, and use stakeholder feedback to spot areas of improvement."
+    }
+  ]
+}
