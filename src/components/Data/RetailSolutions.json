@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Supply Chain Management",
+    "description": "We can automate individual processes, like procurement and inventory management, or develop a comprehensive solution for integrated SCM to facilitate efficient workflow automation and accurate data transfer across the chain.",
+    "image": "/supply-chain-management.png"
+  },
+  {
+    "id": 2,
+    "title": "Ecommerce",
+    "description": "We help retailers establish and manage an effective online presence through various solutions: web stores, marketplaces, mobile apps, and auction platforms. We also build software such as PIM or CMS that connects to the ecommerce storefront and facilitates back-office processes.",
+    "image": "/online-store.png"
+  },
+  {
+    "id": 3,
+    "title": "HR and Workforce Management",
+    "description": "We can enable you to manage a full employee life cycle, schedule shifts based on peak traffic times, and track employee attendance, ensuring that the right staff is always present to meet customer demand.",
+    "image": "/systems.png"
+  },
+  {
+    "id": 4,
+    "title": "Customer Relationship Management",
+    "description": "We can collect and organize disparate customer data in a centralized CRM system and implement tailored strategies to leverage this data for B2C and B2B sales and customer engagement.",
+    "image": "/crm.png"
+  },
+  {
+    "id": 5,
+    "title": "Vendor Management",
+    "description": "We can build a system to onboard, evaluate, and monitor wholesalers and manufacturers you work with, ensuring compliance with quality standards and contractual obligations.",
+    "image": "/vendor.png"
+  }
+]
