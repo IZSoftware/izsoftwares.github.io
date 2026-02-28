@@ -597,7 +597,7 @@ const ProjectPortfolio = () => {
         </Grid>
       </Grid>
 
-      {/* Dialog  */}
+      {/* Dialog - Fully Responsive */}
       <Dialog
         open={openDialog}
         onClose={handleCloseDialog}
@@ -605,41 +605,75 @@ const ProjectPortfolio = () => {
         fullWidth
         fullScreen={isMobile}
         scroll="paper"
+        sx={{
+          '& .MuiDialog-paper': {
+            margin: isMobile ? 0 : { xs: 2, sm: 3, md: 4 },
+            borderRadius: isMobile ? 0 : { xs: 2, sm: 2.5, md: 3 },
+          }
+        }}
       >
         {selectedProject && (
           <>
-            <DialogTitle sx={{ p: isMobile ? 2 : 3 }}>
+            <DialogTitle sx={{ 
+              p: { xs: 2, sm: 2.5, md: 3 },
+              borderBottom: '1px solid #e0e0e0',
+              backgroundColor: '#f8f9fa',
+            }}>
               <Typography
                 variant={isMobile ? "h6" : "h5"}
                 component="div"
-                sx={{ fontWeight: "bold" }}
+                sx={{ 
+                  fontWeight: "bold",
+                  color: '#002d5c',
+                  fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' },
+                  lineHeight: 1.3,
+                  pr: { xs: 4, sm: 5 }
+                }}
               >
                 {selectedProject.title}
               </Typography>
             </DialogTitle>
-            <DialogContent dividers sx={{ p: isMobile ? 2 : 3 }}>
-              <Box sx={{ mb: 3 }}>
+
+            <DialogContent 
+              dividers 
+              sx={{ 
+                p: { xs: 2, sm: 2.5, md: 3 },
+                backgroundColor: '#ffffff',
+              }}
+            >
+              {/* Project Image */}
+              <Box sx={{ 
+                mb: { xs: 2, sm: 2.5, md: 3 },
+                borderRadius: { xs: 2, sm: 2.5, md: 3 },
+                overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              }}>
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   style={{
                     width: "100%",
-                    height: isMobile ? "200px" : "300px",
+                    height: isMobile ? "180px" : isTablet ? "250px" : "300px",
                     objectFit: "cover",
-                    borderRadius: "8px",
+                    display: 'block',
                   }}
                 />
               </Box>
 
-              <Box sx={{ mb: 2 }}>
-                <Grid container spacing={0.5}>
+              {/* Industry/Region/Country Chips */}
+              <Box sx={{ mb: { xs: 2, sm: 2.5, md: 3 } }}>
+                <Grid container spacing={1}>
                   <Grid item xs={12} sm={4}>
                     <Chip
                       label={`Industry: ${selectedProject.industry}`}
                       color="primary"
                       variant="outlined"
-                      size="small"
-                      sx={{ width: '100%' }}
+                      size={isMobile ? "small" : "small"}
+                      sx={{ 
+                        width: '100%',
+                        fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.875rem' },
+                        height: { xs: '28px', sm: '30px', md: '32px' },
+                      }}
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -647,8 +681,12 @@ const ProjectPortfolio = () => {
                       label={`Region: ${selectedProject.region}`}
                       color="primary"
                       variant="outlined"
-                      size="small"
-                      sx={{ width: '100%' }}
+                      size={isMobile ? "small" : "small"}
+                      sx={{ 
+                        width: '100%',
+                        fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.875rem' },
+                        height: { xs: '28px', sm: '30px', md: '32px' },
+                      }}
                     />
                   </Grid>
                   <Grid item xs={12} sm={4}>
@@ -656,144 +694,218 @@ const ProjectPortfolio = () => {
                       label={`Country: ${getCountryName(selectedProject.country)}`}
                       color="primary"
                       variant="outlined"
-                      size="small"
-                      sx={{ width: '100%' }}
+                      size={isMobile ? "small" : "small"}
+                      sx={{ 
+                        width: '100%',
+                        fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.875rem' },
+                        height: { xs: '28px', sm: '30px', md: '32px' },
+                      }}
                     />
                   </Grid>
                 </Grid>
               </Box>
 
-              <Box sx={{ mb: 4 }}>
+              {/* Tech Stack Chips */}
+              <Box sx={{ 
+                mb: { xs: 3, sm: 3.5, md: 4 },
+                backgroundColor: '#f8f9fa',
+                p: { xs: 1.5, sm: 2, md: 2.5 },
+                borderRadius: { xs: 1.5, sm: 2, md: 2.5 },
+              }}>
+                <Typography
+                  variant="subtitle2"
+                  sx={{
+                    fontWeight: 600,
+                    color: '#002d5c',
+                    mb: 1.5,
+                    fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                  }}
+                >
+                  Technology Stack:
+                </Typography>
                 <Grid container spacing={0.5}>
                   {selectedProject.techStack.map((stack) => (
                     <Grid item key={stack}>
                       <Chip
-                        label={`${stack}`}
+                        label={stack}
                         color="success"
-                        size="small"
+                        size={isMobile ? "small" : "small"}
+                        sx={{
+                          fontSize: { xs: '0.7rem', sm: '0.75rem', md: '0.8rem' },
+                          height: { xs: '24px', sm: '26px', md: '28px' },
+                        }}
                       />
                     </Grid>
                   ))}
                 </Grid>
               </Box>
 
-              <Box sx={{ mb: 4 }}>
+              {/* About Our Client Section */}
+              <Box sx={{ mb: { xs: 3, sm: 3.5, md: 4 } }}>
                 <Typography
                   variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 1,
+                    mb: { xs: 1, sm: 1.2, md: 1.5 },
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
-                    fontSize: isMobile ? "1rem" : "1.25rem",
+                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
                     "&::before": {
                       content: '""',
-                      width: isMobile ? "3px" : "4px",
-                      height: isMobile ? "18px" : "24px",
+                      width: { xs: '3px', sm: '3.5px', md: '4px' },
+                      height: { xs: '18px', sm: '20px', md: '24px' },
                       backgroundColor: "#0066cc",
-                      marginRight: "8px",
+                      marginRight: { xs: '6px', sm: '7px', md: '8px' },
                       borderRadius: "2px",
                     },
                   }}
                 >
                   About Our Client
                 </Typography>
-                <Typography
-                  variant="body2"
+                <Box
                   sx={{
-                    pl: 2,
-                    borderLeft: "1px solid #e0e0e0",
-                    fontSize: isMobile ? '0.875rem' : '1rem',
+                    pl: { xs: 2, sm: 2.5, md: 3 },
+                    borderLeft: "2px solid #e0e0e0",
                   }}
                 >
-                  <ReactMarkdown> 
-                    {selectedProject.clientDescription}
-                  </ReactMarkdown> 
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                      lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+                      color: '#4a5568',
+                    }}
+                  >
+                    <ReactMarkdown 
+                      components={{
+                        p: ({node, ...props}) => <p style={{margin: '0 0 1rem 0'}} {...props} />
+                      }}
+                    > 
+                      {selectedProject.clientDescription}
+                    </ReactMarkdown> 
+                  </Typography>
+                </Box>
               </Box>
 
-              <Box sx={{ mb: 4 }}>
+              {/* The Challenge Section */}
+              <Box sx={{ mb: { xs: 3, sm: 3.5, md: 4 } }}>
                 <Typography
                   variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 1,
+                    mb: { xs: 1, sm: 1.2, md: 1.5 },
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
-                    fontSize: isMobile ? "1rem" : "1.25rem",
+                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
                     "&::before": {
                       content: '""',
-                      width: isMobile ? "3px" : "4px",
-                      height: isMobile ? "18px" : "24px",
+                      width: { xs: '3px', sm: '3.5px', md: '4px' },
+                      height: { xs: '18px', sm: '20px', md: '24px' },
                       backgroundColor: "#0066cc",
-                      marginRight: "8px",
+                      marginRight: { xs: '6px', sm: '7px', md: '8px' },
                       borderRadius: "2px",
                     },
                   }}
                 >
                   The Challenge
                 </Typography>
-                <Typography
-                  variant="body2"
+                <Box
                   sx={{
-                    pl: 2,
-                    borderLeft: "1px solid #e0e0e0",
-                    fontSize: isMobile ? '0.875rem' : '1rem',
+                    pl: { xs: 2, sm: 2.5, md: 3 },
+                    borderLeft: "2px solid #e0e0e0",
                   }}
                 >
-                  <ReactMarkdown> 
-                    {selectedProject.challenge}
-                  </ReactMarkdown>
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                      lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+                      color: '#4a5568',
+                    }}
+                  >
+                    <ReactMarkdown
+                      components={{
+                        p: ({node, ...props}) => <p style={{margin: '0 0 1rem 0'}} {...props} />
+                      }}
+                    > 
+                      {selectedProject.challenge}
+                    </ReactMarkdown>
+                  </Typography>
+                </Box>
               </Box>
 
-              <Box sx={{ mb: 4 }}>
+              {/* The Transformation & Solution Section */}
+              <Box sx={{ mb: { xs: 2, sm: 2.5, md: 3 } }}>
                 <Typography
                   variant={isMobile ? "subtitle1" : "h6"}
                   sx={{
                     color: "#0066cc",
-                    mb: 1,
+                    mb: { xs: 1, sm: 1.2, md: 1.5 },
                     fontWeight: "bold",
                     display: "flex",
                     alignItems: "center",
-                    fontSize: isMobile ? "1rem" : "1.25rem",
+                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
                     "&::before": {
                       content: '""',
-                      width: isMobile ? "3px" : "4px",
-                      height: isMobile ? "18px" : "24px",
+                      width: { xs: '3px', sm: '3.5px', md: '4px' },
+                      height: { xs: '18px', sm: '20px', md: '24px' },
                       backgroundColor: "#0066cc",
-                      marginRight: "8px",
+                      marginRight: { xs: '6px', sm: '7px', md: '8px' },
                       borderRadius: "2px",
                     },
                   }}
                 >
                   The Transformation & Solution
                 </Typography>
-                <Typography
-                  variant="body2"
+                <Box
                   sx={{
-                    pl: 2,
-                    borderLeft: "1px solid #e0e0e0",
-                    whiteSpace: "pre-line",
-                    fontSize: isMobile ? '0.875rem' : '1rem',
+                    pl: { xs: 2, sm: 2.5, md: 3 },
+                    borderLeft: "2px solid #e0e0e0",
                   }}
                 >
-                  <ReactMarkdown>
-                    {selectedProject.description}
-                  </ReactMarkdown>
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                      lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
+                      color: '#4a5568',
+                      whiteSpace: "pre-line",
+                    }}
+                  >
+                    <ReactMarkdown
+                      components={{
+                        p: ({node, ...props}) => <p style={{margin: '0 0 1rem 0'}} {...props} />
+                      }}
+                    >
+                      {selectedProject.description}
+                    </ReactMarkdown>
+                  </Typography>
+                </Box>
               </Box>
             </DialogContent>
-            <DialogActions sx={{ p: isMobile ? 2 : 3 }}>
+
+            <DialogActions sx={{ 
+              p: { xs: 2, sm: 2.5, md: 3 },
+              borderTop: '1px solid #e0e0e0',
+              backgroundColor: '#f8f9fa',
+              justifyContent: isMobile ? 'center' : 'flex-end',
+            }}>
               <Button
                 onClick={handleCloseDialog}
                 variant="contained"
                 color="primary"
-                size={isMobile ? "small" : "medium"}
+                size={isMobile ? "medium" : "medium"}
                 fullWidth={isMobile}
-                sx={{ mb: isMobile ? 1 : 0 }}
+                sx={{ 
+                  px: { xs: 3, sm: 4, md: 5 },
+                  py: { xs: 1, sm: 1.2, md: 1.5 },
+                  fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                  fontWeight: 600,
+                  borderRadius: { xs: 2, sm: 2.5, md: 3 },
+                  maxWidth: isMobile ? '90%' : 'auto',
+                }}
               >
                 Close
               </Button>
