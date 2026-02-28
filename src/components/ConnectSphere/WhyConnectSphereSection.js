@@ -13,18 +13,23 @@ import SpeedIcon from '@mui/icons-material/Speed';
 export default function WhyConnectSphereSection({ whyConnectSphere }) {
   return (
     <Box sx={{ 
-      py: { xs: 6, md: 10 }, 
+      py: { xs: 6, sm: 8, md: 10 }, 
       backgroundColor: "#f8f9fa" 
     }}>
-      <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
+      <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
         <Grid container spacing={6} justifyContent="center">
-          <Grid item xs={12} md={9.5}>
-            <Box sx={{ mb: 8 }}>
+          <Grid item xs={12} md={11} lg={10}>
+            
+            {/* Header */}
+            <Box sx={{ mb: { xs: 4, md: 8 } }}>
               <Typography 
                 variant="h3" 
                 sx={{ 
                   fontWeight: "800", 
-                  color: "#004283"
+                  color: "#004283",
+                  textAlign: { xs: 'center', md: 'left' },
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
+                  mb: 2,
                 }}
               >
                 {whyConnectSphere.title || "Why ConnectSphere?"}
@@ -32,34 +37,40 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
               <Typography 
                 variant="h6" 
                 sx={{ 
-                  color: "#000000", 
+                  color: "#4a5568", 
                   mt: 2,
-                  maxWidth: 800
+                  textAlign: { xs: 'center', md: 'left' },
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
+                  px: { xs: 2, md: 0 }
                 }}
               >
                 {whyConnectSphere.subtitle || "Discover the benefits of our platform"}
               </Typography>
             </Box>
 
-            <Grid container spacing={6}>
+            {/* Two Column Layout */}
+            <Grid container spacing={{ xs: 4, md: 6 }}>
+              {/* Business Benefits Column */}
               <Grid item xs={12} md={6}>
-                <Box sx={{ mb: 6 }}>
+                <Box sx={{ mb: { xs: 4, md: 6 } }}>
                   <Typography 
                     variant="h4" 
                     sx={{ 
                       fontWeight: "700", 
                       color: "#004283",
-                      mb: 4,
+                      mb: { xs: 3, md: 4 },
                       display: "flex",
                       alignItems: "center",
-                      gap: 2
+                      gap: 1.5,
+                      justifyContent: { xs: 'center', md: 'flex-start' },
+                      fontSize: { xs: '1.3rem', sm: '1.5rem', md: '1.7rem' },
                     }}
                   >
-                    <TrendingUpIcon sx={{ fontSize: 36, color: "#004283" }} />
+                    <TrendingUpIcon sx={{ fontSize: { xs: 28, md: 36 }, color: "#004283" }} />
                     Business Benefits
                   </Typography>
                   
-                  <Grid container spacing={4}>
+                  <Grid container spacing={{ xs: 3, sm: 4 }}>
                     {(whyConnectSphere.businessBenefits || []).map((benefit, index) => (
                       <Grid item xs={12} key={index}>
                         <Card sx={{ 
@@ -70,23 +81,29 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                           backgroundColor: "#ffffff",
                           transition: "all 0.25s ease",
                           "&:hover": {
-                            transform: "translateY(-4px)",
-                            boxShadow: "0 10px 28px rgba(0,66,131,0.12)",
-                            borderColor: "#004283"
+                            transform: { xs: "none", md: "translateY(-4px)" },
+                            boxShadow: { xs: "none", md: "0 10px 28px rgba(0,66,131,0.12)" },
+                            borderColor: { xs: "#e0e0e0", md: "#004283" }
                           }
                         }}>
-                          <CardContent sx={{ p: 3 }}>
-                            <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                          <CardContent sx={{ p: { xs: 2.5, sm: 3 } }}>
+                            <Box sx={{ 
+                              display: "flex", 
+                              alignItems: "center", 
+                              mb: 2,
+                              flexDirection: { xs: 'column', sm: 'row' },
+                              textAlign: { xs: 'center', sm: 'left' }
+                            }}>
                               <Box sx={{
-                                width: 40,
-                                height: 40,
+                                width: { xs: 36, sm: 40 },
+                                height: { xs: 36, sm: 40 },
                                 borderRadius: "50%",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                mr: 2,
+                                mr: { xs: 0, sm: 2 },
+                                mb: { xs: 1, sm: 0 },
                                 overflow: "hidden"
-                                // Removed backgroundColor → clean look
                               }}>
                                 <img
                                   src={benefit.iconSrc}
@@ -102,7 +119,8 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                                 variant="h6" 
                                 sx={{ 
                                   fontWeight: "600", 
-                                  color: "#004283" 
+                                  color: "#004283",
+                                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
                                 }}
                               >
                                 {benefit.title}
@@ -111,8 +129,10 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                             <Typography 
                               variant="body1" 
                               sx={{ 
-                                color: "#000000", 
-                                lineHeight: 1.7 
+                                color: "#4a5568", 
+                                lineHeight: 1.7,
+                                fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                                textAlign: 'justify'
                               }}
                             >
                               {benefit.description}
@@ -125,6 +145,7 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                 </Box>
               </Grid>
 
+              {/* Technical Advantages Column */}
               <Grid item xs={12} md={6}>
                 <Box sx={{ mb: 6 }}>
                   <Typography 
@@ -132,17 +153,19 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                     sx={{ 
                       fontWeight: "700", 
                       color: "#004283",
-                      mb: 4,
+                      mb: { xs: 3, md: 4 },
                       display: "flex",
                       alignItems: "center",
-                      gap: 2
+                      gap: 1.5,
+                      justifyContent: { xs: 'center', md: 'flex-start' },
+                      fontSize: { xs: '1.3rem', sm: '1.5rem', md: '1.7rem' },
                     }}
                   >
-                    <SpeedIcon sx={{ fontSize: 36, color: "#004283" }} />
+                    <SpeedIcon sx={{ fontSize: { xs: 28, md: 36 }, color: "#004283" }} />
                     Technical Advantages
                   </Typography>
                   
-                  <Grid container spacing={4}>
+                  <Grid container spacing={{ xs: 3, sm: 4 }}>
                     {(whyConnectSphere.technicalAdvantages || []).map((advantage, index) => (
                       <Grid item xs={12} key={index}>
                         <Card sx={{ 
@@ -153,23 +176,29 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                           backgroundColor: "#ffffff",
                           transition: "all 0.25s ease",
                           "&:hover": {
-                            transform: "translateY(-4px)",
-                            boxShadow: "0 10px 28px rgba(0,66,131,0.12)",
-                            borderColor: "#004283"
+                            transform: { xs: "none", md: "translateY(-4px)" },
+                            boxShadow: { xs: "none", md: "0 10px 28px rgba(0,66,131,0.12)" },
+                            borderColor: { xs: "#e0e0e0", md: "#004283" }
                           }
                         }}>
-                          <CardContent sx={{ p: 3 }}>
-                            <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                          <CardContent sx={{ p: { xs: 2.5, sm: 3 } }}>
+                            <Box sx={{ 
+                              display: "flex", 
+                              alignItems: "center", 
+                              mb: 2,
+                              flexDirection: { xs: 'column', sm: 'row' },
+                              textAlign: { xs: 'center', sm: 'left' }
+                            }}>
                               <Box sx={{
-                                width: 40,
-                                height: 40,
+                                width: { xs: 36, sm: 40 },
+                                height: { xs: 36, sm: 40 },
                                 borderRadius: "50%",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                mr: 2,
+                                mr: { xs: 0, sm: 2 },
+                                mb: { xs: 1, sm: 0 },
                                 overflow: "hidden"
-                                // No backgroundColor
                               }}>
                                 <img
                                   src={advantage.iconSrc}
@@ -185,7 +214,8 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                                 variant="h6" 
                                 sx={{ 
                                   fontWeight: "600", 
-                                  color: "#004283" 
+                                  color: "#004283",
+                                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
                                 }}
                               >
                                 {advantage.title}
@@ -194,8 +224,10 @@ export default function WhyConnectSphereSection({ whyConnectSphere }) {
                             <Typography 
                               variant="body1" 
                               sx={{ 
-                                color: "#000000", 
-                                lineHeight: 1.7 
+                                color: "#4a5568", 
+                                lineHeight: 1.7,
+                                fontSize: { xs: '0.875rem', sm: '0.9rem', md: '1rem' },
+                                textAlign: 'justify'
                               }}
                             >
                               {advantage.description}

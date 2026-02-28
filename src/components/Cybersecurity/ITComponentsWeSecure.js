@@ -6,7 +6,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // Divider image at top
 import CyberThreatsDivider from '../../assets/images/cybersecurity banner.png';
 
-// Hardcoded image paths for each component (change these to your actual files in public/ or src/assets/)
+// Hardcoded image paths for each component
 const componentImages = {
   "Cloud Environment": "/cloud (2).png",
   "Databases, Data Warehouses and Data Lakes": "/database.png",
@@ -16,7 +16,6 @@ const componentImages = {
   "APIs and Microservices": "/structure.png",
   "Email Services": "/email.png",
   "Security Policies and Practices": "/privacy-policy.png",
-
 };
 
 const components = [
@@ -50,12 +49,13 @@ export default function ITComponentsWeSecure() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, backgroundColor: '#f8fafc' }}>
-      <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 } }}>
+    <Box sx={{ py: { xs: 6, sm: 8, md: 10 }, backgroundColor: '#f8fafc' }}>
+      <Container maxWidth={false} sx={{ px: { xs: 3, sm: 4, md: 5 } }}>
         <Grid container spacing={6} justifyContent="center">
-          <Grid item xs={12} md={9.5}>
+          <Grid item xs={12} md={11} lg={10}>
+            
             {/* Divider image at top */}
-            <Box sx={{ mb: 6, width: '100%' }}>
+            <Box sx={{ mb: { xs: 4, md: 6 }, width: '100%' }}>
               <img
                 src={CyberThreatsDivider}
                 alt="Cyber threats illustration"
@@ -75,15 +75,17 @@ export default function ITComponentsWeSecure() {
               sx={{
                 fontWeight: 800,
                 color: '#002d5c',
-                mb: 4,
-                textAlign: 'left',
+                mb: { xs: 4, md: 4 },
+                textAlign: { xs: 'center', md: 'left' },
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
+                px: { xs: 2, md: 0 }
               }}
             >
               IT Components We Secure
             </Typography>
 
             {/* Grid of cards */}
-            <Grid container spacing={3}>
+            <Grid container spacing={{ xs: 2, sm: 3 }}>
               {components.map((item, index) => {
                 const isHovered = hoveredIndex === index;
 
@@ -94,7 +96,7 @@ export default function ITComponentsWeSecure() {
                       onMouseLeave={() => setHoveredIndex(null)}
                       sx={{
                         height: '100%',
-                        p: 4,
+                        p: { xs: 2.5, sm: 3, md: 4 },
                         borderRadius: 3,
                         backgroundColor: '#ffffff',
                         border: '1px solid #e1e8f0',
@@ -103,9 +105,9 @@ export default function ITComponentsWeSecure() {
                         transition: 'all 0.3s ease',
                         cursor: 'pointer',
                         '&:hover': {
-                          transform: 'translateY(-8px)',
-                          boxShadow: '0 12px 32px rgba(0,0,0,0.1)',
-                          borderColor: '#004d99',
+                          transform: { xs: 'none', md: 'translateY(-8px)' },
+                          boxShadow: { xs: 'none', md: '0 12px 32px rgba(0,0,0,0.1)' },
+                          borderColor: { xs: '#e1e8f0', md: '#004d99' },
                         },
                       }}
                     >
@@ -125,11 +127,11 @@ export default function ITComponentsWeSecure() {
                       />
 
                       {/* Image instead of icon */}
-                      <Box sx={{ mb: 3, textAlign: 'center' }}>
+                      <Box sx={{ mb: { xs: 2, md: 3 }, textAlign: 'center' }}>
                         <Box
                           sx={{
-                            width: 80,
-                            height: 80,
+                            width: { xs: 60, sm: 70, md: 80 },
+                            height: { xs: 60, sm: 70, md: 80 },
                             margin: '0 auto',
                             borderRadius: '12px',
                             overflow: 'hidden',
@@ -138,7 +140,7 @@ export default function ITComponentsWeSecure() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             transition: 'transform 0.3s ease',
-                            '&:hover': { transform: 'scale(1.08)' },
+                            '&:hover': { transform: { xs: 'none', md: 'scale(1.08)' } },
                           }}
                         >
                           <img
@@ -148,7 +150,7 @@ export default function ITComponentsWeSecure() {
                               width: '100%',
                               height: '100%',
                               objectFit: 'contain',
-                              padding: '8px',
+                              padding: { xs: '6px', md: '8px' },
                             }}
                           />
                         </Box>
@@ -162,6 +164,14 @@ export default function ITComponentsWeSecure() {
                           color: isHovered ? '#004d99' : '#333333',
                           textAlign: 'center',
                           transition: 'color 0.3s ease',
+                          fontSize: { 
+                            xs: '0.95rem', 
+                            sm: '1rem', 
+                            md: '1.1rem', 
+                            lg: '1.25rem' 
+                          },
+                          lineHeight: 1.4,
+                          px: { xs: 0.5, md: 0 }
                         }}
                       >
                         {item.title}
@@ -171,16 +181,23 @@ export default function ITComponentsWeSecure() {
                       <Box
                         sx={{
                           position: 'absolute',
-                          top: 16,
-                          right: 16,
+                          top: { xs: 12, md: 16 },
+                          right: { xs: 12, md: 16 },
                           opacity: isHovered ? 1 : 0,
                           transition: 'opacity 0.3s ease',
                         }}
                       >
                         {isHovered ? (
-                          <ArrowForwardIcon sx={{ color: '#004d99', fontSize: 24 }} />
+                          <ArrowForwardIcon sx={{ 
+                            color: '#004d99', 
+                            fontSize: { xs: 20, md: 24 } 
+                          }} />
                         ) : (
-                          <ArrowOutwardIcon sx={{ color: '#004d99', fontSize: 24, opacity: 0.5 }} />
+                          <ArrowOutwardIcon sx={{ 
+                            color: '#004d99', 
+                            fontSize: { xs: 20, md: 24 }, 
+                            opacity: 0.5 
+                          }} />
                         )}
                       </Box>
                     </Box>
