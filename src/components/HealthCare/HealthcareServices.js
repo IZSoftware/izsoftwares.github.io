@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
-import financialData from '../Data/FinancialServices.json';
+import healthcareServicesData from '../Data/HealthcareServices.json';
 
 const css = `
   /* ── Outer shell: white card, only right side rounded ── */
@@ -182,25 +182,21 @@ function ArticleContent({ svc }) {
     <>
       <h3 className="sli-article-title">{svc.title}</h3>
       <p className="sli-article-desc">{svc.description}</p>
-      {svc.bullets && svc.bullets.length > 0 && (
-        <>
-          <div className="sli-divider" />
-          <div className="sli-bullets">
-            {svc.bullets.map((b, index) => (
-              <div key={index} className="sli-bullet-item">
-                <span className="sli-bullet-sq" />
-                {b}
-              </div>
-            ))}
+      <div className="sli-divider" />
+      <div className="sli-bullets">
+        {svc.bullets.map((b) => (
+          <div key={b} className="sli-bullet-item">
+            <span className="sli-bullet-sq" />
+            {b}
           </div>
-        </>
-      )}
+        ))}
+      </div>
     </>
   );
 }
 
-export default function FinancialServices() {
-  const [active, setActive] = useState(financialData.services[0]?.key || 'financial-software-development');
+export default function HealthcareServices() {
+  const [active, setActive] = useState(healthcareServicesData[0].key);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -208,9 +204,6 @@ export default function FinancialServices() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  // Extract services array from the JSON structure
-  const services = financialData.services || [];
 
   return (
     <Box sx={{ py: { xs: 6, md: 10 }, backgroundColor: '#f0f4f8' }}>
@@ -227,23 +220,16 @@ export default function FinancialServices() {
                 color: "#002d5c",
                 mb: 6,
                 textAlign: 'left',
+                fontSize: {
+                  xs: '1.75rem',
+                  sm: '2.2rem',
+                  md: '2.5rem',
+                  lg: '3rem'
+                },
+                lineHeight: 1.2,
               }}
             >
-              IT Services for the Financial Industry
-            </Typography>
-
-            <Typography
-              variant="body1"
-              sx={{
-                color: "#4a5568",
-                mb: 6,
-                textAlign: 'left',
-                maxWidth: '1200px',
-                fontSize: '1rem',
-                lineHeight: 1.7
-              }}
-            >
-              Financial IT services are aimed to help BFSI companies create and operate tailored digital solutions smoothly, cost-effectively, and with minimal effort. Addressing these aspects, IZSoftwaresoffers all-encompassing services — from consulting and software engineering to cybersecurity and IT support.
+              Explore the Full Range of Our Healthcare Services
             </Typography>
 
             {windowWidth > 700 ? (
@@ -251,7 +237,7 @@ export default function FinancialServices() {
 
                 {/* Sidebar — no radius, no padding, tabs start at top */}
                 <div className="sli-sidebar">
-                  {services.map((svc) => (
+                  {healthcareServicesData.map((svc) => (
                     <div
                       key={svc.key}
                       className={`sli-tab${active === svc.key ? ' active' : ''}`}
@@ -266,7 +252,7 @@ export default function FinancialServices() {
 
                 {/* Content */}
                 <div className="sli-content">
-                  {services.map((svc) => (
+                  {healthcareServicesData.map((svc) => (
                     <div
                       key={svc.key}
                       className={`sli-article${active === svc.key ? ' active' : ''}`}
@@ -279,7 +265,7 @@ export default function FinancialServices() {
               </div>
             ) : (
               <div className="sli-mobile-stack">
-                {services.map((svc) => (
+                {healthcareServicesData.map((svc) => (
                   <div key={svc.key} className="sli-mobile-card">
                     <ArticleContent svc={svc} />
                   </div>

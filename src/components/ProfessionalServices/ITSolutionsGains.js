@@ -157,7 +157,7 @@ export default function ITSolutionsGains() {
                       pr: { xs: 0, md: 2 }
                     }}
                   >
-                    Reach out to ScienceSoft's team right NOW to learn how to streamline service delivery and raise the productivity of your business with IT.
+                    Reach out to IZSoftwares's team right NOW to learn how to streamline service delivery and raise the productivity of your business with IT.
                   </Typography>
                 </Box>
 

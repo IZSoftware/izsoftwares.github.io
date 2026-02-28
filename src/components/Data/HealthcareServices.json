@@ -1,0 +1,123 @@
+[
+  {
+    "key": "healthcare-software-development",
+    "label": "Healthcare software development",
+    "title": "Healthcare software development",
+    "description": "We cover every project step, from healthcare software design to its implementation. A solid project plan, a value-driving feature list, a reliable and secure architecture, full regulatory compliance, and high software performance are a given when you work with IZSoftwares.",
+    "bullets": [
+      "Healthcare mobile app development",
+      "Medical web design and development",
+      "SaaS software development",
+      "Medical device software development",
+      "SaMD product development",
+      "Patient engagement software development"
+    ]
+  },
+  {
+    "key": "healthcare-it-consulting",
+    "label": "Healthcare IT consulting",
+    "title": "Healthcare IT consulting",
+    "description": "Whether you want to polish your approach to ITSM or launch a new medical app, IZSoftwares's consultants with 5–20 years of industry experience will ensure the success of your initiative.",
+    "bullets": [
+      "IT strategy consulting",
+      "Technology consulting",
+      "Assessment of the existing IT environment",
+      "Feasibility study",
+      "Digital health startup consulting",
+      "Medical solution consulting"
+    ]
+  },
+  {
+    "key": "it-modernization",
+    "label": "IT modernization",
+    "title": "IT modernization",
+    "description": "Ready to upgrade your healthcare IT environment or legacy software? IZSoftwares's medical IT services will help you improve the reliability, optimize performance, and ensure 100% security of the target IT components.",
+    "bullets": [
+      "Healthcare app integration (e.g., EHR integration)",
+      "Modernization of legacy healthcare apps (recoding, reengineering, containerization, etc.)",
+      "Healthcare data consolidation",
+      "Upgrading information security and compliance safeguards"
+    ]
+  },
+  {
+    "key": "cloud-migration",
+    "label": "Cloud migration",
+    "title": "Cloud migration",
+    "description": "Take a step toward a cloud-based IT environment to reduce infrastructure costs and enable on-demand scalability of your healthcare software.",
+    "bullets": [
+      "HIPAA-compliant cloud selection",
+      "Devising a risk-free cloud migration strategy",
+      "Cloud infrastructure management",
+      "Application migration (gradually migrating app modules)",
+      "Server, data warehouse, desktop migration"
+    ]
+  },
+  {
+    "key": "healthcare-data-analytics",
+    "label": "Healthcare data analytics",
+    "title": "Healthcare data analytics",
+    "description": "With 36 years of experience in data analytics, IZSoftwares is here to help you get insights from healthcare data and support clinical decision-making with AI-based recommendations.",
+    "bullets": [
+      "Medical data analytics consulting",
+      "Healthcare data warehousing",
+      "Healthcare data management",
+      "Healthcare business intelligence",
+      "Healthcare data visualization",
+      "Big data in healthcare",
+      "Medical image analysis"
+    ]
+  },
+  {
+    "key": "digital-transformation",
+    "label": "Digital transformation",
+    "title": "Digital transformation",
+    "description": "Looking for professional digital transformation services in healthcare? Since 2005, IZSoftwares designs and implements successful digital transformation strategies even amidst diverse expectations of medical staff, shifting priorities, and resistance to change.",
+    "bullets": [
+      "Digital transformation consulting",
+      "End-to-end digital transformation",
+      "Targeted changes implementation"
+    ]
+  },
+  {
+    "key": "healthcare-it-support",
+    "label": "Healthcare IT support",
+    "title": "Healthcare IT support",
+    "description": "With 17 years in IT support, IZSoftwares covers everything from help desk services for healthcare to holistic IT infrastructure maintenance and modernization.",
+    "bullets": [
+      "L1, L2, L3 healthcare IT support",
+      "Proactive and reactive support",
+      "Software troubleshooting",
+      "Software evolution",
+      "Software security management",
+      "Software performance management",
+      "Regulatory compliance management"
+    ]
+  },
+  {
+    "key": "managed-it-services",
+    "label": "Managed IT services",
+    "title": "Managed IT services",
+    "description": "IZSoftwares's team is ready to proactively monitor and manage your healthcare IT infrastructure or its specific components. We can modify or optimize apps and infrastructures and adjust security policies and processes.",
+    "bullets": [
+      "IT infrastructure monitoring & administration",
+      "Managed IT help desk",
+      "Managed application services",
+      "Managed security services"
+    ]
+  },
+  {
+    "key": "cybersecurity-and-compliance",
+    "label": "Cybersecurity and compliance",
+    "title": "Cybersecurity and compliance",
+    "description": "Our security and compliance experts ensure full adherence to HIPAA, GDPR, FDA, the 21st Century Cures Act, GCP, GMP, GLP, NCPDP, MDR, IVDR, SAMHSA, and MOHAP requirements. We also support CEHRT, MACRA, MIPS, and SAFER regulations to align with evolving healthcare IT standards. IZSoftwares is certified under ISO 13485, ISO 9001, and ISO 27001, ensuring a mature approach to quality and data security.",
+    "bullets": [
+      "Cybersecurity consulting",
+      "IT security audit",
+      "Compliance assessment",
+      "HIPAA-compliant software development",
+      "Verification and validation testing for SaMD",
+      "Penetration testing",
+      "Managed security services"
+    ]
+  }
+]
