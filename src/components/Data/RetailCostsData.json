@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Inventory Management Solution",
+    "price": "$90,000 – $400,000",
+    "description": "A comprehensive solution to automate and optimize inventory operations, including:",
+    "features": [
+      "Inventory tracking (using barcode or RFID scanning).",
+      "Inventory item cataloging.",
+      "Automated and manual purchase order creation.",
+      "Order processing.",
+      "Inventory analytics and reporting."
+    ],
+    "image": "/material-management.png"
+  },
+  {
+    "id": 2,
+    "title": "Ecommerce Store",
+    "price": "$25,000 – $200,000",
+    "description": "A solution for online sales equipped with:",
+    "features": [
+      "Product and catalog management.",
+      "Pricing and promotion management.",
+      "Shopping cart and checkout via integrated payment gateways.",
+      "Order management.",
+      "Basic sales analytics."
+    ],
+    "image": "/ecommerce.png"
+  }
+]

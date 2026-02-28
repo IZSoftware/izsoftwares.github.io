@@ -1,0 +1,38 @@
+[
+  {
+    "key": "it-consulting",
+    "label": "IT consulting",
+    "title": "IT consulting",
+    "description": "We leverage our full expertise as IT practitioners to guide your digital transformation, address technical debt, optimize IT costs, and help you avoid the pitfalls and enhance the outcomes of any IT initiative."
+  },
+  {
+    "key": "staff-augmentation",
+    "label": "Staff augmentation",
+    "title": "Staff augmentation",
+    "description": "We provide developers specializing in ecommerce and retail software as well as project managers, business analysts, QA engineers, cybersecurity engineers, and other experts to join your team on an hourly basis."
+  },
+  {
+    "key": "software-modernization",
+    "label": "Software modernization",
+    "title": "Software modernization",
+    "description": "We overcome your current technology constraints, improve operational efficiency of your software, and facilitate its further maintenance."
+  },
+  {
+    "key": "software-integration",
+    "label": "Software integration",
+    "title": "Software integration",
+    "description": "We connect disparate applications and data sources to create a unified ecosystem and facilitate collaboration within your organization."
+  },
+  {
+    "key": "software-maintenance",
+    "label": "Software maintenance and support",
+    "title": "Software maintenance and support",
+    "description": "We provide preventive software maintenance, deliver instant troubleshooting assistance, and modify your software according to new or changing requirements."
+  },
+  {
+    "key": "security-management",
+    "label": "Security management",
+    "title": "Security management",
+    "description": "We can routinely assess your evolving IT environment or selected software for security flaws and implement measures to fix them. We can also check and verify whether you comply with privacy laws and security standards applicable to your business."
+  }
+]
