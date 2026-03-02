@@ -299,9 +299,9 @@ export default function Footer(){
                                                 </Link>                                                             
                                             </Grid>
                                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                                                <Link href="/industries/smart-office" underline="none" color="inherit">
+                                                <Link href="/industries/manufacturing" underline="none" color="inherit">
                                                     <Typography align="center" gutterBottom>
-                                                        Smart Office
+                                                        Manufacturing
                                                     </Typography> 
                                                 </Link>                                                             
                                             </Grid>

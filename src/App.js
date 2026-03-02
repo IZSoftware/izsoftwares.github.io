@@ -35,6 +35,7 @@ import FinanceIndustry from './pages/FinanceIndustry/FinanceIndustry';
 import ProfessionalServices from './pages/ProfessionalServices/ProfessionalServices';
 import RetailIndustries from './pages/RetailIndustries/RetailIndustries';
 import HealthCare from './pages/HealthCare/HealthCare';
+import ManufacturingIndustry from './pages/ManufacturingIndustry/ManufacturingIndustry';
 
 // Main App Content with conditional navbar
 const AppContent = () => {
@@ -86,7 +87,7 @@ const AppContent = () => {
         <Route path="/industries/public-services" element={<Construction/>} />
         <Route path="/industries/professional-services" element={<ProfessionalServices/>} />
         <Route path="/industries/financial-services" element={<FinanceIndustry/>} />
-        <Route path="/industries/smart-office" element={<Construction/>} />
+        <Route path="/industries/manufacturing" element={<ManufacturingIndustry />} />
         <Route path="/industries/retail" element={<RetailIndustries />} />
         
         <Route path="/about/affiliate-agent" element={<AffiliateAgent />} />
