@@ -1,0 +1,32 @@
+{
+  "title": "Industry 4.0 Technologies We Use to Drive Digital Manufacturing Transformation",
+  "description": "At IZSoftwares, we employ the most appropriate advanced manufacturing techs for each business case to help our clients build a powerful smart manufacturing system and achieve high ROI across enterprise-level processes.",
+  "technologies": [
+    {
+      "id": 1,
+      "title": "Cloud Computing",
+      "image": "/cloud-computing.png"
+    },
+    {
+      "id": 2,
+      "title": "Data Science",
+      "image": "/data-science.png"
+    },
+    {
+      "id": 3,
+      "title": "Artificial Intelligence (AI)",
+      "image": "/artificial-intelligence.png"
+    }
+  ],
+  "reliablePartner": {
+    "title": "What Makes IZSoftwares a Reliable Partner",
+    "bullets": [
+      "Since 2021 in IT for manufacturing.",
+      "350+ developers (more than 50% of them are Seniors or Leads) and 40+ business analysts and consultants experienced in manufacturing IT.",
+      "Proficiency in advanced technologies: cloud, IoT, AI and ML, big data, AR and VR, blockchain.",
+      "4,200+ successful projects, including projects on specialized IT solutions for the manufacturing industry, such as ERP, MRP, CRM, SCM, PLM, etc.",
+      "In-house project management office to lead complex manufacturing software development projects with distributed teams and multiple vendors involved.",
+      "Mature quality management and robust security management backed by ISO 9001 and ISO 27001 certifications."
+    ]
+  }
+}

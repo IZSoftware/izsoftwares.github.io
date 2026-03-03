@@ -1,0 +1,59 @@
+{
+  "title": "IT Services for Manufacturing",
+  "description": "IZSoftwares provides full-cycle IT services to help manufacturers design, build, revamp, and maintain their enterprise solutions, as well as implement cutting-edge Industry 4.0 technologies to embrace the digital manufacturing process transformation.",
+  "services": [
+    {
+      "key": "manufacturing-it-strategy-consulting",
+      "label": "Manufacturing IT strategy consulting",
+      "title": "Manufacturing IT strategy consulting",
+      "description": "We advise you how to:",
+      "bullets": [
+        "Increase ROA via equipment effectiveness optimization and predictive maintenance.",
+        "Improve the flexibility of manufacturing processes via M2M integration and smart automation.",
+        "Reduce operational costs and improve business productivity via AI-based optimization.",
+        "Achieve and maintain compliance with the relevant manufacturing sector regulations, such as OSHA, EPA, FDA, NIST, CPSC, CMMC, and more."
+      ]
+    },
+    {
+      "key": "manufacturing-solution-consulting",
+      "label": "Manufacturing solution consulting, development, and support",
+      "title": "Manufacturing solution consulting, development, and support",
+      "description": "We help:",
+      "bullets": [
+        "Design optimal functionality, architecture, and tech stack for your manufacturing software solution.",
+        "Accurately plan your software development project.",
+        "Reduce implementation and operational costs.",
+        "Ensure seamless user adoption.",
+        "We offer:",
+        "End-to-end manufacturing software development.",
+        "Continuous solution maintenance and evolution."
+      ]
+    },
+    {
+      "key": "modernization-of-manufacturing-software",
+      "label": "Modernization of manufacturing software",
+      "title": "Modernization of manufacturing software",
+      "description": "We upgrade your existing software promptly and with minimal disruption for your business operations. We perform:",
+      "bullets": [
+        "Migration to cloud.",
+        "Software rearchitecting, recoding, re-engineering.",
+        "Tech stack modernization.",
+        "UX and UI revamp.",
+        "Software evolution with the required features and advanced technologies."
+      ]
+    },
+    {
+      "key": "quality-assurance-and-information-security",
+      "label": "Quality assurance and information security",
+      "title": "Quality assurance and information security",
+      "description": "We offer IT outsourcing for individual functions:",
+      "bullets": [
+        "One-time testing, e.g., functional, performance, usability, integration, security testing.",
+        "Software audit and code review.",
+        "Establishing network protection: DDoS protection, SIEM, IDS/IPS, SOAR, EDR, etc.",
+        "Vulnerability assessment, implementing data backup and recovery mechanisms.",
+        "Identity and access management (IAM)."
+      ]
+    }
+  ]
+}

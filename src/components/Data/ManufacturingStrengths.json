@@ -1,0 +1,35 @@
+{
+  "title": "Strengths of IZSoftwares's Offering for Manufacturing Companies",
+  "benefits": [
+    {
+      "id": 1,
+      "title": "Full-cycle services",
+      "description": "We offer comprehensive manufacturing IT services, from design and development to ongoing evolution and support of your software."
+    },
+    {
+      "id": 2,
+      "title": "Focus on security",
+      "description": "We rely on comprehensive security policies and processes, advanced cybersecurity techs, and our skilled professionals to guarantee safety of our clients' data."
+    },
+    {
+      "id": 3,
+      "title": "Estimation accuracy",
+      "description": "Due to ample industry experience of our project managers, we can accurately estimate project costs and delivery time."
+    },
+    {
+      "id": 4,
+      "title": "Cost-efficiency",
+      "description": "We use proven open-source components like frameworks and libraries and public APIs to reduce implementation costs and increase the ROI of your solution."
+    },
+    {
+      "id": 5,
+      "title": "Quality-first approach",
+      "description": "We adhere to our established quality management practices to deliver services of consistently high and predictable quality and minimize project risks."
+    },
+    {
+      "id": 6,
+      "title": "Minimized development risks",
+      "description": "We adhere to the iterative development model that allows seeing first results early and get next versions of a solution delivered every 2-4 weeks."
+    }
+  ]
+}
