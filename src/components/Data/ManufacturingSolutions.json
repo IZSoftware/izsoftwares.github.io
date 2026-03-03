@@ -1,0 +1,77 @@
+{
+  "title": "IT Solutions for Manufacturing Industry to Optimize Your Operations",
+  "description": "IT solutions for manufacturing are designed to streamline and innovate business-critical operations of a manufacturer, which helps improve the company's productivity, extend asset lifespan, reduce operational costs, and minimize risks.",
+  "industry4": {
+    "title": "What Does Industry 4.0 Hold for Manufacturers",
+    "description": "Industry 4.0 conceptualizes the rapid integration of innovative technologies into manufacturers' production and business processes. Spurred by the proliferation of big data, AI-driven analytics, edge computing, 5G, and IoT, it promotes the shift from a traditional to a smart factory model and brings an opportunity for manufacturers to boost the efficiency of their operations via:",
+    "bullets": [
+      "End-to-end automation of even highly complex and specific production workflows.",
+      "Real-time, data-driven making of optimal operational decisions.",
+      "Predictive asset maintenance and intelligent troubleshooting.",
+      "Analytics-based product customization and optimization of servicing workflows."
+    ]
+  },
+  "categories": [
+    {
+      "id": 1,
+      "title": "High-level management and business operations",
+      "image": "/management-operations.png",
+      "bullets": [
+        "ERP",
+        "Business intelligence solutions",
+        "Manufacturing data analytics solutions",
+        "Data warehouse solutions",
+        "HR management solutions",
+        "Project management software",
+        "Document management systems",
+        "Intranets"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Production process and asset management",
+      "image": "/production-asset.png",
+      "bullets": [
+        "Manufacturing execution system",
+        "Production scheduling solutions",
+        "Product lifecycle management solutions",
+        "Equipment monitoring solutions",
+        "Machine monitoring solutions",
+        "Condition monitoring solutions",
+        "Overall equipment effectiveness software",
+        "Automated visual inspection software",
+        "Human-machine interface",
+        "Inventory management solutions",
+        "Product data management software"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Procurement and vendor management",
+      "image": "/procurement-vendor.png",
+      "bullets": [
+        "Procurement management solutions",
+        "SRM software",
+        "Vendor portals",
+        "Warehouse management systems",
+        "Supply chain management solutions",
+        "Supply chain analytics solutions"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sales and customer management",
+      "image": "/sales-customer.png",
+      "bullets": [
+        "Manufacturing CRM",
+        "Order management systems",
+        "Ecommerce solutions",
+        "Remote service software",
+        "Customer portals",
+        "Customer data analytics",
+        "Marketing and advertising solutions"
+      ]
+    }
+
+  ]
+}

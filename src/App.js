@@ -84,7 +84,7 @@ const AppContent = () => {
         <Route path="/services/connect-sphere" element={<ConnectSphere/>} />
         <Route path="/services/cybersecurity" element={<CyberSecurity/>} />
         <Route path="/industries/healthcare" element={<HealthCare />} />
-        <Route path="/industries/public-services" element={<Construction/>} />
+        <Route path="/industries/public-services" element={<Egovernment/>} />
         <Route path="/industries/professional-services" element={<ProfessionalServices/>} />
         <Route path="/industries/financial-services" element={<FinanceIndustry/>} />
         <Route path="/industries/manufacturing" element={<ManufacturingIndustry />} />
