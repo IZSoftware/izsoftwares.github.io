@@ -11,26 +11,59 @@ import {
   TableContainer, 
   TableHead, 
   TableRow,
-  Button
+  Button,
+  Alert,
+  CircularProgress
 } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import CancelIcon from '@mui/icons-material/Cancel';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import statusData from '../../components/Data/Izsoftware_status.json';
+// Remove this line: import statusData from '../../components/Data/Izsoftware_status.json';
 
 const Status = () => {
   const PRIMARY = '#004d99';
   const [zetScoreServices, setZetScoreServices] = useState([]);
   const [zetCollectServices, setZetCollectServices] = useState([]);
   const [, setMetadata] = useState({});
-  const [lastUpdated] = useState(new Date());
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchStatusData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const response = await fetch('https://raw.githubusercontent.com/IZSoftware/product-status/refs/heads/main/Izsoftware_status.json');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      setZetScoreServices(data.zetScoreServices || []);
+      setZetCollectServices(data.zetCollectServices || []);
+      setMetadata(data.metadata || {});
+      setLastUpdated(new Date());
+      
+    } catch (err) {
+      console.error('Error fetching status data:', err);
+      setError(err.message || 'Failed to fetch status data');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    // Load data from JSON
-    setZetScoreServices(statusData.zetScoreServices);
-    setZetCollectServices(statusData.zetCollectServices);
-    setMetadata(statusData.metadata);
+    fetchStatusData();
+    
+    // Optional: Set up periodic refresh (e.g., every 5 minutes)
+    const intervalId = setInterval(fetchStatusData, 5 * 60 * 1000);
+    
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   const zetScoreWithProduct = zetScoreServices.map((item, index) => ({ 
@@ -67,6 +100,36 @@ const Status = () => {
   const zetCollectOperational = zetCollectServices.filter(item => item.status === 'Operational').length;
   const zetCollectMaintenance = zetCollectServices.filter(item => item.status === 'Under Maintenance').length;
   const zetCollectTotal = zetCollectServices.length;
+
+  // Loading state
+  if (loading) {
+    return (
+      <Box sx={{ minHeight: '100vh', bgcolor: '#f5f7fa', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <CircularProgress sx={{ color: PRIMARY }} />
+      </Box>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <Box sx={{ minHeight: '100vh', bgcolor: '#f5f7fa', p: 3 }}>
+        <Container maxWidth="md">
+          <Alert 
+            severity="error" 
+            sx={{ mt: 4 }}
+            action={
+              <Button color="inherit" size="small" onClick={fetchStatusData}>
+                Retry
+              </Button>
+            }
+          >
+            Error loading status data: {error}
+          </Alert>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: '#f5f7fa', pt: { xs: '20px', sm: '30px', md: '40px' } }}>
