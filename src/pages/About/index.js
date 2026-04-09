@@ -19,7 +19,8 @@ import { CloudDownload } from '@mui/icons-material';
 
 export default function About() {
 
-  const fileUrl = "https://drive.google.com/file/d/1sCaalN5B-UfiAWpMEbTMyprdDCUVCXXO/view";
+  const fileUrl = "https://drive.google.com/file/d/1fyKnvEZP_CPP0BYQR1MVhoIVInpXn0pe/view";
+  const pillarsUrl = "https://drive.google.com/file/d/1tPwOqhI-iaDxf56Ah9nYJPLjV0w11XhD/view";
 
   return (
     <Box sx={{p: 5, width: '100%',  marginTop: '100px'}}>
@@ -55,8 +56,19 @@ export default function About() {
                       href={fileUrl} 
                       target="_blank"
                       rel="noopener noreferrer"
+                      sx={{ mr: 2, mb: { xs: 2, sm: 0 } }}
                     > 
-                      IZSoftwares Profile 2023 
+                       IZSoftwares Profile 2025
+                    </Button>
+                    <Button 
+                      variant="outlined" 
+                      color="primary" 
+                      startIcon={<CloudDownload />} 
+                      href={pillarsUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    > 
+                      IZSoftwares Core Pillars
                     </Button> 
                   </span>
                 </p>
