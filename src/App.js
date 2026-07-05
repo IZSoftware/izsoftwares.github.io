@@ -43,7 +43,7 @@ const AppContent = () => {
   
   // Use StatusNavbar for status page and upcoming maintenance page
   const isStatusNavbar = location.pathname === '/status' || 
-                        location.pathname === '/upcoming-maintainance';
+  location.pathname === '/upcoming-maintainance';
 
   return (
     <>
