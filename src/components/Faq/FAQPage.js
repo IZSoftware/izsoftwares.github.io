@@ -1,97 +1,91 @@
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Link } from 'react-router-dom';
+import { Typography, Box, Container, Grid } from '@mui/material';
+import FAQ from './FAQ';
+import combinedFaqData from '../Data/CombinedFaqData';
 
-const FAQ = ({ faqData }) => {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
-
-  // Add a conditional check to ensure faqData is a valid array
-  if (!Array.isArray(faqData)) {
-    console.error("Error: faqData is not an array. Check the data source.");
-    return null;
-  }
-
+const FAQPage = () => {
   return (
-    <div>
-      <Box />
-      {faqData.map((faq, index) => (
-        <Accordion
-          key={index}
-          expanded={expanded === `panel${index}`}
-          onChange={handleChange(`panel${index}`)}
-          sx={{
-            marginBottom: '10px',
-            boxShadow: 'none',
-            border: '1px solid #dce3ed',
-            '&.Mui-expanded': {
-              backgroundColor: '#f5faff',
-            },
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon
-              sx={{
-                color: '#000000',
-                transform: 'rotate(0deg)',
-                '&.Mui-expanded': { transform: 'rotate(180deg)' },
+    <Container maxWidth={false} sx={{ px: { xs: 5, sm: 3, md: 0 }, py: 8 }}>
+      <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid item xs={12} sm={12} md={9.5}>
+          {/* Added top padding to push content down */}
+          <Box sx={{ pt: { xs: 8, sm: 10, md: 12 } }}>
+            <Typography 
+              variant="h2" 
+              component="h1" 
+              sx={{ 
+                fontWeight: 'bold', 
+                mb: 2,
+                fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
+                color: '#1a1a1a'
               }}
-            />}
-            aria-controls={`faq-content-${index}`}
-            id={`faq-header-${index}`}
-            sx={{
-              padding: '10px 16px',
-              '&.Mui-expanded': {
-                backgroundColor: '#e7f1ff',
-                color: '#0073e6',
-              },
-              '& .MuiAccordionSummary-content': {
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                margin: 0,
-              },
-            }}
-          >
-            {expanded === `panel${index}` ? (
-              <KeyboardArrowDownIcon
-                sx={{
-                  color: '#000000',
-                  transition: 'transform 0.3s ease-in-out',
-                }}
-              />
-            ) : (
-              <KeyboardArrowRightIcon
-                sx={{
-                  color: '#000000',
-                  transition: 'transform 0.3s ease-in-out',
-                }}
-              />
-            )}
-            <Typography variant="h6" sx={{ fontSize: '16px', fontWeight: 'bold' }}>
-              {faq.question || faq.title}
+            >
+              Any Questions?
             </Typography>
-          </AccordionSummary>
-          <AccordionDetails
-            sx={{
-              padding: '10px 16px',
-              backgroundColor: '#f5faff',
-              color: '#333',
-              fontSize: '14px',
-              paddingLeft: '44px',
-            }}
-          >
-            <Typography variant="body1">{faq.answer || faq.description}</Typography> 
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </div>
+            
+            <Typography 
+              variant="h6" 
+              component="p"
+              sx={{ 
+                mb: 5, 
+                color: '#555',
+                fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
+                lineHeight: 1.6
+              }}
+            >
+              If the answer to your question is not on this page, please contact our{' '}
+              <Link 
+                to="/contact-us" 
+                style={{ 
+                  color: '#0073e6', 
+                  textDecoration: 'none',
+                  fontWeight: 'bold'
+                }}
+              >
+                Account Managers
+              </Link>
+              .
+            </Typography>
+
+            {/* Software Development Section */}
+            <Box sx={{ mb: 5 }}>
+              <Typography 
+                variant="h4" 
+                component="h2" 
+                sx={{ 
+                  fontWeight: 'bold', 
+                  mb: 3,
+                  color: '#1a1a1a',
+                  fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
+                }}
+              >
+                Software Development
+              </Typography>
+              <FAQ faqData={combinedFaqData.softwareDevelopment} />
+            </Box>
+
+            {/* General Section */}
+            <Box sx={{ mb: 4 }}>
+              <Typography 
+                variant="h4" 
+                component="h2" 
+                sx={{ 
+                  fontWeight: 'bold', 
+                  mb: 3,
+                  color: '#1a1a1a',
+                  fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
+                }}
+              >
+                General Questions
+              </Typography>
+              <FAQ faqData={combinedFaqData.general} />
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
-export default FAQ;
+export default FAQPage;

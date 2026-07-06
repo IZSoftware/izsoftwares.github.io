@@ -24,6 +24,7 @@ import { styled } from '@mui/material/styles';
 import SendIcon from '@mui/icons-material/Send';
 
 import countriesData from '../../Data/Countries.json';
+import Offices from './Offices';
 
 // API configuration
 const API_CONFIG = {
@@ -359,288 +360,292 @@ const ContactUsPage = () => {
   };
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 } }}>
-      <Container maxWidth={false} sx={{ 
-        position: 'relative', 
-        zIndex: 1, 
-        px: { xs: 5, sm: 3, md: 0 },
-        py: { xs: 5, sm: 3, md: 5 }
-      }}>
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={9.5}>
-            <Grid container spacing={0} alignItems="stretch">
-              {/* Left Section: Blue Background and Heading */}
-              <Grid item xs={12} md={6}>
-                <Card
-                  sx={{
-                    backgroundColor: primaryColor,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    p: { xs: 4, lg: 6 },
-                    color: 'white',
-                    borderRadius: isMobile ? '8px 8px 0 0' : '8px 0 0 8px',
-                    height: '100%',
-                    minHeight: '500px',
-                    boxShadow: 3
-                  }}
-                >
-                  <Box>
-                    <Typography
-                      variant="h1"
-                      component="h1"
-                      sx={{
-                        fontWeight: 'bold',
-                        fontSize: { xs: '2.5rem', lg: '3rem' },
-                        lineHeight: 1.1,
-                        mb: 2
-                      }}
-                    >
-                      Talk to IZSoftwares 
-                    </Typography>
-                  </Box>
-                </Card>
-              </Grid>
-
-              {/* Right Section: Form Container */}
-              <Grid item xs={12} md={6}>
-                <Card
-                  sx={{
-                    p: { xs: 4, lg: 6 },
-                    bgcolor: 'background.paper',
-                    borderRadius: isMobile ? '0 0 8px 8px' : '0 8px 8px 0',
-                    height: '100%',
-                    minHeight: '500px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    boxShadow: 3,
-                    border: `2px solid ${primaryColor}`
-                  }}
-                >
-                  <Typography 
-                    variant="h4" 
-                    component="h2" 
-                    sx={{ 
-                      mb: 4, 
-                      fontWeight: 'bold', 
-                      color: 'text.primary',
-                      fontSize: { xs: '1.75rem', lg: '2rem' }
+    <>
+      <Box sx={{ py: { xs: 8, md: 12 } }}>
+        <Container maxWidth={false} sx={{ 
+          position: 'relative', 
+          zIndex: 1, 
+          px: { xs: 5, sm: 3, md: 0 },
+          py: { xs: 5, sm: 3, md: 5 }
+        }}>
+          <Grid container spacing={4} justifyContent="center">
+            <Grid item xs={12} md={9.5}>
+              <Grid container spacing={0} alignItems="stretch">
+                {/* Left Section: Blue Background and Heading */}
+                <Grid item xs={12} md={6}>
+                  <Card
+                    sx={{
+                      backgroundColor: primaryColor,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      p: { xs: 4, lg: 6 },
+                      color: 'white',
+                      borderRadius: isMobile ? '8px 8px 0 0' : '8px 0 0 8px',
+                      height: '100%',
+                      minHeight: '500px',
+                      boxShadow: 3
                     }}
                   >
-                    Contact Us
-                  </Typography>
+                    <Box>
+                      <Typography
+                        variant="h1"
+                        component="h1"
+                        sx={{
+                          fontWeight: 'bold',
+                          fontSize: { xs: '2.5rem', lg: '3rem' },
+                          lineHeight: 1.1,
+                          mb: 2
+                        }}
+                      >
+                        Talk to IZSoftwares 
+                      </Typography>
+                    </Box>
+                  </Card>
+                </Grid>
 
-                  {/* Modal notification */}
-                  {modal && (
-                    <Modal 
-                      message={modal.message} 
-                      type={modal.type} 
-                      onClose={hideModal} 
-                    />
-                  )}
+                {/* Right Section: Form Container */}
+                <Grid item xs={12} md={6}>
+                  <Card
+                    sx={{
+                      p: { xs: 4, lg: 6 },
+                      bgcolor: 'background.paper',
+                      borderRadius: isMobile ? '0 0 8px 8px' : '0 8px 8px 0',
+                      height: '100%',
+                      minHeight: '500px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      boxShadow: 3,
+                      border: `2px solid ${primaryColor}`
+                    }}
+                  >
+                    <Typography 
+                      variant="h4" 
+                      component="h2" 
+                      sx={{ 
+                        mb: 4, 
+                        fontWeight: 'bold', 
+                        color: 'text.primary',
+                        fontSize: { xs: '1.75rem', lg: '2rem' }
+                      }}
+                    >
+                      Contact Us
+                    </Typography>
 
-                  <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-                    <Grid container spacing={3}>
-                      {/* Name and Email - Two Columns */}
-                      <Grid item xs={12} sm={6}>
-                        <TextField
-                          fullWidth
-                          id="name"
-                          label="Full Name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                          variant="outlined"
-                          size="small"
-                          error={!!errors.name}
-                          helperText={errors.name}
-                          inputProps={{ maxLength: 100 }}
-                        />
-                      </Grid>
+                    {/* Modal notification */}
+                    {modal && (
+                      <Modal 
+                        message={modal.message} 
+                        type={modal.type} 
+                        onClose={hideModal} 
+                      />
+                    )}
 
-                      <Grid item xs={12} sm={6}>
-                        <TextField
-                          fullWidth
-                          id="email"
-                          label="Email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                          variant="outlined"
-                          error={!!errors.email}
-                          helperText={errors.email}
-                          size="small"
-                          inputProps={{ maxLength: 100 }}
-                        />
-                      </Grid>
+                    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
+                      <Grid container spacing={3}>
+                        {/* Name and Email - Two Columns */}
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            fullWidth
+                            id="name"
+                            label="Full Name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                            variant="outlined"
+                            size="small"
+                            error={!!errors.name}
+                            helperText={errors.name}
+                            inputProps={{ maxLength: 100 }}
+                          />
+                        </Grid>
 
-                      {/* Phone and Company - Two Columns */}
-                      <Grid item xs={12} sm={6}>
-                        <TextField
-                          fullWidth
-                          id="phone"
-                          label="Phone Number (Optional)"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          variant="outlined"
-                          error={!!errors.phone}
-                          helperText={errors.phone}
-                          size="small"
-                          placeholder="+1 (555) 123-4567"
-                          inputProps={{ maxLength: 20 }}
-                        />
-                      </Grid>
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            fullWidth
+                            id="email"
+                            label="Email"
+                            type="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                            variant="outlined"
+                            error={!!errors.email}
+                            helperText={errors.email}
+                            size="small"
+                            inputProps={{ maxLength: 100 }}
+                          />
+                        </Grid>
 
-                      <Grid item xs={12} sm={6}>
-                        <TextField
-                          fullWidth
-                          id="company"
-                          label="Company (Optional)"
-                          value={formData.company}
-                          onChange={handleInputChange}
-                          variant="outlined"
-                          error={!!errors.company}
-                          helperText={errors.company}
-                          size="small"
-                          inputProps={{ maxLength: 200 }}
-                        />
-                      </Grid>
+                        {/* Phone and Company - Two Columns */}
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            fullWidth
+                            id="phone"
+                            label="Phone Number (Optional)"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            error={!!errors.phone}
+                            helperText={errors.phone}
+                            size="small"
+                            placeholder="+1 (555) 123-4567"
+                            inputProps={{ maxLength: 20 }}
+                          />
+                        </Grid>
 
-                      {/* Country and Interest - Two Columns */}
-                      <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth size="small">
-                          <Autocomplete
-                            id="country"
-                            options={allCountries}
-                            value={formData.country}
-                            onChange={handleCountryChange}
-                            renderInput={(params) => (
-                              <TextField
-                                {...params}
-                                label="Country (Optional)"
-                                error={!!errors.country}
-                                helperText={errors.country}
-                                size="small"
-                                InputProps={{
-                                  ...params.InputProps,
-                                  style: {
-                                    fontSize: '0.875rem'
-                                  }
-                                }}
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            fullWidth
+                            id="company"
+                            label="Company (Optional)"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            error={!!errors.company}
+                            helperText={errors.company}
+                            size="small"
+                            inputProps={{ maxLength: 200 }}
+                          />
+                        </Grid>
+
+                        {/* Country and Interest - Two Columns */}
+                        <Grid item xs={12} sm={6}>
+                          <FormControl fullWidth size="small">
+                            <Autocomplete
+                              id="country"
+                              options={allCountries}
+                              value={formData.country}
+                              onChange={handleCountryChange}
+                              renderInput={(params) => (
+                                <TextField
+                                  {...params}
+                                  label="Country (Optional)"
+                                  error={!!errors.country}
+                                  helperText={errors.country}
+                                  size="small"
+                                  InputProps={{
+                                    ...params.InputProps,
+                                    style: {
+                                      fontSize: '0.875rem'
+                                    }
+                                  }}
+                                />
+                              )}
+                              renderOption={(props, option) => (
+                                <li {...props} style={{ fontSize: '0.875rem' }}>
+                                  {option}
+                                </li>
+                              )}
+                              sx={{
+                                '& .MuiAutocomplete-inputRoot': {
+                                  padding: '2px 8px'
+                                }
+                              }}
+                            />
+                          </FormControl>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            fullWidth
+                            id="interest"
+                            label="Interest (Optional)"
+                            value={formData.interest}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            error={!!errors.interest}
+                            helperText={errors.interest}
+                            size="small"
+                            inputProps={{ maxLength: 100 }}
+                            placeholder="Product/service interest"
+                          />
+                        </Grid>
+
+                        {/* NDA Switch */}
+                        <Grid item xs={12}>
+                          <FormControlLabel
+                            control={
+                              <IOSSwitch
+                                id="ndaRequested"
+                                checked={formData.ndaRequested}
+                                onChange={handleInputChange}
                               />
-                            )}
-                            renderOption={(props, option) => (
-                              <li {...props} style={{ fontSize: '0.875rem' }}>
-                                {option}
-                              </li>
-                            )}
-                            sx={{
-                              '& .MuiAutocomplete-inputRoot': {
-                                padding: '2px 8px'
-                              }
+                            }
+                            label="I'd like to sign an NDA"
+                            sx={{ 
+                              m: 0,
+                              '& .MuiFormControlLabel-label': { 
+                                fontSize: '0.875rem', 
+                                color: 'text.secondary',
+                                ml: 1
+                              } 
                             }}
                           />
-                        </FormControl>
-                      </Grid>
+                        </Grid>
 
-                      <Grid item xs={12} sm={6}>
-                        <TextField
-                          fullWidth
-                          id="interest"
-                          label="Interest (Optional)"
-                          value={formData.interest}
-                          onChange={handleInputChange}
-                          variant="outlined"
-                          error={!!errors.interest}
-                          helperText={errors.interest}
-                          size="small"
-                          inputProps={{ maxLength: 100 }}
-                          placeholder="Product/service interest"
-                        />
-                      </Grid>
+                        {/* Message - Full Width */}
+                        <Grid item xs={12}>
+                          <TextField
+                            fullWidth
+                            id="message"
+                            label="Message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                            variant="outlined"
+                            multiline
+                            rows={4}
+                            size="small"
+                            error={!!errors.message}
+                            helperText={errors.message}
+                            inputProps={{ maxLength: 5000 }}
+                          />
+                        </Grid>
 
-                      {/* NDA Switch */}
-                      <Grid item xs={12}>
-                        <FormControlLabel
-                          control={
-                            <IOSSwitch
-                              id="ndaRequested"
-                              checked={formData.ndaRequested}
-                              onChange={handleInputChange}
-                            />
-                          }
-                          label="I'd like to sign an NDA"
-                          sx={{ 
-                            m: 0,
-                            '& .MuiFormControlLabel-label': { 
-                              fontSize: '0.875rem', 
-                              color: 'text.secondary',
-                              ml: 1
-                            } 
-                          }}
-                        />
+                        {/* Submit Button */}
+                        <Grid item xs={12}>
+                          <Button
+                            type="submit"
+                            endIcon={<SendIcon />}
+                            disabled={isSubmitting}
+                            variant="contained"
+                            sx={{
+                              backgroundColor: primaryColor,
+                              color: 'white',
+                              px: 6,
+                              py: 1.5,
+                              borderRadius: 2,
+                              fontSize: '1rem',
+                              fontWeight: 'bold',
+                              '&:hover': {
+                                backgroundColor: '#004a94',
+                                transform: 'translateY(-1px)',
+                                boxShadow: 3
+                              },
+                              '&:disabled': {
+                                opacity: 0.6
+                              },
+                              transition: 'all 0.2s ease-in-out'
+                            }}
+                            startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : null}
+                          >
+                            {isSubmitting ? 'Submitting...' : 'Submit'}
+                          </Button>
+                        </Grid>
                       </Grid>
-
-                      {/* Message - Full Width */}
-                      <Grid item xs={12}>
-                        <TextField
-                          fullWidth
-                          id="message"
-                          label="Message"
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          required
-                          variant="outlined"
-                          multiline
-                          rows={4}
-                          size="small"
-                          error={!!errors.message}
-                          helperText={errors.message}
-                          inputProps={{ maxLength: 5000 }}
-                        />
-                      </Grid>
-
-                      {/* Submit Button */}
-                      <Grid item xs={12}>
-                        <Button
-                          type="submit"
-                          endIcon={<SendIcon />}
-                          disabled={isSubmitting}
-                          variant="contained"
-                          sx={{
-                            backgroundColor: primaryColor,
-                            color: 'white',
-                            px: 6,
-                            py: 1.5,
-                            borderRadius: 2,
-                            fontSize: '1rem',
-                            fontWeight: 'bold',
-                            '&:hover': {
-                              backgroundColor: '#004a94',
-                              transform: 'translateY(-1px)',
-                              boxShadow: 3
-                            },
-                            '&:disabled': {
-                              opacity: 0.6
-                            },
-                            transition: 'all 0.2s ease-in-out'
-                          }}
-                          startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : null}
-                        >
-                          {isSubmitting ? 'Submitting...' : 'Submit'}
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Box>
-                </Card>
+                    </Box>
+                  </Card>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+
+      <Offices />
+    </>
   );
 };
 

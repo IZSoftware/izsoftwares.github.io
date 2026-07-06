@@ -61,7 +61,6 @@ const aboutServiceMap =[
         text3: 'Business Registration Portal (G2B)',
         bgColor:'#3692f2'
     },
-   
     {
         title: 'UX/UI Design',
         text:  'User Interface (UI) Design',
@@ -79,19 +78,19 @@ const aboutServiceMap =[
         bgColor:'#3692f2'
     },
     {
-        title: 'ConnectSphere Service',
-        text:  'Website Development',
-        text1: 'Website Maintenance',
-        text2: 'Community Management',
-        text3: 'Website Redesign',
+        title: 'ConnectSphere',
+        text:  'Cloud Migration Support',
+        text1: 'Cloud Security Service',
+        text2: 'Cloud Pricing and Usage Optimisation',
+        text3: 'Cloud Consulting',
         bgColor:'#3692f2'
     },
     {
-        title: 'Digital Transformation',
-        text:  'Customer Experience',
-        text3: 'Corporate Finance',
-        text1: 'Workforce',
-        text2: 'Enterprise-wide Transformation',
+        title: 'CyberSecurity',
+        text:  'CyberSecurity Consulting',
+        text1: 'Managed Security Services',
+        text2: 'SIEM Services',
+        text3: 'Compliance Service',
         bgColor:'#3692f2'
     },
 ]
