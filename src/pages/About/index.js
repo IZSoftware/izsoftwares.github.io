@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Grid, Hidden, Button } from '@mui/material'
+import { Box, Grid, Hidden, Button, Dialog, DialogContent, IconButton } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close';
 import StatsItem from '../../components/StatsItem'
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -19,8 +20,21 @@ import { CloudDownload } from '@mui/icons-material';
 
 export default function About() {
 
-  const fileUrl = "https://drive.google.com/file/d/1fyKnvEZP_CPP0BYQR1MVhoIVInpXn0pe/view";
-  const pillarsUrl = "https://drive.google.com/file/d/1tPwOqhI-iaDxf56Ah9nYJPLjV0w11XhD/view";
+  const fileUrl = "https://drive.google.com/file/d/1fyKnvEZP_CPP0BYQR1MVhoIVInpXn0pe/preview";
+  const pillarsUrl = "https://drive.google.com/file/d/1tPwOqhI-iaDxf56Ah9nYJPLjV0w11XhD/preview";
+
+  const [openPdf, setOpenPdf] = React.useState(false);
+  const [activeUrl, setActiveUrl] = React.useState('');
+
+  const handleOpenPdf = (url) => {
+    setActiveUrl(url);
+    setOpenPdf(true);
+  };
+
+  const handleClosePdf = () => {
+    setOpenPdf(false);
+    setActiveUrl('');
+  };
 
   return (
     <Box sx={{p: 5, width: '100%',  marginTop: '100px'}}>
@@ -53,9 +67,7 @@ export default function About() {
                       variant="outlined" 
                       color="primary" 
                       startIcon={<CloudDownload />} 
-                      href={fileUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={() => handleOpenPdf(fileUrl)}
                       sx={{ mr: 2, mb: { xs: 2, sm: 0 } }}
                     > 
                        IZSoftwares Profile 2025
@@ -64,9 +76,7 @@ export default function About() {
                       variant="outlined" 
                       color="primary" 
                       startIcon={<CloudDownload />} 
-                      href={pillarsUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={() => handleOpenPdf(pillarsUrl)}
                     > 
                       IZSoftwares Core Pillars
                     </Button> 
@@ -363,6 +373,26 @@ export default function About() {
       
         </Grid>
       </Grid>
+
+      <Dialog open={openPdf} onClose={handleClosePdf} maxWidth="lg" fullWidth>
+        <IconButton
+          onClick={handleClosePdf}
+          sx={{ position: 'absolute', right: 8, top: 8, zIndex: 1 }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent sx={{ p: 0, height: '92vh' }}>
+          {activeUrl && (
+            <iframe
+              src={activeUrl}
+              title="PDF Preview"
+              width="100%"
+              height="100%"
+              style={{ border: 'none' }}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </Box>
   )
 }
