@@ -260,10 +260,10 @@ export default function About() {
             <Box sx={{ backgroundColor: 'white', textAlign: 'center', display: 'flex', flex: '1 1 25%',  flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
               <img width="75" height="75" style={{ borderRadius: '100%', display: 'block', margin: '0 auto' }} src="https://media.licdn.com/dms/image/D4D03AQGFZ169xcmDsg/profile-displayphoto-shrink_200_200/0/1685559491514?e=2147483647&v=beta&t=4KQVYKhZA96NvknW29JnTCam33GVuKgnO9RTtxN4hzw" alt="SE Profile" />
               <div>
-                <Typography variant="h6">Beryl Joceran</Typography>
+                <Typography variant="h6">Yanick Che</Typography>
               </div>
               <div>
-                <Typography variant="subtitle1">Senior Software Engineer</Typography>
+                <Typography variant="subtitle1">Vice President of Engineering and Technology</Typography>
               </div>
             </Box>
             <div className='text_section'>  
