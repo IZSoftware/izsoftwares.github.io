@@ -3,32 +3,125 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
-import {Box} from '@mui/material';
+import { Box, Button } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-export function BlogCardComponent({post}){
-    return (
-      <Card sx={{ maxWidth: 420, height: 500}}>
-        <CardMedia component="img" alt="Blog Img" height="215" image={post.image}/>
-        <CardContent>
-          <Box sx={{ color: '#f59000', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase'}}>{post.category}</Box>
-          <Typography gutterBottom variant="h5" component="div">
-             {post.title}
+export function BlogCardComponent({ post }) {
+  const navigate = useNavigate();
+  const goToPost = () => navigate(`/blog/${post.blogUrl}`);
+
+  return (
+    <Card
+      onClick={goToPost}
+      sx={{
+        maxWidth: 420,
+        height: 520,
+        display: 'flex',
+        flexDirection: 'column',
+        cursor: 'pointer',
+        transition: 'box-shadow 0.2s, transform 0.2s',
+        '&:hover': {
+          boxShadow: 6,
+          transform: 'translateY(-2px)',
+        },
+      }}
+    >
+      <CardMedia
+        component="img"
+        alt={post.title || 'Blog image'}
+        height="215"
+        image={post.image}
+      />
+
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Box
+          sx={{
+            color: '#f59000',
+            fontSize: '12px',
+            fontWeight: 600,
+            textTransform: 'uppercase',
+            mb: 1,
+          }}
+        >
+          {post.category}
+        </Box>
+
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="div"
+          sx={{
+            fontWeight: 700,
+            color: '#005eb8',
+            lineHeight: 1.3,
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}
+        >
+          {post.title}
+        </Typography>
+
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {post.content}
+        </Typography>
+      </CardContent>
+
+      <CardActions
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingLeft: 2,
+          paddingRight: 2,
+          paddingBottom: 2,
+        }}
+      >
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Typography
+            sx={{ color: '#005eb8', fontSize: '12px', fontWeight: 600 }}
+          >
+            {post.author}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-              {post.content}
+          <Typography
+            sx={{ color: '#6c6e70', fontSize: '11px', fontWeight: 500 }}
+          >
+            {post.date}
           </Typography>
-        </CardContent>
-        <CardActions style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', paddingLeft: 20,  paddingRight: 25}}>
-          <Typography style={{color:'#005eb8', fontSize: '12px', fontWeight: 600}} >{post.author}</Typography>
-          <Typography style={{color:"#005eb8", fontSize: '12px', fontWeight: 600}} >{post.date}</Typography>       
-        </CardActions>
-        <Link to={`/blog/${post.blogUrl}`}  style={{textDecoration:'none', display:'flex', justifyContent:'flex-end', paddingRight: 25}}>
-          <ArrowForwardIcon style={{color: '#005eb8', fontSize: '16px', fontWeight: 700}}/>
+        </Box>
+
+        <Link
+          to={`/blog/${post.blogUrl}`}
+          onClick={(e) => e.stopPropagation()} // don't double-fire the card click
+          style={{ textDecoration: 'none' }}
+        >
+          <Button
+            size="small"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              textTransform: 'none',
+              fontWeight: 600,
+              color: '#005eb8',
+            }}
+          >
+            Read More
+          </Button>
         </Link>
-      </Card>
-    );
-  }
-  
+      </CardActions>
+    </Card>
+  );
+}
