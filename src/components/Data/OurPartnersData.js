@@ -37,47 +37,49 @@ export const country = [
   {name: 'USA'},
   {name: 'Africa'},
   {name: 'UK'},
+  {name: 'Kenya'},
   {name: 'Cameroon'},
   {name: 'Slovakia'},
 ];
 
 export const projectData = [
-  {
-    id: 1,
-    title: "Black Box, Phishing, and Vishing Testing for an Investment Institution",
-    industry: "Financial Services",
-    region: "North America",
-    techStack: [
-      "Acunetix",
-      "Metasploit",
-      "Nessus",
-      "Hydra",
-      "SSLScan",
-      "Nikto",
-      "Burp Suite",
-      "Nmap",
-      "DirB",
-      "Python",
-      "C"
-    ],
-    country: "USA",
-    image: PortfolioInvestment,
-    clientDescription: "The customer is a **financial investment advisor firm** offering retirement account services. Its web application helps invest and manage retirement savings plans.",
-    challenge: "To ensure the maximum security of its clients’ data, the Customer was looking for a Cybersecurity vendor with a hands-on background in investment software. The Customer found the required competence with Evolv IZSoftwares Group and turned to us to examine its retirement planning solution and evaluate its employee’s cybersecurity awareness.",
-    description:
-      "IZSoftwares experts performed **black box pentesting** of the Customer’s retirement planning solution according to the **PTES** and **OWASP Web Security Testing Guide** methodology. The testing area included a customer-facing web application, API, and a public network comprising 3 IP addresses.\n\n" +
-      "Our pentesters scanned the targets for known vulnerabilities and validated the findings to eliminate false positives. To evaluate the potential impact of the identified security gaps, the team attempted to exploit the vulnerabilities by simulating a real-life cyber-attack.\n\n" +
-      "During the pentesting, IZSoftwares revealed **three medium-severity** and **seven low-severity** vulnerabilities, classified based on **OWASP API TOP 10** and **NIST CVSS**. The detected weaknesses could be exploited by an attacker to steal sensitive data, distribute malware, and affect web server performance.\n\n" +
-      "IZSoftwares team also ran several social engineering scenarios against **15 employee emails** and **2 corporate phone numbers**. During the phishing attack simulation, most of the employees followed safety precautions and ignored emails with unknown links. However, **2 of 15 employees** submitted their personal data in the Google form that was controlled by IZSoftwares pentesters.\n\n" +
-      "**Key Achievements:**\n" +
-      "• **Strict Input Validation** implemented to prevent injection attacks.\n" +
-      "• **FTP replaced with SSH** for secure encrypted file transfers.\n" +
-      "• **Brute-force protection** introduced (SSH keys, IP restrictions, CAPTCHA, failed login limits).\n" +
-      "• **Cross-domain request protection** by properly configuring Access-Control-Allow-Origin and server-side security.\n" +
-      "• **Security awareness training** recommended based on social engineering results.\n" +
-      "• Full black box pentesting + phishing & vishing simulation completed in **2 weeks**.\n" +
-      "• Customer received a complete report of all detected vulnerabilities and associated risks."
-  },
+{
+  id: 1,
+  title: "Black Box, Phishing, and Vishing Testing for an Investment Institution",
+  industry: "Financial Services",
+  region: "Africa",
+  techStack: [
+    "Acunetix",
+    "Metasploit",
+    "Nessus",
+    "Hydra",
+    "SSLScan",
+    "Nikto",
+    "Burp Suite",
+    "Nmap",
+    "DirB",
+    "Python",
+    "C"
+  ],
+  country: "Kenya",
+  image: PortfolioInvestment,
+  clientDescription: "The customer is a financial investment advisor firm offering retirement account services. Its web application helps invest and manage retirement savings plans.",
+  challenge: "To ensure the maximum security of its clients’ data, the Customer was looking for a Cybersecurity vendor with a hands-on background in investment software. The Customer found the required competence with Evolv IZSoftwares Group and turned to us to examine its retirement planning solution and evaluate its employee’s cybersecurity awareness.",
+  description:
+    "IZSoftwares experts performed black box pentesting of the Customer’s retirement planning solution according to the **PTES** and **OWASP Web Security Testing Guide** methodology. The testing area included a customer-facing web application, API, and a public network comprising 3 IP addresses.\n\n" +
+    "Our pentesters scanned the targets for known vulnerabilities and validated the findings to eliminate false positives. To evaluate the potential impact of the identified security gaps, IZSoftwares team attempted to exploit the vulnerabilities by simulating a real-life cyber-attack.\n\n" +
+    "During the pentesting, IZSoftwares revealed three medium-severity and seven low-severity vulnerabilities, classified based on **OWASP API TOP 10**, and **NIST CVSS**. The detected weaknesses could be exploited by an attacker to steal sensitive data, distribute malware, and affect web server performance.\n\n" +
+    "IZSoftwares team ran several social engineering scenarios against 15 employee emails and 2 corporate phone numbers. During the phishing attack simulation, most of the employees followed safety precautions and ignored emails with unknown links. However, 2 of 15 employees submitted their personal data in the Google form that was controlled by IZSoftwares pentesters.\n\n" +
+    "**Key Achievements**\n" +
+    "To seal the gaps, our pentesters suggested pragmatic corrective measures, such as:\n" +
+    "• Implementing strict input validation and sanitization to prevent injection attacks.\n" +
+    "• Replacing FTP with a more secure file transfer protocol like SSH to take advantage of built-in encryption.\n" +
+    "• Introducing brute force protection: using SSH keys and disabling password authentication where possible, configuring the firewall to allow connections to the remote hosts only from selected IPs, adding CAPTCHA, enforcing a limit on failed login attempts, and blocking an account or IP when the limit is reached.\n" +
+    "• Preventing malicious cross-domain requests by properly configuring Access-Control-Allow-Origin header and setting up server-side protection of sensitive data (e.g., authentication and session management).\n" +
+    "• Based on the social engineering testing results, IZSoftwares recommended organizing security awareness training for the Customer’s employees.\n" +
+    "• In two weeks, IZSoftwares conducted the black box pentesting and simulated phishing and vishing attacks.\n" +
+    "• The customer received a report detailing the detected vulnerabilities and associated risks to its IT infrastructure and client data."
+},
   {
     id: 2,
     title: "Zerd Horizon",
