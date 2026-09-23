@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.cab65b64.css",
-    "main.js": "/static/js/main.8ac24e0d.js",
+    "main.js": "/static/js/main.17d75309.js",
     "static/js/453.79b1ddd5.chunk.js": "/static/js/453.79b1ddd5.chunk.js",
     "static/media/medical-banner-with-doctor-wearing-goggles.jpg": "/static/media/medical-banner-with-doctor-wearing-goggles.d2a0f3873e016678de32.jpg",
+    "static/media/cyber-security.jpg": "/static/media/cyber-security.5f6701a930b174b21904.jpg",
     "static/media/ZetCollect mockuper.png": "/static/media/ZetCollect mockuper.64dd30cdd041518dd96a.png",
     "static/media/people-office-work-day.jpg": "/static/media/people-office-work-day.97494c77053bbff313f8.jpg",
     "static/media/Construction.jpg": "/static/media/Construction.33df4daced354ba682a2.jpg",
@@ -124,11 +125,11 @@
     "static/media/modal_bg.svg": "/static/media/modal_bg.bc00c7e4ada3a0014c12.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.cab65b64.css.map": "/static/css/main.cab65b64.css.map",
-    "main.8ac24e0d.js.map": "/static/js/main.8ac24e0d.js.map",
+    "main.17d75309.js.map": "/static/js/main.17d75309.js.map",
     "453.79b1ddd5.chunk.js.map": "/static/js/453.79b1ddd5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cab65b64.css",
-    "static/js/main.8ac24e0d.js"
+    "static/js/main.17d75309.js"
   ]
 }
