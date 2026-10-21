@@ -52,7 +52,7 @@ const PRODUCT_ITEMS = [
     },
     {
         title: 'IZSales',
-        description: 'Manage contacts, pipeline and deals in one CRM built for sales agents.',
+        description: 'Manage your B2B sales through one CRM built for your sales representative and manager.',
         href: 'https://sales.izsoftwares.com',
         icon: PointOfSaleOutlinedIcon,
         logo: LOGOS.izsales,
