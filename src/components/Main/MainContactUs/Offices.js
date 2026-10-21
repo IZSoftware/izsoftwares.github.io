@@ -5,52 +5,52 @@ import Typography from '@mui/material/Typography';
 import PhoneIcon from '@mui/icons-material/Phone';
 
 const primaryColor = '#005EB8';
-
-// Color scheme per tag type (Odoo-style outlined chips)
+// 1. Add IZSales to tagColors (pick a distinct color — here's a purple/magenta)
 const tagColors = {
   ZetScore: { color: '#005EB8', border: '#005EB8' },
   ZetCollect: { color: '#7B1FA2', border: '#7B1FA2' },
+  IZSales: { color: '#007a90', border: '#007a90' },
   Services: { color: '#5f6368', border: '#c4c9cf' },
   Finance: { color: '#c0392b', border: '#c0392b' },
-  Sales: { color: '#5f6368', border: '#c4c9cf' },
   HR: { color: '#00897b', border: '#00897b' },
   HQ: { color: '#e65100', border: '#e65100' },
 };
 
+// 2. Add 'IZSales' to every office's tags array
 const officesData = [
   {
     country: 'Kenya',
     flag: 'https://flagcdn.com/w80/ke.png',
-    tags: ['ZetScore', 'Services', 'Finance', 'Sales', 'HR', 'HQ'],
+    tags: ['ZetScore', 'ZetCollect', 'IZSales', 'Services', 'Finance', 'HR', 'HQ'],
     address: 'Delta Corner Towers',
     phone: '+254 703 468 300',
   },
   {
     country: 'Rwanda',
     flag: 'https://flagcdn.com/w80/rw.png',
-    tags: ['ZetScore', 'Services', 'Sales'],
+    tags: ['ZetScore', 'IZSales', 'Services'],
   },
   {
     country: 'Cameroon',
     flag: 'https://flagcdn.com/w80/cm.png',
-    tags: ['ZetCollect', 'Services', 'Sales'],
+    tags: ['ZetCollect', 'IZSales', 'Services'],
   },
   {
     country: 'Namibia',
     flag: 'https://flagcdn.com/w80/na.png',
-    tags: ['ZetScore', 'Services'],
+    tags: ['ZetScore', 'IZSales', 'Services'],
   },
   {
     country: 'Botswana',
     flag: 'https://flagcdn.com/w80/bw.png',
-    tags: ['ZetScore', 'Services'],
+    tags: ['ZetScore', 'IZSales', 'Services'],
   },
   {
     country: 'Ghana',
     flag: 'https://flagcdn.com/w80/gh.png',
-    tags: ['ZetScore', 'Services'],
+    tags: ['ZetScore', 'IZSales', 'Services'],
   },
-]
+];
 
 export default function Offices() {
   return (
